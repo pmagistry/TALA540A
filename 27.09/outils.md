@@ -3,12 +3,19 @@
 #### Groupe : Camille, Clément, Fanny, Tifanny
 
 **Nom** : khaiii
+
 **Crée le** : 2018
+
 **Dernière release** : 
+
 **Par** : Kakao Corp.
+
 **Licence** : Licence open source : Apache License 2.0
+
 **Langue** : Coréen
+
 **Programmé en** : C++ 14 / package en Python pour que les utilisateurs interagissent avec Khaiii en utilisant Python. 
+
 **Lien du git** : https://github.com/kakao/khaiii
 
 **Description** : Khaiii est le troisième analyseur morphologique développé par Kakao, succédant à dha2 (sur la base de dictionnaires et de règles). Il utilise l'apprentissage automatique avec un réseau neuronal convolutif (CNN) pour l'analyse morphologique du coréen.
@@ -79,13 +86,21 @@ En éxecutant le script Python :
 ---
 
 **Nom** : Underthesea
+
 **Crée le** : Mars 2017
+
 **Dernière release** : 28 juillet 2023
+
 **Par** : Underthesea
+
 **Licence** : GNU General Public License v3.0 license.
+
 **Langue** : Vietnamien
+
 **Programmé en** : Python
+
 **Lien du git** : https://github.com/undertheseanlp/underthesea/tree/main
+
 **Lien du site** : https://undertheseanlp.com/#!/
 
 **Description** : BAO qui contient de nombreux modules en python pour traiter le Vietnamien.
@@ -112,17 +127,27 @@ Identifier les entités
 Classifier des textes
 Déterminer le ton/le sentiment d’un texte
 
+[Script](UTS_test.py)
+
 
 ---
 
 **Nom** :
+
 **Crée le** :
+
 **Dernière release** : 
+
 **Par** :
+
 **Licence** : 
+
 **Langue** : 
+
 **Programmé en** :
+
 **Lien du git** : 
+
 **Lien du site** : 
 
 **Description** :
