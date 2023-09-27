@@ -10,7 +10,6 @@
 **Langue** : Coréen
 **Programmé en** : C++ 14 / package en Python pour que les utilisateurs interagissent avec Khaiii en utilisant Python. 
 **Lien du git** : https://github.com/kakao/khaiii
-**Lien du site** : 
 
 **Description** : Khaiii est le troisième analyseur morphologique développé par Kakao, succédant à dha2 (sur la base de dictionnaires et de règles). Il utilise l'apprentissage automatique avec un réseau neuronal convolutif (CNN) pour l'analyse morphologique du coréen.
 Le corpus d'apprentissage provient du “21st Century Sejong Project” (constitué de textes écrits en coréen, provenant de diverses sources et domaines. Le but de ce corpus est de servir de base pour la recherche linguistique, l'analyse linguistique, et le développement de ressources linguistiques visant à améliorer la compréhension et l'utilisation de la langue coréenne.) distribué par l'Institut national de la langue coréenne, avec des erreurs corrigées et du contenu ajouté par Kakao.
@@ -45,7 +44,37 @@ make large_resource
 
 **Problèmes liés à l'installation** : Quelques difficultés
 
-**Tâches** :  POS tagging
+Au lieu de ```cmake -E env CXXFLAGS="-w" cmake ..``` , j’étais d’abord tombée sur un guide d’installation m’indiquant d’écrire ```cmake ..```.
+Sauf qu’en écrivant seulement ça, il y a eu des erreurs : 
+![legende](erreur_1.png) 
+Il s’agit de faire en sorte que les warnings ne soient pas considérés comme des erreurs à la compilation.
+
+Au niveau de ```make all```, il y a eu une montagne d'erreur dont voici la fin :
+![legende](erreur_2.png)
+
+Le problème étant l'installation de la bibliothèque "cxxopts". Elle n’était pas installée dans le projet, je l’ai donc installée. Le fichier “cxxopts.hpp” était pourtant appelé de base dans plusieurs fichiers du dossier source. En corrigeant le chemin d’accès au fichier dans tous les fichiers source qui appelait cette bibliothèque tout s’est déroulé sans accrocs par la suite.
+
+**Tâche** :  POS tagging
+
+**Fonctionnement**
+
+Rester dans le dossier build et taper : ```./bin/khaiii --rsc-dir=./share/khaiii```, il suffira ensuite de taper directement dans le terminal la phrase à analyser.
+
+Si on veut l’utiliser avec python, il va falloir écrire : 
+```bash
+make package_python 
+cd package_python
+pip install .
+```
+Pour enfin l’utiliser tel que : 
+![legende](package_python.png)
+
+**Résultats**
+
+En ligne de commande : 
+![legende](resultat_terminal.png)
+En éxecutant le script Python : 
+![legende](resultat_script.png)
 
 ---
 
