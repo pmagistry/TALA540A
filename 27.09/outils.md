@@ -6,7 +6,7 @@
 
 **Crée le** : 2018
 
-**Dernière release** : 
+**Dernière release** : 17 juin 2019
 
 **Par** : Kakao Corp.
 
@@ -53,11 +53,11 @@ make large_resource
 
 Au lieu de ```cmake -E env CXXFLAGS="-w" cmake ..``` , j’étais d’abord tombée sur un guide d’installation m’indiquant d’écrire ```cmake ..```.
 Sauf qu’en écrivant seulement ça, il y a eu des erreurs : 
-![legende](erreur_1.png) 
+![legende](images/erreur_1.png) 
 Il s’agit de faire en sorte que les warnings ne soient pas considérés comme des erreurs à la compilation.
 
 Au niveau de ```make all```, il y a eu une montagne d'erreur dont voici la fin :
-![legende](erreur_2.png)
+![legende](images/erreur_2.png)
 
 Le problème étant l'installation de la bibliothèque "cxxopts". Elle n’était pas installée dans le projet, je l’ai donc installée. Le fichier “cxxopts.hpp” était pourtant appelé de base dans plusieurs fichiers du dossier source. En corrigeant le chemin d’accès au fichier dans tous les fichiers source qui appelait cette bibliothèque tout s’est déroulé sans accrocs par la suite.
 
@@ -74,14 +74,14 @@ cd package_python
 pip install .
 ```
 Pour enfin l’utiliser tel que : 
-![legende](package_python.png)
+![legende](images/package_python.png)
 
 **Résultats**
 
 En ligne de commande : 
-![legende](resultat_terminal.png)
+![legende](images/resultat_terminal.png)
 En éxecutant le script Python : 
-![legende](resultat_script.png)
+![legende](images/resultat_script.png)
 
 ---
 
@@ -128,6 +128,7 @@ Classifier des textes
 Déterminer le ton/le sentiment d’un texte
 
 [Script](UTS_test.py)
+![resultats](images/result_uts.png)
 
 
 ---
