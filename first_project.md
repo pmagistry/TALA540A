@@ -9,6 +9,15 @@
 
 Tous les outils ont été développé particulièrement pour le chinois mais certains ont des modèles anglais. Nous avons testé les modèles chinois
 
+Une autre particularité, les trois outils présentés sont capables de produire une analyse syntaxique, ce sur quoi nous allons nous pencher.
+
+Ex : 9月9日上午，纳达尔在亚瑟阿什球场击败俄罗斯球员梅德韦杰夫，赢得个人第 24 座大满贯奖杯。
+Le matin du 9 septembre, Nadal a triomphé le joueur russe Dmitry Medvedev au stade Arthur Ashe et remporté son 24e Grand Chelem.
+![alt text](analyse_syntaxique_2.png)
+
+Ex：这家的鱼太咸了，还不新鲜。
+Le poisson de ce restaurant est trop salé et pas assez frais.
+![alt text](analyse_syntaxique.png)
 
 ## n-ltp = outils open-source présent sur git-hub
 
@@ -215,6 +224,8 @@ for (w,t) in tagging:
 ...
 
 ## DDParser
+
+Baidu Dependency Parser (Analyseur de Dépendance Baidu) est un outil de Tal développé par la société chinoise Baidu. Son objectif principal est d'analyser la structure syntaxique des phrases dans le texte chinois, en identifiant les relations de dépendance entre les mots.
 
 ### url
 - https://github.com/baidu/DDParser
