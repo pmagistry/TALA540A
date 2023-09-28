@@ -117,15 +117,15 @@ pip install underthesea[deep] #(pour le parsing par ex)
 **Problèmes liés à l'installation** : aucune
 
 **Tâches** : Cette BAO permet de faire beaucoup de choses telles que : 
-Séparer un texte en phrases individuelles (Sentence segmentation)
-Standardiser (?) un texte
-Word segmentation
-POS Tagging
-Chunking
-Analyser les structures grammaticales entre les mots (Parsing)
-Identifier les entités
-Classifier des textes
-Déterminer le ton/le sentiment d’un texte
+- Séparer un texte en phrases individuelles (Sentence segmentation)
+- Standardiser (?) un texte
+- Word segmentation
+- POS Tagging
+- Chunking
+- Analyser les structures grammaticales entre les mots (Parsing)
+- Identifier les entités
+- Classifier des textes
+- Déterminer le ton/le sentiment d’un texte
 
 [Script](UTS_test.py)
 ![resultats](images/result_uts.png)
