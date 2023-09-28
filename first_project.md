@@ -27,8 +27,9 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ltp ltp-core ltp-extensi
 ### d’où vient cet outils
 - présent sur github (issues...)
 - open-source
-- article acl pour présenter le projet
-- créé par deux étudiants chinois pour faire les choses suivantes :
+- licence du Centre de recherche en informatique sociale et en recherche d'informations de l'Institut de technologie de Harbin 
+- article acl pour présenter le projet : utilisation gratuite à fin non-commerciale (sinon contacter le centre de recherche)
+- créé par deux étudiants chinois / chercheurs pour faire les choses suivantes :
 	- chinese word segmentation, 
 	- part-of-speech tagging, 
 	- named entity recognition
