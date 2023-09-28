@@ -133,29 +133,35 @@ Déterminer le ton/le sentiment d’un texte
 
 ---
 
-**Nom** :
+**Nom** : pyvi
 
-**Crée le** :
+**Crée le** : mars 2017
 
-**Dernière release** : 
+**Dernière release** : 17 mai 2020
 
-**Par** :
+**Par** : /
 
-**Licence** : 
+**Licence** : OSI Approved :: MIT License
 
-**Langue** : 
+**Langue** : Vietnamien
 
-**Programmé en** :
+**Programmé en** : Python
 
-**Lien du git** : 
+**Lien du git** : https://github.com/trungtv/pyvi
 
-**Lien du site** : 
+**Lien du site** : https://pypi.org/project/pyvi/
 
-**Description** :
+**Description** : Outil python pour le vietnamien // scores : Vietnamese tokenizer f1_score = 0.985 | Vietnamese pos tagging f1_score = 0.925
 
-**Installation** :
+**Installation** : 
+```bash
+pip install pyvi
+```
 
 **Problèmes liés à l'installation** :
 
-**Tâches** : 
+**Tâches** : Tokenisation, POS tagging, Accents removal et Accents adding 
 
+**Utilisation** : [Script](script_pyvi/script_pyvi.py)
+
+**Résultats** : ![resultats](images/resultats_pyvi.png)
