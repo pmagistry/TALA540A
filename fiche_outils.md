@@ -19,6 +19,11 @@
 **Utilisation de différents modules** : 
 - KKMA (utilisation d’un dictionnaire créé à partir du corpus Sejong) : analyseur morpho-syntaxique développé en Java par Intelligent Data Systems (IDS) à l’Université Nationale de Séoul (SNU).
 	- Corpus Sejong (1997-2007) : Se veut devenir le corpus national coréen (au même niveau que le British National Corpus. Composé de textes bruts et annotés provenant de différents domaines : coréen moderne (écrit et transcription orale), nord-coréen, coréen utilisé à l’étranger, vieux coréen, corpus parallèles (alignés par phrase) coréen-japonais et coréen-anglais, coréen spécialisé. ~ 89 millions de mots bruts. Créé par l’Institut National de la Langue Coréenne
+	- Options : 
+		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
+		- .nouns(phrase) : extraction des noms
+		- .pos(phrase) : associe une étiquette à chaque morphème (de manière probabiliste).
+		- .sentences(phrase) : détecte les phrases
 - Hannamun (utilisation d’un dictionnaire créé à partir du corpus KAIST) : analyseur morpho-syntaxique et POS-Tagger développé en Java par le SWRC (Semantic Web Research Center)  à l’Institut supérieur coréen des sciences et technologies (KAIST)(1999-2014)
 	- Corpus KAIST (1994-1997) : corpus composé de textes bruts tirés de romans, d’articles de presse, etc. ~ 70 millions de mots
 	- Options
@@ -32,6 +37,10 @@
 		- .nouns(phrase) : retourne une liste des noms présents dans la phrase
 		- .pos(phrase) : retourne une liste de tuples où chaque tuple est composé du token et de son étiquette de partie du discours. 
 - Komoran (possibilité d’utiliser un dictionnaire utilisateur) : 
+	- Options : 
+		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
+		- .nouns(phrase) : retourne une liste des noms présents dans la phrase
+		- .pos(phrase) : retourne une liste de tuples où chaque tuple est composé du token et de son étiquette de partie du discours. 
 - Okt (Open Korean Text) : tokenizer open source du coréen, écrit en Scala et développé par Will Hohyon Ryu.
 	- Options
 		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
