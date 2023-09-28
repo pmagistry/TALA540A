@@ -1,0 +1,45 @@
+Thursday 21 September 2023
+
+TreeTagger
+
+Nom de l'outil : TreeTagger 
+
+Version : 3.3.0
+
+Créé le : 1994
+
+Dernière mise à jour le : 
+
+Programmé en : bash
+
+Accessibilité : facile
+
+Licenses : le logiciel est disponible gratuitement pour la recherche, l’éducation et l’évaluation.
+Pour les licences commerciales et autres il faut contacter le développeur par le site web.
+
+Auteurs : Helmut Schmid
+
+Outil associé aux institutions : the Institute for Computational Linguistics of the University of Stuttgart
+
+Lien de téléchargement : https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/
+
+Détails de l'outil : TreeTagger a été utilisé pour annoter en lemma et en POS plusieurs langues dont le danois, le suédois, le norvégien, le néerlandais, le bulgare,
+le russe, le biélorusse, l'ukrainien, le galicien, le grec, le chinois, le swahili, le slovaque, le slovène, le latin, estonien, polonais, persan, roumain, tchèque,
+ancien français et est adaptable à d'autres langues si un lexique et un corpus de formation étiqueté manuellement sont disponibles. 
+
+Il peut être utilisé comme un chunker pour l'anglais, l'allemand, le français et l'espagnol.
+
+Installation est facile. Il suffit d’aller sous le lien https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/ dans la section downloads.
+Il faut télécharger la version de TreeTagger qui correspond à notre système d’exploitation, des tagging scripts, le script d’installation et
+des fichiers de paramètres pour chaque langue qu’on veut traiter (tous ces fichiers doivent être placés dans le même chemin).
+Ensuite dans le terminal il faut se placer où nous avons téléchargé les fichiers et lancer le script d’installation avec une commande “sh install-tagger.sh”
+À chaque fois on télécharge un nouveau fichier paramètre il faut relancer installation.
+
+Le format d’annotation sera un text separé par les tabulations en trois colonnes, la première contient un token, la deuxième contient les informations morpho-syntaxiques
+ et la troisième contient un lemma. Pour le chunking ce sont deux colonnes. 
+
+Ensuite nous pouvons lancer treetagger depuis le terminal avec une commande “cat fichier.txt | cmd/tree-tagger-polish > fichier.tsv
+Pour avoir du chunking il faut lancer “cat baudelaire.txt | cmd/tagger-chunker-french > baudelaire_chunk.tsv”
+
+
+
