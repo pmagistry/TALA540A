@@ -51,6 +51,17 @@
 	- .delete_links(text) → suppression des liens
 	- …
 
+**Installation** : 
+``` bash
+python3 -m pip install konlpy
+```
+
+**Installation Mecab et dictionnaire coréen** : 
+```bash
+pip install mecab
+pip install mecab-ko-dic
+```
+Il faut indiquer le chemin du dictionnaire quand on appelle Mecab dans notre script, sinon, déclenche une erreur.
 
 ---
 
