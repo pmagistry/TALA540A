@@ -139,7 +139,7 @@ Déterminer le ton/le sentiment d’un texte
 
 **Dernière release** : 17 mai 2020
 
-**Par** : /
+**Par** : Viet-Trung Tran
 
 **Licence** : OSI Approved :: MIT License
 
