@@ -13,7 +13,7 @@ tag = ViPosTagger.postagging(ViTokenizer.tokenize(phrase))
 
 # Affichez chaque token avec son POS (pour plus de lisibilité)
 for token, tag in zip(tag[0], tag[1]):
-    print(f" Voici les POS de chaque token : {{{token}, {tag} }}", end=';')
+    print(f" {{{token}, {tag} }}", end=';')
 print ("\t")
 
 
