@@ -6,7 +6,9 @@
 - Li Kedi
 - Liza Fretel
 
+
 Tous les outils ont été développé particulièrement pour le chinois mais certains ont des modèles anglais. Nous avons testé les modèles chinois
+
 
 ## n-ltp = outils open-source présent sur git-hub
 
@@ -46,6 +48,8 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ltp ltp-core ltp-extensi
 ```
 
 ### comment ça marche
+
+#### avec le modèle par défaut, LTP/small
 ```
 import torch
 from ltp import LTP
@@ -55,7 +59,7 @@ from ltp import LTP
 # sinon ltp = LTP("/path/to/your/model")
 ltp = LTP("LTP/small")  
 
-# si gpu.............
+# si gpu...
 if torch.cuda.is_available():
     # ltp.cuda()
     ltp.to("cuda")
@@ -78,9 +82,7 @@ print(output.sdpg)
 [{'head': [2, 0, 2, 2, 4, 5, 2], 'label': ['AGT', 'Root', 'DATV', 'eSUCC', 'eSUCC', 'PAT', 'mPUNC']}]
 [[(1, 2, 'AGT'), (2, 0, 'Root'), (3, 2, 'DATV'), (3, 4, 'AGT'), (3, 5, 'AGT'), (4, 2, 'eSUCC'), (5, 2, 'eSUCC'), (5, 4, 'eSUCC'), (6, 5, 'PAT'), (7, 2, 'mPUNC')]]
 ```
-- possible d'utiliser l'indentation ou `output.qqchose`
-- certains résultats sont en liste, liste de tuples ou dictionnaires
-- resultat brut quand on fait `print(output)`
+Pour accéder à une des réponses, il est possible d'utiliser l'indentation ou `output.qqchose`. Certains résultats sont en liste, liste de tuples ou dictionnaires. Voici les résultats bruts :
 ```
 LTPOutput(
 	cws=[['他', '叫', '汤姆', '去', '拿', '外衣', '。']], 
@@ -93,8 +95,10 @@ LTPOutput(
 	)
 ```
 
+#### Avec le modèle LTP/legacy
+Il existe un autre modèle qui rend la segmentation des mots, la reconnaissance de parties du discours et d'entités nommées relativement + rapide, mais la précision est légèrement inférieure.
+
 ```
-# une version avec la segmentation des mots, la reconnaissance de parties du discours et d'entités nommées relativement + rapide, mais une précision est légèrement inférieure
 # algorithme perceptron qui ne fait pas plus que cws, pos, net
 ltp = LTP("LTP/legacy")
 
@@ -104,7 +108,7 @@ print(cws, pos, ner)
 ```
 [['他', '叫', '汤姆', '去', '拿', '外衣', '。']] [['r', 'v', 'nh', 'v', 'v', 'n', 'wp']] [[('Nh', '汤姆')]]
 ```
-- resultat brut quand on fait :
+Voici les résultats bruts :
 ```
 print(ltp.pipeline(["他叫汤姆去拿外衣。"], tasks=["cws", "pos", "ner"]).to_tuple())
 ```
@@ -118,14 +122,15 @@ print(ltp.pipeline(["他叫汤姆去拿外衣。"], tasks=["cws", "pos", "ner"])
 
 ## deep-nlp
 
-## url
+### url
 - https://github.com/rockingdingo/deepnlp
 
-## téléchargement
+### téléchargement
 - pour télécharger le module : `pip install deepnlp`
-- pour télécharger les modèles directement sur le script python
+- pour télécharger les modèles, directement sur le script python :
 ```
 import deepnlp
+
 # Download all the modules
 deepnlp.download()
 
@@ -141,8 +146,7 @@ deepnlp.download(module = 'ner', name = 'zh_entertainment')
 ```
 
 ### d’où vient cet outils
-- présent sur git
-- pas d'informations sur son developpeur
+- développé par un certain rockingdingo mais il ne donne aucune information sur lui ou son travail
 
 ### quel type de sorti il propose
 - Word Segmentation/Tokenization
@@ -161,11 +165,11 @@ deepnlp.download(module = 'ner', name = 'zh_entertainment')
 - le module est encore téléchargeable mais il ne marche pas à cause du module `crfpp` :
 	- issue ouverte depuis 2 ans sur le git de deepnlp : "No module named 'CRFPP'"
 	- le module `crfpy` installable via pip n'est plus  telechargeable, le dossier git dont il est issu n'est plus disponible
-  - le module `crf++` contenant lui aussi `crfpp` n'est plus mise à jour depuis 2013
+  - le module `crf++` contenant lui aussi `crfpp` n'est plus mise à jour depuis 2013 et le miroir de téléchargement est cassé (pas de fichier Release)
   - le module `crfpp` qui est téléchargeable en clonant le dossier git `deepnlp` n'est plus installable, il se télécharge d'une manière que python ne prend plus en charge (`python setup.py install`)
 
-- pour la segmentation :
-  ```
+#### pour la segmentation
+```
 from deepnlp import segmenter
 
 tokenizer = segmenter.load_model(name = 'zh_entertainment')
@@ -175,16 +179,17 @@ text_seg = " ".join(segList)
 
 #Results
 # 我 刚刚 在 浙江卫视 看 了 电视剧 老九门 ， 觉得 陈伟霆 很 帅
-  ```
-- pour les entités nommées :
+```
+#### pour les entités nommées :
 ```
 import deepnlp
-deepnlp.download('ner')  # download the NER pretrained models from github if installed from pip
-
 from deepnlp import ner_tagger
 
+deepnlp.download('ner')  # download the NER pretrained models from github if installed from pip
+
 # Example: Entertainment Model
-tagger = ner_tagger.load_model(name = 'zh_entertainment')   # Base LSTM Based Model
+tagger = ner_tagger.load_model(name='zh_entertainment')   # Base LSTM Based Model
+
 #Load Entertainment Dict
 tagger.load_dict("zh_entertainment")
 text = "你 最近 在 看 胡歌 演的 猎场 吗 ?"
@@ -211,14 +216,14 @@ for (w,t) in tagging:
 ## DDParser
 
 ### url
-- [https://github.com/baidu/DDParser](https://github.com/baidu/DDParser)
-- [https://pypi.org/project/ddparser/](https://pypi.org/project/ddparser/)
+- https://github.com/baidu/DDParser
+- https://pypi.org/project/ddparser/
 
-## téléchargement
+### téléchargement
 - installer ddparser : `pip install ddparser`
 - installer paddlepaddle avec ou sans cuda : 
 	- `nvcc --version` + https://www.paddlepaddle.org.cn/
-	- `pip install paddlepaddle==2.4.2
+	- `pip install paddlepaddle==2.4.2`
 - installer LAC : `pip install lac`
 
 ### d’où vient cet outils
@@ -227,9 +232,10 @@ for (w,t) in tagging:
 - open-source
 - Les données utilisées par l'outil pour entraîner son modèle est Baidu Chinese Treebank 1.0. Il est composé d'un million de phrases mais l'outil en a utilisé 530k. Ce sont des données issues du web, écrites comme orales, des news, des forums etc.
 
-### quel type de sorti il propose (quel type d’informations)
+### quel type de sorti il propose
 DDParser est utilisé pour faire de l'analyse syntaxique.
 Il intègre un outil de tokenisation et de POS tagging, qui sont les étapes précédentes et nécessaires à l'analyse syntaxique.
+
 #### Compatibilité CoNLL-X
 La sortie est compatible avec le format CoNLL:
 ```
@@ -242,7 +248,6 @@ ID      FROM   LEMMA CPOSTAG POSTAG  FEATS   HEAD    DEPREL   PROB   PDEPREL
 ```
 
 #### Format de sortie
-
 En sortie de la fonction parse ou parse_seg, on obtient une liste dont chaque élément est une phrase.
 Dans cette liste, un dictionnaire avec 3 clés:
 - 'word', avec pour valeur la liste des tokens.
@@ -261,8 +266,7 @@ Exemple:
 			- `wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.19_amd64.deb`
 			- `sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.19_amd64.deb`
 		- `AttributeError: module 'paddle.fluid.dygraph' has no attribute 'Layer'` 
-			- impossible de trouver de solution
-			- dans les issues sur le github, beaucoup de personnes ont des problèmes avec la classe `fluid`
+			- nous n'avons pas trouver de solution ; dans les issues sur le github, beaucoup de personnes ont des problèmes avec la classe `fluid`
 	- avec paddle 2.4.2 :
 		- marche à peu près mais des problèmes (Warnings) au niveau du téléchargement des modules car le python sur lequel ont travaille est trop haut
 
