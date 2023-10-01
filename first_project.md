@@ -7,7 +7,7 @@
 - Liza Fretel
 
 
-Tous les outils ont été développé particulièrement pour le chinois mais certains ont des modèles anglais. Nous avons testé les modèles chinois
+Tous les outils ont été développé particulièrement pour le chinois mais certains ont des modèles anglais. Nous avons testé les modèles chinois.
 
 Une autre particularité, les trois outils présentés sont capables de produire une analyse syntaxique, ce sur quoi nous allons nous pencher.
 
@@ -38,7 +38,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ltp ltp-core ltp-extensi
 - open-source
 - licence du Centre de recherche en informatique sociale et en recherche d'informations de l'Institut de technologie de Harbin 
 - article acl pour présenter le projet : utilisation gratuite à fin non-commerciale (sinon contacter le centre de recherche)
-- créé par deux étudiants chinois / chercheurs pour faire les choses suivantes :
+- créé par deux étudiants/chercheurs chinois pour faire les tâches suivantes :
 	- chinese word segmentation, 
 	- part-of-speech tagging, 
 	- named entity recognition
@@ -46,7 +46,6 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ltp ltp-core ltp-extensi
 	- semantic dependency parsing
 	- semantic role labeling
 
-### quel type de sorti il propose
 ```
 # cws : segmentation de mots
 # pos : partie du discours 
@@ -57,7 +56,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ltp ltp-core ltp-extensi
 # sdpg : graphique d'analyse de dépendance sémantique
 ```
 
-### comment ça marche
+### comment ça marche et quel type de sorti il propose
 
 #### avec le modèle par défaut, LTP/small
 ```
