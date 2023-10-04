@@ -33,7 +33,7 @@ Il peut être utilisé comme un chunker pour l'anglais, l'allemand, le français
 Installation est facile. Il suffit d’aller sous le lien https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/ dans la section downloads.
 Il faut télécharger la version de TreeTagger qui correspond à notre système d’exploitation, des tagging scripts, le script d’installation et
 des fichiers de paramètres pour chaque langue qu’on veut traiter (tous ces fichiers doivent être placés dans le même chemin).
-Ensuite dans le terminal il faut se placer où nous avons téléchargé les fichiers et lancer le script d’installation avec une commande “sh install-tagger.sh”
+Ensuite dans le terminal il faut se placer où nous avons téléchargé les fichiers et lancer le script d’installation avec une commande `sh install-tagger.sh`
 À chaque fois on télécharge un nouveau fichier paramètre il faut relancer installation.
 
 ## utilisation
@@ -41,12 +41,8 @@ Le format d’annotation sera un text separé par les tabulations en trois colon
  et la troisième contient un lemma. Pour le chunking ce sont deux colonnes. 
 
 Ensuite nous pouvons lancer treetagger depuis le terminal avec une commande 
-    cat fichier.txt | cmd/tree-tagger-polish
-    
-    ![<# alt text #>](../../../../../../var/folders/1p/3w_zjjdd6sb14pc7lbpvz15m0000gn/T/TemporaryItems/NSIRD_screencaptureui_wSgCRK/Screenshot%202023-10-04%20at%2021.59.32.png "Screenshot")
+`cat fichier.txt | cmd/tree-tagger-polish`
     
 Pour avoir du chunking il faut lancer 
-    cat baudelaire.txt | cmd/tagger-chunker-french > baudelaire_chunk.tsv
-
-![<# alt text #>](../../../../../../var/folders/1p/3w_zjjdd6sb14pc7lbpvz15m0000gn/T/TemporaryItems/NSIRD_screencaptureui_ptBtOP/Screenshot%202023-10-04%20at%2021.54.29.png "Screenshot")
+`cat baudelaire.txt | cmd/tagger-chunker-french > baudelaire_chunk.tsv`
 
