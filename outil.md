@@ -3,6 +3,8 @@
 
 * Dévelopée en python, propose des modèles neuronaux
 
+* Interface python pour le package java CoreNLP
+
 * première version en 2019, dernière version (1.4) avril 2022
 
 * #### Type de tâches  : 
@@ -11,6 +13,11 @@
   * entités nommées, 
   * segmentation, tokenisation, lemmatisation, 
   * analyse de sentiments
+
+  Avec le package CoreNLP :
+  * Parsing en constituant
+  * Résolution de coréférence
+  
 
 * #### Installation :
 pip :
