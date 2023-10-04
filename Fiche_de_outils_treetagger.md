@@ -40,8 +40,13 @@ Ensuite dans le terminal il faut se placer où nous avons téléchargé les fich
 Le format d’annotation sera un text separé par les tabulations en trois colonnes, la première contient un token, la deuxième contient les informations morpho-syntaxiques
  et la troisième contient un lemma. Pour le chunking ce sont deux colonnes. 
 
-Ensuite nous pouvons lancer treetagger depuis le terminal avec une commande cat fichier.txt | cmd/tree-tagger-polish > fichier.tsv
-Pour avoir du chunking il faut lancer cat baudelaire.txt | cmd/tagger-chunker-french > baudelaire_chunk.tsv
+Ensuite nous pouvons lancer treetagger depuis le terminal avec une commande 
+    cat fichier.txt | cmd/tree-tagger-polish
+    
+    ![<# alt text #>](../../../../../../var/folders/1p/3w_zjjdd6sb14pc7lbpvz15m0000gn/T/TemporaryItems/NSIRD_screencaptureui_wSgCRK/Screenshot%202023-10-04%20at%2021.59.32.png "Screenshot")
+    
+Pour avoir du chunking il faut lancer 
+    cat baudelaire.txt | cmd/tagger-chunker-french > baudelaire_chunk.tsv
 
-
+![<# alt text #>](../../../../../../var/folders/1p/3w_zjjdd6sb14pc7lbpvz15m0000gn/T/TemporaryItems/NSIRD_screencaptureui_ptBtOP/Screenshot%202023-10-04%20at%2021.54.29.png "Screenshot")
 
