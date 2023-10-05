@@ -2,7 +2,7 @@
 Utilisation et évaluation de modèles pré-entraînés
 (séances 1 et 2)
 
-## Étape 1
+## Étape 1 OK
 ### récupérer modèle et données
 
 - création d'un venv si besoin
@@ -13,7 +13,7 @@ Utilisation et évaluation de modèles pré-entraînés
 - trouver du corpus:
     - `wget https://github.com/UniversalDependencies/UD_French-Sequoia/raw/master/fr_sequoia-ud-test.conllu`
     - version texte brute: 
-        `cat fr_sequoia-ud-test.conllu | grep "# text" | sed 's/# text = //'`
+        `cat fr_sequoia-ud-test.conllu | grep "# text" | sed 's/# text = //'` > texte_brut.txt
         
 
 ## Étape 2
