@@ -7,7 +7,7 @@
 - Li Kedi
 - Liza Fretel
 
-On peut trouver un panorama des outils pour le chinois mandarin standard de la RPC sur le git de Beijing University,  cette liste n'est pas exhaustive bien entendu et cela nous montre que le chinois mandarin est bien dotée :
+On peut trouver un panorama des outils pour le chinois mandarin standard de la RPC sur le git de Beijing University,  cette liste n'est pas exhaustive bien entendu et cela nous montre que le chinois mandarin est bien doté de ce point de vue :
 
 - [THULAC 中文词法分析工具包](http://thulac.thunlp.org/) by 清华 (C++/Java/Python)
 - [NLPIR](https://github.com/NLPIR-team/NLPIR) by 中科院 (Java)
@@ -37,7 +37,7 @@ On peut trouver un panorama des outils pour le chinois mandarin standard de la R
 - [FoolNLTK](https://github.com/rockyzhengwu/FoolNLTK) (Python &
    Java) A Chinese Nature Language Toolkit
 
-Nous en avons choisi de travailler sur trois outils sélectionnés sur Github après une recherche :
+Nous avons choisi de travailler sur trois outils sélectionnés sur Github après une recherche :
 
 1. n-ltp
 
