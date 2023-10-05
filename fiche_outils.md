@@ -1,15 +1,15 @@
 # Fiches de synthèse - Outils TAL
 
 
-**Nom de l'outil** : KoNLPy
-**Version** : 0.6.0
-**Créé le** : 26 août 2014
-**Dernière mise à jour le** : 2 janvier 2022
-**Accessibilité** : Open Source (under GPL licence)
-**Auteurs** : Park Eunjeong L. and Cho Sungzoon
-**Outil associé aux institutions** : 
-**Lien du site internet** : https://konlpy.org/en/latest/ 
-**Références** :
+**Nom de l'outil** : KoNLPy  
+**Version** : 0.6.0  
+**Créé le** : 26 août 2014  
+**Dernière mise à jour le** : 2 janvier 2022  
+**Accessibilité** : Open Source (under GPL licence)  
+**Auteurs** : Park Eunjeong L. and Cho Sungzoon  
+**Outil associé aux institutions** :   
+**Lien du site internet** : https://konlpy.org/en/latest/   
+**Références** :  
 - Eunjeong L. Park, Sungzoon Cho. “KoNLPy: Korean natural language processing in Python”, Proceedings of the 26th Annual Conference on Human & Cognitive Language Technology, Chuncheon, Korea, Oct 2014 - (plus trouvable sur internet)
 - https://buildmedia.readthedocs.org/media/pdf/konlpy/stable/konlpy.pdf
 - Kim, Hung-gyu, et al. “21st Century Sejong Corpora (to Be) Completed.” The Korean Language in America, vol. 12, 2007, pp. 31–42. JSTOR, http://www.jstor.org/stable/42922169. Accessed 27 Sept. 2023.
@@ -18,7 +18,7 @@
 
 **Utilisation de différents modules** : 
 - KKMA (utilisation d’un dictionnaire créé à partir du corpus Sejong) : analyseur morpho-syntaxique développé en Java par Intelligent Data Systems (IDS) à l’Université Nationale de Séoul (SNU).
-	- Corpus Sejong (1997-2007) : Se veut devenir le corpus national coréen (au même niveau que le British National Corpus. Composé de textes bruts et annotés provenant de différents domaines : coréen moderne (écrit et transcription orale), nord-coréen, coréen utilisé à l’étranger, vieux coréen, corpus parallèles (alignés par phrase) coréen-japonais et coréen-anglais, coréen spécialisé. ~ 89 millions de mots bruts. Créé par l’Institut National de la Langue Coréenne
+	- Corpus Sejong (1997-2007) : Se veut devenir le corpus national coréen (au même niveau que le British National Corpus). Composé de textes bruts et annotés provenant de différents domaines : coréen moderne (écrit et transcription orale), nord-coréen, coréen utilisé à l’étranger, vieux coréen, corpus parallèles (alignés par phrase) coréen-japonais et coréen-anglais, coréen spécialisé. ~ 89 millions de mots bruts. Créé par l’Institut National de la Langue Coréenne
 	- Options : 
 		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
 		- .nouns(phrase) : extraction des noms
@@ -36,7 +36,7 @@
 		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
 		- .nouns(phrase) : retourne une liste des noms présents dans la phrase
 		- .pos(phrase) : retourne une liste de tuples où chaque tuple est composé du token et de son étiquette de partie du discours. 
-- Komoran (possibilité d’utiliser un dictionnaire utilisateur) : 
+- Komoran (possibilité d’utiliser un dictionnaire utilisateur) : développé en Java par Shineware depuis 2013
 	- Options : 
 		- .morphs(phrase) : créer une liste des morphèmes présents dans la phrase
 		- .nouns(phrase) : retourne une liste des noms présents dans la phrase
