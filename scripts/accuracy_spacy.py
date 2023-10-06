@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from datastructures import Corpus, Phrase, Token
+from datastructures_corpus import Corpus, Phrase, Token
 from pprint import pprint
 import sys, spacy
 
