@@ -10,22 +10,13 @@ class Token:
     form: str
     lemma: str
     pos: str
-    tag: str
-    dep: str
-    shape: str
-    alpha: bool
-    stop: bool
 
 @dataclass
 class Sentence:
-    text: str
-    length: int
-    analyse: List[Token]
+    number_tokens: int  # pour savoir si le découpage par tokens est le même
+    analyses: List[Token]
 
 @dataclass
 class Corpus:
-    categories: List[str]
-    begin: str
-    end: str
-    chemin: Path
-    articles: List[Article]
+    number_lines: int # pour savoir si le découpage par ligne s'est bien passé
+    sentences: List[Sentence]

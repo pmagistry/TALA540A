@@ -30,14 +30,23 @@ Essayer d'utiliser `typing` et des `dataclass` pour structurer votre code
 ## Étape 3
 ### quantifier les résultats 
 
-- exactitude 
+- exactitude
     - % de tags corrects
     - idem en distanguant les OOV
         - token.is_oov pour les embeddings
         - par rapport au train de sequoia
 - vitesse 
     - bash `time`
-    - module python `timeit`
+    ``` Shell
+        (project) laura@laura:~/Documents/TALA540A$ time script/tp1.py
+            bash: script/tp1.py: Permission denied
+
+            real    0m0,002s
+            user    0m0,001s
+            sys 0m0,000s
+
+    ```
+    - module python `timeit` : j'ai utilisé le module tqdm
     - comment améliorer ces temps ?
 - Matrice de confusion
     (si on a le temps)
