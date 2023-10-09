@@ -1,4 +1,5 @@
 #!/bin/python3
+# -*- coding: utf-8 -*-
 
 import numpy as np
 import pandas as pd
@@ -84,7 +85,7 @@ def conll_to_corpus(file: str) -> Corpus:
 			misc = token_line[9]
 			t.append(Token(form, lemma, upos))
 			
-		s.append(Sentence(sentence, str))
+		s.append(Sentence(sentence, t))
 	d = Document(s)
 	c = Corpus([d]) # only one document
 	return c
