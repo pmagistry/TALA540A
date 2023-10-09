@@ -8,7 +8,8 @@
 
 #### python
 - tp1.py : fichier python principal du projet
-- datastructures.py : fichier python contenant les dataclasses
+- get_function.py : fichier python avec toutes les fonctions appelées par tp1.py
+- datastructures.py : fichier python contenant les dataclasses appelées par get_function.py
 
 #### corpus
 - fr_sequoia-ud-test.conllu  
@@ -23,22 +24,22 @@
 ---
 
 ### étape 2
-- tokenisation et analyse du texte avec spacy
+- tokenisation et analyse du texte avec spacy :
 - recuperation des données du fichier conllu
 
-
-- **à faire : avec la tokenization du fichier conllu**
+- tokenization avec le fichier conllu tout en utilisant spacy :
+    - forcement, c'est plus rapide car on va juste chercher des informations dans une variable contenant le texte du fichier conllu
 
 ---
 
 ### étape 3
 
-
-- **à faire :exactitude**
-
+- exactitude :
+    - accuracy ; precision et rappel pour le pos 'DET'
+    - **idem en distanguant les OOV : à faire mais peut-être pas le temps**
 
 - vitesse
-    - bash `time`
+    - bash `time` : n'a pas marché correctement
     ``` Shell
         (project) laura@laura:~/Documents/TALA540A$ time script/tp1.py
             bash: script/tp1.py: Permission denied
