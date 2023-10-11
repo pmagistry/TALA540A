@@ -105,3 +105,7 @@ if __name__ == "__main__":
     get_token(corpus, dico_gold)
     VP_lemme, VP_pos, FP_lemme, FP_pos, cpt_total = get_token(corpus, dico_gold)
     print("compte sans separation de classe", "\nVP_lemme = ", VP_lemme, "\n VP_pos = ", VP_pos, "FP_lemme = ", FP_lemme, "\n FP_pos = ", FP_pos, "\n cpt_total_tokens = ", cpt_total)
+    pourcentage_lemmes_corrects = VP_lemme/cpt_total*100
+    pourcentage_pos_corrects = VP_pos/cpt_total*100
+    print("lemmes corrects :", pourcentage_lemmes_corrects)
+    print("pos corrects : ", pourcentage_pos_corrects)
