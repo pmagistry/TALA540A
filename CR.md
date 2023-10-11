@@ -44,9 +44,7 @@ Si les listes ne sont pas de même longueur (par exemple pour le cas de nos fame
 #### Résultat 
 La formule utilisée est celle de l'exactitude, et reportée sur nos variables, et la suivante : 
 
-$$
-Exactitude=\frac{\text{nombre de pos corrects}}{\text{corrects + errors}} = \frac{6289}{6289+3904}=0.617
-$$.
+$Exactitude=\frac{\text{nombre de pos corrects}}{\text{corrects + errors}} = \frac{6289}{6289+3904}=0.617$
 
 Suivant ce test, on peut dire que l'exactitude du modèle est bien plus basse que l'évaluation de spacy elle-même. 
 Toutefois, l'écart est tellement grand, que j'ai probablement commis une erreur quelque part. 
