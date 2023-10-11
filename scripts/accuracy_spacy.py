@@ -46,7 +46,8 @@ def compar_listes(liste_1 : list, liste_2 : list):
 
 if __name__=="__main__":
 	corpus=sys.argv[1]
-	nlp=spacy.load("ko_core_news_md")
+	model=sys.argv[2]
+	nlp=spacy.load(model)
 	c=make_corpus(corpus)
 	dico_acc={}
 	sum_acc=0
@@ -59,4 +60,4 @@ if __name__=="__main__":
 		dico_acc.update({phrase.sent_id:acc})
 		sum_acc+=acc
 	moy_acc=sum_acc/len(c.liste_sent)
-	print(f"L'accuracy moyenne de spacy sur ce corpus est de : {moy_acc}")
+	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {moy_acc}")
