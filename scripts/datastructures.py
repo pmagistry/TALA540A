@@ -8,8 +8,8 @@ from typing import List
 @dataclass
 class Token:
     id: int
-    forme: str
-    lemme: str
+    form: str
+    lemma: str
     upos: str
     xpos: str
     feats: Optional[str]
@@ -20,10 +20,9 @@ class Token:
 
 @dataclass
 class Sentence:
-    text : str
+    text: str
     tokens : List[Token]
 
 @dataclass
 class Corpus:
-    text : str 
-    sents : List[Sentence]
+    sentences : List[Sentence]
