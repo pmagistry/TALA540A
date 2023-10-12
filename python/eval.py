@@ -13,20 +13,13 @@ def import_spacy(model):
 	from spacy.tokenizer import Tokenizer
 
 	module = __import__(model, fromlist=[model])
-	#Model = getattr(module)
-	#print(model)
-	#model_class = eval(model)
-	#import model_class
 	nlp = spacy.load(model)
-	#nlp.tokenizer = Tokenizer(nlp.vocab, token_match=re.compile(r'\S+').match)
 	return nlp
 
 def evaluate(corpus, model):
-	# import model from spacy
 	from spacy.tokens import Doc
 	nlp = import_spacy(model)
 	vocab = set(nlp.vocab.strings)
-	#print(vocab[1000:1010])
 	total_ok_corpus = 0
 	total_wrong_corpus = 0
 	# oov
@@ -44,12 +37,10 @@ def evaluate(corpus, model):
 			for token in sentence.tokens:
 				POS_refs.append(token.pos)
 				forms.append(token.form)
-			#doc = nlp(' '.join(forms))
 			doc = Doc(nlp.vocab, words=forms, spaces = [True] * len(forms))
 			doc = nlp(doc)
 			pos_result = [tok.pos_ for tok in doc]
 			form_result = [tok.text for tok in doc]
-			#is_oov = [tok.is_oov for tok in doc]
 			is_oov = [tok.text not in vocab for tok in doc]
 			total_ok_sent = 0
 			total_wrong_sent = 0
