@@ -43,7 +43,7 @@ def recup_token():
     return tokenisation
 
 def get_texte():
-    with open("../corpus/textebrut.txt", 'r', encoding='utf-8') as fichier_brut:
+    with open("../corpus/ntextebrut.txt", 'r', encoding='utf-8') as fichier_brut:
         texte_brute = fichier_brut.read()
 
         doc = nlp(texte_brute)
