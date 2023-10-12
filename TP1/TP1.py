@@ -93,8 +93,25 @@ def read_conll(path: Path ) -> Corpus :
     return Corpus(sentences)  # Retourne un objet "Corpus" contenant toutes les phrases extraites du fichier.
 
 # Fonction pour étiqueter un corpus à l'aide d'un modèle Spacy.
-def tag_corpus(corpus: Corpus, model_spacy: spacy.language) -> Corpus : 
-    pass 
+def tag_corpus_spacy(corpus: Corpus, model_spacy: spacy.language) -> Corpus : 
+    sentences = []
+    for sentences in corpus : 
+        doc = sentence_to_doc(Sentence, model_spacy)
+        # doc = def append(object:_T, /) -> None 
+        sentences.append(doc_to_sentence(doc))
+
+    return Corpus (sentences) 
+
+def sentence_to_doc(sentence : Sentence, vocab) -> SpacyDoc : 
+    words = [tok.form for tok in sentence.tokens]
+    return SpacyDoc(vocab, words=words)
+
+def doc_to_sentence(doc: SpacyDoc) -> Sentence: 
+    tokens = []
+    for tok in doc : 
+        tokens.append(Token(tok.text, tok.pos_))
+    return Sentence(tokens)
+    
 
 # Fonction pour calculer l'exactitude (accuracy) entre un corpus "gold" et un corpus "test".
 def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> float: 
@@ -110,8 +127,10 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> float:
 
 # Fonction principale qui lit un corpus "gold" à partir d'un fichier et l'affiche.
 def main():
+    modele_spacy = spacy.load("fr_core_news_sm")
     corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
-    print(corpus_gold)
+    corpus_test = tag_corpus_spacy(corpus_gold, modele_spacy)
+    print(compute_accuracy(corpus_gold, corpus_test))
 
 if __name__ == "__main__":
     main()  # Exécute la fonction principale
