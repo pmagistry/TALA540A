@@ -3,20 +3,13 @@ from typing import List, Optional
 
 @dataclass
 class Token : 
-    id :int
-    text : str
-    lemma : str
+    form : str
     pos : str
-    head : int
-    dep : str
-    misc : str
 
 @dataclass 
 class Sent :
-    text : str
     tokens : List[Token]
 
 @dataclass 
 class Corpus : 
-    text : str 
     sents : List[Sent]

@@ -1,8 +1,10 @@
-import sys, argparse, re, conllu, spacy 
-from typing import List, Optional, Tuple
-from collections import defaultdict
+import argparse, spacy 
+from pathlib import Path
+from typing import List
+
 from datastructures import *
-from spacy.tokens import Doc
+from spacy import Language as SpacyPipeline
+from spacy.tokens import Doc as SpacyDoc
 
 ###### Argparse
 def arguments() -> argparse: 
@@ -13,32 +15,58 @@ def arguments() -> argparse:
     )
     return parser.parse_args()
 
-##### Création de notre structure
+##### Read Conll 
+def read_conll(path : Path) -> Corpus : 
 
-#Gestion des espaces pour Doc
-def get_misc_space(token : None or dict)-> bool : 
-    return True if type(token)=='dict' else False 
+    sentences = []    
+    tokens = []
+    with open(path) as f:
+        for line in f:
+            line = line.strip()
+            if not line.startswith("#"):
+                if line == "":
+                    sentences.append(Sent(tokens))
+                    tokens = []
+                else:
+                    fields = line.split("\t")
+                    form, pos = fields[1], fields[3]
+                    if not "-" in fields[0]: # éviter les contractions type "du"
+                        tokens.append(Token(form, pos))
+    return Corpus(sentences)            
 
-# Création des tokens   
-def get_token(sentence : str) -> Token :
- 
-    for token in sentence : 
-        yield Token(token["id"],token["form"], token["lemma"], 
-                    token["upos"],token["head"], token["deps"],
-                    get_misc_space(token["misc"]))
- 
-# Création des phrases
-def get_sentence(data : str) -> Sent : 
+####### Création des corpus de test 
 
-    sentences = conllu.parse(data)
-    for sentence in sentences : 
-        yield Sent(sentence.metadata["text"],
-                    [token for token in get_token(sentence)])
+def sentence_to_doc(sentence: Sent, vocab) -> SpacyDoc:
+    words = [tok.form for tok in sentence.tokens]
+    return SpacyDoc(vocab, words=words)
 
-#def correct_error(posconll : str, posother : str) -> bool :
-    #correct, error = 0, 0
-    #return correct + 1, error if posconll == posother else correct, error + 1             
+def doc_to_sentence(doc: SpacyDoc) -> Sent:
+    tokens = []
+    for tok in doc:
+        tokens.append(Token(tok.text, tok.pos_))
+    return Sent(tokens)
 
+def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline ) -> Corpus:
+    sentences = []
+    for sentence in corpus.sents:
+        doc = sentence_to_doc(sentence, model_spacy.vocab)
+        doc = model_spacy(doc)
+        sentences.append(doc_to_sentence(doc))
+    return Corpus(sentences)
+
+
+####### Calcul de la précision 
+def compute_accuracy(gold_list : Corpus, test_list : Corpus) -> float:
+    correct = 0 
+    total = 0 
+    for gold_sentence, test_sentence in zip(gold_list.sents, test_list.sents) : 
+        for gold_token, test_token in zip(gold_sentence.tokens, test_sentence.tokens) : 
+            assert (gold_token.form == test_token.form)
+            total += 1
+            if gold_token.pos == test_token.pos : 
+                correct +=1
+        
+    return correct/total
 
 if __name__ == '__main__' : 
 
@@ -47,54 +75,8 @@ if __name__ == '__main__' :
     args = arguments()
 
     if args.file.endswith(".conllu") :
-        f=open(args.file)
-        data=f.read()
-        text = [text.metadata["text"] for text in conllu.parse(data)]
-        text="".join(text)
-        #Création de notre corpus
-        corpus = Corpus(text, [sentence for sentence in get_sentence(data)])
-        f.close()
-        del data # On supprime la variable pour optimiser l'espace mémoire
-
-
-    # Télchargement du modèle de langue spacy 
-    nlp = spacy.load('fr_core_news_sm')
-
-    # Gestion des espaces en français
-    # nlp = spacy.blank('fr_core_news_sm')
+        corpus_gold = read_conll(args.file)
     
-    ######## On va lancer la comparaison entre spacy et conll en liste
-    ######## de pos par phrase, on zip et on compare. 
-
-    correct=0
-    error=0
-    for sent in corpus.sents : 
-        
-        doc = nlp(sent.text)
-        posspacy = [token.pos_ for token in doc] 
-        posconll = [token.pos for token in sent.tokens]
-
-        if len(posspacy) == len(posconll) : 
-            for spacypos, conllpos in zip(posspacy,posconll) : 
-                if spacypos == conllpos : 
-                    correct += 1
-                else : 
-                    error += 1
-        elif len(posspacy) > len(posconll) : 
-            error += len(posspacy) - len(posconll)
-            for spacypos,conllpos in zip(posspacy[0:len(posconll)-1],posconll) :
-                if spacypos == conllpos : 
-                    correct += 1
-                else : 
-                    error += 1
-        elif len(posspacy) < len(posconll) : 
-            error += len(posconll) - len(posspacy)
-            for spacypos,conllpos in zip(posspacy,posconll[0:len(posspacy)-1]) :
-                if spacypos == conllpos : 
-                    correct += 1
-                else : 
-                    error += 1
-    
-    print("accuracy : ", correct/(correct+error))
-
-    
+    model_spacy = spacy.load("fr_core_news_sm")
+    corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
+    print(compute_accuracy(corpus_gold, corpus_test))
