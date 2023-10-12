@@ -38,8 +38,23 @@ def read_conll(path: Path) -> Corpus:
                         tokens.append(Token(form, tag))
     return Corpus(sentences)
 
+def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
+    words = [tok.form for tok in sentence.tokens]
+    return SpacyDoc(vocab, words=words)
+
+def doc_to_sentence(doc: SpacyDoc) -> Sentence:
+    tokens = []
+    for tok in doc:
+        tokens.append(Token(tok.text, tok.pos_))
+    return Sentence(tokens)
+
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline ) -> Corpus:
-    pass
+    sentences = []
+    for sentence in corpus.sentences:
+        doc = sentence_to_doc(sentence, model_spacy.vocab)
+        doc = model_spacy(doc)
+        sentences.append(doc_to_sentence(doc))
+    return Corpus(sentences)
 
 
 def compute_accuracy(corpus_gold: Corpus, corpus_test:Corpus) -> float:
@@ -57,8 +72,11 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test:Corpus) -> float:
 
 
 def main():
+    model_spacy = spacy.load("fr_core_news_sm")
     corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
-    print(compute_accuracy(corpus_gold, corpus_gold))
+
+    corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
+    print(compute_accuracy(corpus_gold, corpus_test))
 
 
 if __name__ == "__main__":
