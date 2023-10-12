@@ -25,6 +25,8 @@ def evaluate(corpus, model):
 	# import model from spacy
 	from spacy.tokens import Doc
 	nlp = import_spacy(model)
+	vocab = set(nlp.vocab.strings)
+	#print(vocab[1000:1010])
 	total_ok_corpus = 0
 	total_wrong_corpus = 0
 	# oov
@@ -46,8 +48,9 @@ def evaluate(corpus, model):
 			doc = Doc(nlp.vocab, words=forms, spaces = [True] * len(forms))
 			doc = nlp(doc)
 			pos_result = [tok.pos_ for tok in doc]
-			is_oov = [tok.is_oov for tok in doc]
 			form_result = [tok.text for tok in doc]
+			#is_oov = [tok.is_oov for tok in doc]
+			is_oov = [tok.text not in vocab for tok in doc]
 			total_ok_sent = 0
 			total_wrong_sent = 0
 			# oov
@@ -55,6 +58,9 @@ def evaluate(corpus, model):
 			total_oov_wrong_sent = 0
 			assert len(POS_refs) == len(pos_result)
 			for pos_ref, pos_res, tok_is_oov in list(zip(POS_refs, pos_result, is_oov)):
+				# TODO:
+				# ajouter tok_ref et tok_res dans le zip
+				#assert tok_ref == tok_res
 				if pos_ref == pos_res:
 					total_ok_sent += 1
 					if tok_is_oov:
@@ -81,7 +87,7 @@ def evaluate(corpus, model):
 	# oov
 	print("OK pos in the oov:", total_oov_ok_corpus)
 	print("Wrong pos in the oov:", total_oov_wrong_corpus)
-	print("Accuracy in the oov:", total_oov_ok_corpus / (total_oov_ok_corpus + total_oov_wrong_corpus))
+	print("Accuracy in the oov:", 0 if total_oov_ok_corpus == 0 else total_oov_ok_corpus / (total_oov_ok_corpus + total_oov_wrong_corpus))
 
 
 def main(file, model="fr_core_news_sm"):
