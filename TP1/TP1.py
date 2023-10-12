@@ -45,8 +45,6 @@ print(doc)
 
 # Correction 
 
-#importation de modules
-
 from typing import List, Union, Dict 
 from pathlib import Path 
 from dataclasses import dataclass 
@@ -55,55 +53,65 @@ from spacy import Language
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc 
 import spacy 
 
+# Définition d'une classe "Token" avec deux attributs : "form" (forme du mot) et "tag" (étiquette grammaticale).
 @dataclass
 class Token():
     form : str 
     tag : str 
 
+# Définition d'une classe "Sentence" qui contient une liste de tokens.
 @dataclass
 class Sentence():
     tokens: List[Token]
 
-
+# Définition d'une classe "Corpus" qui contient une liste de phrases (sentences).
 @dataclass
 class Corpus():
     sentences: List[Sentence]
 
-
+# Fonction pour lire un fichier au format CoNLL et retourner un objet "Corpus" contenant les données lues.
 def read_conll(path: Path ) -> Corpus : 
-    sentences = []
-    with open(path) as f: 
-        for line in f: 
-            line = line.strip()
-            if not line.startswith('#'): 
+    sentences = []  # Initialisation d'une liste vide pour stocker les phrases.
+    with open(path) as f:  # Ouverture du fichier situé au chemin spécifié dans "path".
+        tokens = []  # Initialisation d'une liste vide pour stocker les tokens de la phrase en cours.
+        for line in f:  # Parcours de chaque ligne du fichier.
+            line = line.strip()  # Suppression des espaces vides à la fin de la ligne.
+            if not line.startswith('#'):  # Vérification que la ligne n'est pas un commentaire.
 
                 if line == "": 
-                    sentences.append(sentences(tokens))
-                    tokens = []
+                    # Si la ligne est vide, cela signifie la fin d'une phrase.
+                    # On crée un objet "Sentence" avec les tokens collectés jusqu'à présent et on l'ajoute à la liste "sentences".
+                    sentences.append(Sentence(tokens))
+                    tokens = []  # Réinitialisation de la liste "tokens" pour la phrase suivante.
                 else : 
+                    # Si la ligne contient un token, on la divise en champs et on extrait la forme du mot et l'étiquette grammaticale.
                     fields = line.split("\t")
                     form, tag = fields[1], fields[3]
-                    if not tag == "_" : 
-                        tokens.append(Token(form,tag))
-    return Corpus (sentences)
+                    if not tag == "_": 
+                        # Si l'étiquette n'est pas "_", on crée un objet "Token" et on l'ajoute à la liste "tokens".
+                        tokens.append(Token(form, tag))
+    return Corpus(sentences)  # Retourne un objet "Corpus" contenant toutes les phrases extraites du fichier.
 
-def tag_corpus(corpus: Corpus,model_spacy: spacy.language) -> Corpus : 
+# Fonction pour étiqueter un corpus à l'aide d'un modèle Spacy.
+def tag_corpus(corpus: Corpus, model_spacy: spacy.language) -> Corpus : 
     pass 
-               
-def compute_accuracy(corpus_gold: Corpus, corpus_test:Corpus) -> float: 
-    nb_ok = 0
-    nb_total = 0   
+
+# Fonction pour calculer l'exactitude (accuracy) entre un corpus "gold" et un corpus "test".
+def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> float: 
+    nb_ok = 0  # Compteur pour les tokens correctement étiquetés.
+    nb_total = 0  # Compteur pour le nombre total de tokens.
     for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
         for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens): 
-            assert(token_gold.form == token_test.form )
-            if token_gold.tag == token_test.tag : 
-                nb_ok+= 1 
-            nb_total += 1 
-    return nb_ok /nb_total
+            assert(token_gold.form == token_test.form )  # Vérification que les formes des tokens correspondent.
+            if token_gold.tag == token_test.tag: 
+                nb_ok += 1  # Incrémentation du compteur si l'étiquette est correcte.
+            nb_total += 1  # Incrémentation du compteur total.
+    return nb_ok / nb_total  # Calcul de l'exactitude en divisant les tokens corrects par le nombre total de tokens.
 
-
+# Fonction principale qui lit un corpus "gold" à partir d'un fichier et l'affiche.
 def main():
     corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
-    print (corpus_gold)
+    print(corpus_gold)
 
-# if __name__ == 
+if __name__ == "__main__":
+    main()  # Exécute la fonction principale
