@@ -48,10 +48,8 @@ def evaluate(corpus, model):
 			total_oov_ok_sent = 0
 			total_oov_wrong_sent = 0
 			assert len(POS_refs) == len(pos_result)
+			assert forms == form_result
 			for pos_ref, pos_res, tok_is_oov in list(zip(POS_refs, pos_result, is_oov)):
-				# TODO:
-				# ajouter tok_ref et tok_res dans le zip
-				#assert tok_ref == tok_res
 				if pos_ref == pos_res:
 					total_ok_sent += 1
 					if tok_is_oov:
