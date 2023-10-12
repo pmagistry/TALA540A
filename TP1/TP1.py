@@ -1,3 +1,7 @@
+'''
+Étape 1 
+'''
+
 import spacy 
 
 chemin_fichier = "resultats.txt"
