@@ -6,7 +6,6 @@ from pprint import pprint
 import sys, spacy
 
 
-
 def make_corpus(file:str):
 	with open(file, "r") as f:
 		content=f.read()
@@ -15,33 +14,42 @@ def make_corpus(file:str):
 		# Création d'une liste où chaque élément est une phrase (métadonnées + analyse)
 		sents=content.split("\n\n")
 		for i in range(len(sents)-1):
+			# Initialisation phrase
+			sentence=Phrase("", "", "", [])
+			# On a une liste d'éléments par phrase (metadata + analyse Token)
 			sent_data=sents[i].split("\n")
-			# Les 3 premières lignes de chaque phrase correspondent aux metadata
-			meta=[data.split("=")[1] for data in sent_data[:3]]
-			# Initialisation d'une instance de Phrase
-			sentence=Phrase(meta[0].strip(), meta[1].strip(), meta[2].strip(), [])
-
-			for token in sent_data[3:]:
-				token_ana=token.split("\t")
-				# Permet de faire correspondre à chaque élément de la liste l'attribut associé en fonction de l'ordre/indice
-				tok=Token(*token_ana)
-				sentence.analyse.append(tok)
+			meta=[]
+			for data in sent_data:
+				# Les metadata commencent par un #
+				if data.startswith("#"):
+					meta.append(data)
+					# Initialisation d'une instance de Phrase
+					for d in meta : 
+						if "sent_id" in d:
+							sentence.sent_id=d.split(" = ")[1]
+						if "text" in d:
+							sentence.text=d.split(" = ")[1]
+				else:
+					token_ana=data.split("\t")
+					# Permet de faire correspondre à chaque élément de la liste l'attribut associé en fonction de l'ordre/indice
+					tok=Token(*token_ana)
+					sentence.analyse.append(tok)
 			corpus.liste_sent.append(sentence)
 	return corpus
 
-def compar_listes(liste_1 : list, liste_2 : list):
+def compar_listes(tokens_gold : list, tokens_test : list):
 	compt_false=0
 	compt_true=0
-	min_length=min(len(pos_list_corp), len(pos_list_spacy))
+	min_length=min(len(tokens_gold), len(tokens_test))
 	for i in range(min_length):
-		if pos_list_corp[i]==pos_list_spacy[i]:
+		if tokens_gold[i]==tokens_test[i]:
 			compt_true+=1
 		else:
 			compt_false+=1
-	if len(liste_1) > min_length:
-		compt_false += len(liste_1)-min_length
-	elif len(liste_2) > min_length:
-		compt_false += len(liste_2)-min_length
+	if len(tokens_gold) > min_length:
+		compt_false += len(tokens_gold)-min_length
+	elif len(tokens_test) > min_length:
+		compt_false += len(tokens_test)-min_length
 	return compt_true, compt_false
 
 if __name__=="__main__":

@@ -26,7 +26,7 @@ class Token:
 class Phrase:
     sent_id: str
     text: str
-    translit: str
+    translit: Optional[str]
     analyse: List[Token]
     
 
