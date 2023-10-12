@@ -17,20 +17,20 @@ def make_corpus(file_name:str):
     """
     fonction pour contruire l'objet Corpus à partir du fichier file_name
     """
-    type_corpus = file_name.split('-')[2].split('.')[0]
+    type_corpus = file_name.split('/')[1].split('.')[0]
 
     # initialisation d'une instance de Corpus
     corpus = Corpus(type=type_corpus, sentences=[])
 
     with open(file_name, 'r') as f:
-        next(f) # pour ignorer la première ligne du fichier
+        # next(f) # pour ignorer la première ligne du fichier
         content = f.read()
 
     sents_info = content[1:].split("\n\n") # contient les metadata + l'analyse de chaque phrase
     # print(sents_info)
     for i in range(len(sents_info) - 1):
         sent_data = sents_info[i].split('\n')
-        metadata = [data.split("=")[1].strip() for data in sent_data[:2]]
+        metadata = [data.split("=")[1].strip() for data in sent_data if (data.startswith('# sent_id') or data.startswith('# text'))]
         
         # initialisation d'une instance de Sentence
         sentence = Sentence(id=metadata[0], text=metadata[1], tokens=[])

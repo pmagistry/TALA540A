@@ -19,14 +19,17 @@ import corpus
 
 # calcul de la précision : pourcentage d'élements correctement prédits par rapport au nombre total d'élément prédits
 def precision(reference_list, predicted_list):
-    correct_predicted = sum(1 for element in predicted_list if element in reference_list)
+    if len(predicted_list) == len(reference_list):
+        correct_predicted = sum(1 for i in range(len(predicted_list)) if predicted_list[i] == reference_list[i])
+    else:
+        correct_predicted = sum(1 for element in predicted_list if element in reference_list) # pour la tokenisation
     total_predicted = len(predicted_list)
     accuracy = correct_predicted / total_predicted
     return accuracy
 
 # calcul du rappel : pourcentage d'élément correctement prédits par rapport au nombre total d'élément de référence
 def recall(reference_list, predicted_list):
-    correct_predicted = sum(1 for element in predicted_list if element in reference_list)
+    correct_predicted = sum(1 for i in range(len(predicted_list)) if predicted_list[i] == reference_list[i])
     total_predicted = len(reference_list)
     recall = correct_predicted / total_predicted
     return recall
@@ -52,7 +55,6 @@ def spacy_tokenisation_evaluation(spacy_model, corpus):
 
     for sentence in corpus.sentences:
         list_token_ref = [token.form for token in sentence.tokens]
-        
         doc = nlp(sentence.text)
         list_token_spacy = [token.text for token in doc]
 
@@ -75,9 +77,9 @@ def spacy_pos_tagging_evaluation(spacy_model, corpus):
         doc = Doc(nlp.vocab, words=tokens)
         
         list_pos_spacy = [token.pos_ for token in nlp(doc)]
-        
-        # accuracy = precision(reference_list=list_pos_ref, predicted_list=list_pos_spacy)
-        accuracy = f_score(reference_list=list_pos_ref, predicted_list=list_pos_spacy)
+
+        accuracy = precision(reference_list=list_pos_ref, predicted_list=list_pos_spacy)
+        # accuracy = f_score(reference_list=list_pos_ref, predicted_list=list_pos_spacy)
         dict_acc.update({sentence.id: accuracy})
         sum_acc += accuracy
     acc_mean = sum_acc/len(corpus.sentences)
@@ -85,8 +87,8 @@ def spacy_pos_tagging_evaluation(spacy_model, corpus):
 
 if __name__ == "__main__":
     corpus = corpus.make_corpus(sys.argv[1])
-    # spacy_model = "fr_core_news_sm"
-    spacy_model = "ja_core_news_sm"
+    spacy_model = "fr_core_news_sm"
+    # spacy_model = "ja_core_news_sm"
 
-    # spacy_tokenisation_evaluation(spacy_model=spacy_model, corpus=corpus)
+    spacy_tokenisation_evaluation(spacy_model=spacy_model, corpus=corpus)
     spacy_pos_tagging_evaluation(spacy_model=spacy_model, corpus=corpus)
