@@ -31,17 +31,19 @@ def make_corpus(file_name:str):
     for i in range(len(sents_info) - 1):
         sent_data = sents_info[i].split('\n')
         metadata = [data.split("=")[1].strip() for data in sent_data if (data.startswith('# sent_id') or data.startswith('# text'))]
+        analyse = [data for data in sent_data if not data.startswith('#')] 
         
         # initialisation d'une instance de Sentence
         sentence = Sentence(id=metadata[0], text=metadata[1], tokens=[])
 
-        for token in sent_data[2:]:
+        for token in analyse:
             token_data = token.split('\t')
             
             if len(token_data) == 10:
+                if not "_" in token_data[3]:
                 # initialisation d'une instance de Token
-                token = Token(*token_data) # syntaxe pour faire correspondre chaque attribut de Token à chaque élément de la liste token_data
-                sentence.tokens.append(token)
+                    token = Token(*token_data) # syntaxe pour faire correspondre chaque attribut de Token à chaque élément de la liste token_data
+                    sentence.tokens.append(token)
         
         corpus.sentences.append(sentence)
     return corpus
