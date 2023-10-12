@@ -6,7 +6,7 @@ from pprint import pprint
 import sys, spacy
 
 
-def make_corpus(file:str):
+def make_corpus_conll(file:str):
 	with open(file, "r") as f:
 		content=f.read()
 		# Initialisation d'une instance de Corpus
@@ -15,7 +15,7 @@ def make_corpus(file:str):
 		sents=content.split("\n\n")
 		for i in range(len(sents)-1):
 			# Initialisation phrase
-			sentence=Phrase("", "", "", [])
+			sentence=Phrase("", "", [])
 			# On a une liste d'éléments par phrase (metadata + analyse Token)
 			sent_data=sents[i].split("\n")
 			meta=[]
@@ -33,39 +33,44 @@ def make_corpus(file:str):
 					token_ana=data.split("\t")
 					# Permet de faire correspondre à chaque élément de la liste l'attribut associé en fonction de l'ordre/indice
 					tok=Token(*token_ana)
-					sentence.analyse.append(tok)
+					# éviter les contractions type "du"
+					if not "-" in token_ana[0]:
+						sentence.analyse.append(tok)
 			corpus.liste_sent.append(sentence)
 	return corpus
 
-def compar_listes(tokens_gold : list, tokens_test : list):
-	compt_false=0
+def make_corpus_spacy(corpus_gold : Corpus, spacy_model) -> Corpus :
+	corpus_spacy=Corpus([])
+	nlp=spacy.load(spacy_model)
+	for sent in corpus_gold.liste_sent:
+		sent_spacy=Phrase("","",[])
+		doc=nlp(sent.text)
+		sent_spacy.text=sent.text
+		sent_spacy.sent_id=sent.sent_id
+		compt=1
+		for tok in doc:
+			tok_spacy=Token(compt, tok.text, tok.lemma_, tok.pos_, tok.tag_, "", "", "", "", "")
+			compt+=1
+			sent_spacy.analyse.append(tok_spacy)
+		corpus_spacy.liste_sent.append(sent_spacy)
+	return corpus_spacy
+
+
+def compar_listes(corpus_gold : Corpus, corpus_test : Corpus):
 	compt_true=0
-	min_length=min(len(tokens_gold), len(tokens_test))
-	for i in range(min_length):
-		if tokens_gold[i]==tokens_test[i]:
-			compt_true+=1
-		else:
-			compt_false+=1
-	if len(tokens_gold) > min_length:
-		compt_false += len(tokens_gold)-min_length
-	elif len(tokens_test) > min_length:
-		compt_false += len(tokens_test)-min_length
-	return compt_true, compt_false
+	compt_tot=0
+	for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
+		for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
+			assert(token_gold.forme == token_test.forme)
+			if token_gold.upos == token_test.upos:
+				compt_true += 1
+			compt_tot += 1
+	return compt_true / compt_tot
 
 if __name__=="__main__":
 	corpus=sys.argv[1]
 	model=sys.argv[2]
-	nlp=spacy.load(model)
-	c=make_corpus(corpus)
-	dico_acc={}
-	sum_acc=0
-	for phrase in c.liste_sent:
-		doc=nlp(phrase.text)
-		pos_list_spacy=[token.pos_ for token in doc]
-		pos_list_corp=[tok.upos for tok in phrase.analyse]
-		true, false = compar_listes(pos_list_corp, pos_list_spacy)
-		acc=true/(true + false)
-		dico_acc.update({phrase.sent_id:acc})
-		sum_acc+=acc
-	moy_acc=sum_acc/len(c.liste_sent)
-	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {moy_acc}")
+	c_gold=make_corpus_conll(corpus)
+	c_test=make_corpus_spacy(c_gold, model)
+	acc=compar_listes(c_gold, c_test)
+	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc}")

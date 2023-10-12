@@ -14,7 +14,7 @@ class Token:
     forme: str
     lemme: str
     upos: str
-    xpos: str    
+    xpos: Optional[str]
     feats: Optional[str]
     head: Optional[int] = None
     deprel: Optional[str] = None
@@ -26,7 +26,6 @@ class Token:
 class Phrase:
     sent_id: str
     text: str
-    translit: Optional[str]
     analyse: List[Token]
     
 
