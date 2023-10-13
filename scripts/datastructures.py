@@ -5,6 +5,7 @@ from typing import List, Optional
 class Token : 
     form : str
     pos : str
+    is_oov: bool
 
 @dataclass 
 class Sent :
