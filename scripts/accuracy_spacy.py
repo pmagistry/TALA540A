@@ -4,6 +4,7 @@
 from datastructures_corpus import Corpus, Phrase, Token
 from pprint import pprint
 import sys, spacy
+from spacy.tokens import Doc
 
 
 def make_corpus_conll(file:str):
@@ -44,15 +45,18 @@ def make_corpus_spacy(corpus_gold : Corpus, spacy_model) -> Corpus :
 	nlp=spacy.load(spacy_model)
 	for sent in corpus_gold.liste_sent:
 		sent_spacy=Phrase("","",[])
-		doc=nlp(sent.text)
 		sent_spacy.text=sent.text
 		sent_spacy.sent_id=sent.sent_id
 		compt=1
-		for tok in doc:
+		# permet de prendre en compte les formes décontractées (de le)
+		doc=Doc(nlp.vocab, words=[t.forme for t in sent.analyse])
+		for tok in nlp(doc):
+			# print(tok.pos_)
 			tok_spacy=Token(compt, tok.text, tok.lemma_, tok.pos_, tok.tag_, "", "", "", "", "")
 			compt+=1
 			sent_spacy.analyse.append(tok_spacy)
 		corpus_spacy.liste_sent.append(sent_spacy)
+	print(tok.pos_)
 	return corpus_spacy
 
 
@@ -61,16 +65,23 @@ def compar_listes(corpus_gold : Corpus, corpus_test : Corpus):
 	compt_tot=0
 	for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
 		for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
+			# print(token_gold.forme, token_test.forme)
 			assert(token_gold.forme == token_test.forme)
 			if token_gold.upos == token_test.upos:
 				compt_true += 1
 			compt_tot += 1
+	# print(compt_true, compt_tot)
 	return compt_true / compt_tot
 
 if __name__=="__main__":
 	corpus=sys.argv[1]
 	model=sys.argv[2]
+	# nlp=spacy.load(model)
+	# doc=nlp("Bonjour")
+	# print(f"test : {type(doc)}")
 	c_gold=make_corpus_conll(corpus)
 	c_test=make_corpus_spacy(c_gold, model)
+	# print(c_gold.liste_sent[0].analyse[0])
+	# print(c_test.liste_sent[0].analyse[0])
 	acc=compar_listes(c_gold, c_test)
 	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc}")
