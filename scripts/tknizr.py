@@ -1,10 +1,13 @@
-import argparse, spacy 
+import argparse
 from pathlib import Path
-from typing import List, Set, Dict, Tuple
+from typing import Dict, List, Set, Tuple
 
+import spacy
 from datastructures import *
+from sklearn.metrics import confusion_matrix
 from spacy import Language as SpacyPipeline
 from spacy.tokens import Doc as SpacyDoc
+
 
 ###### Argparse
 def arguments() -> argparse: 
@@ -64,14 +67,22 @@ def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline ) -> Corpus:
     return Corpus(sentences)
 
 ####### Calcul de la précision 
-def compute_accuracy(gold_list : Corpus, test_list : Corpus) -> float:
+def compute_accuracy(gold_list : Corpus, test_list : Corpus, confusionMatrix : Optional[bool] = False) -> float:
     correct = 0 
     total = 0 
     oov_total = 0
     oov_ok =0
+
+    if confusionMatrix :
+        y_gold = []
+        y_pred = [] 
+            
     for gold_sentence, test_sentence in zip(gold_list.sents, test_list.sents) : 
         for gold_token, test_token in zip(gold_sentence.tokens, test_sentence.tokens) : 
             assert (gold_token.form == test_token.form)
+            if confusionMatrix : 
+                y_gold.append(gold_token.pos)
+                y_pred.append(test_token.pos)
             total += 1
             if gold_token.pos == test_token.pos : 
                 correct +=1
@@ -79,8 +90,12 @@ def compute_accuracy(gold_list : Corpus, test_list : Corpus) -> float:
                 oov_total += 1
                 if gold_token.pos == test_token.pos:
                     oov_ok += 1
-
+    
+    if confusionMatrix : 
+        print(confusion_matrix(y_gold, y_pred))
+    
     return correct / total, oov_ok / oov_total
+
 
 if __name__ == '__main__' : 
 
@@ -91,7 +106,6 @@ if __name__ == '__main__' :
         if args.ref.endswith(".conllu") : 
             corpus_ref, vocab_ref = read_conll(args.ref)
             
-    print(len(vocab_ref))
     if args.gold.endswith(".conllu") :
 
         corpus_gold, vocab_gold = read_conll(args.gold, vocab_ref)
@@ -99,4 +113,6 @@ if __name__ == '__main__' :
 
     model_spacy = spacy.load("fr_core_news_sm")
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    print(compute_accuracy(corpus_gold, corpus_test))
+    accur, accur_oov = compute_accuracy(corpus_gold, corpus_test, confusionMatrix=True)
+
+    print(f"Précision du pos tagging : {round(accur, 2)}\nPrécision sur OOV : {round(accur_oov, 2)}")
