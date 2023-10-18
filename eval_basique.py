@@ -94,7 +94,9 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
-    corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
+    corpus_train = read_conll("fr_sequoia-ud-train.conllu")
+    vocab_train = build_vocabulaire(corpus_train)
+    corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
     print(compute_accuracy(corpus_gold, corpus_test))
