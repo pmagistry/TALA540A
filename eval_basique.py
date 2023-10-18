@@ -1,3 +1,11 @@
+
+'''
+Vocab a creer à partir du corpus train
+A partir de là , voir si token rencontrée out of domain OOV
+A compléter
+
+'''
+
 from typing import List, Union, Dict
 from pathlib import Path
 from dataclasses import dataclass
