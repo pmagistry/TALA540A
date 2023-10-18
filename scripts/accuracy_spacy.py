@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from datastructures_corpus import Corpus, Phrase, Token
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
 from typing import Optional, Set
 from pprint import pprint
 import sys, spacy
@@ -67,15 +70,25 @@ def make_corpus_spacy(corpus_gold : Corpus, spacy_model, vocabulaire: Optional[S
 	return corpus_spacy
 
 
-def compar_listes(corpus_gold : Corpus, corpus_test : Corpus):
+def compar_listes(corpus_gold : Corpus, corpus_test : Corpus, conf_matrix: Optional[bool]=False):
 	compt_true=0
 	compt_tot=0
+	pos_gold=[]
+	pos_spacy=[]
 	for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
 		for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
 			assert(token_gold.forme == token_test.forme)
+			pos_gold.append(token_gold.upos)
+			pos_spacy.append(token_test.upos)
 			if token_gold.upos == token_test.upos:
 				compt_true += 1
 			compt_tot += 1
+	# print(pos_gold)
+	if conf_matrix:
+		sns.heatmap(confusion_matrix(pos_gold, pos_spacy),annot=True, cmap="Blues", xticklabels=list(set(pos_gold)), yticklabels=list(set(pos_gold)))
+		plt.xlabel("POS spacy")
+		plt.ylabel("POS corpus")
+		plt.show()
 	return compt_true / compt_tot
 
 def make_vocab(file_train : str):
@@ -103,7 +116,9 @@ if __name__=="__main__":
 	
 	# Affichage des tokens oov
 	for sent in c_gold.liste_sent:
-		print(tok for tok in sent.analyse if tok.is_oov==True)
+		for tok in sent.analyse: 
+			if tok.is_oov==True:
+				print(tok)
 	
-	acc=compar_listes(c_gold, c_test)
+	acc=compar_listes(c_gold, c_test, True)
 	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc}")
