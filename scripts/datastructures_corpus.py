@@ -14,12 +14,13 @@ class Token:
     forme: str
     lemme: str
     upos: str
-    xpos: Optional[str]
-    feats: Optional[str]
-    head: Optional[int] = None
-    deprel: Optional[str] = None
-    deps: Optional[str] = None
-    misc: Optional[str] = None
+    xpos: str
+    feats: str
+    head: int 
+    deprel: str
+    deps: str
+    misc: str
+    is_oov: bool
 
 
 @dataclass

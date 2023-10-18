@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from datastructures_corpus import Corpus, Phrase, Token
+from typing import Optional, Set
 from pprint import pprint
 import sys, spacy
 from spacy.tokens import Doc
 
 
-def make_corpus_conll(file:str):
+def make_corpus_conll(file:str, vocabulaire: Optional[Set[str]]=None):
 	with open(file, "r") as f:
 		content=f.read()
 		# Initialisation d'une instance de Corpus
@@ -32,15 +33,18 @@ def make_corpus_conll(file:str):
 							sentence.text=d.split(" = ")[1]
 				else:
 					token_ana=data.split("\t")
-					# Permet de faire correspondre à chaque élément de la liste l'attribut associé en fonction de l'ordre/indice
-					tok=Token(*token_ana)
 					# éviter les contractions type "du"
 					if not "-" in token_ana[0]:
-						sentence.analyse.append(tok)
+						if vocabulaire is None:
+							token_ana.append(True)
+						else:
+							token_ana.append(not token_ana[1] in vocabulaire)
+						# Permet de faire correspondre à chaque élément de la liste l'attribut associé en fonction de l'ordre/indice
+						sentence.analyse.append(Token(*token_ana))
 			corpus.liste_sent.append(sentence)
 	return corpus
 
-def make_corpus_spacy(corpus_gold : Corpus, spacy_model) -> Corpus :
+def make_corpus_spacy(corpus_gold : Corpus, spacy_model, vocabulaire: Optional[Set[str]]=None) -> Corpus :
 	corpus_spacy=Corpus([])
 	nlp=spacy.load(spacy_model)
 	for sent in corpus_gold.liste_sent:
@@ -52,11 +56,14 @@ def make_corpus_spacy(corpus_gold : Corpus, spacy_model) -> Corpus :
 		doc=Doc(nlp.vocab, words=[t.forme for t in sent.analyse])
 		for tok in nlp(doc):
 			# print(tok.pos_)
-			tok_spacy=Token(compt, tok.text, tok.lemma_, tok.pos_, tok.tag_, "", "", "", "", "")
+			if vocabulaire is None:
+				tok_spacy=Token(compt, tok.text, tok.lemma_, tok.pos_, tok.tag_, "", "", "", "", "", True)
+			else:
+				is_oov=not tok.text in vocabulaire
+				tok_spacy=Token(compt, tok.text, tok.lemma_, tok.pos_, tok.tag_, "", "", "", "", "", is_oov)
 			compt+=1
 			sent_spacy.analyse.append(tok_spacy)
 		corpus_spacy.liste_sent.append(sent_spacy)
-	print(tok.pos_)
 	return corpus_spacy
 
 
@@ -65,23 +72,38 @@ def compar_listes(corpus_gold : Corpus, corpus_test : Corpus):
 	compt_tot=0
 	for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
 		for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
-			# print(token_gold.forme, token_test.forme)
 			assert(token_gold.forme == token_test.forme)
 			if token_gold.upos == token_test.upos:
 				compt_true += 1
 			compt_tot += 1
-	# print(compt_true, compt_tot)
 	return compt_true / compt_tot
 
+def make_vocab(file_train : str):
+	vocab=set()
+	with open(file_train) as train:
+		for line in train:
+			if not line.startswith("#") and line != "\n":
+				tok=line.split("\t")[1]
+				vocab.add(tok)
+	return vocab
+
 if __name__=="__main__":
-	corpus=sys.argv[1]
-	model=sys.argv[2]
-	# nlp=spacy.load(model)
-	# doc=nlp("Bonjour")
-	# print(f"test : {type(doc)}")
-	c_gold=make_corpus_conll(corpus)
-	c_test=make_corpus_spacy(c_gold, model)
-	# print(c_gold.liste_sent[0].analyse[0])
-	# print(c_test.liste_sent[0].analyse[0])
+	# corpus train utilisé pour faire le vocabulaire
+	corpus_train=sys.argv[1]
+
+	corpus_test=sys.argv[2]
+	model=sys.argv[3]
+	# Création du vocabulaire à partir du corpus train
+	vocab=make_vocab(corpus_train)
+
+	# Création du Corpus à partir du corpus de test
+	c_gold=make_corpus_conll(corpus_test, vocab)
+	# Création du Corpus spacy à partir du corpus gold
+	c_test=make_corpus_spacy(c_gold, model, vocab)
+	
+	# Affichage des tokens oov
+	for sent in c_gold.liste_sent:
+		print(tok for tok in sent.analyse if tok.is_oov==True)
+	
 	acc=compar_listes(c_gold, c_test)
 	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc}")
