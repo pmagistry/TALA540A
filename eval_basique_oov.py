@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Correction du 12.10 (et début oov)
+Correction du 12.10
+18.10 : ajout pr distinguer les OOV
 """
 
 from typing import List, Union, Dict
@@ -12,6 +13,7 @@ import spacy
 from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 
+
 @dataclass
 class Token():
     #id : int
@@ -19,6 +21,7 @@ class Token():
     #lemme : int
     #upos : int
     tag : str
+    is_oov : bool
 
 @dataclass
 class Sentence():
@@ -30,7 +33,7 @@ class Sentence():
 class Corpus():
     sentences : List[Sentence]
 
-def read_conll(path: Path) -> Corpus:
+def read_conll(path: Path, vocab) -> Corpus:
     sentences = []
     tokens = []
     with open(path) as f:
@@ -45,7 +48,12 @@ def read_conll(path: Path) -> Corpus:
                     fields = line.split("\t")
                     form, tag = fields[1], fields[3]
                     if not "-" in fields[0]: # Eviter les contractions type "du"
-                        tokens.append(Token(form, tag))
+                        if vocab is None:
+                            is_oov = True
+                        else:
+                            is_oov = not form in vocab
+                        tokens.append(Token(form, tag, is_oov))
+
     return Corpus(sentences)
 
 def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
@@ -54,8 +62,8 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 
 def doc_to_sentence(doc: SpacyDoc) -> Sentence:
     tokens = []
-    for tok in doc:
-        tokens.append(Token(tok.text, tok.pos_))
+    for tok, origin_token in doc:
+        tokens.append(Token(tok.text, tok.pos_, is_oov = origin_token.is_oov))
     return Sentence(tokens)
 
 def tag_corpus(corpus: Corpus, model_spacy: SpacyPipeline ) -> Corpus:
@@ -80,7 +88,8 @@ def sequoia_voc(train_path: Path) -> set:
 def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, sequoia_train_vocab: set) -> float:
     nb_ok = 0
     nb_total = 0
-    nb_oov = 0
+    oov_nb = 0
+    oov_total = 0
     for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
         for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
             assert(token_gold.form == token_test.form)
@@ -89,30 +98,23 @@ def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, sequoia_
             nb_total += 1
 
             # Vérifie si le token est OOV (hors du vocabulaire Sequoia)
-            if token_test.form not in sequoia_train_vocab:
-                nb_oov += 1
+            if token_test.is_oov or token_test.form not in sequoia_train_vocab:
+                oov_total += 1
+                if token_gold.tag == token_test.tag:
+                    oov_nb += 1
 
-    accuracy = nb_ok / nb_total
-    accuracy_percentage = accuracy * 100
-    return accuracy, accuracy_percentage, nb_oov
+    #accuracy = nb_ok / nb_total
+    oov_accuracy = oov_nb / oov_total if oov_total > 0 else 0.0
+    return oov_accuracy
     
-'''def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> float:
-    nb_ok = 0
-    nb_total = 0
-    for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            assert(token_gold.form == token_test.form)
-            if token_gold.tag == token_test.tag:
-                nb_ok += 1
-            nb_total += 1
-        return nb_ok / nb_total '''
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
-    corpus_gold = read_conll("../corpus/fr_sequoia-ud-test.conllu")
+    vocab = sequoia_voc("../corpus/fr_sequoia-ud-train.conllu")
+    corpus_gold = read_conll("../corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
     corpus_test = tag_corpus(corpus_gold, model_spacy)
 
-    accuracy = compute_accuracy(corpus_gold, corpus_test)
+    accuracy = compute_accuracy_with_oov(corpus_gold, corpus_test)
     acc_pourcentage = accuracy * 100
     print(f'Accuracy : {acc_pourcentage:.2f}%')
 
