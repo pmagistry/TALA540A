@@ -6,6 +6,8 @@ from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 import spacy
 
+import timeit
+
 @dataclass 
 class Token:
     form: str
@@ -20,33 +22,45 @@ class Sentence:
 class Corpus:
     sentences: List[Sentence]
 
-
-def read_conll(path: Path, vocabulaire: Optional[Set[str]]=None ) -> Corpus:
-    sentences = []    
-    tokens = []
+def get_vocab(path:Path)-> Set[str]:
+    vocabulaire = set()
     with open(path) as f:
         for line in f:
             line = line.strip()
+            if not line.startswith("#") and not line == "":
+                fields = line.split("\t")
+                if fields[0] != "-":
+                    vocabulaire.add(fields[1])
+    return vocabulaire
+
+
+def read_conll(path: Path, vocabulaire: Optional[Set[str]]=None ) -> Corpus:
+    sentences = []    
+    tokens = []#objet token
+    with open(path) as f:
+        for line in f:
+            line = line.strip()# retire les espaces debut et fin
             if not line.startswith("#"):
                 
-                if line == "":
+                if line == "":# si la ligne est vide = fin de phrase
                     sentences.append(Sentence(tokens))
-                    tokens = []
+                    tokens = []#formes, tag et oov, de nouveau vide pour la nouvelle phrase
                 else:
                     fields = line.split("\t")
-                    form, tag = fields[1], fields[3]
-                    if not "-" in fields[0]: # éviter les contractions type "du"
+                    if not "-" in fields[0]:  # éviter les contractions type "du"
+                        form, tag = fields[1], fields[3]
                         if vocabulaire is None:
                             is_oov=True
                         else:
                             is_oov = not form in vocabulaire
                         tokens.append(Token(form, tag, is_oov ))
+    #print(Corpus(sentences))
     return Corpus(sentences)
-
+# création de doc ? pour avoir des .token
 def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
     words = [tok.form for tok in sentence.tokens]
     return SpacyDoc(vocab, words=words)
-
+#il fait l'inverse, on prend un doc pour en faire une phrase, prise en cpt de tokenisation
 def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
@@ -85,14 +99,17 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test:Corpus) -> float:
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
-    corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
+    vocab_train = get_vocab("fr_sequoia-ud-train.conllu")
+    corpus_gold = read_conll("fr_sequoia-ud-test.conllu",vocabulaire=vocab_train)
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
     print(compute_accuracy(corpus_gold, corpus_test))
+    #ajouter timeit par là
 
 
 if __name__ == "__main__":
-    main()
+    time=timeit.timeit(main,number=1)
+    print(time)
 
 
 
