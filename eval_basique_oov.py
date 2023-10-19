@@ -62,9 +62,10 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 
 def doc_to_sentence(doc: SpacyDoc) -> Sentence:
     tokens = []
-    for tok, origin_token in doc:
-        tokens.append(Token(tok.text, tok.pos_, is_oov = origin_token.is_oov))
+    for token in doc:
+        tokens.append(Token(token.text, token.pos_, is_oov=token.is_oov))
     return Sentence(tokens)
+
 
 def tag_corpus(corpus: Corpus, model_spacy: SpacyPipeline ) -> Corpus:
     sentences = []
@@ -85,7 +86,7 @@ def sequoia_voc(train_path: Path) -> set:
                 vocabulary.add(word)
     return vocabulary
 
-def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, sequoia_train_vocab: set) -> float:
+def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, vocab: set) -> float:
     nb_ok = 0
     nb_total = 0
     oov_nb = 0
@@ -98,7 +99,7 @@ def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, sequoia_
             nb_total += 1
 
             # Vérifie si le token est OOV (hors du vocabulaire Sequoia)
-            if token_test.is_oov or token_test.form not in sequoia_train_vocab:
+            if token_test.is_oov or token_test.form not in vocab:
                 oov_total += 1
                 if token_gold.tag == token_test.tag:
                     oov_nb += 1
@@ -114,7 +115,7 @@ def main():
     corpus_gold = read_conll("./corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
     corpus_test = tag_corpus(corpus_gold, model_spacy)
 
-    accuracy = compute_accuracy_with_oov(corpus_gold, corpus_test)
+    accuracy = compute_accuracy_with_oov(corpus_gold, corpus_test, vocab)
     acc_pourcentage = accuracy * 100
     print(f'Accuracy : {acc_pourcentage:.2f}%')
 
