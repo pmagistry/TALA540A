@@ -39,6 +39,7 @@ def read_conll(path: Path) -> Corpus:
     return Corpus(sentences)
 
 def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
+    # fonction qui permet 
     words = [tok.form for tok in sentence.tokens]
     return SpacyDoc(vocab, words=words)
 
@@ -68,17 +69,15 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test:Corpus) -> float:
             nb_total += 1
     return nb_ok / nb_total
 
-
-
-
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
     corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    print(compute_accuracy(corpus_gold, corpus_test))
 
-
+    accuracy = compute_accuracy(corpus_gold, corpus_test)
+    print(f"Exactitude : {accuracy * 100:.2f}%")  # Affichage de l'exactitude en pourcentage avec deux décimales.
+   
 if __name__ == "__main__":
     main()
 
