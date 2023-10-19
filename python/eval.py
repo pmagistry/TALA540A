@@ -6,11 +6,13 @@ import argparse
 import sys
 import re
 
+from sklearn.metrics import confusion_matrix
+
 
 def import_spacy(model):
 	# Spacy imports
 	import spacy
-	from spacy.tokenizer import Tokenizer
+	#from spacy.tokenizer import Tokenizer
 
 	module = __import__(model, fromlist=[model])
 	nlp = spacy.load(model)
@@ -25,6 +27,10 @@ def evaluate(corpus, model):
 	# oov
 	total_oov_ok_corpus = 0
 	total_oov_wrong_corpus = 0
+
+	# for confusion matrux
+	y_true = []
+	y_pred = []
 	for document in corpus.documents:
 		total_ok_doc = 0
 		total_wrong_doc = 0
@@ -58,6 +64,8 @@ def evaluate(corpus, model):
 					total_wrong_sent += 1
 					if tok_is_oov:
 						total_oov_wrong_sent += 1
+				y_true.append(pos_ref)
+				y_pred.append(pos_res)
 			total_ok_doc += total_ok_sent
 			total_wrong_doc += total_wrong_sent
 			# oov
@@ -78,6 +86,20 @@ def evaluate(corpus, model):
 	print("Wrong pos in the oov:", total_oov_wrong_corpus)
 	print("Accuracy in the oov:", 0 if total_oov_ok_corpus == 0 else total_oov_ok_corpus / (total_oov_ok_corpus + total_oov_wrong_corpus))
 
+	cf_matrix(y_true, y_pred)
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+def cf_matrix(y_true, y_pred):
+	cf = confusion_matrix(y_true, y_pred)
+	print(cf)
+
+	plt.figure(figsize=(8, 6))
+	sns.heatmap(cf, annot=True, cmap="Blues")
+	plt.xlabel("Expected Labels", fontsize=14)
+	plt.ylabel("Predicted Labels", fontsize=14)
+
+	plt.show()
 
 def main(file, model="fr_core_news_sm"):
 	corpus = conll.conll_to_corpus(file)
