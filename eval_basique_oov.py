@@ -110,8 +110,8 @@ def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, sequoia_
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
-    vocab = sequoia_voc("../corpus/fr_sequoia-ud-train.conllu")
-    corpus_gold = read_conll("../corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
+    vocab = sequoia_voc("./corpus/fr_sequoia-ud-train.conllu")
+    corpus_gold = read_conll("./corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
     corpus_test = tag_corpus(corpus_gold, model_spacy)
 
     accuracy = compute_accuracy_with_oov(corpus_gold, corpus_test)
