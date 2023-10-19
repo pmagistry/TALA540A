@@ -8,6 +8,7 @@ import spacy
 
 from pyJoules.energy_meter import measure_energy
 
+from sklearn.metrics import classification_report
 
 @dataclass
 class Token:
@@ -93,6 +94,10 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
 
     return nb_ok / nb_total, oov_ok / oov_total
 
+def print_report(corpus_gold: Corpus, corpus_test: Corpus):
+    ref = [tok.tag for sent in corpus_test.sentences for tok in sent.tokens]
+    test = [tok.tag for sent in corpus_gold.sentences for tok in sent.tokens]
+    print(classification_report(ref, test))
 
 def main():
     corpus_train = read_conll("fr_sequoia-ud-train.conllu")
@@ -103,6 +108,7 @@ def main():
         corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
         print(compute_accuracy(corpus_gold, corpus_test))
+        print_report(corpus_gold, corpus_test)
 
 
 if __name__ == "__main__":
