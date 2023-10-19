@@ -73,6 +73,8 @@ def make_corpus_spacy(corpus_gold : Corpus, spacy_model, vocabulaire: Optional[S
 def compar_listes(corpus_gold : Corpus, corpus_test : Corpus, conf_matrix: Optional[bool]=False):
 	compt_true=0
 	compt_tot=0
+	oov_ok=0
+	oov_total=0
 	pos_gold=[]
 	pos_spacy=[]
 	for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
@@ -83,13 +85,17 @@ def compar_listes(corpus_gold : Corpus, corpus_test : Corpus, conf_matrix: Optio
 			if token_gold.upos == token_test.upos:
 				compt_true += 1
 			compt_tot += 1
+			if token_gold.is_oov:
+				oov_total+=1
+				if token_gold.upos == token_test.upos:
+					oov_ok+=1
 	# print(pos_gold)
 	if conf_matrix:
 		sns.heatmap(confusion_matrix(pos_gold, pos_spacy),annot=True, cmap="Blues", xticklabels=list(set(pos_gold)), yticklabels=list(set(pos_gold)))
 		plt.xlabel("POS spacy")
 		plt.ylabel("POS corpus")
 		plt.show()
-	return compt_true / compt_tot
+	return compt_true / compt_tot, oov_ok/oov_total
 
 def make_vocab(file_train : str):
 	vocab=set()
@@ -115,10 +121,12 @@ if __name__=="__main__":
 	c_test=make_corpus_spacy(c_gold, model, vocab)
 	
 	# Affichage des tokens oov
-	for sent in c_gold.liste_sent:
-		for tok in sent.analyse: 
-			if tok.is_oov==True:
-				print(tok)
+	# for sent in c_gold.liste_sent:
+	# 	for tok in sent.analyse: 
+	# 		if tok.is_oov==True:
+	# 			print(tok)
 	
-	acc=compar_listes(c_gold, c_test, True)
-	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc}")
+	acc_tok, acc_oov = compar_listes(c_gold, c_test, True)
+	print(f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc_tok} et l'accuracy sur les mots non-présents dans le vocabulaire est de : {acc_oov}")
+	
+
