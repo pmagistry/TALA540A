@@ -111,7 +111,25 @@ def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, vocab: s
     #accuracy = nb_ok / nb_total
     oov_accuracy = oov_nb / oov_total if oov_total > 0 else 0.0
     return oov_accuracy
+
+def accuracy(corpus_gold, corpus_test, vocab):
+    acc = compute_accuracy_with_oov(corpus_gold, corpus_test, vocab)
+    acc_pourcentage = acc * 100
+    print(f'Accuracy : {acc_pourcentage:.2f}%')
+
+def matrice_confusion(corpus_gold, corpus_test):
+    y_true = []  
+    y_pred = []  
+
+    for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
+        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+            y_true.append(token_gold.tag)
+            y_pred.append(token_test.tag)
     
+    # Créer la matrice de confusion
+    confusion = confusion_matrix(y_true, y_pred)
+
+    return confusion
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
@@ -120,28 +138,13 @@ def main():
     corpus_gold = read_conll("./corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
     corpus_test = tag_corpus(corpus_gold, model_spacy)
 
-    def accuracy():
-        acc = compute_accuracy_with_oov(corpus_gold, corpus_test, vocab)
-        acc_pourcentage = acc * 100
-        print(f'Accuracy : {acc_pourcentage:.2f}%')
-
     # Mesurer le temps que prend le programme pr s'éxecuter 
 
-    time = timeit.timeit(accuracy, number = 1)
+    time = timeit.timeit(lambda: accuracy(corpus_gold, corpus_test, vocab), number = 1)
 
-    # Matrice de confusion
+    # Créer la matrice
 
-    y_true = []  
-    y_pred = []  
-
-    for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            y_true.append(token_gold.tag)
-            y_pred.append(token_test.tag)
-
-
-    # Créer la matrice de confusion
-    confusion = confusion_matrix(y_true, y_pred)
+    confusion = matrice_confusion(corpus_gold, corpus_test)
 
     print(f"Temps de l'exécution : {time:.2f} seconds")
     print("Confusion Matrix:")
