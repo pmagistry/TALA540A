@@ -21,6 +21,7 @@ class Token:
 
 @dataclass
 class Sentence:
+    sent_id : str
     tokens: List[Token]
 
 
@@ -28,7 +29,9 @@ class Sentence:
 class Corpus:
     sentences: List[Sentence]
 
-
+"""
+objectif à revoir : split le corpus en 4 sous corpus --> remis à plus tard
+"""
 # Création de l'objet Corpus
 def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
     sentences = []
@@ -95,7 +98,7 @@ def vocab_train(path: Path) -> set:
     return vocabulaire
 
 
-def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
+def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus, subcorpus: Optional[str]=None) -> Tuple[float, float]:
     nb_ok = 0  # nb de tokens correctement étiquetés
     nb_total = 0  # nb total de tokens dans les deux corpus
     oov_ok = 0  # nb tokens correctement étiquetés parmi les oov
@@ -103,18 +106,20 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     for sentence_gold, sentence_test in zip(
         corpus_gold.sentences, corpus_test.sentences
     ):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            assert (
-                token_gold.form == token_test.form
-            )  # pose la condition que la forme du token du corpus_gold soit le même
-               # que le corpus_test sinon lève une exception AssertionError
-            if token_gold.tag == token_test.tag:
-                nb_ok += 1
-            nb_total += 1
-            if token_gold.is_oov:
-                oov_total += 1
+        # soit je veux que le sous-corpus soit je veux tout
+        if subcorpus is None or subcorpus in sentence_gold.sent_id:
+            for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+                assert (
+                    token_gold.form == token_test.form
+                )  # pose la condition que la forme du token du corpus_gold soit le même
+                # que le corpus_test sinon lève une exception AssertionError
                 if token_gold.tag == token_test.tag:
-                    oov_ok += 1
+                    nb_ok += 1
+                nb_total += 1
+                if token_gold.is_oov:
+                    oov_total += 1
+                    if token_gold.tag == token_test.tag:
+                        oov_ok += 1
 
     # taux d'exactitude global (nb_ok / nb_total) qui mesure
     # la précision globale de l'étiquetage de parties du discours
@@ -151,6 +156,18 @@ def compute_confusion_matrix(corpus_gold: Corpus, corpus_test: Corpus):
 
     return conf_df
 
+"""
+The original sentences of the corpus are taken from:
+
+French Europarl (sent_id prefix: Europar.550)
+Wikipédia Fr (sent_id prefix: frwiki_50.1000)
+Newspaper Est Républicain (sent_id prefix: annodis.er)
+European Medicines Agency (sent_id prefix: emea-fr-dev and emea-fr-test)
+
+se servir des sent_id pour séparer le corpus en 4 ?
+"""
+
+
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
@@ -159,8 +176,9 @@ def main():
 
     corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocabulaire)
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    print(compute_accuracy(corpus_gold, corpus_test))
-    print(compute_confusion_matrix(corpus_gold, corpus_test))
+    for subcorpus in ("annodis", "frwiki", "Europar", "emea-fr"):
+        print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
+        print(compute_confusion_matrix(corpus_gold, corpus_test))
 
 
 if __name__ == "__main__":
