@@ -9,6 +9,7 @@ class Token :
 
 @dataclass 
 class Sent :
+    sent_id : str
     tokens : List[Token]
 
 @dataclass 

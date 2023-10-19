@@ -1,4 +1,4 @@
-import argparse
+import argparse, re
 from pathlib import Path
 from typing import Set, Tuple, Optional, List
 
@@ -25,9 +25,13 @@ def read_conll(path: Path, vocab: Optional[Set[str]] = None) -> Tuple[Corpus, Se
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
+            if line.startswith('# sent_id'):
+                #On récupère le nom 
+                sent_id = re.findall(r'# sent_id = (.*)_.*', line)
+                #print(id)
             if not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sent(tokens))
+                    sentences.append(Sent(sent_id[0], tokens))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -46,29 +50,32 @@ def read_conll(path: Path, vocab: Optional[Set[str]] = None) -> Tuple[Corpus, Se
 
 
 def sentence_to_doc(sentence: Sent, vocab) -> SpacyDoc:
-    words = [tok.form for tok in sentence.tokens]
+    words = [tok.form for tok in sentence]
     return SpacyDoc(vocab, words=words)
 
 
-def doc_to_sentence(doc: SpacyDoc, origin: Sent) -> Sent:
+def doc_to_sentence(sent_id : str, doc: SpacyDoc, origin: Sent) -> Sent:
     tokens = []
     for tok, origin_tok in zip(doc, origin.tokens):
         tokens.append(Token(tok.text, tok.pos_, is_oov=origin_tok.is_oov))
-    return Sent(tokens)
+    return Sent(sent_id, tokens)
 
 
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     sentences = []
+    #print([sent for sent in corpus.sents])
     for sentence in corpus.sents:
-        doc = sentence_to_doc(sentence, model_spacy.vocab)
+        doc = sentence_to_doc(sentence.tokens, model_spacy.vocab)
         doc = model_spacy(doc)
-        sentences.append(doc_to_sentence(doc, sentence))
+        sentences.append(doc_to_sentence(sentence.sent_id, doc, sentence))
     return Corpus(sentences)
 
 
 ####### Calcul de la précision
 def compute_accuracy(
-    gold_list: Corpus, test_list: Corpus, confusion: Optional[bool] = False
+    gold_list: Corpus, test_list: Corpus, 
+    subcorpus: Optional[str] = None,
+    confusion: Optional[bool] = False 
 ) -> Tuple[float, float]:
     correct = 0
     total = 0
@@ -80,21 +87,22 @@ def compute_accuracy(
         y_pred = []
 
     for gold_sentence, test_sentence in zip(gold_list.sents, test_list.sents):
-        for gold_token, test_token in zip(gold_sentence.tokens, test_sentence.tokens):
-            assert gold_token.form == test_token.form
-            if confusion:
-                y_gold.append(gold_token.pos)
-                y_pred.append(test_token.pos)
-            total += 1
-            if gold_token.pos == test_token.pos:
-                correct += 1
-            if gold_token.is_oov:
-                oov_total += 1
+        if subcorpus is None or subcorpus in gold_sentence.sent_id : 
+            for gold_token, test_token in zip(gold_sentence.tokens, test_sentence.tokens):
+                assert gold_token.form == test_token.form
+                if confusion:
+                    y_gold.append(gold_token.pos)
+                    y_pred.append(test_token.pos)
+                total += 1
                 if gold_token.pos == test_token.pos:
-                    oov_ok += 1
+                    correct += 1
+                if gold_token.is_oov:
+                    oov_total += 1
+                    if gold_token.pos == test_token.pos:
+                        oov_ok += 1
 
-    if confusion:
-        print(confusion_matrix(y_gold, y_pred))
+        if confusion:
+            print(confusion_matrix(y_gold, y_pred))
 
     return correct / total, oov_ok / oov_total
 
@@ -112,9 +120,18 @@ if __name__ == "__main__":
 
     model_spacy = spacy.load("fr_core_news_sm")
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    accur, accur_oov = compute_accuracy(corpus_gold, corpus_test, confusion=True)
+    
+    subcorpus = set()
+    for sub in corpus_test.sents : 
+        subcorpus.add(sub.sent_id) 
+    print(subcorpus)
 
-    print(
-        f"Précision du pos tagging : {round(accur, 2)}\
-          \nPrécision sur OOV : {round(accur_oov, 2)}"
-    )
+
+    for sub in subcorpus : 
+        accur, accur_oov = compute_accuracy(corpus_gold, corpus_test, sub)
+
+        print(
+            f"------ {sub} ------\
+            \nPrécision du pos tagging : {round(accur, 2)}\
+            \nPrécision sur OOV : {round(accur_oov, 2)}"
+        )
