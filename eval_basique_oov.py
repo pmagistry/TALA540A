@@ -13,6 +13,10 @@ import spacy
 from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 
+from sklearn.metrics import confusion_matrix
+
+import timeit
+
 
 @dataclass
 class Token():
@@ -111,14 +115,37 @@ def compute_accuracy_with_oov(corpus_gold: Corpus, corpus_test: Corpus, vocab: s
 
 def main():
     model_spacy = spacy.load("fr_core_news_sm")
+
     vocab = sequoia_voc("./corpus/fr_sequoia-ud-train.conllu")
     corpus_gold = read_conll("./corpus/fr_sequoia-ud-test.conllu", vocab=vocab)
     corpus_test = tag_corpus(corpus_gold, model_spacy)
 
-    accuracy = compute_accuracy_with_oov(corpus_gold, corpus_test, vocab)
-    acc_pourcentage = accuracy * 100
-    print(f'Accuracy : {acc_pourcentage:.2f}%')
+    def accuracy():
+        acc = compute_accuracy_with_oov(corpus_gold, corpus_test, vocab)
+        acc_pourcentage = acc * 100
+        print(f'Accuracy : {acc_pourcentage:.2f}%')
 
+    # Mesurer le temps que prend le programme pr s'éxecuter 
+
+    time = timeit.timeit(accuracy, number = 1)
+
+    # Matrice de confusion
+
+    y_true = []  
+    y_pred = []  
+
+    for sentence_gold, sentence_test in zip(corpus_gold.sentences, corpus_test.sentences):
+        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+            y_true.append(token_gold.tag)
+            y_pred.append(token_test.tag)
+
+
+    # Créer la matrice de confusion
+    confusion = confusion_matrix(y_true, y_pred)
+
+    print(f"Temps de l'exécution : {time:.2f} seconds")
+    print("Confusion Matrix:")
+    print(confusion)
 
 if __name__ == "__main__":
     main()
