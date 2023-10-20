@@ -37,22 +37,13 @@ Essayer d'utiliser `typing` et des `dataclass` pour structurer votre code
         - par rapport au train de sequoia
 - vitesse 
     - bash `time`
-    ``` Shell
-        (project) laura@laura:~/Documents/TALA540A$ time script/tp1.py
-            bash: script/tp1.py: Permission denied
-
-            real    0m0,002s
-            user    0m0,001s
-            sys 0m0,000s
-
-    ```
     - module python `timeit` : j'ai utilisé le module tqdm
     - comment améliorer ces temps ?
 
-- **Matrice de confusion**
+- matrice de confusion
 
 - comparer
-    - **différents modèles spacy**
+    - différents modèles spacy : on peut choisir le modèle en argument (sm, md, lg, trf)
     - différents corpus UD : français et chinois
 
 découper par corpus *sent_id
