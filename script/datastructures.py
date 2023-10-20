@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from pathlib import Path
 from dataclasses import dataclass
 from typing import List
 
 @dataclass
 class Token:
     form: str
-    lemma: str
     pos: str
+    is_oov: bool
 
 @dataclass
 class Sentence:
-    number_tokens: int  # pour savoir si le découpage par tokens est le même
-    analyses: List[Token]
+    nb_tokens: int # pour vérifier découpage des tokens
+    tokens: List[Token]
 
 @dataclass
 class Corpus:
-    number_lines: int # pour savoir si le découpage par ligne s'est bien passé
+    nb_sentences: int
     sentences: List[Sentence]

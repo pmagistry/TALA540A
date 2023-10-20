@@ -48,9 +48,11 @@ Essayer d'utiliser `typing` et des `dataclass` pour structurer votre code
     ```
     - module python `timeit` : j'ai utilisé le module tqdm
     - comment améliorer ces temps ?
-- Matrice de confusion
-    (si on a le temps)
-- comparer
-    - différents modèles spacy
-    - différents corpus UD
 
+- **Matrice de confusion**
+
+- comparer
+    - **différents modèles spacy**
+    - différents corpus UD : français et chinois
+
+découper par corpus *sent_id

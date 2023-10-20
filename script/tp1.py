@@ -2,39 +2,41 @@
 #-*- coding: utf-8 -*-
 
 import argparse
-from get_function import get_spacy, get_spacy_retokenize, get_conllu, get_pos, get_accuracy, get_precision, get_rappel
+from get_corpus import get_spacy_retok, get_conllu, test_tokens
+from get_evaluation import get_tags, get_accuracy, get_precision, get_rappel, get_matrice
 
 '''
-    exemple de ce que l'on peut ecrire sur le terminal
-    python3 script/tp1.py -e spacy_retokenize
-    soit spacy_retokenize, le parsing à évaluer
+    exemple de ce que l'on peut ecrire sur le terminal :
+    python3 script/tp1.py -l zh -m lg
 '''
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-e", help="parsing a evaluer", default="spacy")
+parser.add_argument("-l", help="langue sur laquelle travailler : fr ou zh", default="fr")
+parser.add_argument("-m", help="choix du modèle : sm, md, lg, trf", default="sm")
 args = parser.parse_args()
 
+# on récupère les corpus et les tags
+corpus_r = get_conllu(args.l)
+corpus_e = get_spacy_retok(args.l, args.m, corpus_r)
+tags_e, tags_r = get_tags(corpus_e, corpus_r)
 
-if args.e == "spacy_retokenize" :
-    sentences_conllu, corpus_conllu = get_conllu()
-    # print(timeit.timeit(stmt="get_conllu()", setup="from __main__ import get_conllu", number=1))
-    lpos_r, pos_r = get_pos(corpus_conllu)
+if corpus_e.nb_sentences == corpus_r.nb_sentences:
+    
+    acc = get_accuracy(corpus_r, corpus_e)
+    print(f"L'accuracy est à {acc[0]}%.")
+    print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.\n")
+    # test_tokens(corpus_e, corpus_r)
 
-    corpus_spacy_retokenize = get_spacy_retokenize(sentences_conllu)
-    # print(timeit.timeit(stmt="get_spacy_retokenize(sentences_conllu)", setup="from __main__ import get_spacy_retokenize(sentences_conllu)", number=1))
-    lpos_e, pos_e = get_pos(corpus_spacy_retokenize)
-
-else : # par defaut, parsing spacy
-    sentences_conllu, corpus_conllu = get_conllu()
-    # print(timeit.timeit(stmt="get_conllu()", setup="from __main__ import get_conllu", number=1))
-    lpos_r, pos_r = get_pos(corpus_conllu)
-
-    corpus_spacy = get_spacy()
-    # print(timeit.timeit(stmt="get_spacy()", setup="from __main__ import get_spacy", number=1))
-    lpos_e, pos_e = get_pos(corpus_spacy)
-
-
-print(f"\nnombre de pos dans le corpus de reference : {len(pos_r)}\nnombre de pos dans le corpus a evaluer : {len(pos_e)}")
-print(f"l'accuracy est à {round(get_accuracy(lpos_r, lpos_e, pos_e) * 100, 2)}%")
-print(f"la precision pour la classe \'DET\' est à {round(get_precision(lpos_r, lpos_e, pos_e, 'DET') * 100, 2)}%")
-print(f"le rappel pour la classe \'DET\' est à {round(get_rappel(lpos_r, lpos_e, pos_r, 'DET') * 100, 2)}%")
+    if acc != 100: # pas besoin de toute cela si l'accuracy est à 100%
+        # on va regarder les catégories qu'ils classent le mieux
+        for tag in tags_e:
+            print(f"la precision pour {tag} est à {get_precision(corpus_e, corpus_r, tag)}%.")   
+        for tag in set(tags_r):
+            print(f"le rappel pour {tag} est à {get_rappel(corpus_e, corpus_r, tag)}%.")
+        
+        # on affiche ensuite les matrices de confusion
+        get_matrice(corpus_e, corpus_r)
+    
+else :
+    # si les corpus n'ont pas le même nombre de phrase, cela ne sert à rien de continuer
+    print(f"\nLe corpus de reference a {corpus_r.number_sentences} phrases, et le corpus à evaluer {corpus_e.number_sentences}.")
