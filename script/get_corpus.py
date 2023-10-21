@@ -11,7 +11,6 @@ from conllu import parse, SentenceList
 import spacy
 from spacy.tokens import Doc
 from spacy import Language as SpacyPipeline
-from pyJoules.energy_meter import measure_energy
 from datastructures import Token, Sentence, Corpus
 
 
@@ -73,51 +72,33 @@ def get_conllu(langue: str, vocabulaire: Optional[Set[str]] = None) -> Corpus:
     return Corpus(nb_sentences=len(sentences), sentences=sentences)
 
 
-def get_model(langue: str, model: str) -> SpacyPipeline:
+def get_model(langue: str) -> SpacyPipeline:
     """
     Args:
         langue (str): langue du corpus
-        model (str): modèle de spacy choisi pour la tokenisation
 
     Returns:
-        SpacyPipeline: modèle de spacy choisi pour la tokenisation
+        SpacyPipeline: modèle de spacy que l'on a entrainé
     """
     if langue == "zh":  # choix de la langue : chinois
-        if model == "trf":  # choix entre pls modèles de langue
-            nlp = spacy.load("zh_core_web_trf")
-        elif model == "lg":
-            nlp = spacy.load("zh_core_web_lg")
-        elif model == "md":
-            nlp = spacy.load("zh_core_web_md")
-        else:  # modèle par défaut
-            nlp = spacy.load("zh_core_web_sm")
+        nlp = spacy.load("./script/model_zh/model-best")
 
     else:  # choix par défaut de la langue : français
-        if model == "trf":  # choix entre pls modèles de langue
-            nlp = spacy.load("fr_core_news_trf")
-        elif model == "lg":
-            nlp = spacy.load("fr_core_news_lg")
-        elif model == "md":
-            nlp = spacy.load("fr_core_news_md")
-        else:  # modèle par défaut
-            nlp = spacy.load("fr_core_news_sm")
+        nlp = spacy.load("./script/model_fr/model-best")
 
     return nlp
 
-
-@measure_energy
-def get_spacy_retok(langue: str, model: str, rcorpus: Corpus) -> Corpus:
+def get_spacy_mymodel(langue: str, rcorpus: Corpus) -> Corpus:
     """
     Args:
         langue (str): langue du corpus
-        model (str): modèle de spacy choisi pour la tokenisation
         rcorpus (Corpus): corpus de référence
 
     Returns:
         Corpus: contient les informations du corpus à évaluer
     """
     # 'nlp' est le modèle spacy que l'on a choisi en argument
-    nlp = get_model(langue, model)
+    nlp = get_model(langue)
 
     # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
     with tqdm(
@@ -140,7 +121,6 @@ def get_spacy_retok(langue: str, model: str, rcorpus: Corpus) -> Corpus:
 
     return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
 
-
 def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
     """ fonction d'affichage pour voir les résultats obtenus 
         après l'obtention des corpus
@@ -154,8 +134,8 @@ def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
     for esentences, rsentences in zip(ecorpus.sentences, rcorpus.sentences):
         for etoken, rtoken in zip(esentences.tokens, rsentences.tokens):
             # plusieurs proposition aux choix en fonction de ce que l'on veut voir
-            if etoken.pos != rtoken.pos:
-                print(etoken, "\t", rtoken)
-            # print(etoken, "\t", rtoken)
+            # if etoken.pos != rtoken.pos:
+            #     print(etoken, "\t", rtoken)
+            print(etoken, "\t", rtoken)
             # print(etoken.form, "\t", rtoken.form)
             # print(etoken.pos, "\t", rtoken.pos)

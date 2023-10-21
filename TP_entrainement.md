@@ -41,10 +41,7 @@ pour accélérer l'entraînement et voir que tout fonctionne.
 
 cf. https://spacy.io/api/cli#train
 
-Commande:
-`python -m spacy train config.cfg --output ./spacy_model2/ --paths.train ./spacy_sequoia/fr_sequoia-ud-train.spacy --paths.dev ./spacy_sequoia/fr_sequoia-ud-dev.spacy `
-
-(adapter les chemins en fonction de votre environement)
+`python -m spacy train config.cfg --output ./spacy_model2/ --paths.train ./spacy/fr_sequoia-ud-train.spacy --paths.dev ./spacy/fr_sequoia-ud-dev.spacy `
 
 ## Étape 4: Évaluation (cf. TP précédent)
 
