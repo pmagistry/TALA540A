@@ -81,21 +81,21 @@
 ### étape 4 : ok
 - découpage possible par corpus en fonction du corpus d'où vient chaque phrase
     - corpus fr :
-        - Europar
-        - annodis
-        - emea
-        - frwiki
-    - corpus zh :
-        - n01...
-        - w01...
-        - n02...
-        - n03
-        - n04...
-        - n05...
-        - w02...
-        - w03...
-        - w04...
-        - w05...
+        - Europar, annodis, emea, frwiki
+    - corpus zh : n01..., w01..., n02..., n03, n04..., n05..., w02..., w03..., w04..., w05...
+    - on peut filtrer de cette manière mais je n'ai pas très bien compris ce qu'il faut faire avec ...
+    ```python
+    from conllu import parse
+    import re
+
+    with open(f"fr_sequoia-ud-test.conllu", "r", encoding="utf-8") as file:
+        data = file.read()
+    lines = parse(data)
+
+    for line in lines :
+        if re.search(r"^frwiki.*", line.metadata['sent_id']) :
+            print(line)
+    ```
 
 - autres petites choses à faire
     - pyJoules : je crois ça marche ?
