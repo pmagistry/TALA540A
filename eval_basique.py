@@ -24,6 +24,7 @@ class Token:
 
 @dataclass
 class Sentence:
+    sent_id: Optional[str]
     tokens: List[Token]
 
 
@@ -41,10 +42,17 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
     with open(path) as f:
         for line in f:
             line = line.strip()
-            if not line.startswith("#"):
+            if line.startswith("# sent_id"):
+                phrase_id = line.split()[-1]
+            elif not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sentence(tokens))
+                    if phrase_id is not None:
+                        sentences.append(Sentence(sent_id=phrase_id, tokens=tokens))
+                    else:
+                        sentences.append(Sentence(tokens=tokens))
+
                     tokens = []
+                    phrase_id = None
                 else:
                     fields = line.split("\t")
                     form, tag = fields[1], fields[3]
@@ -56,6 +64,7 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
                                 not form in vocabulaire
                             )  # même chose que False if form in vocabulaire
                         tokens.append(Token(form, tag, is_oov))
+
     return Corpus(sentences)
 
 
@@ -86,7 +95,7 @@ def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
         tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
-    return Sentence(tokens)
+    return Sentence(None, tokens)
 
 
 ##################################
@@ -104,7 +113,9 @@ def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
 #########################################
 # calcul de l'accuracy entre deux corpus
 #########################################
-def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
+def compute_accuracy(
+    corpus_gold: Corpus, corpus_test: Corpus, subcorpus: Optional[str] = None
+) -> Tuple[float, float]:
     nb_ok = 0
     nb_total = 0
     oov_ok = 0
@@ -112,18 +123,24 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     for sentence_gold, sentence_test in zip(
         corpus_gold.sentences, corpus_test.sentences
     ):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            assert token_gold.form == token_test.form
-            if token_gold.tag == token_test.tag:
-                nb_ok += 1
-            nb_total += 1
-            if token_test.is_oov:
-                oov_total += 1
+        if subcorpus is None or subcorpus in sentence_gold.sent_id:
+            for token_gold, token_test in zip(
+                sentence_gold.tokens, sentence_test.tokens
+            ):
+                assert token_gold.form == token_test.form
                 if token_gold.tag == token_test.tag:
-                    oov_ok += 1
+                    nb_ok += 1
+                nb_total += 1
+                if token_test.is_oov:
+                    oov_total += 1
+                    if token_gold.tag == token_test.tag:
+                        oov_ok += 1
     return nb_ok / nb_total, oov_ok / oov_total
 
 
+######################################
+# confusion matrix simple sur les POS
+######################################
 def make_confusion_matrix(corpus_gold: Corpus, corpus_test: Corpus):
     tag_true = []
     tag_pred = []
@@ -135,16 +152,16 @@ def make_confusion_matrix(corpus_gold: Corpus, corpus_test: Corpus):
             tag_pred.append(token_test.tag)
     return confusion_matrix(tag_true, tag_pred)
 
+
+#########################################
+# sauvegarde SVG de la confusion matrix
+#########################################
 def beautiful_confusion_matrix(confusion_matrix) -> None:
     # création d'une figure et d'un axe pour le graphique
     # f, ax = plt.subplots(figsize=(8,6))
 
     # création d'une heatmap pour visualiser la matrice de confusion
-    sns.heatmap(confusion_matrix,
-                annot=True,
-                cmap="Blues",
-                robust=True,
-                linewidth=1)
+    sns.heatmap(confusion_matrix, annot=True, cmap="Blues", robust=True, linewidth=1)
 
     # titre du graphique et étiquettes des axes
     plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
@@ -152,7 +169,7 @@ def beautiful_confusion_matrix(confusion_matrix) -> None:
     plt.ylabel("Etiquette correcte", fontsize=14)
 
     # sauvegarde matrice
-    plt.savefig('confusion_matrix.svg')
+    plt.savefig("confusion_matrix.svg")
 
 
 #######
@@ -169,7 +186,9 @@ def main():
     )
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    # print(compute_accuracy(corpus_gold, corpus_test))
+    for subcorpus in ("annodis", "frwiki", "Europar", "emea"):
+        print(subcorpus)
+        print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
 
     cm = make_confusion_matrix(corpus_gold=corpus_gold, corpus_test=corpus_test)
     beautiful_confusion_matrix(cm)
