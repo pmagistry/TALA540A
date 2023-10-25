@@ -58,7 +58,7 @@ def read_conll(path: Path, vocab) -> Corpus:
                             is_oov = True
                         else:
                             is_oov = not form in vocab
-                        tokens.append(SpacyToken(form, tag, is_oov))
+                        tokens.append(Token(form, tag, is_oov))
 
     return Corpus(sentences)
 
