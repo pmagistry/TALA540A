@@ -6,7 +6,7 @@ from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 import spacy
 
-from pyJoules.energy_meter import measure_energy
+#from pyJoules.energy_meter import measure_energy
 
 from sklearn.metrics import classification_report
 
@@ -64,7 +64,7 @@ def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
         tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
     return Sentence(tokens)
 
-@measure_energy
+#@measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     sentences = []
     for sentence in corpus.sentences:
@@ -100,12 +100,12 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     print(classification_report(ref, test))
 
 def main():
-    corpus_train = read_conll("fr_sequoia-ud-train.conllu")
+    corpus_train = read_conll("corpus/fr_sequoia-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    for model_name in ("fr_core_news_sm", "./model/model-best/"):
         print(model_name)
         model_spacy = spacy.load(model_name)
-        corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
+        corpus_gold = read_conll("corpus/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
         print(compute_accuracy(corpus_gold, corpus_test))
         print_report(corpus_gold, corpus_test)
