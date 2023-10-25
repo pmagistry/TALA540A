@@ -9,7 +9,9 @@ J'ai laissé les paramètres par défaut :
 
 ### Évaluation :
 
-Pour pouvoir comparer les deux modèles :
+J'ai lancé l'évaluation avec la correction du script eval_basique.py
+
+Pour pouvoir comparer les deux modèles  :
 ```py
  for model_name in ("fr_core_news_sm", "./model/model-best/"):
 ```
