@@ -19,6 +19,7 @@ class Token:
 
 @dataclass
 class Sentence:
+    sent_id: str
     tokens: List[Token]
 
 
@@ -74,7 +75,7 @@ def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     return Corpus(sentences)
 
 
-def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
+def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus, subcorpus: Optional[str] = None) -> Tuple[float, float]:
     nb_ok = 0
     nb_total = 0
     oov_ok = 0
@@ -82,16 +83,17 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     for sentence_gold, sentence_test in zip(
         corpus_gold.sentences, corpus_test.sentences
     ):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            assert token_gold.form == token_test.form
-            if token_gold.tag == token_test.tag:
-                nb_ok += 1
-            nb_total += 1
-            if token_gold.is_oov:
-                oov_total += 1
+        if subcorpus is None or subcorpus in sentence_gold.sent_id: 
+            for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+                assert token_gold.form == token_test.form
                 if token_gold.tag == token_test.tag:
-                    oov_ok += 1
-
+                    nb_ok += 1
+                nb_total += 1
+                if token_gold.is_oov:
+                    oov_total += 1
+                    if token_gold.tag == token_test.tag:
+                        oov_ok += 1
+    
     return nb_ok / nb_total, oov_ok / oov_total
 
 def print_report(corpus_gold: Corpus, corpus_test: Corpus):
@@ -107,7 +109,8 @@ def main():
         model_spacy = spacy.load(model_name)
         corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-        print(compute_accuracy(corpus_gold, corpus_test))
+        for subcorpus in ("annodis", "frwiki", ...):
+            print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
         print_report(corpus_gold, corpus_test)
 
 
