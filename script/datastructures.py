@@ -27,10 +27,12 @@ class Sentence:
     """Chaque objet de la classe Sentence contiendra
     
     nb_tokens -- le nombre de tokens dans la phrase
+    sent_id -- le nom du sous-corpus d'où vient la phrase
     tokens -- la liste d'objets de la classe Token
     """
 
     nb_tokens: int
+    sent_id: str
     tokens: List[Token]
 
 

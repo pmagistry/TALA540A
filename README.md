@@ -1,29 +1,40 @@
 # TALA540A : TP de Laura Darenne
 
+## to-do-list
+- [] : entrainer en divisant le corpus ?
+- [] : resoudre problème tagging avec corpus chinois :
+
+- tag conllu : {'PROPN', 'NOUN', 'AUX', 'ADJ', 'PRON', 'X', 'PART', 'DET', 'CCONJ', 'NUM', 'ADV', 'VERB', 'PUNCT', 'ADP'}
+- tag mon modèle spacy pour le chinois : {'EC', 'SFN', 'FW', 'NNP', 'VV', 'MD', 'PFA', '(', '.', 'PRP', 'UH', 'DEC', 'RB', '/', 'IN', ',', 'DT', ')', 'BB', 'DEV', 'NNB', 'CD', '``', ':', 'NN', 'AS', 'VC', 'PRD', 'JJ', "''", 'HYPH', 'CC'}
+  - => prend les XPOS au lieu des UPOS
+
 ## liste des fichiers
 - README.md : explications du tp
 - TP_entrainement.md : étapes du tp à faire
 
 #### ./script
-- get_corpus.py : fichier python contenant les fonctions appelées par tp1.py pour obtenir les corpus tokenisés
+- get_conllu.py et get_spacy.py : fichier python contenant les fonctions appelées par tp1.py pour obtenir les corpus tokenisés
 - get_evaluation.py : fichier python contenant les fonctions appelées par tp1.py pour l'évaluation des tokenisations
 - datastructures.py : fichier python contenant les dataclasses 
-
 - tp2.py : fichier python principal pour le TP2
-- corpus.sh : fichier bash pour transformer les fichiers conllu en fichier spacy
-- spacy
-	- fr_sequoia-ud-dev.spacy
-	- fr_sequoia-ud-train.spacy
+
+- corpus_and_train.sh : fichier bash pour transformer les fichiers conllu en fichier spacy et lancer le train
+- model_spacy
+  - corpus
+  	- fr_sequoia-ud-dev.spacy
+  	- fr_sequoia-ud-train.spacy
+    - zh_gsdsimp-ud-dev.conllu
+    - zh_gsdsimp-ud-train.spacy
 - model_fr et model_zh : nos modèles entrainés
 	- model-best : le modèle que l'on prend pour chaque langue
 
 #### ./corpus
-- corpus français :
-	- fr_sequoia-ud-test.conllu
-	- fr_sequoia-ud-train.conllu
-	- fr_sequoia-ud-dev.conllu
-- corpus chinois :
-	- zh_pud-ud-test.conllu
+- fr_sequoia-ud-test.conllu
+- fr_sequoia-ud-train.conllu
+- fr_sequoia-ud-dev.conllu
+- zh_gsdsimp-ud-test.conllu
+- zh_gsdsimp-ud-train.conllu
+- zh_gsdsimp-ud-dev.conllu
 
 ---
 
@@ -31,8 +42,9 @@
 
 ### étape 1 : préparation du corpus
 
-- [x] fichier dev train sous format spacy pour sequoia
-- [ ] seulement des fichiers test pour le chinois, à voir plus tard
+- corpus chinois gsd et corpus français sequoia
+
+- division en sous-corpus possible pour sequoia mais pas pour gsd (car pas de sous-corpus)
 
 ### étape 2 : configuration de la pipeline
 
@@ -43,25 +55,35 @@ Premier modele à télécharger sous forme `base_config.cfg`
 - optimize for : efficiency
 
 ```shell
-(project) laura@laura:~/Documents/TALA540A/script$ python -m spacy init fill-config base_config.cfg config.cfg
+(project) laura@laura:~/Documents/TALA540A/script/model_spacy$ python -m spacy init fill-config base_config_fr.cfg config_fr.cfg
 ✔ Auto-filled config with all values
 ✔ Saved config
-config.cfg
+config_fr.cfg
 You can now add your data and train your pipeline:
-python -m spacy train config.cfg --paths.train ./train.spacy --paths.dev ./dev.spacy
+python -m spacy train config_fr.cfg --paths.train ./train.spacy --paths.dev ./dev.spacy
 ```
 
-On modifie `base.cfg` pour accélérer l'entraînement et voir que tout fonctionne
-- batch_size : train petit donc on test 100
+On modifie `config_fr.cfg` pour accélérer l'entraînement et voir que tout fonctionne
+- batch_size : 100 valeur par défaut
 - max_steps : 20000 (valeur laissée par défaut)
 - max_epochs : on teste 20
 
 ### étape 3: entraînement
+- je lance le script ./corpus_and_train.sh qui crée les fichiers corpus .spacy et lance le train
 
 ```shell
-(project) laura@laura:~/Documents/TALA540A/script$ python -m spacy train config.cfg --output ./model_fr/ --paths.train ./spacy/fr_sequoia-ud-train.spacy --paths.dev ./spacy/fr_sequoia-ud-dev.spacy
-✔ Created output directory: model_fr
-ℹ Saving to output directory: model_fr
+(project) laura@laura:~/Documents/TALA540A$ ./script/corpus_and_train.sh ./corpus/fr_sequoia-ud-train.conllu ./corpus/fr_sequoia-ud-dev.conllu ./script/model_spacy/corpus/ french
+ℹ Grouping every 1 sentences into a document.
+⚠ To generate better training data, you may want to group sentences
+into documents with `-n 10`.
+✔ Generated output file (2231 documents):
+script/model_spacy/corpus/fr_sequoia-ud-train.spacy
+ℹ Grouping every 1 sentences into a document.
+⚠ To generate better training data, you may want to group sentences
+into documents with `-n 10`.
+✔ Generated output file (412 documents):
+script/model_spacy/corpus/fr_sequoia-ud-dev.spacy
+ℹ Saving to output directory: script/model_spacy/model_fr
 ℹ Using CPU
 
 =========================== Initializing pipeline ===========================
@@ -86,22 +108,9 @@ E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE
  15    2200         12.46       214.40    93.69    0.94
  19    2400         10.03       180.60    93.70    0.94
 ✔ Saved pipeline to output directory
-model_fr/model-last
+script/model_spacy/model_fr/model-last
 ```
 
 ### étape 4: évaluation
 
-Je tente de load le modèle comme ceci
-```python
-nlp = spacy.load("./script/model_fr/model-best")
-```
-Mais petit problème ...
-```shell
-(project) laura@laura:~/Documents/TALA540A$ python script/tp2.py 
-phrases conllu: 100%|██████████████████████| 456/456 [00:00<00:00, 32681.21it/s]
-phrases spacy: 100%|█████████████████████████| 456/456 [00:02<00:00, 168.15it/s]
-L'accuracy est à 0.0%.
-En tenant compte du vocabulaire, l'accuracy est à 0.0%.
-```
-
-### étape 5: refaire la même chose sur un autre langue/d'autres corpus
+C'est bon !

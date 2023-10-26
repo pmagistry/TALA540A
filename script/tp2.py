@@ -3,20 +3,16 @@
 
 """
 Exemple de ce que l'on peut ecrire sur le terminal depuis le dossier TALA540A :
-    python3 script/tp1.py -l fr
+    python3 script/tp2.py -l fr
 
 Ce fichier compare la tokenisation du modèle spacy que l'on a entrainé avec une tokenisation de référence
 """
 
 import argparse
-from get_corpus import get_spacy_mymodel, get_conllu, test_tokens
-from get_evaluation import (
-    get_tags,
-    get_accuracy,
-    get_precision,
-    get_rappel,
-    get_matrice,
-)
+from get_spacy import get_spacy_mymodel, get_spacy
+from get_conllu import get_conllu, get_vocab
+from get_evaluation import get_accuracy, get_matrice, test_tokens
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -24,35 +20,44 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
+
+if args.l == "zh" :
+    corpus_train = get_conllu(args.l, "train")
+    vocabulaire = get_vocab(corpus_train)
+else :
+    corpus_train = get_conllu(args.l, "train")
+    vocabulaire = get_vocab(corpus_train)
+
 # 'corpus_r' est le corpus de référence
-corpus_r = get_conllu(args.l)
-# 'corpus_e' est le corpus à évaluer, à comparer avec le corpus de référence
+corpus_r = get_conllu(args.l, "test", vocabulaire)
+# 'corpus_e' est le corpus de notre modèle
 corpus_e = get_spacy_mymodel(args.l, corpus_r)
-# 'tags_e' et 'tags_r' correspondent aux pos présents dans chaque corpus
-tags_e, tags_r = get_tags(corpus_e, corpus_r)
+# test_tokens(corpus_e, corpus_r)
 
-if corpus_e.nb_sentences == corpus_r.nb_sentences:
-    # 'acc' est l'accuracy avec ou sans les oov
-    acc = get_accuracy(corpus_r, corpus_e)
-    print(f"L'accuracy est à {acc[0]}%.")
-    print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.\n")
-    test_tokens(corpus_e, corpus_r)
+# # 'corpus_lg', 'corpus_md', 'corpus_sm' sont les corpus spacy
+corpus_lg, corpus_md, corpus_sm = get_spacy(args.l, corpus_r)
 
-#     if acc != 100:  # pas besoin de toute cela si l'accuracy est à 100%
-#         # on va regarder les catégories qu'ils classent le mieux
-#         for tag in tags_e:
-#             print(
-#                 f"la precision pour {tag} est à {get_precision(corpus_e, corpus_r, tag)}%."
-#             )
-#         for tag in set(tags_r):
-#             print(f"le rappel pour {tag} est à {get_rappel(corpus_e, corpus_r, tag)}%.")
 
-#         # on affiche ensuite les matrices de confusion
-#         get_matrice(corpus_e, corpus_r)
+# on affiche l'accuracy et la matrice de confusion
+acc_e = get_accuracy(corpus_e, corpus_r)
+print(f"\nL'accuracy avec notre modèle est à {acc_e[0]}%.")
+print(f"En tenant compte du vocabulaire, l'accuracy est à {acc_e[1]}%.")
+get_matrice(corpus_e, corpus_r, args.l)
 
-# else:
-#     # si les corpus n'ont pas le même nombre de phrase, cela ne sert à rien de continuer
-#     print(
-#         f"\nLe corpus de reference a {corpus_r.nb_sentences} phrases, \
-#             et le corpus à evaluer {corpus_e.nb_sentences}."
-#     )
+
+acc_lg = get_accuracy(corpus_lg, corpus_r)
+print(f"\nL'accuracy avec le modèle spacy lg est à {acc_lg[0]}%.")
+print(f"En tenant compte du vocabulaire, l'accuracy est à {acc_lg[1]}%.")
+get_matrice(corpus_lg, corpus_r, args.l)
+
+
+acc_md = get_accuracy(corpus_md, corpus_r)
+print(f"\n'accuracy avec le modèle spacy md est à {acc_md[0]}%.")
+print(f"En tenant compte du vocabulaire, l'accuracy est à {acc_md[1]}%.")
+get_matrice(corpus_md, corpus_r, args.l)
+
+
+acc_sm = get_accuracy(corpus_sm, corpus_r)
+print(f"\nL'accuracy avec le modèle spacy sm est à {acc_sm[0]}%.")
+print(f"En tenant compte du vocabulaire, l'accuracy est à {acc_sm[1]}%.")
+get_matrice(corpus_sm, corpus_r, args.l)

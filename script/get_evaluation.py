@@ -5,37 +5,11 @@
 Ce fichier contient les fonctions pour évaluer la tokenisation des corpus
 """
 
-from collections import defaultdict
+from collections import OrderedDict
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datastructures import Corpus
-
-
-def get_tags(ecorpus: Corpus, rcorpus: Corpus) -> tuple[list, list]:
-    """
-    Args:
-        ecorpus (Corpus): corpus à évaluer
-        rcorpus (Corpus): corpus de référence
-
-    Returns:
-        tuple[list, list]: listes des pos du rcorpus et du ecorpus
-    """
-    # certains tags ne sont présents que dans un des deux corpus
-    # 'etags' est une liste des pos présent dans le corpus à évaluer
-    etags = []
-    for esentence in ecorpus.sentences:
-        for token in esentence.tokens:
-            if token.pos not in etags:
-                etags.append(token.pos)
-    # 'rtags' est une liste des pos présent dans le corpus à évaluer
-    rtags = []
-    for rsentence in rcorpus.sentences:
-        for token in rsentence.tokens:
-            if token.pos not in rtags:
-                rtags.append(token.pos)
-
-    return etags, rtags
 
 
 def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
@@ -64,7 +38,7 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
             if etoken.pos == rtoken.pos:
                 acc += 1
             # avec vocab
-            if rtoken.is_oov:
+            if etoken.is_oov:
                 total_oov += 1
                 if etoken.pos == rtoken.pos:
                     acc_oov += 1
@@ -72,53 +46,7 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
     return round(acc / total * 100, 2), round(acc_oov / total_oov * 100, 2)
 
 
-def get_precision(ecorpus: Corpus, rcorpus: Corpus, tag: str) -> float:
-    """
-    Args:
-        ecorpus (Corpus): corpus à évaluer
-        rcorpus (Corpus): corpus de référence
-        tag (str): un des tags du corpus à évaluer
-
-    Returns:
-        float: precision pour la classification du tag donné en argument
-    """
-    # 'all_positive' est le nb de docs attribués à la classe i
-    all_positive = 0
-    # 'true_positive' est le nb de docs correctement attribués à la classe i
-    true_positive = 0
-    for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-            if etoken.pos == tag:
-                all_positive += 1
-            if etoken.pos == rtoken.pos and etoken.pos == tag:
-                true_positive += 1
-    return round(true_positive / all_positive * 100, 2)
-
-
-def get_rappel(ecorpus: Corpus, rcorpus: Corpus, tag: str) -> float:
-    """
-    Args:
-        ecorpus (Corpus): corpus à évaluer
-        rcorpus (Corpus): corpus de référence
-        tag (str): un des tags du corpus de référence
-
-    Returns:
-        float: rappel pour la classification du tag donné en argument
-    """
-    # 'all_positive' est le nb de docs appartenant à la classe i
-    all_positive = 0
-    # 'true_positive' est le nb de docs correctement attribués à la classe i
-    true_positive = 0
-    for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-            if rtoken.pos == tag:
-                all_positive += 1
-            if etoken.pos == rtoken.pos and etoken.pos == tag:
-                true_positive += 1
-    return round(true_positive / all_positive * 100, 2)
-
-
-def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
+def get_matrice(ecorpus: Corpus, rcorpus: Corpus, langue: str):
     """fonction d'affichage des matrices de confusion
     pour la classification des pos
 
@@ -126,14 +54,28 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
     """
-    # 'epos_rpos' est un dictionnaire (clé = rpos) de dictionnaire (clé = rpos)
-    epos_rpos = defaultdict(lambda: defaultdict(int))
+    
+    if langue == "zh" :
+        etags = 0
+        rtags = 0
+    else :
+        etags = ["NUM", "DET", "ADJ", "NOUN", "PROPN", "PRON", "ADV", "AUX", "VERB", "SCONJ", "ADP", "PUNCT", "CCONJ", "X", "SYM"]
+        rtags = ["NUM", "DET", "ADJ", "NOUN", "PROPN", "PRON", "ADV", "AUX", "VERB", "SCONJ", "ADP", "PUNCT", "CCONJ", "X", "SYM"]
+    
+    # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
+    epos_rpos = OrderedDict()
+    for etag in etags :
+        epos_rpos[etag] = OrderedDict()
+        for rtag in rtags :
+            epos_rpos[etag][rtag] = 0
+
     for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
         for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
             epos_rpos[etoken.pos][rtoken.pos] += 1
 
     # 'cm' est une matrice de confusion faite vec pandas
     cm = pd.DataFrame.from_dict(epos_rpos)
+
     # remplace les NaN par des 0 -> important pour les calculs après
     cm = cm.fillna(0)
     print("\n", cm)  # colonne rpos, ligne epos
@@ -149,3 +91,23 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
 
     # affichage
     plt.show()
+
+
+def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
+    """ fonction d'affichage pour voir les résultats obtenus 
+        après l'obtention des corpus
+        
+    Args:
+        ecorpus (Corpus): corpus à évaluer
+        rcorpus (Corpus): corpus de référence
+    """
+    # pour voir sur le terminal la tokenisation des deux corpus
+    print("etoken", "\t", "rtoken")
+    for esentences, rsentences in zip(ecorpus.sentences, rcorpus.sentences):
+        for etoken, rtoken in zip(esentences.tokens, rsentences.tokens):
+            # plusieurs proposition aux choix en fonction de ce que l'on veut voir
+            # if etoken.pos != rtoken.pos:
+            #     print(etoken, "\t", rtoken)
+            print(etoken, "\t", rtoken)
+            # print(etoken.form, "\t", rtoken.form)
+            # print(etoken.pos, "\t", rtoken.pos)
