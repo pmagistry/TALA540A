@@ -38,6 +38,7 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None, sous_corpus: 
     corpus: List[Corpus] = []
     with open(path) as f:
         corp_id = ""
+        sent_id = ""
         for line in f:
             line = line.strip()
             if sous_corpus and line.startswith("# sent_id = "):
