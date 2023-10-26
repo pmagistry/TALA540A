@@ -100,12 +100,13 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     print(classification_report(ref, test))
 
 def main():
-    corpus_train = read_conll("fr_sequoia-ud-train.conllu")
+    corpus_train = read_conll("data/fr_sequoia-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    #for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    for model_name in ("spacy_model2/model-best/",):
         print(model_name)
         model_spacy = spacy.load(model_name)
-        corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
+        corpus_gold = read_conll("data/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
         print(compute_accuracy(corpus_gold, corpus_test))
         print_report(corpus_gold, corpus_test)
