@@ -31,12 +31,15 @@ class Corpus:
 def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
     sentences: List[Sentence] = []
     tokens: List[Token] = []
+    sid = ""
     with open(path) as f:
         for line in f:
             line = line.strip()
+            if line.startswith("# sent_id =" ):
+                sid = line.split(" ")[-1]
             if not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sentence(tokens))
+                    sentences.append(Sentence(sent_id=sid, tokens=tokens))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -62,8 +65,11 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
-        tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
-    return Sentence(tokens)
+        tag = tok.pos_ 
+        if len(tag) == 0 :
+            tag = tok.tag_
+        tokens.append(Token(tok.text, tag, is_oov=origin_token.is_oov))
+    return Sentence(origin.sent_id, tokens)
 
 @measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
@@ -104,14 +110,15 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
 def main():
     corpus_train = read_conll("fr_sequoia-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    for model_name in ("output2/model-best", "fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
         print(model_name)
         model_spacy = spacy.load(model_name)
         corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-        for subcorpus in ("annodis", "frwiki", ...):
+        for subcorpus in ("annodis", "frwiki", "emea", "Europar"):
+            print(subcorpus)
             print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
-        print_report(corpus_gold, corpus_test)
+        # print_report(corpus_gold, corpus_test)
 
 
 if __name__ == "__main__":
