@@ -23,12 +23,13 @@ class Token:
 @dataclass
 class Sentence:
     tokens: List[Token]
+    sentence_id: str
 
 
 @dataclass
 class Corpus:
     sentences: List[Sentence]
-    name: str
+    corpus_id: str
 
 
 def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None, sous_corpus: bool = True) -> List[Corpus]:
@@ -36,16 +37,15 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None, sous_corpus: 
     tokens: List[Token] = []
     corpus: List[Corpus] = []
     with open(path) as f:
-        current_corp_id = ""
+        corp_id = ""
         for line in f:
             line = line.strip()
             if sous_corpus and line.startswith("# sent_id = "):
                 sent_id = line[12:]    
                 corp_id = regex.findall(r'^\w+',sent_id)[0]
-                current_corp_id = corp_id
             elif not line.startswith("#"):
                 if line == "":
-                    sentences[current_corp_id].append(Sentence(tokens))
+                    sentences[corp_id].append(Sentence(tokens, sent_id))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -78,7 +78,7 @@ def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
         tokens.append(Token(tok.text, tok.pos_ if len(tok.pos_) > 0 else tok.tag_, is_oov=origin_token.is_oov))
-    return Sentence(tokens)
+    return Sentence(tokens, "")
 
 @measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
@@ -125,7 +125,7 @@ def main():
         model_spacy = spacy.load(model_name)
         corpus_gold = read_conll("data/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train, sous_corpus = True)
         for corpus_g in corpus_gold:
-            print(corpus_g.name)
+            print(corpus_g.corpus_id)
             corpus_test = tag_corpus_spacy(corpus_g, model_spacy)
             print(compute_accuracy(corpus_g, corpus_test))
             print_report(corpus_g, corpus_test)
