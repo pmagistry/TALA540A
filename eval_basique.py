@@ -61,7 +61,7 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
-        tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
+        tokens.append(Token(tok.text, tok.pos_ if len(tok.pos_) > 0 else tok.tag_, is_oov=origin_token.is_oov))
     return Sentence(tokens)
 
 @measure_energy
