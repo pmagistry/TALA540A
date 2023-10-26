@@ -1,4 +1,7 @@
 from typing import List, Union, Dict, Set, Optional, Tuple
+from collections import defaultdict
+import regex
+import sys
 from pathlib import Path
 from dataclasses import dataclass
 
@@ -25,17 +28,24 @@ class Sentence:
 @dataclass
 class Corpus:
     sentences: List[Sentence]
+    name: str
 
 
-def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
-    sentences: List[Sentence] = []
+def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None, sous_corpus: bool = True) -> List[Corpus]:
+    sentences: defaultdict(List[Sentence]) = defaultdict(list[Sentence])
     tokens: List[Token] = []
+    corpus: List[Corpus] = []
     with open(path) as f:
+        current_corp_id = ""
         for line in f:
             line = line.strip()
-            if not line.startswith("#"):
+            if sous_corpus and line.startswith("# sent_id = "):
+                sent_id = line[12:]    
+                corp_id = regex.findall(r'^\w+',sent_id)[0]
+                current_corp_id = corp_id
+            elif not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sentence(tokens))
+                    sentences[current_corp_id].append(Sentence(tokens))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -46,7 +56,13 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
                         else:
                             is_oov = not form in vocabulaire
                         tokens.append(Token(form, tag, is_oov))
-    return Corpus(sentences)
+    all_corpus: List[Corpus] = []
+    for c in sentences:
+        corpus = Corpus(sentences[c], c)
+        all_corpus.append(corpus)
+        print("sous-corpus:", c)
+    #return Corpus(sentences)
+    return all_corpus
 
 
 def build_vocabulaire(corpus: Corpus) -> Set[str]:
@@ -71,7 +87,7 @@ def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
         doc = sentence_to_doc(sentence, model_spacy.vocab)
         doc = model_spacy(doc)
         sentences.append(doc_to_sentence(doc, sentence))
-    return Corpus(sentences)
+    return Corpus(sentences, "")
 
 
 def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
@@ -100,16 +116,19 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     print(classification_report(ref, test))
 
 def main():
-    corpus_train = read_conll("data/fr_sequoia-ud-train.conllu")
+    corpus_train = read_conll("data/fr_sequoia-ud-train.conllu", sous_corpus = False)[0]
+    # False: un seul sous-corpus, pas de découpage
     vocab_train = build_vocabulaire(corpus_train)
     #for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
     for model_name in ("spacy_model2/model-best/",):
         print(model_name)
         model_spacy = spacy.load(model_name)
-        corpus_gold = read_conll("data/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
-        corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-        print(compute_accuracy(corpus_gold, corpus_test))
-        print_report(corpus_gold, corpus_test)
+        corpus_gold = read_conll("data/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train, sous_corpus = True)
+        for corpus_g in corpus_gold:
+            print(corpus_g.name)
+            corpus_test = tag_corpus_spacy(corpus_g, model_spacy)
+            print(compute_accuracy(corpus_g, corpus_test))
+            print_report(corpus_g, corpus_test)
 
 
 if __name__ == "__main__":
