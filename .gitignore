@@ -4,6 +4,7 @@
 
 
 # Files / Data #
+__pycache__
 **/corpus
 **/config
 **/spacy_model2
