@@ -38,7 +38,6 @@ corpus_e = get_spacy_mymodel(args.l, corpus_r)
 # 'corpus_trg', corpus_lg', 'corpus_md', 'corpus_sm' sont les corpus spacy
 corpus_trf, corpus_lg, corpus_md, corpus_sm = get_spacy(args.l, corpus_r)
 
-
 # on affiche l'accuracy et la matrice de confusion
 acc_e = get_accuracy(corpus_e, corpus_r)
 print(f"\nL'accuracy avec notre modèle est à {acc_e[0]}%.")

@@ -54,47 +54,16 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
     """
-
-    etags = [
-        "NUM",
-        "DET",
-        "ADJ",
-        "NOUN",
-        "PROPN",
-        "PRON",
-        "ADV",
-        "AUX",
-        "VERB",
-        "SCONJ",
-        "ADP",
-        "PUNCT",
-        "CCONJ",
-        "X",
-        "SYM",
-    ]
-    rtags = [
-        "NUM",
-        "DET",
-        "ADJ",
-        "NOUN",
-        "PROPN",
-        "PRON",
-        "ADV",
-        "AUX",
-        "VERB",
-        "SCONJ",
-        "ADP",
-        "PUNCT",
-        "CCONJ",
-        "X",
-        "SYM",
-    ]
+    
+    etags = {token.pos for sentence in ecorpus.sentences for token in sentence.tokens}
+    rtags = {token.pos for sentence in rcorpus.sentences for token in sentence.tokens}
+    tags = etags.union(rtags)
 
     # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
     epos_rpos = OrderedDict()
-    for etag in etags:
+    for etag in tags: # tag du modèle à évaluer
         epos_rpos[etag] = OrderedDict()
-        for rtag in rtags:
+        for rtag in tags: # tag du corpus de référence
             epos_rpos[etag][rtag] = 0
 
     for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):

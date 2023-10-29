@@ -72,7 +72,7 @@ def get_conllu(
         langue (str): langue du corpus
         fichier (str): test ou train
         vocabulaire (Optional[Set[str]], optional): vocab du corpus train de référence
-
+    
     Returns:
         Corpus: contient les informations du corpus test de référence
     """
