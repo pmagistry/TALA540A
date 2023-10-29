@@ -11,7 +11,7 @@ from typing import List
 @dataclass
 class Token:
     """Chaque objet de la classe Token contiendra
-    
+
     form -- la forme du mot
     pos -- son pos
     is_oov -- s'il fait partie du vocabulaire du corpus de reference ou non
@@ -25,7 +25,7 @@ class Token:
 @dataclass
 class Sentence:
     """Chaque objet de la classe Sentence contiendra
-    
+
     nb_tokens -- le nombre de tokens dans la phrase
     sent_id -- le nom du sous-corpus d'où vient la phrase
     tokens -- la liste d'objets de la classe Token
@@ -39,7 +39,7 @@ class Sentence:
 @dataclass
 class Corpus:
     """Chaque objet de la classe Corpus contiendra
-    
+
     nb_sentences -- le nombre de phrases dans le corpus
     sentences -- la liste d'objets de la classe Sentence
     """

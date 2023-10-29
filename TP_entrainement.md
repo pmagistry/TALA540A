@@ -4,7 +4,7 @@ Entraînement de nouveau modèles
 
 ## Étape 1: préparation du corpus
 
-cf https://spacy.io/api/cli#convert
+cf. https://spacy.io/api/cli#convert
 
 Option simple: convertir des fichiers conllu en corpus d'entraînement. Par exemple avec sequoia:
 

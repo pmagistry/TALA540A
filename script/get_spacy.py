@@ -22,11 +22,17 @@ def get_model(langue: str) -> SpacyPipeline:
         list[str]: modèles de spacy choisi pour la tokenisation
     """
     if langue == "zh":  # choix de la langue : chinois
-        models = ["zh_core_web_lg", "zh_core_web_md", "zh_core_web_sm"]
+        models = [
+            "zh_core_web_trf", "zh_core_web_lg", 
+            "zh_core_web_md", "zh_core_web_sm"
+        ]
 
     else:  # choix par défaut de la langue : français
-        models = ["fr_core_news_lg", "fr_core_news_md", "fr_core_news_sm"]
-    
+        models = [
+            "fr_dep_news_trf", "fr_core_news_lg",
+            "fr_core_news_md", "fr_core_news_sm",
+        ]
+
     return models
 
 
@@ -41,13 +47,13 @@ def get_spacy(langue: str, rcorpus: Corpus):
     """
     # 'models' est liste des noms des modèles spacy
     models = get_model(langue)
-    
-    # model lg
+
+    # model trf
     nlp = spacy.load(models[0])
 
     # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
     with tqdm(
-        total=rcorpus.nb_sentences, colour="magenta", desc="phrases spacy lg"
+        total=rcorpus.nb_sentences, colour="RED", desc="spacy trf"
     ) as tqdmbar:
         # 'sentences' est une liste d'objets de la classe Sentence
         sentences = []
@@ -57,24 +63,26 @@ def get_spacy(langue: str, rcorpus: Corpus):
             words = [tok.form for tok in rsentence.tokens]
             doc = Doc(nlp.vocab, words=words)
             doc = nlp(doc)
-            
+
             # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
             sent_id = rsentence.sent_id
             # 'tokens' est une liste d'objet de la classe Token
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 tokens.append(Token(etoken.text, etoken.pos_, is_oov=rtoken.is_oov))
-            sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
+            sentences.append(
+                Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens)
+            )
             tqdmbar.update(1)  # update du compteur
-    
-    corpus_lg = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
-    
-    # model md
+
+    corpus_trf = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
+
+    # model lg
     nlp = spacy.load(models[1])
 
     # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
     with tqdm(
-        total=rcorpus.nb_sentences, colour="green", desc="phrases spacy md"
+        total=rcorpus.nb_sentences, colour="GREEN", desc="spacy lg"
     ) as tqdmbar:
         # 'sentences' est une liste d'objets de la classe Sentence
         sentences = []
@@ -84,24 +92,26 @@ def get_spacy(langue: str, rcorpus: Corpus):
             words = [tok.form for tok in rsentence.tokens]
             doc = Doc(nlp.vocab, words=words)
             doc = nlp(doc)
-            
+
             # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
             sent_id = rsentence.sent_id
             # 'tokens' est une liste d'objet de la classe Token
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 tokens.append(Token(etoken.text, etoken.pos_, is_oov=rtoken.is_oov))
-            sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
+            sentences.append(
+                Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens)
+            )
             tqdmbar.update(1)  # update du compteur
-    
-    corpus_md = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
-    
-    # model sm
+
+    corpus_lg = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
+
+    # model md
     nlp = spacy.load(models[2])
 
     # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
     with tqdm(
-        total=rcorpus.nb_sentences, colour="white", desc="phrases spacy sm"
+        total=rcorpus.nb_sentences, colour="CYAN", desc="spacy md"
     ) as tqdmbar:
         # 'sentences' est une liste d'objets de la classe Sentence
         sentences = []
@@ -111,19 +121,50 @@ def get_spacy(langue: str, rcorpus: Corpus):
             words = [tok.form for tok in rsentence.tokens]
             doc = Doc(nlp.vocab, words=words)
             doc = nlp(doc)
-            
+
             # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
             sent_id = rsentence.sent_id
             # 'tokens' est une liste d'objet de la classe Token
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 tokens.append(Token(etoken.text, etoken.pos_, is_oov=rtoken.is_oov))
-            sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
+            sentences.append(
+                Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens)
+            )
             tqdmbar.update(1)  # update du compteur
-    
+
+    corpus_md = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
+
+    # model sm
+    nlp = spacy.load(models[3])
+
+    # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
+    with tqdm(
+        total=rcorpus.nb_sentences, colour="MAGENTA", desc="spacy sm"
+    ) as tqdmbar:
+        # 'sentences' est une liste d'objets de la classe Sentence
+        sentences = []
+        for rsentence in rcorpus.sentences:
+            # 'words' est une liste de tokens
+            # dont on a récupéré la forme dans le corpus de référence
+            words = [tok.form for tok in rsentence.tokens]
+            doc = Doc(nlp.vocab, words=words)
+            doc = nlp(doc)
+
+            # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
+            sent_id = rsentence.sent_id
+            # 'tokens' est une liste d'objet de la classe Token
+            tokens = []
+            for etoken, rtoken in zip(doc, rsentence.tokens):
+                tokens.append(Token(etoken.text, etoken.pos_, is_oov=rtoken.is_oov))
+            sentences.append(
+                Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens)
+            )
+            tqdmbar.update(1)  # update du compteur
+
     corpus_sm = Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
 
-    return corpus_lg, corpus_md, corpus_sm
+    return corpus_trf, corpus_lg, corpus_md, corpus_sm
 
 
 def get_mymodel(langue: str) -> SpacyPipeline:
@@ -157,7 +198,7 @@ def get_spacy_mymodel(langue: str, rcorpus: Corpus) -> Corpus:
 
     # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
     with tqdm(
-        total=rcorpus.nb_sentences, colour="red", desc="phrases spacy"
+        total=rcorpus.nb_sentences, colour="YELLOW", desc="mon modèle"
     ) as tqdmbar:
         # 'sentences' est une liste d'objets de la classe Sentence
         sentences = []
@@ -167,14 +208,16 @@ def get_spacy_mymodel(langue: str, rcorpus: Corpus) -> Corpus:
             words = [tok.form for tok in rsentence.tokens]
             doc = Doc(nlp.vocab, words=words)
             doc = nlp(doc)
-            
+
             # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
             sent_id = rsentence.sent_id
             # 'tokens' est une liste d'objet de la classe Token
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 tokens.append(Token(etoken.text, etoken.tag_, is_oov=rtoken.is_oov))
-            sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
+            sentences.append(
+                Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens)
+            )
             tqdmbar.update(1)  # update du compteur
 
     return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)

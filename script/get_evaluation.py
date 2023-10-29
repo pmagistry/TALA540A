@@ -46,7 +46,7 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
     return round(acc / total * 100, 2), round(acc_oov / total_oov * 100, 2)
 
 
-def get_matrice(ecorpus: Corpus, rcorpus: Corpus, langue: str):
+def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
     """fonction d'affichage des matrices de confusion
     pour la classification des pos
 
@@ -54,19 +54,47 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus, langue: str):
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
     """
-    
-    if langue == "zh" :
-        etags = 0
-        rtags = 0
-    else :
-        etags = ["NUM", "DET", "ADJ", "NOUN", "PROPN", "PRON", "ADV", "AUX", "VERB", "SCONJ", "ADP", "PUNCT", "CCONJ", "X", "SYM"]
-        rtags = ["NUM", "DET", "ADJ", "NOUN", "PROPN", "PRON", "ADV", "AUX", "VERB", "SCONJ", "ADP", "PUNCT", "CCONJ", "X", "SYM"]
-    
+
+    etags = [
+        "NUM",
+        "DET",
+        "ADJ",
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADV",
+        "AUX",
+        "VERB",
+        "SCONJ",
+        "ADP",
+        "PUNCT",
+        "CCONJ",
+        "X",
+        "SYM",
+    ]
+    rtags = [
+        "NUM",
+        "DET",
+        "ADJ",
+        "NOUN",
+        "PROPN",
+        "PRON",
+        "ADV",
+        "AUX",
+        "VERB",
+        "SCONJ",
+        "ADP",
+        "PUNCT",
+        "CCONJ",
+        "X",
+        "SYM",
+    ]
+
     # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
     epos_rpos = OrderedDict()
-    for etag in etags :
+    for etag in etags:
         epos_rpos[etag] = OrderedDict()
-        for rtag in rtags :
+        for rtag in rtags:
             epos_rpos[etag][rtag] = 0
 
     for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
@@ -94,9 +122,9 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus, langue: str):
 
 
 def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
-    """ fonction d'affichage pour voir les résultats obtenus 
+    """fonction d'affichage pour voir les résultats obtenus
         après l'obtention des corpus
-        
+
     Args:
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
@@ -106,8 +134,8 @@ def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
     for esentences, rsentences in zip(ecorpus.sentences, rcorpus.sentences):
         for etoken, rtoken in zip(esentences.tokens, rsentences.tokens):
             # plusieurs proposition aux choix en fonction de ce que l'on veut voir
-            # if etoken.pos != rtoken.pos:
-            #     print(etoken, "\t", rtoken)
-            print(etoken, "\t", rtoken)
+            if etoken.pos != rtoken.pos:
+                print(etoken, "\t", rtoken)
+            # print(etoken, "\t", rtoken)
             # print(etoken.form, "\t", rtoken.form)
             # print(etoken.pos, "\t", rtoken.pos)

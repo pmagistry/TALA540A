@@ -2,11 +2,9 @@
 
 ## to-do-list
 - [] : entrainer en divisant le corpus ?
-- [] : resoudre problème tagging avec corpus chinois :
-
-- tag conllu : {'PROPN', 'NOUN', 'AUX', 'ADJ', 'PRON', 'X', 'PART', 'DET', 'CCONJ', 'NUM', 'ADV', 'VERB', 'PUNCT', 'ADP'}
-- tag mon modèle spacy pour le chinois : {'EC', 'SFN', 'FW', 'NNP', 'VV', 'MD', 'PFA', '(', '.', 'PRP', 'UH', 'DEC', 'RB', '/', 'IN', ',', 'DT', ')', 'BB', 'DEV', 'NNB', 'CD', '``', ':', 'NN', 'AS', 'VC', 'PRD', 'JJ', "''", 'HYPH', 'CC'}
-  - => prend les XPOS au lieu des UPOS
+- [x] : résoudre problème tagging avec corpus chinois :
+  - spacy prend les XPOS pour le tagging au lieu des UPOS
+  - => j'ai copié collé avec grep les UPOS dans la colonne XPOS
 
 ## liste des fichiers
 - README.md : explications du tp
