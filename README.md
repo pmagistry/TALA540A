@@ -18,6 +18,7 @@ Commande : `python3 -m spacy corpus/corpus_eval/fr_sequoia-ud-dev.conllu corpus/
 ## Étape 3 : entrainement
 
 - [x] Entrainer le modèle sur le corpus d'entrainement.
+
   > Commande : `python3 -m spacy train config/config.cfg --output ./spacy_model2/ --paths.train corpus/spacy_sequoia/fr_sequoia-ud-train.spacy --paths.dev corpus/spacy_sequoia/fr_sequoia-ud-dev.spacy`
 
 > Résultats :
@@ -51,7 +52,9 @@ E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE
 ## Étape 4 : évaluation
 
 - [x] Évaluer le modèle sur le corpus de test.
+
   > Commande : `python3 eval.py`
+
   > Résultats :
 
 ```
