@@ -1,8 +1,8 @@
 # TP1 - eval - Spacy POS tagging (suite)
 
-## [x] Étape 1
+## Étape 1
 
-## [x] Étape 2
+## Étape 2
 
 Reprise du script fait en classe eval.py.
 
@@ -17,15 +17,15 @@ Qualifier les résultats.
 
 ### Résultats
 
-- Exatitude : `python3 eval.py`
+- **Exatitude** : `python3 eval.py`
 
 ```
 (0.9645559538032656, 0.9645559538032656)
 ```
 
-- Matrice de confusion :
+- **Matrice de confusion** :
 
-#### Matrice 1 :
+##### Matrice 1 :
 
 ```
 Confusion Matrix:
@@ -152,7 +152,7 @@ Tag: SYM
   F1 Score: 80.00%
 ```
 
-#### Matrice 2 :
+##### Matrice 2 (sortie terminal):
 
 ```
 Confusion Matrix:
