@@ -20,6 +20,7 @@ class Token:
 @dataclass
 class Sentence:
     tokens: List[Token]
+    sent_id : str
 
 
 @dataclass
@@ -28,14 +29,19 @@ class Corpus:
 
 
 def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
+
     sentences: List[Sentence] = []
     tokens: List[Token] = []
     with open(path) as f:
         for line in f:
             line = line.strip()
+            sent_id = ""
+            if line.startswith("#") and line[1:].split("=")[0] == "sent_id":
+                sent_id = line.split("=")[1]
+   
             if not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sentence(tokens))
+                    sentences.append(Sentence(tokens=tokens, sent_id=sent_id))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -62,7 +68,7 @@ def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
         tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
-    return Sentence(tokens)
+    return Sentence(tokens, origin.sent_id)
 
 #@measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
@@ -83,6 +89,7 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
         corpus_gold.sentences, corpus_test.sentences
     ):
         for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+            print(token_gold.tag, token_test.tag)
             assert token_gold.form == token_test.form
             if token_gold.tag == token_test.tag:
                 nb_ok += 1
@@ -113,3 +120,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+#sous-corpus 
+#passer autres langues
+#à la fin mélanger tout et faire un rapport détaillé d'évaluation d'outil
