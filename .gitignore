@@ -5,6 +5,6 @@
 
 # Files / Data #
 __pycache__
-**/corpus
+**/corpus_polonais
 **/config
 **/spacy_model2
