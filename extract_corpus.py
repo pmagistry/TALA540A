@@ -4,9 +4,9 @@ from eval_basique import read_conll, Sentence, Corpus, Token
 def sentence_to_conll(sent: Sentence) -> str:
     result = f"# sent_id = {sent.sent_id}\n"
     text = " ".join([tok.form for tok in sent.tokens])
-    result += f"# text = {text}"
+    result += f"# text = {text}\n"
     for i, token in enumerate(sent.tokens):
-        result += "\t".join([str(i+1), token.form, "_", token.tag, "_", "_", "_", "_", "_"]) + "\n"
+        result += "\t".join([str(i+1), token.form, "_", token.tag, "_", "_", "_", "_", "_", "_"]) + "\n"
     return result
 
 
