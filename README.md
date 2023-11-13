@@ -6,7 +6,7 @@
 - [x] Convertir le corpus en corpus d'entrainement.
 - [ ] À faire sur d'autres (sous-)corpus.
 
-Commande : `python3 -m spacy corpus/corpus_eval/fr_sequoia-ud-dev.conllu corpus/spacy_sequoia/fr_sequoia-ud-dev.spacy`
+Commande : `python3 -m convert spacy corpus/corpus_eval/fr_sequoia-ud-dev.conllu corpus/spacy_sequoia/fr_sequoia-ud-dev.spacy`
 
 ## Étape 2 : configuration de la pipeline
 
