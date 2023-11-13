@@ -6,17 +6,19 @@ Ce fichier contient les fonctions pour évaluer la tokenisation des corpus
 """
 
 from collections import OrderedDict
+from typing import Optional
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from datastructures import Corpus
 
 
-def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
+def get_accuracy(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str]) -> tuple[float, float]:
     """
     Args:
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
+        subcorpus (Optional[str]): nom du sous-corpus du corpus test à évaluer
 
     Returns:
         tuple[float, float]: accuracy de la tokenisation du ecorpus
@@ -31,22 +33,36 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus) -> tuple[float, float]:
     # 'acc' est le nb de docs bien classés avec is_oov == True
     acc_oov = 0
     for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-            assert etoken.form == rtoken.form
-            # sans vocab
-            total += 1
-            if etoken.pos == rtoken.pos:
-                acc += 1
-            # avec vocab
-            if etoken.is_oov:
-                total_oov += 1
+        if subcorpus is None:
+            for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
+                assert etoken.form == rtoken.form
+                # sans vocab
+                total += 1
                 if etoken.pos == rtoken.pos:
-                    acc_oov += 1
+                    acc += 1
+                # avec vocab
+                if etoken.is_oov:
+                    total_oov += 1
+                    if etoken.pos == rtoken.pos:
+                        acc_oov += 1
+        else:
+            if rsentence.sent_id == subcorpus :
+                for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
+                    assert etoken.form == rtoken.form
+                    # sans vocab
+                    total += 1
+                    if etoken.pos == rtoken.pos:
+                        acc += 1
+                    # avec vocab
+                    if etoken.is_oov:
+                        total_oov += 1
+                        if etoken.pos == rtoken.pos:
+                            acc_oov += 1
 
     return round(acc / total * 100, 2), round(acc_oov / total_oov * 100, 2)
 
 
-def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
+def get_matrice(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str]):
     """fonction d'affichage des matrices de confusion
     pour la classification des pos
 
@@ -67,8 +83,13 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus):
             epos_rpos[etag][rtag] = 0
 
     for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-            epos_rpos[etoken.pos][rtoken.pos] += 1
+        if subcorpus is None:
+            for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
+                epos_rpos[etoken.pos][rtoken.pos] += 1    
+        else:
+            if rsentence.sent_id == subcorpus :
+                for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
+                    epos_rpos[etoken.pos][rtoken.pos] += 1
 
     # 'cm' est une matrice de confusion faite vec pandas
     cm = pd.DataFrame.from_dict(epos_rpos)

@@ -88,7 +88,7 @@ def get_conllu(
         sentences = []
         for table in tables:
             # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
-            sent_id = regex.search(r"^.+(\.|-)", table.metadata["sent_id"]).group(0)
+            sent_id = regex.search(r"^.+(\.|-|_)", table.metadata["sent_id"]).group(0)
 
             # 'tokens' est une liste d'objet de la classe Token
             tokens = []
