@@ -45,3 +45,5 @@ Essayer d'utiliser `typing` et des `dataclass` pour structurer votre code
     - différents modèles spacy
     - différents corpus UD
 
+- consommation énergétique avec `pyJoules`
+  Attention: `sudo chmod -R a+r /sys/class/powercap/intel-rapl` nécessaire

@@ -2,7 +2,6 @@ from typing import List, Union, Dict, Set, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
 
-
 from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 import spacy
@@ -20,6 +19,7 @@ class Token:
 
 @dataclass
 class Sentence:
+    sent_id: str
     tokens: List[Token]
 
 
@@ -31,12 +31,15 @@ class Corpus:
 def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
     sentences: List[Sentence] = []
     tokens: List[Token] = []
+    sid = ""
     with open(path) as f:
         for line in f:
             line = line.strip()
+            if line.startswith("# sent_id =" ):
+                sid = line.split(" ")[-1]
             if not line.startswith("#"):
                 if line == "":
-                    sentences.append(Sentence(tokens))
+                    sentences.append(Sentence(sent_id=sid, tokens=tokens))
                     tokens = []
                 else:
                     fields = line.split("\t")
@@ -62,10 +65,13 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
-        tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
-    return Sentence(tokens)
+        tag = tok.pos_ 
+        if len(tag) == 0 :
+            tag = tok.tag_
+        tokens.append(Token(tok.text, tag, is_oov=origin_token.is_oov))
+    return Sentence(origin.sent_id, tokens)
 
-# @measure_energy
+#@measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     sentences = []
     for sentence in corpus.sentences:
@@ -75,7 +81,7 @@ def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     return Corpus(sentences)
 
 
-def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
+def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus, subcorpus: Optional[str] = None) -> Tuple[float, float]:
     nb_ok = 0
     nb_total = 0
     oov_ok = 0
@@ -83,16 +89,17 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     for sentence_gold, sentence_test in zip(
         corpus_gold.sentences, corpus_test.sentences
     ):
-        for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
-            assert token_gold.form == token_test.form
-            if token_gold.tag == token_test.tag:
-                nb_ok += 1
-            nb_total += 1
-            if token_gold.is_oov:
-                oov_total += 1
+        if subcorpus is None or subcorpus in sentence_gold.sent_id: 
+            for token_gold, token_test in zip(sentence_gold.tokens, sentence_test.tokens):
+                assert token_gold.form == token_test.form
                 if token_gold.tag == token_test.tag:
-                    oov_ok += 1
-
+                    nb_ok += 1
+                nb_total += 1
+                if token_gold.is_oov:
+                    oov_total += 1
+                    if token_gold.tag == token_test.tag:
+                        oov_ok += 1
+    
     return nb_ok / nb_total, oov_ok / oov_total
 
 def print_report(corpus_gold: Corpus, corpus_test: Corpus):
@@ -103,13 +110,15 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
 def main():
     corpus_train = read_conll("corpus/fr_sequoia-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    for model_name in ("outputs/model-best", "fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
         print(model_name)
         model_spacy = spacy.load(model_name)
         corpus_gold = read_conll("corpus/fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-        print(compute_accuracy(corpus_gold, corpus_test))
-        print_report(corpus_gold, corpus_test)
+        for subcorpus in ("annodis", "frwiki", "emea", "Europar"):
+            print(subcorpus)
+            print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
+        # print_report(corpus_gold, corpus_test)
 
 
 if __name__ == "__main__":
