@@ -2,13 +2,15 @@ from typing import List, Union, Dict, Set, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
 
+import pandas as pd
 from spacy import Language as SpacyPipeline
 from spacy.tokens import Token as SpacyToken, Doc as SpacyDoc
 import spacy
 
 from pyJoules.energy_meter import measure_energy
 
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, confusion_matrix
+import numpy as np
 
 @dataclass
 class Token:
@@ -105,7 +107,15 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus, subcorpus: Option
 def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     ref = [tok.tag for sent in corpus_test.sentences for tok in sent.tokens]
     test = [tok.tag for sent in corpus_gold.sentences for tok in sent.tokens]
+
+    labels = np.unique(ref + test)
+    conf_matrix = confusion_matrix(ref_test, labels=labels)
+    conf_matrix_df = pd.DataFrame(conf_matrix, index=labels, colummns=labels)
+    print("Matrice de confusion : ")
+    print(conf_matrix_df)
     print(classification_report(ref, test))
+
+
 
 def main():
     corpus_train = read_conll("fr_sequoia-ud-train.conllu")
