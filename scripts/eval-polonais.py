@@ -110,7 +110,7 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
 def main():
     corpus_train = read_conll("./corpus_polonais/corpus-pdb/pl_pdb-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("spacy_model2/model-best", "pl_core_news_sm", "pl_core_news_md", "pl_core_news_lg"):
+    for model_name in ("./model-pl/spacy_model2/model-best", "pl_core_news_sm", "pl_core_news_md", "pl_core_news_lg"):
         print(model_name)
         model_spacy = spacy.load(model_name)
         corpus_gold = read_conll("./corpus_polonais/corpus-pdb/pl_pdb-ud-test.conllu", vocabulaire=vocab_train)
