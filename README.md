@@ -699,7 +699,7 @@ weighted avg       0.97      0.96      0.96     33616
 
 # ARABE
 
-- [x] Télécharger le corpus conllu (train, dev et test) pour le polonais.
+- [x] Télécharger le corpus conllu (train, dev et test) pour l'arabe.
 - [ ] Convertir le corpus en corpus d'entrainement.
   > COMMANDES :
 
@@ -715,7 +715,7 @@ weighted avg       0.97      0.96      0.96     33616
 `python -m spacy init fill-config config-ar/base_config.cfg config.cfg`
 
 - [ ] Entrainement.
-  > COMMANDE
+  > COMMANDE :
 
 `python3 -m spacy train ./config-ar/config.cfg --output ./model-ar/spacy_model2/ --paths.train ./corpus_arabe/corpus-ent/ar_nyuad-ud-train.spacy --paths.dev ./corpus_arabe/corpus-ent/ar_nyuad-ud-dev.spacy `
 
