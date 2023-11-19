@@ -1,7 +1,9 @@
 # TALA540A : TP de Laura Darenne
 
 ## to-do-list
-- [] : entrainer en divisant le corpus
+- [] : entrainer en divisant le corpus (rajouter extract_corpus.py)
+- [] : finaliser choix du tagger pos pour chinois classique
+- [] : passer d'un modèle spacy effiency à accuracy : https://spacy.io/usage/training#quickstart
 
 ## liste des fichiers
 - README.md : explications du tp
