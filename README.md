@@ -71,7 +71,7 @@ E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE
 ```
 
 ### Essai 2
-
+```
 ===================== Training pipeline ==========================
 ℹ Pipeline: ['tok2vec', 'morphologizer']
 ℹ Initial learn rate: 0.001
@@ -104,7 +104,7 @@ E # LOSS TOK2VEC LOSS MORPH... POS_ACC MORPH_ACC SCORE
 28 4400 955.57 2663.25 94.63 84.88 0.90
 30 4600 938.47 2531.77 94.67 84.88 0.90
 32 4800 927.07 2457.63 94.61 84.76 0.90
-
+```
 - [x] Évaluation.
   > COMMANDE
   > `python3 scripts/eval-polonais.py`
