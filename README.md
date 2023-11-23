@@ -1,8 +1,8 @@
 # TALA540A : TP de Laura Darenne
 
 ## to-do-list
-- [] : finaliser choix du tagger pos pour chinois classique
 - [] : passer d'un modèle spacy effiency à accuracy : https://spacy.io/usage/training#quickstart
+- [] : jiayan continuer tableau de conversion
 
 ## liste des fichiers
 - README.md : explications du tp
@@ -20,6 +20,7 @@
   - monmodel : mon modèle entrainé
     - model-best : le modèle que l'on prend pour l'évaluation
 - model jiayan : https://github.com/jiaeyan/Jiayan/tree/master
+- model bert : https://huggingface.co/Jihuai/bert-ancient-chinese
 
 ### ./corpus
 - lzh_kyoto-ud-dev.conllu
