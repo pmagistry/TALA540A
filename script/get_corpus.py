@@ -41,6 +41,10 @@ def get_conllu(fichier: str, vocabulaire: Optional[Set[str]] = None) -> Corpus:
         with open("./corpus/lzh_kyoto-ud-train.conllu", "r", encoding="utf-8") as f :
             data = f.read()
         tables = parse(data)
+    elif fichier == "dev" :
+        with open("./corpus/lzh_kyoto-ud-dev.conllu", "r", encoding="utf-8") as f :
+            data = f.read()
+        tables = parse(data)
     else : 
         with open("./corpus/lzh_kyoto-ud-test.conllu", "r", encoding="utf-8") as f :
             data = f.read()
@@ -68,7 +72,7 @@ def get_conllu(fichier: str, vocabulaire: Optional[Set[str]] = None) -> Corpus:
             sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
             tqdmbar.update(1)  # update du compteur
 
-    return Corpus(nb_sentences=len(sentences), sentences=sentences)
+    return Corpus(nb_sentences=len(sentences), sentences=sentences, name="conllu")
 
 
 def get_spacy(rcorpus: Corpus, title: str, model: str, color: str) -> Corpus:
@@ -114,4 +118,4 @@ def get_spacy(rcorpus: Corpus, title: str, model: str, color: str) -> Corpus:
             sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
             tqdmbar.update(1)  # update du compteur
 
-    return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences)
+    return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences, name=title)

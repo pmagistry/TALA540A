@@ -2,6 +2,9 @@
 
 #### toutes les commandes pour entrainer le modèle spacy
 
+# pour la partie config
+# python -m spacy init fill-config base_config_acc.cfg config.cfg
+
 # transformer les corpus si ce n'est pas déjà fait
 python -m spacy convert ./corpus/lzh_kyoto-ud-train.conllu ./script/model_spacy/corpus/ -c conllu -l chinese -n 10
 python -m spacy convert ./corpus/lzh_kyoto-ud-dev.conllu ./script/model_spacy/corpus/ -c conllu -l chinese -n 10

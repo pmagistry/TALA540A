@@ -42,7 +42,9 @@ class Corpus:
 
     nb_sentences -- le nombre de phrases dans le corpus
     sentences -- la liste d'objets de la classe Sentence
+    name -- nom du modèle utilisé
     """
 
     nb_sentences: int
     sentences: List[Sentence]
+    name: str

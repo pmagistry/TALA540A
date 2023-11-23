@@ -1,0 +1,5646 @@
+# sent_id = KR1h0004_
+# text = 顏 淵 篇 第 十二
+1	顏	顏	PROPN	PROPN	_	_	_	_	_
+2	淵	淵	PROPN	PROPN	_	_	_	_	_
+3	篇	篇	NOUN	NOUN	_	_	_	_	_
+4	第	第	NOUN	NOUN	_	_	_	_	_
+5	十二	十二	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 顏 淵 問 仁
+1	顏	顏	PROPN	PROPN	_	_	_	_	_
+2	淵	淵	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 克 己 復 禮 為 仁
+1	克	克	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	復	復	VERB	VERB	_	_	_	_	_
+4	禮	禮	NOUN	NOUN	_	_	_	_	_
+5	為	為	AUX	AUX	_	_	_	_	_
+6	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 一 日 克 己 復 禮
+1	一	一	NUM	NUM	_	_	_	_	_
+2	日	日	NOUN	NOUN	_	_	_	_	_
+3	克	克	VERB	VERB	_	_	_	_	_
+4	己	己	PRON	PRON	_	_	_	_	_
+5	復	復	VERB	VERB	_	_	_	_	_
+6	禮	禮	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 天 下 歸 仁 焉
+1	天	天	NOUN	NOUN	_	_	_	_	_
+2	下	下	NOUN	NOUN	_	_	_	_	_
+3	歸	歸	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+5	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 為 仁 由 己 而 由 人 乎 哉
+1	為	為	VERB	VERB	_	_	_	_	_
+2	仁	仁	NOUN	NOUN	_	_	_	_	_
+3	由	由	VERB	VERB	_	_	_	_	_
+4	己	己	PRON	PRON	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	由	由	VERB	VERB	_	_	_	_	_
+7	人	人	NOUN	NOUN	_	_	_	_	_
+8	乎	乎	PART	PART	_	_	_	_	_
+9	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 顏 淵 曰
+1	顏	顏	PROPN	PROPN	_	_	_	_	_
+2	淵	淵	PROPN	PROPN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 問 其 目
+1	請	請	VERB	VERB	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	目	目	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 禮 勿 視
+1	非	非	ADV	ADV	_	_	_	_	_
+2	禮	禮	NOUN	NOUN	_	_	_	_	_
+3	勿	勿	ADV	ADV	_	_	_	_	_
+4	視	視	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 禮 勿 聽
+1	非	非	ADV	ADV	_	_	_	_	_
+2	禮	禮	NOUN	NOUN	_	_	_	_	_
+3	勿	勿	ADV	ADV	_	_	_	_	_
+4	聽	聽	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 禮 勿 言
+1	非	非	ADV	ADV	_	_	_	_	_
+2	禮	禮	NOUN	NOUN	_	_	_	_	_
+3	勿	勿	ADV	ADV	_	_	_	_	_
+4	言	言	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 禮 勿 動
+1	非	非	ADV	ADV	_	_	_	_	_
+2	禮	禮	NOUN	NOUN	_	_	_	_	_
+3	勿	勿	ADV	ADV	_	_	_	_	_
+4	動	動	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 顏 淵 曰
+1	顏	顏	PROPN	PROPN	_	_	_	_	_
+2	淵	淵	PROPN	PROPN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 回 雖 不 敏
+1	回	回	PROPN	PROPN	_	_	_	_	_
+2	雖	雖	ADV	ADV	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	敏	敏	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 事 斯 語 矣
+1	請	請	VERB	VERB	_	_	_	_	_
+2	事	事	VERB	VERB	_	_	_	_	_
+3	斯	斯	PRON	PRON	_	_	_	_	_
+4	語	語	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仲弓 問 仁
+1	仲弓	仲弓	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 出 門 如 見 大 賓
+1	出	出	VERB	VERB	_	_	_	_	_
+2	門	門	NOUN	NOUN	_	_	_	_	_
+3	如	如	VERB	VERB	_	_	_	_	_
+4	見	見	VERB	VERB	_	_	_	_	_
+5	大	大	VERB	VERB	_	_	_	_	_
+6	賓	賓	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 民 如 承 大 祭
+1	使	使	VERB	VERB	_	_	_	_	_
+2	民	民	NOUN	NOUN	_	_	_	_	_
+3	如	如	VERB	VERB	_	_	_	_	_
+4	承	承	VERB	VERB	_	_	_	_	_
+5	大	大	VERB	VERB	_	_	_	_	_
+6	祭	祭	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 己 所 不 欲 勿 施 於 人
+1	己	己	PRON	PRON	_	_	_	_	_
+2	所	所	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	欲	欲	VERB	VERB	_	_	_	_	_
+5	勿	勿	ADV	ADV	_	_	_	_	_
+6	施	施	VERB	VERB	_	_	_	_	_
+7	於	於	ADP	ADP	_	_	_	_	_
+8	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 邦 無 怨
+1	在	在	VERB	VERB	_	_	_	_	_
+2	邦	邦	NOUN	NOUN	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	怨	怨	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 家 無 怨
+1	在	在	VERB	VERB	_	_	_	_	_
+2	家	家	NOUN	NOUN	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	怨	怨	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仲弓 曰
+1	仲弓	仲弓	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雍 雖 不 敏
+1	雍	雍	PROPN	PROPN	_	_	_	_	_
+2	雖	雖	ADV	ADV	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	敏	敏	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 事 斯 語 矣
+1	請	請	VERB	VERB	_	_	_	_	_
+2	事	事	VERB	VERB	_	_	_	_	_
+3	斯	斯	PRON	PRON	_	_	_	_	_
+4	語	語	VERB	VERB	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 司馬 牛 問 仁
+1	司馬	司馬	PROPN	PROPN	_	_	_	_	_
+2	牛	牛	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仁 者 其 言 也 訒
+1	仁	仁	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	其	其	PART	PART	_	_	_	_	_
+4	言	言	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+6	訒	訒	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 言 也 訒
+1	其	其	PART	PART	_	_	_	_	_
+2	言	言	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+4	訒	訒	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 斯 謂 之 仁 已 乎
+1	斯	斯	PRON	PRON	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	仁	仁	VERB	VERB	_	_	_	_	_
+5	已	已	PART	PART	_	_	_	_	_
+6	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 為 之 難
+1	為	為	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	難	難	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 之 得 無 訒 乎
+1	言	言	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	得	得	AUX	AUX	_	_	_	_	_
+4	無	無	VERB	VERB	_	_	_	_	_
+5	訒	訒	VERB	VERB	_	_	_	_	_
+6	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 司馬 牛 問 君子
+1	司馬	司馬	PROPN	PROPN	_	_	_	_	_
+2	牛	牛	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	君子	君子	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 不 憂 不 懼
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	憂	憂	VERB	VERB	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	懼	懼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 憂 不 懼
+1	不	不	ADV	ADV	_	_	_	_	_
+2	憂	憂	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	懼	懼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 斯 謂 之 君子 已 乎
+1	斯	斯	PRON	PRON	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	君子	君子	NOUN	NOUN	_	_	_	_	_
+5	已	已	PART	PART	_	_	_	_	_
+6	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 內 省 不 疚
+1	內	內	NOUN	NOUN	_	_	_	_	_
+2	省	省	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	疚	疚	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 何 憂 何 懼
+1	夫	夫	PART	PART	_	_	_	_	_
+2	何	何	PRON	PRON	_	_	_	_	_
+3	憂	憂	VERB	VERB	_	_	_	_	_
+4	何	何	PRON	PRON	_	_	_	_	_
+5	懼	懼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 司馬 牛 憂
+1	司馬	司馬	PROPN	PROPN	_	_	_	_	_
+2	牛	牛	PROPN	PROPN	_	_	_	_	_
+3	憂	憂	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 皆 有 兄 弟
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	皆	皆	ADV	ADV	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	兄	兄	NOUN	NOUN	_	_	_	_	_
+5	弟	弟	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 我 獨 亡
+1	我	我	PRON	PRON	_	_	_	_	_
+2	獨	獨	ADV	ADV	_	_	_	_	_
+3	亡	亡	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子夏 曰
+1	子夏	子夏	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 商 聞 之 矣
+1	商	商	PROPN	PROPN	_	_	_	_	_
+2	聞	聞	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 死 生 有 命
+1	死	死	VERB	VERB	_	_	_	_	_
+2	生	生	VERB	VERB	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	命	命	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 富 貴 在 天
+1	富	富	VERB	VERB	_	_	_	_	_
+2	貴	貴	VERB	VERB	_	_	_	_	_
+3	在	在	VERB	VERB	_	_	_	_	_
+4	天	天	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 敬 而 無 失
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	敬	敬	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	無	無	VERB	VERB	_	_	_	_	_
+5	失	失	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 與 人 恭 而 有 禮
+1	與	與	ADP	ADP	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	恭	恭	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	有	有	VERB	VERB	_	_	_	_	_
+6	禮	禮	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 四 海 之 內 皆 兄 弟 也
+1	四	四	NUM	NUM	_	_	_	_	_
+2	海	海	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	內	內	NOUN	NOUN	_	_	_	_	_
+5	皆	皆	ADV	ADV	_	_	_	_	_
+6	兄	兄	NOUN	NOUN	_	_	_	_	_
+7	弟	弟	NOUN	NOUN	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 何 患 乎 無 兄 弟 也
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	何	何	ADV	ADV	_	_	_	_	_
+3	患	患	VERB	VERB	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+5	無	無	VERB	VERB	_	_	_	_	_
+6	兄	兄	NOUN	NOUN	_	_	_	_	_
+7	弟	弟	NOUN	NOUN	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 問 明
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	明	明	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 浸 潤 之 譖
+1	浸	浸	ADV	ADV	_	_	_	_	_
+2	潤	潤	VERB	VERB	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	譖	譖	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 膚 受 之 愬
+1	膚	膚	NOUN	NOUN	_	_	_	_	_
+2	受	受	VERB	VERB	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	愬	愬	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 行 焉
+1	不	不	ADV	ADV	_	_	_	_	_
+2	行	行	VERB	VERB	_	_	_	_	_
+3	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 謂 明 也 已 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	明	明	NOUN	NOUN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+5	已	已	PART	PART	_	_	_	_	_
+6	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 浸 潤 之 譖
+1	浸	浸	ADV	ADV	_	_	_	_	_
+2	潤	潤	VERB	VERB	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	譖	譖	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 膚 受 之 愬
+1	膚	膚	NOUN	NOUN	_	_	_	_	_
+2	受	受	VERB	VERB	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	愬	愬	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 行 焉
+1	不	不	ADV	ADV	_	_	_	_	_
+2	行	行	VERB	VERB	_	_	_	_	_
+3	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 謂 遠 也 已 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	遠	遠	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+5	已	已	PART	PART	_	_	_	_	_
+6	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 問 政
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 足 食
+1	足	足	VERB	VERB	_	_	_	_	_
+2	食	食	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 足 兵
+1	足	足	VERB	VERB	_	_	_	_	_
+2	兵	兵	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 民 信 之 矣
+1	民	民	NOUN	NOUN	_	_	_	_	_
+2	信	信	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 不 得 已 而 去
+1	必	必	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	得	得	AUX	AUX	_	_	_	_	_
+4	已	已	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	去	去	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 於 斯 三 者 何 先
+1	於	於	ADP	ADP	_	_	_	_	_
+2	斯	斯	PRON	PRON	_	_	_	_	_
+3	三	三	NUM	NUM	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	何	何	PRON	PRON	_	_	_	_	_
+6	先	先	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 去 兵
+1	去	去	VERB	VERB	_	_	_	_	_
+2	兵	兵	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 不 得 已 而 去
+1	必	必	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	得	得	AUX	AUX	_	_	_	_	_
+4	已	已	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	去	去	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 於 斯 二 者 何 先
+1	於	於	ADP	ADP	_	_	_	_	_
+2	斯	斯	PRON	PRON	_	_	_	_	_
+3	二	二	NUM	NUM	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	何	何	PRON	PRON	_	_	_	_	_
+6	先	先	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 去 食
+1	去	去	VERB	VERB	_	_	_	_	_
+2	食	食	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 自 古 皆 有 死
+1	自	自	ADP	ADP	_	_	_	_	_
+2	古	古	NOUN	NOUN	_	_	_	_	_
+3	皆	皆	ADV	ADV	_	_	_	_	_
+4	有	有	VERB	VERB	_	_	_	_	_
+5	死	死	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 民 無 信 不 立
+1	民	民	NOUN	NOUN	_	_	_	_	_
+2	無	無	VERB	VERB	_	_	_	_	_
+3	信	信	VERB	VERB	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	立	立	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 棘 子成 曰
+1	棘	棘	PROPN	PROPN	_	_	_	_	_
+2	子成	子成	PROPN	PROPN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 質 而 已 矣
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	質	質	NOUN	NOUN	_	_	_	_	_
+3	而	而	PART	PART	_	_	_	_	_
+4	已	已	PART	PART	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 以 文 為
+1	何	何	PRON	PRON	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	文	文	NOUN	NOUN	_	_	_	_	_
+4	為	為	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 惜 乎
+1	惜	惜	VERB	VERB	_	_	_	_	_
+2	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 之 說 君子 也
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	說	說	VERB	VERB	_	_	_	_	_
+4	君子	君子	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 駟 不 及 舌
+1	駟	駟	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	及	及	VERB	VERB	_	_	_	_	_
+4	舌	舌	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 文 猶 質 也
+1	文	文	NOUN	NOUN	_	_	_	_	_
+2	猶	猶	VERB	VERB	_	_	_	_	_
+3	質	質	NOUN	NOUN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 質 猶 文 也
+1	質	質	NOUN	NOUN	_	_	_	_	_
+2	猶	猶	VERB	VERB	_	_	_	_	_
+3	文	文	NOUN	NOUN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 虎 豹 之 鞹 猶 犬 羊 之 鞹
+1	虎	虎	NOUN	NOUN	_	_	_	_	_
+2	豹	豹	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	鞹	鞹	NOUN	NOUN	_	_	_	_	_
+5	猶	猶	VERB	VERB	_	_	_	_	_
+6	犬	犬	NOUN	NOUN	_	_	_	_	_
+7	羊	羊	NOUN	NOUN	_	_	_	_	_
+8	之	之	SCONJ	SCONJ	_	_	_	_	_
+9	鞹	鞹	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 哀 公 問 於 有若 曰
+1	哀	哀	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	於	於	ADP	ADP	_	_	_	_	_
+5	有若	有若	PROPN	PROPN	_	_	_	_	_
+6	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 年 饑 用 不 足
+1	年	年	NOUN	NOUN	_	_	_	_	_
+2	饑	饑	VERB	VERB	_	_	_	_	_
+3	用	用	VERB	VERB	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 之 何
+1	如	如	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	何	何	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有若 對 曰
+1	有若	有若	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 盍 徹 乎
+1	盍	盍	ADV	ADV	_	_	_	_	_
+2	徹	徹	VERB	VERB	_	_	_	_	_
+3	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 二 吾 猶 不 足
+1	二	二	NUM	NUM	_	_	_	_	_
+2	吾	吾	PRON	PRON	_	_	_	_	_
+3	猶	猶	ADV	ADV	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 之 何 其 徹 也
+1	如	如	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	何	何	PRON	PRON	_	_	_	_	_
+4	其	其	PART	PART	_	_	_	_	_
+5	徹	徹	VERB	VERB	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 對 曰
+1	對	對	ADV	ADV	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 百 姓 足
+1	百	百	NUM	NUM	_	_	_	_	_
+2	姓	姓	NOUN	NOUN	_	_	_	_	_
+3	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君 孰 與 不 足
+1	君	君	NOUN	NOUN	_	_	_	_	_
+2	孰	孰	PRON	PRON	_	_	_	_	_
+3	與	與	ADP	ADP	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 百 姓 不 足
+1	百	百	NUM	NUM	_	_	_	_	_
+2	姓	姓	NOUN	NOUN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君 孰 與 足
+1	君	君	NOUN	NOUN	_	_	_	_	_
+2	孰	孰	PRON	PRON	_	_	_	_	_
+3	與	與	ADP	ADP	_	_	_	_	_
+4	足	足	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 問 崇 德 辨 惑
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	崇	崇	VERB	VERB	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+5	辨	辨	VERB	VERB	_	_	_	_	_
+6	惑	惑	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 主 忠 信
+1	主	主	VERB	VERB	_	_	_	_	_
+2	忠	忠	NOUN	NOUN	_	_	_	_	_
+3	信	信	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 徙 義
+1	徙	徙	VERB	VERB	_	_	_	_	_
+2	義	義	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 崇 德 也
+1	崇	崇	VERB	VERB	_	_	_	_	_
+2	德	德	NOUN	NOUN	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 愛 之 欲 其 生
+1	愛	愛	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	欲	欲	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	生	生	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 惡 之 欲 其 死
+1	惡	惡	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	欲	欲	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	死	死	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 既 欲 其 生
+1	既	既	ADV	ADV	_	_	_	_	_
+2	欲	欲	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	生	生	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 又 欲 其 死
+1	又	又	ADV	ADV	_	_	_	_	_
+2	欲	欲	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	死	死	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 是 惑 也
+1	是	是	PRON	PRON	_	_	_	_	_
+2	惑	惑	NOUN	NOUN	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 誠 不 以 富
+1	誠	誠	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	富	富	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 祗 以 異
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	祗	祗	ADV	ADV	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	異	異	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 齊 景 公 問 政 於 孔子
+1	齊	齊	PROPN	PROPN	_	_	_	_	_
+2	景	景	PROPN	PROPN	_	_	_	_	_
+3	公	公	NOUN	NOUN	_	_	_	_	_
+4	問	問	VERB	VERB	_	_	_	_	_
+5	政	政	NOUN	NOUN	_	_	_	_	_
+6	於	於	ADP	ADP	_	_	_	_	_
+7	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君 君
+1	君	君	NOUN	NOUN	_	_	_	_	_
+2	君	君	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 臣 臣
+1	臣	臣	NOUN	NOUN	_	_	_	_	_
+2	臣	臣	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 父 父
+1	父	父	NOUN	NOUN	_	_	_	_	_
+2	父	父	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 子
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	子	子	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公 曰
+1	公	公	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 哉
+1	善	善	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 信 如 君 不 君
+1	信	信	ADV	ADV	_	_	_	_	_
+2	如	如	ADV	ADV	_	_	_	_	_
+3	君	君	NOUN	NOUN	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	君	君	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 臣 不 臣
+1	臣	臣	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	臣	臣	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 父 不 父
+1	父	父	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	父	父	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 不 子
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	子	子	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 有 粟
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	粟	粟	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 得 而 食 諸
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	得	得	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	食	食	VERB	VERB	_	_	_	_	_
+5	諸	諸	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 片 言 可 以 折 獄 者 其 由 也 與
+1	片	片	VERB	VERB	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	可	可	AUX	AUX	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+5	折	折	VERB	VERB	_	_	_	_	_
+6	獄	獄	NOUN	NOUN	_	_	_	_	_
+7	者	者	PART	PART	_	_	_	_	_
+8	其	其	PART	PART	_	_	_	_	_
+9	由	由	PROPN	PROPN	_	_	_	_	_
+10	也	也	PART	PART	_	_	_	_	_
+11	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 無 宿 諾
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	無	無	ADV	ADV	_	_	_	_	_
+3	宿	宿	VERB	VERB	_	_	_	_	_
+4	諾	諾	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 聽 訟
+1	聽	聽	VERB	VERB	_	_	_	_	_
+2	訟	訟	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 猶 人 也
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	猶	猶	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 也 使 無 訟 乎
+1	必	必	ADV	ADV	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	使	使	VERB	VERB	_	_	_	_	_
+4	無	無	ADV	ADV	_	_	_	_	_
+5	訟	訟	VERB	VERB	_	_	_	_	_
+6	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 問 政
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 居 之 無 倦
+1	居	居	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	倦	倦	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 行 之 以 忠
+1	行	行	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	忠	忠	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 博 學 於 文
+1	博	博	ADV	ADV	_	_	_	_	_
+2	學	學	VERB	VERB	_	_	_	_	_
+3	於	於	ADP	ADP	_	_	_	_	_
+4	文	文	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 約 之 以 禮
+1	約	約	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	禮	禮	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 可 以 弗 畔 矣 夫
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	弗	弗	ADV	ADV	_	_	_	_	_
+5	畔	畔	VERB	VERB	_	_	_	_	_
+6	矣	矣	PART	PART	_	_	_	_	_
+7	夫	夫	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 成 人 之 美
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	成	成	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	美	美	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 成 人 之 惡
+1	不	不	ADV	ADV	_	_	_	_	_
+2	成	成	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	惡	惡	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 反 是
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	反	反	VERB	VERB	_	_	_	_	_
+4	是	是	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 季 康子 問 政 於 孔子
+1	季	季	PROPN	PROPN	_	_	_	_	_
+2	康子	康子	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 政 者 正 也
+1	政	政	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 帥 以 正
+1	子	子	PRON	PRON	_	_	_	_	_
+2	帥	帥	VERB	VERB	_	_	_	_	_
+3	以	以	ADV	ADV	_	_	_	_	_
+4	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孰 敢 不 正
+1	孰	孰	PRON	PRON	_	_	_	_	_
+2	敢	敢	AUX	AUX	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 季 康子 患 盜
+1	季	季	PROPN	PROPN	_	_	_	_	_
+2	康子	康子	PROPN	PROPN	_	_	_	_	_
+3	患	患	VERB	VERB	_	_	_	_	_
+4	盜	盜	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 於 孔子
+1	問	問	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 子 之 不 欲
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	子	子	PRON	PRON	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	欲	欲	AUX	AUX	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 賞 之 不 竊
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	賞	賞	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	竊	竊	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 季 康子 問 政 於 孔子
+1	季	季	PROPN	PROPN	_	_	_	_	_
+2	康子	康子	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 殺 無 道
+1	如	如	ADV	ADV	_	_	_	_	_
+2	殺	殺	VERB	VERB	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 就 有 道
+1	以	以	ADV	ADV	_	_	_	_	_
+2	就	就	VERB	VERB	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 為 政
+1	子	子	PRON	PRON	_	_	_	_	_
+2	為	為	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 焉 用 殺
+1	焉	焉	ADV	ADV	_	_	_	_	_
+2	用	用	VERB	VERB	_	_	_	_	_
+3	殺	殺	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 欲 善 而 民 善 矣
+1	子	子	PRON	PRON	_	_	_	_	_
+2	欲	欲	VERB	VERB	_	_	_	_	_
+3	善	善	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	民	民	NOUN	NOUN	_	_	_	_	_
+6	善	善	VERB	VERB	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 之 德 風
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	德	德	NOUN	NOUN	_	_	_	_	_
+4	風	風	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 之 德 草
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+5	草	草	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 草 上 之 風 必 偃
+1	草	草	NOUN	NOUN	_	_	_	_	_
+2	上	上	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	風	風	NOUN	NOUN	_	_	_	_	_
+5	必	必	ADV	ADV	_	_	_	_	_
+6	偃	偃	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 問
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 士 何 如 斯 可 謂 之 達 矣
+1	士	士	NOUN	NOUN	_	_	_	_	_
+2	何	何	PRON	PRON	_	_	_	_	_
+3	如	如	VERB	VERB	_	_	_	_	_
+4	斯	斯	ADV	ADV	_	_	_	_	_
+5	可	可	AUX	AUX	_	_	_	_	_
+6	謂	謂	VERB	VERB	_	_	_	_	_
+7	之	之	PRON	PRON	_	_	_	_	_
+8	達	達	VERB	VERB	_	_	_	_	_
+9	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 哉 爾 所 謂 達 者
+1	何	何	PRON	PRON	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	爾	爾	PRON	PRON	_	_	_	_	_
+4	所	所	PART	PART	_	_	_	_	_
+5	謂	謂	VERB	VERB	_	_	_	_	_
+6	達	達	VERB	VERB	_	_	_	_	_
+7	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 對 曰
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 邦 必 聞
+1	在	在	VERB	VERB	_	_	_	_	_
+2	邦	邦	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	聞	聞	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 家 必 聞
+1	在	在	VERB	VERB	_	_	_	_	_
+2	家	家	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	聞	聞	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 是 聞 也
+1	是	是	PRON	PRON	_	_	_	_	_
+2	聞	聞	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 達 也
+1	非	非	ADV	ADV	_	_	_	_	_
+2	達	達	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 達 也 者 質 直 而 好 義
+1	夫	夫	PART	PART	_	_	_	_	_
+2	達	達	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	質	質	NOUN	NOUN	_	_	_	_	_
+6	直	直	VERB	VERB	_	_	_	_	_
+7	而	而	CCONJ	CCONJ	_	_	_	_	_
+8	好	好	VERB	VERB	_	_	_	_	_
+9	義	義	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 察 言 而 觀 色
+1	察	察	VERB	VERB	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	觀	觀	VERB	VERB	_	_	_	_	_
+5	色	色	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 慮 以 下 人
+1	慮	慮	VERB	VERB	_	_	_	_	_
+2	以	以	ADV	ADV	_	_	_	_	_
+3	下	下	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 邦 必 達
+1	在	在	VERB	VERB	_	_	_	_	_
+2	邦	邦	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 家 必 達
+1	在	在	VERB	VERB	_	_	_	_	_
+2	家	家	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 聞 也 者 色 取 仁 而 行 違
+1	夫	夫	PART	PART	_	_	_	_	_
+2	聞	聞	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	色	色	NOUN	NOUN	_	_	_	_	_
+6	取	取	VERB	VERB	_	_	_	_	_
+7	仁	仁	NOUN	NOUN	_	_	_	_	_
+8	而	而	CCONJ	CCONJ	_	_	_	_	_
+9	行	行	NOUN	NOUN	_	_	_	_	_
+10	違	違	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 居 之 不 疑
+1	居	居	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	疑	疑	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 邦 必 聞
+1	在	在	VERB	VERB	_	_	_	_	_
+2	邦	邦	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	聞	聞	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 在 家 必 聞
+1	在	在	VERB	VERB	_	_	_	_	_
+2	家	家	NOUN	NOUN	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	聞	聞	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 從 遊 於 舞 雩 之 下
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	從	從	VERB	VERB	_	_	_	_	_
+4	遊	遊	VERB	VERB	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	舞	舞	VERB	VERB	_	_	_	_	_
+7	雩	雩	NOUN	NOUN	_	_	_	_	_
+8	之	之	SCONJ	SCONJ	_	_	_	_	_
+9	下	下	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 敢 問 崇 德 脩 慝 辨 惑
+1	敢	敢	AUX	AUX	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	崇	崇	VERB	VERB	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+5	脩	脩	VERB	VERB	_	_	_	_	_
+6	慝	慝	NOUN	NOUN	_	_	_	_	_
+7	辨	辨	VERB	VERB	_	_	_	_	_
+8	惑	惑	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 哉 問
+1	善	善	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 先 事 後 得
+1	先	先	VERB	VERB	_	_	_	_	_
+2	事	事	NOUN	NOUN	_	_	_	_	_
+3	後	後	VERB	VERB	_	_	_	_	_
+4	得	得	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 崇 德 與
+1	非	非	ADV	ADV	_	_	_	_	_
+2	崇	崇	VERB	VERB	_	_	_	_	_
+3	德	德	NOUN	NOUN	_	_	_	_	_
+4	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 攻 其 惡
+1	攻	攻	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	惡	惡	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 攻 人 之 惡
+1	無	無	VERB	VERB	_	_	_	_	_
+2	攻	攻	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	惡	惡	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 脩 慝 與
+1	非	非	ADV	ADV	_	_	_	_	_
+2	脩	脩	VERB	VERB	_	_	_	_	_
+3	慝	慝	NOUN	NOUN	_	_	_	_	_
+4	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 一 朝 之 忿 忘 其 身
+1	一	一	NUM	NUM	_	_	_	_	_
+2	朝	朝	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	忿	忿	NOUN	NOUN	_	_	_	_	_
+5	忘	忘	VERB	VERB	_	_	_	_	_
+6	其	其	PRON	PRON	_	_	_	_	_
+7	身	身	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 及 其 親
+1	以	以	ADV	ADV	_	_	_	_	_
+2	及	及	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	親	親	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 惑 與
+1	非	非	ADV	ADV	_	_	_	_	_
+2	惑	惑	NOUN	NOUN	_	_	_	_	_
+3	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 問 仁
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 愛 人
+1	愛	愛	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 知
+1	問	問	VERB	VERB	_	_	_	_	_
+2	知	知	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 知 人
+1	知	知	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 未 達
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	未	未	ADV	ADV	_	_	_	_	_
+4	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 直 錯 諸 枉
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	直	直	VERB	VERB	_	_	_	_	_
+3	錯	錯	VERB	VERB	_	_	_	_	_
+4	諸	諸	NOUN	NOUN	_	_	_	_	_
+5	枉	枉	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 能 使 枉 者 直
+1	能	能	AUX	AUX	_	_	_	_	_
+2	使	使	VERB	VERB	_	_	_	_	_
+3	枉	枉	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	直	直	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 退
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	退	退	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 見 子夏 曰
+1	見	見	VERB	VERB	_	_	_	_	_
+2	子夏	子夏	PROPN	PROPN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 鄉 也 吾 見 於 夫子 而 問 知
+1	鄉	鄉	ADV	ADV	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	吾	吾	PRON	PRON	_	_	_	_	_
+4	見	見	VERB	VERB	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+7	而	而	CCONJ	CCONJ	_	_	_	_	_
+8	問	問	VERB	VERB	_	_	_	_	_
+9	知	知	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 直 錯 諸 枉
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	直	直	VERB	VERB	_	_	_	_	_
+3	錯	錯	VERB	VERB	_	_	_	_	_
+4	諸	諸	NOUN	NOUN	_	_	_	_	_
+5	枉	枉	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 能 使 枉 者 直
+1	能	能	AUX	AUX	_	_	_	_	_
+2	使	使	VERB	VERB	_	_	_	_	_
+3	枉	枉	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	直	直	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 謂 也
+1	何	何	PRON	PRON	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子夏 曰
+1	子夏	子夏	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 富 哉 言 乎
+1	富	富	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舜 有 天 下
+1	舜	舜	PROPN	PROPN	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	天	天	NOUN	NOUN	_	_	_	_	_
+4	下	下	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 選 於 眾
+1	選	選	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	眾	眾	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 皋陶
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	皋陶	皋陶	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 仁 者 遠 矣
+1	不	不	ADV	ADV	_	_	_	_	_
+2	仁	仁	VERB	VERB	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	遠	遠	VERB	VERB	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 湯 有 天 下
+1	湯	湯	PROPN	PROPN	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	天	天	NOUN	NOUN	_	_	_	_	_
+4	下	下	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 選 於 眾
+1	選	選	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	眾	眾	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 伊 尹
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	伊	伊	PROPN	PROPN	_	_	_	_	_
+3	尹	尹	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 仁 者 遠 矣
+1	不	不	ADV	ADV	_	_	_	_	_
+2	仁	仁	VERB	VERB	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	遠	遠	VERB	VERB	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 問 友
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	友	友	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 忠 告 而 善 道 之
+1	忠	忠	ADV	ADV	_	_	_	_	_
+2	告	告	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	善	善	ADV	ADV	_	_	_	_	_
+5	道	道	VERB	VERB	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 可 則 止
+1	不	不	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	則	則	ADV	ADV	_	_	_	_	_
+4	止	止	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 毋 自 辱 焉
+1	毋	毋	ADV	ADV	_	_	_	_	_
+2	自	自	PRON	PRON	_	_	_	_	_
+3	辱	辱	VERB	VERB	_	_	_	_	_
+4	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曾子 曰
+1	曾子	曾子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 以 文 會 友
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	文	文	NOUN	NOUN	_	_	_	_	_
+4	會	會	VERB	VERB	_	_	_	_	_
+5	友	友	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 友 輔 仁
+1	以	以	VERB	VERB	_	_	_	_	_
+2	友	友	NOUN	NOUN	_	_	_	_	_
+3	輔	輔	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 篇 第 十三
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	篇	篇	NOUN	NOUN	_	_	_	_	_
+3	第	第	NOUN	NOUN	_	_	_	_	_
+4	十三	十三	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 問 政
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 先 之
+1	先	先	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 勞 之
+1	勞	勞	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 益
+1	請	請	VERB	VERB	_	_	_	_	_
+2	益	益	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 倦
+1	無	無	ADV	ADV	_	_	_	_	_
+2	倦	倦	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仲 弓 為 季 氏 宰
+1	仲	仲	PROPN	PROPN	_	_	_	_	_
+2	弓	弓	PROPN	PROPN	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	季	季	PROPN	PROPN	_	_	_	_	_
+5	氏	氏	NOUN	NOUN	_	_	_	_	_
+6	宰	宰	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 政
+1	問	問	VERB	VERB	_	_	_	_	_
+2	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 先 有 司
+1	先	先	VERB	VERB	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	司	司	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 赦 小 過
+1	赦	赦	VERB	VERB	_	_	_	_	_
+2	小	小	VERB	VERB	_	_	_	_	_
+3	過	過	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 賢 才
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	賢	賢	VERB	VERB	_	_	_	_	_
+3	才	才	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 焉 知 賢 才 而 舉 之
+1	焉	焉	ADV	ADV	_	_	_	_	_
+2	知	知	VERB	VERB	_	_	_	_	_
+3	賢	賢	VERB	VERB	_	_	_	_	_
+4	才	才	NOUN	NOUN	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	舉	舉	VERB	VERB	_	_	_	_	_
+7	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 舉 爾 所 知
+1	舉	舉	VERB	VERB	_	_	_	_	_
+2	爾	爾	PRON	PRON	_	_	_	_	_
+3	所	所	PART	PART	_	_	_	_	_
+4	知	知	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 爾 所 不 知
+1	爾	爾	PRON	PRON	_	_	_	_	_
+2	所	所	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	知	知	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 其 舍 諸
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	其	其	PART	PART	_	_	_	_	_
+3	舍	舍	VERB	VERB	_	_	_	_	_
+4	諸	諸	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 曰
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 衛 君 待 子 而 為 政
+1	衛	衛	PROPN	PROPN	_	_	_	_	_
+2	君	君	NOUN	NOUN	_	_	_	_	_
+3	待	待	VERB	VERB	_	_	_	_	_
+4	子	子	NOUN	NOUN	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	為	為	VERB	VERB	_	_	_	_	_
+7	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 將 奚 先
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	將	將	ADV	ADV	_	_	_	_	_
+3	奚	奚	ADV	ADV	_	_	_	_	_
+4	先	先	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 也 正 名 乎
+1	必	必	ADV	ADV	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+4	名	名	NOUN	NOUN	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 曰
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 是 哉
+1	有	有	VERB	VERB	_	_	_	_	_
+2	是	是	PRON	PRON	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 之 迂 也
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	迂	迂	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 奚 其 正
+1	奚	奚	ADV	ADV	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 野 哉 由 也
+1	野	野	NOUN	NOUN	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	由	由	PROPN	PROPN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 於 其 所 不 知 蓋 闕 如 也
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	所	所	PART	PART	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	知	知	VERB	VERB	_	_	_	_	_
+7	蓋	蓋	PART	PART	_	_	_	_	_
+8	闕	闕	VERB	VERB	_	_	_	_	_
+9	如	如	PART	PART	_	_	_	_	_
+10	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 名 不 正 則 言 不 順
+1	名	名	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	言	言	NOUN	NOUN	_	_	_	_	_
+6	不	不	ADV	ADV	_	_	_	_	_
+7	順	順	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 不 順 則 事 不 成
+1	言	言	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	順	順	VERB	VERB	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	事	事	NOUN	NOUN	_	_	_	_	_
+6	不	不	ADV	ADV	_	_	_	_	_
+7	成	成	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 事 不 成 則 禮 樂 不 興
+1	事	事	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	成	成	VERB	VERB	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	禮	禮	NOUN	NOUN	_	_	_	_	_
+6	樂	樂	NOUN	NOUN	_	_	_	_	_
+7	不	不	ADV	ADV	_	_	_	_	_
+8	興	興	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 禮 樂 不 興 則 刑 罰 不 中
+1	禮	禮	NOUN	NOUN	_	_	_	_	_
+2	樂	樂	NOUN	NOUN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	興	興	VERB	VERB	_	_	_	_	_
+5	則	則	ADV	ADV	_	_	_	_	_
+6	刑	刑	NOUN	NOUN	_	_	_	_	_
+7	罰	罰	NOUN	NOUN	_	_	_	_	_
+8	不	不	ADV	ADV	_	_	_	_	_
+9	中	中	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 刑 罰 不 中 則 民 無 所 錯 手 足
+1	刑	刑	NOUN	NOUN	_	_	_	_	_
+2	罰	罰	NOUN	NOUN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	中	中	VERB	VERB	_	_	_	_	_
+5	則	則	ADV	ADV	_	_	_	_	_
+6	民	民	NOUN	NOUN	_	_	_	_	_
+7	無	無	ADV	ADV	_	_	_	_	_
+8	所	所	PART	PART	_	_	_	_	_
+9	錯	錯	VERB	VERB	_	_	_	_	_
+10	手	手	NOUN	NOUN	_	_	_	_	_
+11	足	足	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 故 君子 名 之 必 可 言 也
+1	故	故	ADV	ADV	_	_	_	_	_
+2	君子	君子	NOUN	NOUN	_	_	_	_	_
+3	名	名	VERB	VERB	_	_	_	_	_
+4	之	之	PRON	PRON	_	_	_	_	_
+5	必	必	ADV	ADV	_	_	_	_	_
+6	可	可	AUX	AUX	_	_	_	_	_
+7	言	言	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 之 必 可 行 也
+1	言	言	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	可	可	AUX	AUX	_	_	_	_	_
+5	行	行	VERB	VERB	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 於 其 言 無 所 苟 而 已 矣
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	於	於	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	言	言	NOUN	NOUN	_	_	_	_	_
+5	無	無	VERB	VERB	_	_	_	_	_
+6	所	所	PART	PART	_	_	_	_	_
+7	苟	苟	VERB	VERB	_	_	_	_	_
+8	而	而	PART	PART	_	_	_	_	_
+9	已	已	PART	PART	_	_	_	_	_
+10	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 請 學 稼
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	請	請	VERB	VERB	_	_	_	_	_
+4	學	學	VERB	VERB	_	_	_	_	_
+5	稼	稼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 不 如 老 農
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	如	如	VERB	VERB	_	_	_	_	_
+4	老	老	VERB	VERB	_	_	_	_	_
+5	農	農	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 學 為 圃
+1	請	請	VERB	VERB	_	_	_	_	_
+2	學	學	VERB	VERB	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+4	圃	圃	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 不 如 老 圃
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	如	如	VERB	VERB	_	_	_	_	_
+4	老	老	VERB	VERB	_	_	_	_	_
+5	圃	圃	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 出
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	出	出	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 哉 樊 須 也
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+4	樊	樊	PROPN	PROPN	_	_	_	_	_
+5	須	須	PROPN	PROPN	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 上 好 禮 則 民 莫 敢 不 敬
+1	上	上	NOUN	NOUN	_	_	_	_	_
+2	好	好	VERB	VERB	_	_	_	_	_
+3	禮	禮	NOUN	NOUN	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	民	民	NOUN	NOUN	_	_	_	_	_
+6	莫	莫	ADV	ADV	_	_	_	_	_
+7	敢	敢	AUX	AUX	_	_	_	_	_
+8	不	不	ADV	ADV	_	_	_	_	_
+9	敬	敬	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 上 好 義 則 民 莫 敢 不 服
+1	上	上	NOUN	NOUN	_	_	_	_	_
+2	好	好	VERB	VERB	_	_	_	_	_
+3	義	義	NOUN	NOUN	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	民	民	NOUN	NOUN	_	_	_	_	_
+6	莫	莫	ADV	ADV	_	_	_	_	_
+7	敢	敢	AUX	AUX	_	_	_	_	_
+8	不	不	ADV	ADV	_	_	_	_	_
+9	服	服	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 上 好 信 則 民 莫 敢 不 用 情
+1	上	上	NOUN	NOUN	_	_	_	_	_
+2	好	好	VERB	VERB	_	_	_	_	_
+3	信	信	NOUN	NOUN	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	民	民	NOUN	NOUN	_	_	_	_	_
+6	莫	莫	ADV	ADV	_	_	_	_	_
+7	敢	敢	AUX	AUX	_	_	_	_	_
+8	不	不	ADV	ADV	_	_	_	_	_
+9	用	用	VERB	VERB	_	_	_	_	_
+10	情	情	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 如 是 則 四 方 之 民 襁 負 其 子 而 至 矣
+1	夫	夫	PART	PART	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	是	是	PRON	PRON	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	四	四	NUM	NUM	_	_	_	_	_
+6	方	方	NOUN	NOUN	_	_	_	_	_
+7	之	之	SCONJ	SCONJ	_	_	_	_	_
+8	民	民	NOUN	NOUN	_	_	_	_	_
+9	襁	襁	VERB	VERB	_	_	_	_	_
+10	負	負	VERB	VERB	_	_	_	_	_
+11	其	其	PRON	PRON	_	_	_	_	_
+12	子	子	NOUN	NOUN	_	_	_	_	_
+13	而	而	CCONJ	CCONJ	_	_	_	_	_
+14	至	至	VERB	VERB	_	_	_	_	_
+15	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 焉 用 稼
+1	焉	焉	ADV	ADV	_	_	_	_	_
+2	用	用	VERB	VERB	_	_	_	_	_
+3	稼	稼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 誦 詩 三百
+1	誦	誦	VERB	VERB	_	_	_	_	_
+2	詩	詩	NOUN	NOUN	_	_	_	_	_
+3	三百	三百	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 授 之 以 政
+1	授	授	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 達
+1	不	不	ADV	ADV	_	_	_	_	_
+2	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 於 四 方
+1	使	使	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	四	四	NUM	NUM	_	_	_	_	_
+4	方	方	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 能 專 對
+1	不	不	ADV	ADV	_	_	_	_	_
+2	能	能	AUX	AUX	_	_	_	_	_
+3	專	專	ADV	ADV	_	_	_	_	_
+4	對	對	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 多 亦 奚 以 為
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	多	多	VERB	VERB	_	_	_	_	_
+3	亦	亦	ADV	ADV	_	_	_	_	_
+4	奚	奚	PRON	PRON	_	_	_	_	_
+5	以	以	VERB	VERB	_	_	_	_	_
+6	為	為	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 身 正
+1	其	其	PRON	PRON	_	_	_	_	_
+2	身	身	NOUN	NOUN	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 令 而 行
+1	不	不	ADV	ADV	_	_	_	_	_
+2	令	令	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	行	行	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 身 不 正
+1	其	其	PRON	PRON	_	_	_	_	_
+2	身	身	NOUN	NOUN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 令 不 從
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	令	令	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	從	從	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 魯 衛 之 政 兄 弟 也
+1	魯	魯	PROPN	PROPN	_	_	_	_	_
+2	衛	衛	PROPN	PROPN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+5	兄	兄	NOUN	NOUN	_	_	_	_	_
+6	弟	弟	NOUN	NOUN	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 謂 衛 公 子 荊
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	衛	衛	PROPN	PROPN	_	_	_	_	_
+4	公	公	NOUN	NOUN	_	_	_	_	_
+5	子	子	NOUN	NOUN	_	_	_	_	_
+6	荊	荊	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 居 室
+1	善	善	ADV	ADV	_	_	_	_	_
+2	居	居	VERB	VERB	_	_	_	_	_
+3	室	室	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 始 有 曰
+1	始	始	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 合 矣
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	合	合	VERB	VERB	_	_	_	_	_
+3	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 少 有 曰
+1	少	少	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 完 矣
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	完	完	VERB	VERB	_	_	_	_	_
+3	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 富 有 曰
+1	富	富	NOUN	NOUN	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 美 矣
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	美	美	VERB	VERB	_	_	_	_	_
+3	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 適 衛
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	適	適	VERB	VERB	_	_	_	_	_
+3	衛	衛	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 冉 有 僕
+1	冉	冉	PROPN	PROPN	_	_	_	_	_
+2	有	有	PROPN	PROPN	_	_	_	_	_
+3	僕	僕	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 庶 矣 哉
+1	庶	庶	VERB	VERB	_	_	_	_	_
+2	矣	矣	PART	PART	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 冉 有 曰
+1	冉	冉	PROPN	PROPN	_	_	_	_	_
+2	有	有	PROPN	PROPN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 既 庶 矣
+1	既	既	ADV	ADV	_	_	_	_	_
+2	庶	庶	VERB	VERB	_	_	_	_	_
+3	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 又 何 加 焉
+1	又	又	ADV	ADV	_	_	_	_	_
+2	何	何	ADV	ADV	_	_	_	_	_
+3	加	加	VERB	VERB	_	_	_	_	_
+4	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 富 之
+1	富	富	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 既 富 矣
+1	既	既	ADV	ADV	_	_	_	_	_
+2	富	富	VERB	VERB	_	_	_	_	_
+3	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 又 何 加 焉
+1	又	又	ADV	ADV	_	_	_	_	_
+2	何	何	ADV	ADV	_	_	_	_	_
+3	加	加	VERB	VERB	_	_	_	_	_
+4	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 教 之
+1	教	教	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 有 用 我 者
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	用	用	VERB	VERB	_	_	_	_	_
+4	我	我	PRON	PRON	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 期 月 而 已 可 也
+1	期	期	NOUN	NOUN	_	_	_	_	_
+2	月	月	NOUN	NOUN	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	已	已	ADV	ADV	_	_	_	_	_
+5	可	可	VERB	VERB	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 三 年 有 成
+1	三	三	NUM	NUM	_	_	_	_	_
+2	年	年	NOUN	NOUN	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	成	成	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 人 為 邦 百 年
+1	善	善	NOUN	NOUN	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+4	邦	邦	NOUN	NOUN	_	_	_	_	_
+5	百	百	NUM	NUM	_	_	_	_	_
+6	年	年	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 可 以 勝 殘 去 殺 矣
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	勝	勝	VERB	VERB	_	_	_	_	_
+5	殘	殘	VERB	VERB	_	_	_	_	_
+6	去	去	VERB	VERB	_	_	_	_	_
+7	殺	殺	VERB	VERB	_	_	_	_	_
+8	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 誠 哉 是 言 也
+1	誠	誠	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	是	是	PRON	PRON	_	_	_	_	_
+4	言	言	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 有 王 者
+1	如	如	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	王	王	NOUN	NOUN	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 世 而 後 仁
+1	必	必	ADV	ADV	_	_	_	_	_
+2	世	世	NOUN	NOUN	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	後	後	NOUN	NOUN	_	_	_	_	_
+5	仁	仁	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 苟 正 其 身 矣
+1	苟	苟	ADV	ADV	_	_	_	_	_
+2	正	正	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	身	身	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 於 從 政 乎 何 有
+1	於	於	ADP	ADP	_	_	_	_	_
+2	從	從	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+5	何	何	PRON	PRON	_	_	_	_	_
+6	有	有	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 能 正 其 身
+1	不	不	ADV	ADV	_	_	_	_	_
+2	能	能	AUX	AUX	_	_	_	_	_
+3	正	正	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	身	身	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 正 人 何
+1	如	如	VERB	VERB	_	_	_	_	_
+2	正	正	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	何	何	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 冉子 退 朝
+1	冉子	冉子	PROPN	PROPN	_	_	_	_	_
+2	退	退	VERB	VERB	_	_	_	_	_
+3	朝	朝	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 晏 也
+1	何	何	ADV	ADV	_	_	_	_	_
+2	晏	晏	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 對 曰
+1	對	對	ADV	ADV	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 政
+1	有	有	VERB	VERB	_	_	_	_	_
+2	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 事 也
+1	其	其	PRON	PRON	_	_	_	_	_
+2	事	事	NOUN	NOUN	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 有 政
+1	如	如	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 不 吾 以
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	吾	吾	PRON	PRON	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 其 與 聞 之
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	與	與	ADP	ADP	_	_	_	_	_
+4	聞	聞	VERB	VERB	_	_	_	_	_
+5	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 定 公 問
+1	定	定	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 一 言 而 可 以 興 邦
+1	一	一	NUM	NUM	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	可	可	AUX	AUX	_	_	_	_	_
+5	以	以	VERB	VERB	_	_	_	_	_
+6	興	興	VERB	VERB	_	_	_	_	_
+7	邦	邦	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 諸
+1	有	有	VERB	VERB	_	_	_	_	_
+2	諸	諸	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 不 可 以 若 是 其 幾 也
+1	言	言	VERB	VERB	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	可	可	AUX	AUX	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+5	若	若	VERB	VERB	_	_	_	_	_
+6	是	是	PRON	PRON	_	_	_	_	_
+7	其	其	PART	PART	_	_	_	_	_
+8	幾	幾	VERB	VERB	_	_	_	_	_
+9	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 之 言 曰
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+4	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 為 君 難
+1	為	為	AUX	AUX	_	_	_	_	_
+2	君	君	NOUN	NOUN	_	_	_	_	_
+3	難	難	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 為 臣 不 易
+1	為	為	AUX	AUX	_	_	_	_	_
+2	臣	臣	NOUN	NOUN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	易	易	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 知 為 君 之 難 也 不 幾 乎 一 言 而 興 邦 乎
+1	如	如	ADV	ADV	_	_	_	_	_
+2	知	知	VERB	VERB	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	君	君	NOUN	NOUN	_	_	_	_	_
+5	之	之	SCONJ	SCONJ	_	_	_	_	_
+6	難	難	VERB	VERB	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+8	不	不	ADV	ADV	_	_	_	_	_
+9	幾	幾	VERB	VERB	_	_	_	_	_
+10	乎	乎	ADP	ADP	_	_	_	_	_
+11	一	一	NUM	NUM	_	_	_	_	_
+12	言	言	NOUN	NOUN	_	_	_	_	_
+13	而	而	CCONJ	CCONJ	_	_	_	_	_
+14	興	興	VERB	VERB	_	_	_	_	_
+15	邦	邦	NOUN	NOUN	_	_	_	_	_
+16	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 一 言 而 喪 邦
+1	一	一	NUM	NUM	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	喪	喪	VERB	VERB	_	_	_	_	_
+5	邦	邦	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 諸
+1	有	有	VERB	VERB	_	_	_	_	_
+2	諸	諸	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 對 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	對	對	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 不 可 以 若 是 其 幾 也
+1	言	言	VERB	VERB	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	可	可	AUX	AUX	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+5	若	若	VERB	VERB	_	_	_	_	_
+6	是	是	PRON	PRON	_	_	_	_	_
+7	其	其	PART	PART	_	_	_	_	_
+8	幾	幾	VERB	VERB	_	_	_	_	_
+9	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 之 言 曰
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+4	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 予 無 樂 乎 為 君
+1	予	予	PRON	PRON	_	_	_	_	_
+2	無	無	ADV	ADV	_	_	_	_	_
+3	樂	樂	VERB	VERB	_	_	_	_	_
+4	乎	乎	ADP	ADP	_	_	_	_	_
+5	為	為	AUX	AUX	_	_	_	_	_
+6	君	君	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 唯 其 言 而 莫 予 違 也
+1	唯	唯	ADV	ADV	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	莫	莫	ADV	ADV	_	_	_	_	_
+6	予	予	PRON	PRON	_	_	_	_	_
+7	違	違	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 其 善 而 莫 之 違 也 不 亦 善 乎
+1	如	如	ADV	ADV	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	善	善	NOUN	NOUN	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	莫	莫	ADV	ADV	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+7	違	違	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+9	不	不	ADV	ADV	_	_	_	_	_
+10	亦	亦	ADV	ADV	_	_	_	_	_
+11	善	善	VERB	VERB	_	_	_	_	_
+12	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 不 善 而 莫 之 違 也 不 幾 乎 一 言 而 喪 邦 乎
+1	如	如	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	善	善	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	莫	莫	ADV	ADV	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+7	違	違	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+9	不	不	ADV	ADV	_	_	_	_	_
+10	幾	幾	VERB	VERB	_	_	_	_	_
+11	乎	乎	ADP	ADP	_	_	_	_	_
+12	一	一	NUM	NUM	_	_	_	_	_
+13	言	言	NOUN	NOUN	_	_	_	_	_
+14	而	而	CCONJ	CCONJ	_	_	_	_	_
+15	喪	喪	VERB	VERB	_	_	_	_	_
+16	邦	邦	NOUN	NOUN	_	_	_	_	_
+17	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 葉 公 問 政
+1	葉	葉	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 近 者 說
+1	近	近	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	說	說	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 遠 者 來
+1	遠	遠	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	來	來	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子夏 為 莒父 宰
+1	子夏	子夏	PROPN	PROPN	_	_	_	_	_
+2	為	為	AUX	AUX	_	_	_	_	_
+3	莒父	莒父	PROPN	PROPN	_	_	_	_	_
+4	宰	宰	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 政
+1	問	問	VERB	VERB	_	_	_	_	_
+2	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 欲 速
+1	無	無	ADV	ADV	_	_	_	_	_
+2	欲	欲	AUX	AUX	_	_	_	_	_
+3	速	速	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 見 小 利
+1	無	無	ADV	ADV	_	_	_	_	_
+2	見	見	VERB	VERB	_	_	_	_	_
+3	小	小	NOUN	NOUN	_	_	_	_	_
+4	利	利	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 欲 速 則 不 達
+1	欲	欲	AUX	AUX	_	_	_	_	_
+2	速	速	VERB	VERB	_	_	_	_	_
+3	則	則	ADV	ADV	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 見 小 利 則 大 事 不 成
+1	見	見	VERB	VERB	_	_	_	_	_
+2	小	小	NOUN	NOUN	_	_	_	_	_
+3	利	利	NOUN	NOUN	_	_	_	_	_
+4	則	則	ADV	ADV	_	_	_	_	_
+5	大	大	VERB	VERB	_	_	_	_	_
+6	事	事	NOUN	NOUN	_	_	_	_	_
+7	不	不	ADV	ADV	_	_	_	_	_
+8	成	成	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 葉 公 語 孔子 曰
+1	葉	葉	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	語	語	VERB	VERB	_	_	_	_	_
+4	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+5	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 黨 有 直 躬 者
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	黨	黨	NOUN	NOUN	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	直	直	VERB	VERB	_	_	_	_	_
+5	躬	躬	NOUN	NOUN	_	_	_	_	_
+6	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 父 攘 羊 而 子 證 之
+1	其	其	PRON	PRON	_	_	_	_	_
+2	父	父	NOUN	NOUN	_	_	_	_	_
+3	攘	攘	VERB	VERB	_	_	_	_	_
+4	羊	羊	NOUN	NOUN	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	子	子	NOUN	NOUN	_	_	_	_	_
+7	證	證	VERB	VERB	_	_	_	_	_
+8	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 黨 之 直 者 異 於 是
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	黨	黨	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	直	直	VERB	VERB	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	異	異	VERB	VERB	_	_	_	_	_
+7	於	於	ADP	ADP	_	_	_	_	_
+8	是	是	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 父 為 子 隱
+1	父	父	NOUN	NOUN	_	_	_	_	_
+2	為	為	ADP	ADP	_	_	_	_	_
+3	子	子	NOUN	NOUN	_	_	_	_	_
+4	隱	隱	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 為 父 隱
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	為	為	ADP	ADP	_	_	_	_	_
+3	父	父	NOUN	NOUN	_	_	_	_	_
+4	隱	隱	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 直 在 其 中 矣
+1	直	直	VERB	VERB	_	_	_	_	_
+2	在	在	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	中	中	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樊 遲 問 仁
+1	樊	樊	PROPN	PROPN	_	_	_	_	_
+2	遲	遲	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 居 處 恭
+1	居	居	VERB	VERB	_	_	_	_	_
+2	處	處	VERB	VERB	_	_	_	_	_
+3	恭	恭	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 執 事 敬
+1	執	執	VERB	VERB	_	_	_	_	_
+2	事	事	NOUN	NOUN	_	_	_	_	_
+3	敬	敬	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 與 人 忠
+1	與	與	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	忠	忠	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 之 夷 狄
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	之	之	VERB	VERB	_	_	_	_	_
+3	夷	夷	NOUN	NOUN	_	_	_	_	_
+4	狄	狄	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 可 棄 也
+1	不	不	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	棄	棄	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 問 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	問	問	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如 斯 可 謂 之 士 矣
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	斯	斯	ADV	ADV	_	_	_	_	_
+4	可	可	AUX	AUX	_	_	_	_	_
+5	謂	謂	VERB	VERB	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+7	士	士	NOUN	NOUN	_	_	_	_	_
+8	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 行 己 有 恥
+1	行	行	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	恥	恥	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 於 四 方 不 辱 君 命
+1	使	使	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	四	四	NUM	NUM	_	_	_	_	_
+4	方	方	NOUN	NOUN	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	辱	辱	VERB	VERB	_	_	_	_	_
+7	君	君	NOUN	NOUN	_	_	_	_	_
+8	命	命	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 謂 士 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	士	士	NOUN	NOUN	_	_	_	_	_
+4	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 敢 問 其 次
+1	敢	敢	AUX	AUX	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	次	次	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 宗 族 稱 孝 焉
+1	宗	宗	NOUN	NOUN	_	_	_	_	_
+2	族	族	NOUN	NOUN	_	_	_	_	_
+3	稱	稱	VERB	VERB	_	_	_	_	_
+4	孝	孝	NOUN	NOUN	_	_	_	_	_
+5	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 鄉 黨 稱 弟 焉
+1	鄉	鄉	NOUN	NOUN	_	_	_	_	_
+2	黨	黨	NOUN	NOUN	_	_	_	_	_
+3	稱	稱	VERB	VERB	_	_	_	_	_
+4	弟	弟	NOUN	NOUN	_	_	_	_	_
+5	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 敢 問 其 次
+1	敢	敢	AUX	AUX	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	次	次	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 言 必 信
+1	言	言	VERB	VERB	_	_	_	_	_
+2	必	必	ADV	ADV	_	_	_	_	_
+3	信	信	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 行 必 果
+1	行	行	VERB	VERB	_	_	_	_	_
+2	必	必	ADV	ADV	_	_	_	_	_
+3	果	果	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 硜 硜 然
+1	硜	硜	VERB	VERB	_	_	_	_	_
+2	硜	硜	VERB	VERB	_	_	_	_	_
+3	然	然	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 哉
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 抑 亦 可 以 為 次 矣
+1	抑	抑	ADV	ADV	_	_	_	_	_
+2	亦	亦	ADV	ADV	_	_	_	_	_
+3	可	可	AUX	AUX	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+5	為	為	VERB	VERB	_	_	_	_	_
+6	次	次	NOUN	NOUN	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 今 之 從 政 者 何 如
+1	今	今	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	從	從	VERB	VERB	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	何	何	PRON	PRON	_	_	_	_	_
+7	如	如	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 噫
+1	噫	噫	INTJ	INTJ	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 斗 筲 之 人
+1	斗	斗	NOUN	NOUN	_	_	_	_	_
+2	筲	筲	NOUN	NOUN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 足 算 也
+1	何	何	ADV	ADV	_	_	_	_	_
+2	足	足	AUX	AUX	_	_	_	_	_
+3	算	算	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 得 中 行 而 與 之
+1	不	不	ADV	ADV	_	_	_	_	_
+2	得	得	AUX	AUX	_	_	_	_	_
+3	中	中	NOUN	NOUN	_	_	_	_	_
+4	行	行	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	與	與	VERB	VERB	_	_	_	_	_
+7	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 必 也 狂 狷 乎
+1	必	必	ADV	ADV	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	狂	狂	VERB	VERB	_	_	_	_	_
+4	狷	狷	VERB	VERB	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 狂 者 進 取
+1	狂	狂	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	進	進	ADV	ADV	_	_	_	_	_
+4	取	取	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 狷 者 有 所 不 為 也
+1	狷	狷	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	所	所	PART	PART	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	為	為	VERB	VERB	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 南 人 有 言 曰
+1	南	南	NOUN	NOUN	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	言	言	VERB	VERB	_	_	_	_	_
+5	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 而 無 恆
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	無	無	ADV	ADV	_	_	_	_	_
+4	恆	恆	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 可 以 作 巫 醫
+1	不	不	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	作	作	VERB	VERB	_	_	_	_	_
+5	巫	巫	NOUN	NOUN	_	_	_	_	_
+6	醫	醫	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 夫
+1	善	善	VERB	VERB	_	_	_	_	_
+2	夫	夫	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 恆 其 德
+1	不	不	ADV	ADV	_	_	_	_	_
+2	恆	恆	ADV	ADV	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 或 承 之 羞
+1	或	或	PRON	PRON	_	_	_	_	_
+2	承	承	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	羞	羞	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 占 而 已 矣
+1	不	不	ADV	ADV	_	_	_	_	_
+2	占	占	VERB	VERB	_	_	_	_	_
+3	而	而	PART	PART	_	_	_	_	_
+4	已	已	PART	PART	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 和 而 不 同
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	和	和	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	同	同	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 同 而 不 和
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	同	同	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	和	和	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 問 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	問	問	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 鄉 人 皆 好 之
+1	鄉	鄉	NOUN	NOUN	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	皆	皆	ADV	ADV	_	_	_	_	_
+4	好	好	VERB	VERB	_	_	_	_	_
+5	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 未 可 也
+1	未	未	ADV	ADV	_	_	_	_	_
+2	可	可	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 鄉 人 皆 惡 之
+1	鄉	鄉	NOUN	NOUN	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	皆	皆	ADV	ADV	_	_	_	_	_
+4	惡	惡	VERB	VERB	_	_	_	_	_
+5	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 未 可 也
+1	未	未	ADV	ADV	_	_	_	_	_
+2	可	可	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 如 鄉 人 之 善 者 好 之
+1	不	不	ADV	ADV	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	鄉	鄉	NOUN	NOUN	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	之	之	SCONJ	SCONJ	_	_	_	_	_
+6	善	善	NOUN	NOUN	_	_	_	_	_
+7	者	者	PART	PART	_	_	_	_	_
+8	好	好	VERB	VERB	_	_	_	_	_
+9	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 不 善 者 惡 之
+1	其	其	PRON	PRON	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	善	善	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	惡	惡	VERB	VERB	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 易 事 而 難 說 也
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	易	易	ADV	ADV	_	_	_	_	_
+3	事	事	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	難	難	ADV	ADV	_	_	_	_	_
+6	說	說	VERB	VERB	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 說 之 不 以 道
+1	說	說	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	以	以	VERB	VERB	_	_	_	_	_
+5	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 說 也
+1	不	不	ADV	ADV	_	_	_	_	_
+2	說	說	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 及 其 使 人 也
+1	及	及	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	使	使	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 器 之
+1	器	器	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 難 事 而 易 說 也
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	難	難	ADV	ADV	_	_	_	_	_
+4	事	事	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	易	易	ADV	ADV	_	_	_	_	_
+7	說	說	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 說 之 雖 不 以 道
+1	說	說	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	雖	雖	ADV	ADV	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	以	以	VERB	VERB	_	_	_	_	_
+6	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 說 也
+1	說	說	VERB	VERB	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 及 其 使 人 也
+1	及	及	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	使	使	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 求 備 焉
+1	求	求	VERB	VERB	_	_	_	_	_
+2	備	備	VERB	VERB	_	_	_	_	_
+3	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 泰 而 不 驕
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	泰	泰	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	驕	驕	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 驕 而 不 泰
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	驕	驕	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	泰	泰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 剛 毅 木 訥
+1	剛	剛	VERB	VERB	_	_	_	_	_
+2	毅	毅	VERB	VERB	_	_	_	_	_
+3	木	木	NOUN	NOUN	_	_	_	_	_
+4	訥	訥	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 近 仁
+1	近	近	VERB	VERB	_	_	_	_	_
+2	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 問 曰
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	問	問	ADV	ADV	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如 斯 可 謂 之 士 矣
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	斯	斯	ADV	ADV	_	_	_	_	_
+4	可	可	AUX	AUX	_	_	_	_	_
+5	謂	謂	VERB	VERB	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+7	士	士	NOUN	NOUN	_	_	_	_	_
+8	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 切 切 偲 偲 怡 怡 如 也
+1	切	切	VERB	VERB	_	_	_	_	_
+2	切	切	VERB	VERB	_	_	_	_	_
+3	偲	偲	VERB	VERB	_	_	_	_	_
+4	偲	偲	VERB	VERB	_	_	_	_	_
+5	怡	怡	VERB	VERB	_	_	_	_	_
+6	怡	怡	VERB	VERB	_	_	_	_	_
+7	如	如	PART	PART	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 謂 士 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	士	士	NOUN	NOUN	_	_	_	_	_
+4	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 朋 友 切 切 偲 偲
+1	朋	朋	NOUN	NOUN	_	_	_	_	_
+2	友	友	NOUN	NOUN	_	_	_	_	_
+3	切	切	VERB	VERB	_	_	_	_	_
+4	切	切	VERB	VERB	_	_	_	_	_
+5	偲	偲	VERB	VERB	_	_	_	_	_
+6	偲	偲	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 兄 弟 怡 怡
+1	兄	兄	NOUN	NOUN	_	_	_	_	_
+2	弟	弟	NOUN	NOUN	_	_	_	_	_
+3	怡	怡	VERB	VERB	_	_	_	_	_
+4	怡	怡	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 善 人 教 民 七 年
+1	善	善	NOUN	NOUN	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	教	教	VERB	VERB	_	_	_	_	_
+4	民	民	NOUN	NOUN	_	_	_	_	_
+5	七	七	NUM	NUM	_	_	_	_	_
+6	年	年	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 可 以 即 戎 矣
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	即	即	VERB	VERB	_	_	_	_	_
+5	戎	戎	NOUN	NOUN	_	_	_	_	_
+6	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 不 教 民 戰
+1	以	以	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	教	教	VERB	VERB	_	_	_	_	_
+4	民	民	NOUN	NOUN	_	_	_	_	_
+5	戰	戰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 是 謂 棄 之
+1	是	是	PRON	PRON	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	棄	棄	VERB	VERB	_	_	_	_	_
+4	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 憲 問 篇 第 十四
+1	憲	憲	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	篇	篇	NOUN	NOUN	_	_	_	_	_
+4	第	第	NOUN	NOUN	_	_	_	_	_
+5	十四	十四	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 憲 問 恥
+1	憲	憲	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	恥	恥	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 邦 有 道 穀
+1	邦	邦	NOUN	NOUN	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	道	道	NOUN	NOUN	_	_	_	_	_
+4	穀	穀	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 邦 無 道 穀 恥 也
+1	邦	邦	NOUN	NOUN	_	_	_	_	_
+2	無	無	VERB	VERB	_	_	_	_	_
+3	道	道	NOUN	NOUN	_	_	_	_	_
+4	穀	穀	VERB	VERB	_	_	_	_	_
+5	恥	恥	VERB	VERB	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 克 伐 怨 欲 不 行 焉
+1	克	克	VERB	VERB	_	_	_	_	_
+2	伐	伐	VERB	VERB	_	_	_	_	_
+3	怨	怨	VERB	VERB	_	_	_	_	_
+4	欲	欲	VERB	VERB	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	行	行	VERB	VERB	_	_	_	_	_
+7	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 以 為 仁 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 以 為 難 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	難	難	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仁 則 吾 不 知 也
+1	仁	仁	NOUN	NOUN	_	_	_	_	_
+2	則	則	ADV	ADV	_	_	_	_	_
+3	吾	吾	PRON	PRON	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	知	知	VERB	VERB	_	_	_	_	_
+6	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 士 而 懷 居
+1	士	士	NOUN	NOUN	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	懷	懷	VERB	VERB	_	_	_	_	_
+4	居	居	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 足 以 為 士 矣
+1	不	不	ADV	ADV	_	_	_	_	_
+2	足	足	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	為	為	VERB	VERB	_	_	_	_	_
+5	士	士	NOUN	NOUN	_	_	_	_	_
+6	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 邦 有 道
+1	邦	邦	NOUN	NOUN	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 危 言 危 行
+1	危	危	VERB	VERB	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	危	危	VERB	VERB	_	_	_	_	_
+4	行	行	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 邦 無 道
+1	邦	邦	NOUN	NOUN	_	_	_	_	_
+2	無	無	VERB	VERB	_	_	_	_	_
+3	道	道	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 危 行 言 孫
+1	危	危	VERB	VERB	_	_	_	_	_
+2	行	行	VERB	VERB	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+4	孫	孫	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 德 者 必 有 言
+1	有	有	VERB	VERB	_	_	_	_	_
+2	德	德	NOUN	NOUN	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	必	必	ADV	ADV	_	_	_	_	_
+5	有	有	VERB	VERB	_	_	_	_	_
+6	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 言 者 不 必 有 德
+1	有	有	VERB	VERB	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	必	必	ADV	ADV	_	_	_	_	_
+6	有	有	VERB	VERB	_	_	_	_	_
+7	德	德	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仁 者 必 有 勇
+1	仁	仁	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	必	必	ADV	ADV	_	_	_	_	_
+4	有	有	VERB	VERB	_	_	_	_	_
+5	勇	勇	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 勇 者 不 必 有 仁
+1	勇	勇	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	必	必	ADV	ADV	_	_	_	_	_
+5	有	有	VERB	VERB	_	_	_	_	_
+6	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 南宮 适 問 於 孔子 曰
+1	南宮	南宮	PROPN	PROPN	_	_	_	_	_
+2	适	适	PROPN	PROPN	_	_	_	_	_
+3	問	問	VERB	VERB	_	_	_	_	_
+4	於	於	ADP	ADP	_	_	_	_	_
+5	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+6	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 羿 善 射
+1	羿	羿	PROPN	PROPN	_	_	_	_	_
+2	善	善	VERB	VERB	_	_	_	_	_
+3	射	射	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 奡 盪 舟
+1	奡	奡	PROPN	PROPN	_	_	_	_	_
+2	盪	盪	VERB	VERB	_	_	_	_	_
+3	舟	舟	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 俱 不 得 其 死
+1	俱	俱	ADV	ADV	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	得	得	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	死	死	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 然 禹 稷 躬 稼 而 有 天 下
+1	然	然	ADV	ADV	_	_	_	_	_
+2	禹	禹	PROPN	PROPN	_	_	_	_	_
+3	稷	稷	PROPN	PROPN	_	_	_	_	_
+4	躬	躬	NOUN	NOUN	_	_	_	_	_
+5	稼	稼	VERB	VERB	_	_	_	_	_
+6	而	而	CCONJ	CCONJ	_	_	_	_	_
+7	有	有	VERB	VERB	_	_	_	_	_
+8	天	天	NOUN	NOUN	_	_	_	_	_
+9	下	下	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 不 答
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	答	答	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 南宮 适 出
+1	南宮	南宮	PROPN	PROPN	_	_	_	_	_
+2	适	适	PROPN	PROPN	_	_	_	_	_
+3	出	出	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 哉 若 人
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	若	若	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 尚 德 哉 若 人
+1	尚	尚	VERB	VERB	_	_	_	_	_
+2	德	德	NOUN	NOUN	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+4	若	若	VERB	VERB	_	_	_	_	_
+5	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 而 不 仁 者 有 矣 夫
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	有	有	VERB	VERB	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+8	夫	夫	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 未 有 小 人 而 仁 者 也
+1	未	未	ADV	ADV	_	_	_	_	_
+2	有	有	VERB	VERB	_	_	_	_	_
+3	小	小	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	仁	仁	NOUN	NOUN	_	_	_	_	_
+7	者	者	PART	PART	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 愛 之
+1	愛	愛	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 能 勿 勞 乎
+1	能	能	AUX	AUX	_	_	_	_	_
+2	勿	勿	ADV	ADV	_	_	_	_	_
+3	勞	勞	VERB	VERB	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 忠 焉
+1	忠	忠	VERB	VERB	_	_	_	_	_
+2	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 能 勿 誨 乎
+1	能	能	AUX	AUX	_	_	_	_	_
+2	勿	勿	ADV	ADV	_	_	_	_	_
+3	誨	誨	VERB	VERB	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 為 命
+1	為	為	VERB	VERB	_	_	_	_	_
+2	命	命	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 裨 諶 草 創 之
+1	裨	裨	PROPN	PROPN	_	_	_	_	_
+2	諶	諶	PROPN	PROPN	_	_	_	_	_
+3	草	草	VERB	VERB	_	_	_	_	_
+4	創	創	VERB	VERB	_	_	_	_	_
+5	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 世叔 討 論 之
+1	世叔	世叔	PROPN	PROPN	_	_	_	_	_
+2	討	討	VERB	VERB	_	_	_	_	_
+3	論	論	VERB	VERB	_	_	_	_	_
+4	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 行 人 子羽 脩 飾 之
+1	行	行	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	子羽	子羽	PROPN	PROPN	_	_	_	_	_
+4	脩	脩	VERB	VERB	_	_	_	_	_
+5	飾	飾	VERB	VERB	_	_	_	_	_
+6	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 東里 子產 潤 色 之
+1	東里	東里	PROPN	PROPN	_	_	_	_	_
+2	子產	子產	PROPN	PROPN	_	_	_	_	_
+3	潤	潤	VERB	VERB	_	_	_	_	_
+4	色	色	NOUN	NOUN	_	_	_	_	_
+5	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 或 問 子產
+1	或	或	PRON	PRON	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	子產	子產	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 惠 人 也
+1	惠	惠	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 子西
+1	問	問	VERB	VERB	_	_	_	_	_
+2	子西	子西	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 彼 哉
+1	彼	彼	PRON	PRON	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 彼 哉
+1	彼	彼	PRON	PRON	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 問 管 仲
+1	問	問	VERB	VERB	_	_	_	_	_
+2	管	管	PROPN	PROPN	_	_	_	_	_
+3	仲	仲	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 也 奪 伯 氏 駢 邑 三百
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	奪	奪	VERB	VERB	_	_	_	_	_
+4	伯	伯	PROPN	PROPN	_	_	_	_	_
+5	氏	氏	NOUN	NOUN	_	_	_	_	_
+6	駢	駢	PROPN	PROPN	_	_	_	_	_
+7	邑	邑	NOUN	NOUN	_	_	_	_	_
+8	三百	三百	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 飯 疏 食
+1	飯	飯	VERB	VERB	_	_	_	_	_
+2	疏	疏	VERB	VERB	_	_	_	_	_
+3	食	食	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 沒 齒
+1	沒	沒	VERB	VERB	_	_	_	_	_
+2	齒	齒	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 怨 言
+1	無	無	VERB	VERB	_	_	_	_	_
+2	怨	怨	VERB	VERB	_	_	_	_	_
+3	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 貧 而 無 怨 難
+1	貧	貧	VERB	VERB	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	怨	怨	NOUN	NOUN	_	_	_	_	_
+5	難	難	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 富 而 無 驕 易
+1	富	富	VERB	VERB	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	無	無	VERB	VERB	_	_	_	_	_
+4	驕	驕	VERB	VERB	_	_	_	_	_
+5	易	易	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孟 公綽 為 趙 魏 老 則 優
+1	孟	孟	PROPN	PROPN	_	_	_	_	_
+2	公綽	公綽	PROPN	PROPN	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	趙	趙	PROPN	PROPN	_	_	_	_	_
+5	魏	魏	PROPN	PROPN	_	_	_	_	_
+6	老	老	NOUN	NOUN	_	_	_	_	_
+7	則	則	ADV	ADV	_	_	_	_	_
+8	優	優	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 可 以 為 滕 薛 大 夫
+1	不	不	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	為	為	AUX	AUX	_	_	_	_	_
+5	滕	滕	PROPN	PROPN	_	_	_	_	_
+6	薛	薛	PROPN	PROPN	_	_	_	_	_
+7	大	大	VERB	VERB	_	_	_	_	_
+8	夫	夫	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 問 成 人
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	成	成	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 若 臧 武仲 之 知
+1	若	若	VERB	VERB	_	_	_	_	_
+2	臧	臧	PROPN	PROPN	_	_	_	_	_
+3	武仲	武仲	PROPN	PROPN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	知	知	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公綽 之 不 欲
+1	公綽	公綽	PROPN	PROPN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	欲	欲	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 卞 莊 子 之 勇
+1	卞	卞	PROPN	PROPN	_	_	_	_	_
+2	莊	莊	VERB	VERB	_	_	_	_	_
+3	子	子	NOUN	NOUN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	勇	勇	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 冉 求 之 藝
+1	冉	冉	PROPN	PROPN	_	_	_	_	_
+2	求	求	PROPN	PROPN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	藝	藝	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 文 之 以 禮 樂
+1	文	文	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	禮	禮	NOUN	NOUN	_	_	_	_	_
+5	樂	樂	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 可 以 為 成 人 矣
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	為	為	VERB	VERB	_	_	_	_	_
+5	成	成	VERB	VERB	_	_	_	_	_
+6	人	人	NOUN	NOUN	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 今 之 成 人 者 何 必 然
+1	今	今	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	成	成	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	何	何	ADV	ADV	_	_	_	_	_
+7	必	必	ADV	ADV	_	_	_	_	_
+8	然	然	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 見 利 思 義
+1	見	見	VERB	VERB	_	_	_	_	_
+2	利	利	NOUN	NOUN	_	_	_	_	_
+3	思	思	VERB	VERB	_	_	_	_	_
+4	義	義	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 見 危 授 命
+1	見	見	VERB	VERB	_	_	_	_	_
+2	危	危	VERB	VERB	_	_	_	_	_
+3	授	授	VERB	VERB	_	_	_	_	_
+4	命	命	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 久 要 不 忘 平 生 之 言
+1	久	久	ADV	ADV	_	_	_	_	_
+2	要	要	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	忘	忘	VERB	VERB	_	_	_	_	_
+5	平	平	VERB	VERB	_	_	_	_	_
+6	生	生	NOUN	NOUN	_	_	_	_	_
+7	之	之	SCONJ	SCONJ	_	_	_	_	_
+8	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 亦 可 以 為 成 人 矣
+1	亦	亦	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	為	為	AUX	AUX	_	_	_	_	_
+5	成	成	VERB	VERB	_	_	_	_	_
+6	人	人	NOUN	NOUN	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 問 公叔 文子 於 公明 賈 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	公叔	公叔	PROPN	PROPN	_	_	_	_	_
+4	文子	文子	PROPN	PROPN	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	公明	公明	PROPN	PROPN	_	_	_	_	_
+7	賈	賈	PROPN	PROPN	_	_	_	_	_
+8	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 信 乎
+1	信	信	VERB	VERB	_	_	_	_	_
+2	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 不 言 不 笑 不 取 乎
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	言	言	VERB	VERB	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	笑	笑	VERB	VERB	_	_	_	_	_
+6	不	不	ADV	ADV	_	_	_	_	_
+7	取	取	VERB	VERB	_	_	_	_	_
+8	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公明 賈 對 曰
+1	公明	公明	PROPN	PROPN	_	_	_	_	_
+2	賈	賈	PROPN	PROPN	_	_	_	_	_
+3	對	對	ADV	ADV	_	_	_	_	_
+4	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 告 者 過 也
+1	以	以	ADV	ADV	_	_	_	_	_
+2	告	告	VERB	VERB	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	過	過	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 時 然 後 言
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	時	時	NOUN	NOUN	_	_	_	_	_
+3	然	然	ADV	ADV	_	_	_	_	_
+4	後	後	NOUN	NOUN	_	_	_	_	_
+5	言	言	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 不 厭 其 言
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	厭	厭	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 樂 然 後 笑
+1	樂	樂	VERB	VERB	_	_	_	_	_
+2	然	然	ADV	ADV	_	_	_	_	_
+3	後	後	NOUN	NOUN	_	_	_	_	_
+4	笑	笑	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 不 厭 其 笑
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	厭	厭	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	笑	笑	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 義 然 後 取
+1	義	義	VERB	VERB	_	_	_	_	_
+2	然	然	ADV	ADV	_	_	_	_	_
+3	後	後	NOUN	NOUN	_	_	_	_	_
+4	取	取	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 人 不 厭 其 取
+1	人	人	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	厭	厭	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	取	取	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 然
+1	其	其	PRON	PRON	_	_	_	_	_
+2	然	然	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 豈 其 然 乎
+1	豈	豈	ADV	ADV	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	然	然	VERB	VERB	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 臧 武仲 以 防 求 為 後 於 魯
+1	臧	臧	PROPN	PROPN	_	_	_	_	_
+2	武仲	武仲	PROPN	PROPN	_	_	_	_	_
+3	以	以	VERB	VERB	_	_	_	_	_
+4	防	防	PROPN	PROPN	_	_	_	_	_
+5	求	求	VERB	VERB	_	_	_	_	_
+6	為	為	VERB	VERB	_	_	_	_	_
+7	後	後	NOUN	NOUN	_	_	_	_	_
+8	於	於	ADP	ADP	_	_	_	_	_
+9	魯	魯	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 雖 曰 不 要 君
+1	雖	雖	ADV	ADV	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	要	要	VERB	VERB	_	_	_	_	_
+5	君	君	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 不 信 也
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	信	信	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 晉 文 公 譎 而 不 正
+1	晉	晉	PROPN	PROPN	_	_	_	_	_
+2	文	文	PROPN	PROPN	_	_	_	_	_
+3	公	公	NOUN	NOUN	_	_	_	_	_
+4	譎	譎	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	不	不	ADV	ADV	_	_	_	_	_
+7	正	正	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 齊 桓 公 正 而 不 譎
+1	齊	齊	PROPN	PROPN	_	_	_	_	_
+2	桓	桓	PROPN	PROPN	_	_	_	_	_
+3	公	公	NOUN	NOUN	_	_	_	_	_
+4	正	正	VERB	VERB	_	_	_	_	_
+5	而	而	CCONJ	CCONJ	_	_	_	_	_
+6	不	不	ADV	ADV	_	_	_	_	_
+7	譎	譎	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 曰
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 桓 公 殺 公 子 糾
+1	桓	桓	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	殺	殺	VERB	VERB	_	_	_	_	_
+4	公	公	NOUN	NOUN	_	_	_	_	_
+5	子	子	NOUN	NOUN	_	_	_	_	_
+6	糾	糾	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 召忽 死 之
+1	召忽	召忽	PROPN	PROPN	_	_	_	_	_
+2	死	死	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 管 仲 不 死
+1	管	管	PROPN	PROPN	_	_	_	_	_
+2	仲	仲	PROPN	PROPN	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	死	死	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 未 仁 乎
+1	未	未	ADV	ADV	_	_	_	_	_
+2	仁	仁	VERB	VERB	_	_	_	_	_
+3	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 桓 公 九 合 諸 侯
+1	桓	桓	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	九	九	NUM	NUM	_	_	_	_	_
+4	合	合	VERB	VERB	_	_	_	_	_
+5	諸	諸	NOUN	NOUN	_	_	_	_	_
+6	侯	侯	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 以 兵 車
+1	不	不	ADV	ADV	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	兵	兵	NOUN	NOUN	_	_	_	_	_
+4	車	車	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 管 仲 之 力 也
+1	管	管	PROPN	PROPN	_	_	_	_	_
+2	仲	仲	PROPN	PROPN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	力	力	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 其 仁
+1	如	如	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 其 仁
+1	如	如	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	仁	仁	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 管 仲 非 仁 者 與
+1	管	管	PROPN	PROPN	_	_	_	_	_
+2	仲	仲	PROPN	PROPN	_	_	_	_	_
+3	非	非	ADV	ADV	_	_	_	_	_
+4	仁	仁	NOUN	NOUN	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 桓 公 殺 公 子 糾
+1	桓	桓	PROPN	PROPN	_	_	_	_	_
+2	公	公	NOUN	NOUN	_	_	_	_	_
+3	殺	殺	VERB	VERB	_	_	_	_	_
+4	公	公	NOUN	NOUN	_	_	_	_	_
+5	子	子	NOUN	NOUN	_	_	_	_	_
+6	糾	糾	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 能 死
+1	不	不	ADV	ADV	_	_	_	_	_
+2	能	能	AUX	AUX	_	_	_	_	_
+3	死	死	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 又 相 之
+1	又	又	ADV	ADV	_	_	_	_	_
+2	相	相	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 管 仲 相 桓 公
+1	管	管	PROPN	PROPN	_	_	_	_	_
+2	仲	仲	PROPN	PROPN	_	_	_	_	_
+3	相	相	VERB	VERB	_	_	_	_	_
+4	桓	桓	PROPN	PROPN	_	_	_	_	_
+5	公	公	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 霸 諸 侯
+1	霸	霸	VERB	VERB	_	_	_	_	_
+2	諸	諸	NOUN	NOUN	_	_	_	_	_
+3	侯	侯	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 一 匡 天 下
+1	一	一	NUM	NUM	_	_	_	_	_
+2	匡	匡	VERB	VERB	_	_	_	_	_
+3	天	天	NOUN	NOUN	_	_	_	_	_
+4	下	下	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 民 到 于 今 受 其 賜
+1	民	民	NOUN	NOUN	_	_	_	_	_
+2	到	到	VERB	VERB	_	_	_	_	_
+3	于	于	ADP	ADP	_	_	_	_	_
+4	今	今	NOUN	NOUN	_	_	_	_	_
+5	受	受	VERB	VERB	_	_	_	_	_
+6	其	其	PRON	PRON	_	_	_	_	_
+7	賜	賜	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 微 管 仲
+1	微	微	VERB	VERB	_	_	_	_	_
+2	管	管	PROPN	PROPN	_	_	_	_	_
+3	仲	仲	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 其 被 髮 左 衽 矣
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	其	其	PART	PART	_	_	_	_	_
+3	被	被	VERB	VERB	_	_	_	_	_
+4	髮	髮	NOUN	NOUN	_	_	_	_	_
+5	左	左	VERB	VERB	_	_	_	_	_
+6	衽	衽	NOUN	NOUN	_	_	_	_	_
+7	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 豈 若 匹 夫 匹 婦 之 為 諒 也
+1	豈	豈	ADV	ADV	_	_	_	_	_
+2	若	若	VERB	VERB	_	_	_	_	_
+3	匹	匹	VERB	VERB	_	_	_	_	_
+4	夫	夫	NOUN	NOUN	_	_	_	_	_
+5	匹	匹	VERB	VERB	_	_	_	_	_
+6	婦	婦	NOUN	NOUN	_	_	_	_	_
+7	之	之	SCONJ	SCONJ	_	_	_	_	_
+8	為	為	VERB	VERB	_	_	_	_	_
+9	諒	諒	VERB	VERB	_	_	_	_	_
+10	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 自 經 於 溝 瀆
+1	自	自	PRON	PRON	_	_	_	_	_
+2	經	經	VERB	VERB	_	_	_	_	_
+3	於	於	ADP	ADP	_	_	_	_	_
+4	溝	溝	NOUN	NOUN	_	_	_	_	_
+5	瀆	瀆	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 而 莫 之 知 也
+1	而	而	CCONJ	CCONJ	_	_	_	_	_
+2	莫	莫	ADV	ADV	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	知	知	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公叔 文子 之 臣 大 夫 僎 與 文子 同 升 諸 公
+1	公叔	公叔	PROPN	PROPN	_	_	_	_	_
+2	文子	文子	PROPN	PROPN	_	_	_	_	_
+3	之	之	SCONJ	SCONJ	_	_	_	_	_
+4	臣	臣	NOUN	NOUN	_	_	_	_	_
+5	大	大	VERB	VERB	_	_	_	_	_
+6	夫	夫	NOUN	NOUN	_	_	_	_	_
+7	僎	僎	PROPN	PROPN	_	_	_	_	_
+8	與	與	ADP	ADP	_	_	_	_	_
+9	文子	文子	PROPN	PROPN	_	_	_	_	_
+10	同	同	VERB	VERB	_	_	_	_	_
+11	升	升	VERB	VERB	_	_	_	_	_
+12	諸	諸	NOUN	NOUN	_	_	_	_	_
+13	公	公	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 聞 之 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	聞	聞	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 可 以 為 文 矣
+1	可	可	AUX	AUX	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+4	文	文	PROPN	PROPN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 言 衛 靈 公 之 無 道 也
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	言	言	VERB	VERB	_	_	_	_	_
+3	衛	衛	PROPN	PROPN	_	_	_	_	_
+4	靈	靈	PROPN	PROPN	_	_	_	_	_
+5	公	公	NOUN	NOUN	_	_	_	_	_
+6	之	之	SCONJ	SCONJ	_	_	_	_	_
+7	無	無	VERB	VERB	_	_	_	_	_
+8	道	道	NOUN	NOUN	_	_	_	_	_
+9	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 康子 曰
+1	康子	康子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 如 是
+1	夫	夫	PART	PART	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	是	是	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 奚 而 不 喪
+1	奚	奚	PRON	PRON	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	喪	喪	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仲 叔圉 治 賓 客
+1	仲	仲	NOUN	NOUN	_	_	_	_	_
+2	叔圉	叔圉	PROPN	PROPN	_	_	_	_	_
+3	治	治	VERB	VERB	_	_	_	_	_
+4	賓	賓	NOUN	NOUN	_	_	_	_	_
+5	客	客	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 祝 鮀 治 宗 廟
+1	祝	祝	PROPN	PROPN	_	_	_	_	_
+2	鮀	鮀	PROPN	PROPN	_	_	_	_	_
+3	治	治	VERB	VERB	_	_	_	_	_
+4	宗	宗	NOUN	NOUN	_	_	_	_	_
+5	廟	廟	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 王 孫賈 治 軍 旅
+1	王	王	PROPN	PROPN	_	_	_	_	_
+2	孫賈	孫賈	PROPN	PROPN	_	_	_	_	_
+3	治	治	VERB	VERB	_	_	_	_	_
+4	軍	軍	NOUN	NOUN	_	_	_	_	_
+5	旅	旅	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 如 是
+1	夫	夫	PART	PART	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+3	是	是	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 奚 其 喪
+1	奚	奚	PRON	PRON	_	_	_	_	_
+2	其	其	PART	PART	_	_	_	_	_
+3	喪	喪	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 言 之 不 怍
+1	其	其	PRON	PRON	_	_	_	_	_
+2	言	言	NOUN	NOUN	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	怍	怍	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 則 為 之 也 難
+1	則	則	ADV	ADV	_	_	_	_	_
+2	為	為	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+5	難	難	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 陳 成子 弒 簡 公
+1	陳	陳	PROPN	PROPN	_	_	_	_	_
+2	成子	成子	PROPN	PROPN	_	_	_	_	_
+3	弒	弒	VERB	VERB	_	_	_	_	_
+4	簡	簡	PROPN	PROPN	_	_	_	_	_
+5	公	公	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 沐 浴 而 朝
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	沐	沐	VERB	VERB	_	_	_	_	_
+3	浴	浴	VERB	VERB	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	朝	朝	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 告 於 哀 公 曰
+1	告	告	VERB	VERB	_	_	_	_	_
+2	於	於	ADP	ADP	_	_	_	_	_
+3	哀	哀	PROPN	PROPN	_	_	_	_	_
+4	公	公	NOUN	NOUN	_	_	_	_	_
+5	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 陳 恆 弒 其 君
+1	陳	陳	PROPN	PROPN	_	_	_	_	_
+2	恆	恆	PROPN	PROPN	_	_	_	_	_
+3	弒	弒	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	君	君	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 請 討 之
+1	請	請	VERB	VERB	_	_	_	_	_
+2	討	討	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公 曰
+1	公	公	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 告 夫 三 子
+1	告	告	VERB	VERB	_	_	_	_	_
+2	夫	夫	PRON	PRON	_	_	_	_	_
+3	三	三	NUM	NUM	_	_	_	_	_
+4	子	子	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 吾 從 大 夫 之 後
+1	以	以	ADV	ADV	_	_	_	_	_
+2	吾	吾	PRON	PRON	_	_	_	_	_
+3	從	從	VERB	VERB	_	_	_	_	_
+4	大	大	VERB	VERB	_	_	_	_	_
+5	夫	夫	NOUN	NOUN	_	_	_	_	_
+6	之	之	SCONJ	SCONJ	_	_	_	_	_
+7	後	後	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 敢 不 告 也
+1	不	不	ADV	ADV	_	_	_	_	_
+2	敢	敢	AUX	AUX	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	告	告	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君 曰
+1	君	君	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 告 夫 三 子 者
+1	告	告	VERB	VERB	_	_	_	_	_
+2	夫	夫	PRON	PRON	_	_	_	_	_
+3	三	三	NUM	NUM	_	_	_	_	_
+4	子	子	NOUN	NOUN	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 之 三 子 告
+1	之	之	VERB	VERB	_	_	_	_	_
+2	三	三	NUM	NUM	_	_	_	_	_
+3	子	子	NOUN	NOUN	_	_	_	_	_
+4	告	告	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 可
+1	不	不	ADV	ADV	_	_	_	_	_
+2	可	可	AUX	AUX	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 吾 從 大 夫 之 後
+1	以	以	ADV	ADV	_	_	_	_	_
+2	吾	吾	PRON	PRON	_	_	_	_	_
+3	從	從	VERB	VERB	_	_	_	_	_
+4	大	大	VERB	VERB	_	_	_	_	_
+5	夫	夫	NOUN	NOUN	_	_	_	_	_
+6	之	之	SCONJ	SCONJ	_	_	_	_	_
+7	後	後	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 敢 不 告 也
+1	不	不	ADV	ADV	_	_	_	_	_
+2	敢	敢	AUX	AUX	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	告	告	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 問 事 君
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	事	事	VERB	VERB	_	_	_	_	_
+4	君	君	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 勿 欺 也
+1	勿	勿	ADV	ADV	_	_	_	_	_
+2	欺	欺	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 而 犯 之
+1	而	而	CCONJ	CCONJ	_	_	_	_	_
+2	犯	犯	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 上 達
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	上	上	ADV	ADV	_	_	_	_	_
+3	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 小 人 下 達
+1	小	小	VERB	VERB	_	_	_	_	_
+2	人	人	NOUN	NOUN	_	_	_	_	_
+3	下	下	ADV	ADV	_	_	_	_	_
+4	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 古 之 學 者 為 己
+1	古	古	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	學	學	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	為	為	AUX	AUX	_	_	_	_	_
+6	己	己	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 今 之 學 者 為 人
+1	今	今	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	學	學	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	為	為	AUX	AUX	_	_	_	_	_
+6	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 蘧 伯玉 使 人 於 孔子
+1	蘧	蘧	PROPN	PROPN	_	_	_	_	_
+2	伯玉	伯玉	PROPN	PROPN	_	_	_	_	_
+3	使	使	VERB	VERB	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 與 之 坐
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	與	與	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	坐	坐	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 而 問 焉
+1	而	而	CCONJ	CCONJ	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 何 為
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	何	何	PRON	PRON	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 對 曰
+1	對	對	ADV	ADV	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 欲 寡 其 過 而 未 能 也
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	欲	欲	AUX	AUX	_	_	_	_	_
+3	寡	寡	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	過	過	NOUN	NOUN	_	_	_	_	_
+6	而	而	CCONJ	CCONJ	_	_	_	_	_
+7	未	未	ADV	ADV	_	_	_	_	_
+8	能	能	AUX	AUX	_	_	_	_	_
+9	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 者 出
+1	使	使	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	出	出	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 乎
+1	使	使	NOUN	NOUN	_	_	_	_	_
+2	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 使 乎
+1	使	使	NOUN	NOUN	_	_	_	_	_
+2	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 在 其 位
+1	不	不	ADV	ADV	_	_	_	_	_
+2	在	在	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	位	位	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 謀 其 政
+1	不	不	ADV	ADV	_	_	_	_	_
+2	謀	謀	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	政	政	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曾子 曰
+1	曾子	曾子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 思 不 出 其 位
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	思	思	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	出	出	VERB	VERB	_	_	_	_	_
+5	其	其	PRON	PRON	_	_	_	_	_
+6	位	位	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 恥 其 言
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	恥	恥	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 而 過 其 行
+1	而	而	CCONJ	CCONJ	_	_	_	_	_
+2	過	過	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	行	行	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君子 道 者 三
+1	君子	君子	NOUN	NOUN	_	_	_	_	_
+2	道	道	NOUN	NOUN	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	三	三	NUM	NUM	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 我 無 能 焉
+1	我	我	PRON	PRON	_	_	_	_	_
+2	無	無	ADV	ADV	_	_	_	_	_
+3	能	能	AUX	AUX	_	_	_	_	_
+4	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 仁 者 不 憂
+1	仁	仁	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	憂	憂	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 知 者 不 惑
+1	知	知	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	惑	惑	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 勇 者 不 懼
+1	勇	勇	NOUN	NOUN	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	懼	懼	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 自 道 也
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	自	自	PRON	PRON	_	_	_	_	_
+3	道	道	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 方 人
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	方	方	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 賜 也 賢 乎 哉
+1	賜	賜	PROPN	PROPN	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+3	賢	賢	VERB	VERB	_	_	_	_	_
+4	乎	乎	PART	PART	_	_	_	_	_
+5	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫 我 則 不 暇
+1	夫	夫	PART	PART	_	_	_	_	_
+2	我	我	PRON	PRON	_	_	_	_	_
+3	則	則	ADV	ADV	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	暇	暇	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 患 人 之 不 己 知
+1	不	不	ADV	ADV	_	_	_	_	_
+2	患	患	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	之	之	SCONJ	SCONJ	_	_	_	_	_
+5	不	不	ADV	ADV	_	_	_	_	_
+6	己	己	PRON	PRON	_	_	_	_	_
+7	知	知	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 患 其 不 能 也
+1	患	患	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	能	能	AUX	AUX	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 逆 詐
+1	不	不	ADV	ADV	_	_	_	_	_
+2	逆	逆	VERB	VERB	_	_	_	_	_
+3	詐	詐	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 億 不 信
+1	不	不	ADV	ADV	_	_	_	_	_
+2	億	億	VERB	VERB	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	信	信	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 抑 亦 先 覺 者 是 賢 乎
+1	抑	抑	ADV	ADV	_	_	_	_	_
+2	亦	亦	ADV	ADV	_	_	_	_	_
+3	先	先	NOUN	NOUN	_	_	_	_	_
+4	覺	覺	VERB	VERB	_	_	_	_	_
+5	者	者	PART	PART	_	_	_	_	_
+6	是	是	PRON	PRON	_	_	_	_	_
+7	賢	賢	VERB	VERB	_	_	_	_	_
+8	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 微生 畝 謂 孔子 曰
+1	微生	微生	PROPN	PROPN	_	_	_	_	_
+2	畝	畝	PROPN	PROPN	_	_	_	_	_
+3	謂	謂	VERB	VERB	_	_	_	_	_
+4	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+5	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 丘 何 為 是 栖 栖 者 與
+1	丘	丘	PROPN	PROPN	_	_	_	_	_
+2	何	何	ADV	ADV	_	_	_	_	_
+3	為	為	AUX	AUX	_	_	_	_	_
+4	是	是	PRON	PRON	_	_	_	_	_
+5	栖	栖	VERB	VERB	_	_	_	_	_
+6	栖	栖	VERB	VERB	_	_	_	_	_
+7	者	者	PART	PART	_	_	_	_	_
+8	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 無 乃 為 佞 乎
+1	無	無	ADV	ADV	_	_	_	_	_
+2	乃	乃	ADV	ADV	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+4	佞	佞	NOUN	NOUN	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 孔子 曰
+1	孔子	孔子	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 敢 為 佞 也
+1	非	非	ADV	ADV	_	_	_	_	_
+2	敢	敢	AUX	AUX	_	_	_	_	_
+3	為	為	VERB	VERB	_	_	_	_	_
+4	佞	佞	NOUN	NOUN	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 疾 固 也
+1	疾	疾	VERB	VERB	_	_	_	_	_
+2	固	固	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 驥 不 稱 其 力
+1	驥	驥	NOUN	NOUN	_	_	_	_	_
+2	不	不	ADV	ADV	_	_	_	_	_
+3	稱	稱	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	力	力	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 稱 其 德 也
+1	稱	稱	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	德	德	NOUN	NOUN	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 或 曰
+1	或	或	PRON	PRON	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 德 報 怨
+1	以	以	VERB	VERB	_	_	_	_	_
+2	德	德	NOUN	NOUN	_	_	_	_	_
+3	報	報	VERB	VERB	_	_	_	_	_
+4	怨	怨	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 如
+1	何	何	PRON	PRON	_	_	_	_	_
+2	如	如	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 以 報 德
+1	何	何	PRON	PRON	_	_	_	_	_
+2	以	以	VERB	VERB	_	_	_	_	_
+3	報	報	VERB	VERB	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 直 報 怨
+1	以	以	VERB	VERB	_	_	_	_	_
+2	直	直	VERB	VERB	_	_	_	_	_
+3	報	報	VERB	VERB	_	_	_	_	_
+4	怨	怨	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 德 報 德
+1	以	以	VERB	VERB	_	_	_	_	_
+2	德	德	NOUN	NOUN	_	_	_	_	_
+3	報	報	VERB	VERB	_	_	_	_	_
+4	德	德	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 莫 我 知 也 夫
+1	莫	莫	ADV	ADV	_	_	_	_	_
+2	我	我	PRON	PRON	_	_	_	_	_
+3	知	知	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+5	夫	夫	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子貢 曰
+1	子貢	子貢	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 為 其 莫 知 子 也
+1	何	何	PRON	PRON	_	_	_	_	_
+2	為	為	ADP	ADP	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	莫	莫	ADV	ADV	_	_	_	_	_
+5	知	知	VERB	VERB	_	_	_	_	_
+6	子	子	NOUN	NOUN	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 怨 天
+1	不	不	ADV	ADV	_	_	_	_	_
+2	怨	怨	VERB	VERB	_	_	_	_	_
+3	天	天	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 不 尤 人
+1	不	不	ADV	ADV	_	_	_	_	_
+2	尤	尤	VERB	VERB	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 下 學 而 上 達
+1	下	下	NOUN	NOUN	_	_	_	_	_
+2	學	學	VERB	VERB	_	_	_	_	_
+3	而	而	CCONJ	CCONJ	_	_	_	_	_
+4	上	上	NOUN	NOUN	_	_	_	_	_
+5	達	達	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 知 我 者 其 天 乎
+1	知	知	VERB	VERB	_	_	_	_	_
+2	我	我	PRON	PRON	_	_	_	_	_
+3	者	者	PART	PART	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	天	天	NOUN	NOUN	_	_	_	_	_
+6	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公伯 寮 愬 子路 於 季孫
+1	公伯	公伯	PROPN	PROPN	_	_	_	_	_
+2	寮	寮	PROPN	PROPN	_	_	_	_	_
+3	愬	愬	VERB	VERB	_	_	_	_	_
+4	子路	子路	PROPN	PROPN	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	季孫	季孫	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子服 景 伯 以 告 曰
+1	子服	子服	PROPN	PROPN	_	_	_	_	_
+2	景	景	PROPN	PROPN	_	_	_	_	_
+3	伯	伯	PROPN	PROPN	_	_	_	_	_
+4	以	以	ADV	ADV	_	_	_	_	_
+5	告	告	VERB	VERB	_	_	_	_	_
+6	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 夫子 固 有 惑 志 於 公伯 寮
+1	夫子	夫子	NOUN	NOUN	_	_	_	_	_
+2	固	固	ADV	ADV	_	_	_	_	_
+3	有	有	VERB	VERB	_	_	_	_	_
+4	惑	惑	NOUN	NOUN	_	_	_	_	_
+5	志	志	NOUN	NOUN	_	_	_	_	_
+6	於	於	ADP	ADP	_	_	_	_	_
+7	公伯	公伯	PROPN	PROPN	_	_	_	_	_
+8	寮	寮	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 力 猶 能 肆 諸 市 朝
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	力	力	NOUN	NOUN	_	_	_	_	_
+3	猶	猶	ADV	ADV	_	_	_	_	_
+4	能	能	AUX	AUX	_	_	_	_	_
+5	肆	肆	VERB	VERB	_	_	_	_	_
+6	諸	諸	PRON	PRON	_	_	_	_	_
+7	市	市	NOUN	NOUN	_	_	_	_	_
+8	朝	朝	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 道 之 將 行 也 與
+1	道	道	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	將	將	ADV	ADV	_	_	_	_	_
+4	行	行	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+6	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 命 也
+1	命	命	NOUN	NOUN	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 道 之 將 廢 也 與
+1	道	道	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	將	將	ADV	ADV	_	_	_	_	_
+4	廢	廢	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+6	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 命 也
+1	命	命	NOUN	NOUN	_	_	_	_	_
+2	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 公伯 寮 其 如 命 何
+1	公伯	公伯	PROPN	PROPN	_	_	_	_	_
+2	寮	寮	PROPN	PROPN	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	如	如	VERB	VERB	_	_	_	_	_
+5	命	命	NOUN	NOUN	_	_	_	_	_
+6	何	何	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 賢 者 辟 世
+1	賢	賢	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	辟	辟	VERB	VERB	_	_	_	_	_
+4	世	世	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 次 辟 地
+1	其	其	PRON	PRON	_	_	_	_	_
+2	次	次	NOUN	NOUN	_	_	_	_	_
+3	辟	辟	VERB	VERB	_	_	_	_	_
+4	地	地	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 次 辟 色
+1	其	其	PRON	PRON	_	_	_	_	_
+2	次	次	NOUN	NOUN	_	_	_	_	_
+3	辟	辟	VERB	VERB	_	_	_	_	_
+4	色	色	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 其 次 辟 言
+1	其	其	PRON	PRON	_	_	_	_	_
+2	次	次	NOUN	NOUN	_	_	_	_	_
+3	辟	辟	VERB	VERB	_	_	_	_	_
+4	言	言	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 作 者 七 人 矣
+1	作	作	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	七	七	NUM	NUM	_	_	_	_	_
+4	人	人	NOUN	NOUN	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 宿 於 石 門
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	宿	宿	VERB	VERB	_	_	_	_	_
+3	於	於	ADP	ADP	_	_	_	_	_
+4	石	石	NOUN	NOUN	_	_	_	_	_
+5	門	門	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 晨 門 曰
+1	晨	晨	NOUN	NOUN	_	_	_	_	_
+2	門	門	NOUN	NOUN	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 奚 自
+1	奚	奚	PRON	PRON	_	_	_	_	_
+2	自	自	ADP	ADP	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 曰
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 自 孔 氏
+1	自	自	ADP	ADP	_	_	_	_	_
+2	孔	孔	PROPN	PROPN	_	_	_	_	_
+3	氏	氏	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 是 知 其 不 可 而 為 之 者 與
+1	是	是	PRON	PRON	_	_	_	_	_
+2	知	知	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	不	不	ADV	ADV	_	_	_	_	_
+5	可	可	VERB	VERB	_	_	_	_	_
+6	而	而	CCONJ	CCONJ	_	_	_	_	_
+7	為	為	VERB	VERB	_	_	_	_	_
+8	之	之	PRON	PRON	_	_	_	_	_
+9	者	者	PART	PART	_	_	_	_	_
+10	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 擊 磬 於 衛
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	擊	擊	VERB	VERB	_	_	_	_	_
+3	磬	磬	NOUN	NOUN	_	_	_	_	_
+4	於	於	ADP	ADP	_	_	_	_	_
+5	衛	衛	PROPN	PROPN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 荷 蕢 而 過 孔 氏 之 門 者
+1	有	有	VERB	VERB	_	_	_	_	_
+2	荷	荷	VERB	VERB	_	_	_	_	_
+3	蕢	蕢	NOUN	NOUN	_	_	_	_	_
+4	而	而	CCONJ	CCONJ	_	_	_	_	_
+5	過	過	VERB	VERB	_	_	_	_	_
+6	孔	孔	PROPN	PROPN	_	_	_	_	_
+7	氏	氏	NOUN	NOUN	_	_	_	_	_
+8	之	之	SCONJ	SCONJ	_	_	_	_	_
+9	門	門	NOUN	NOUN	_	_	_	_	_
+10	者	者	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 有 心 哉
+1	有	有	VERB	VERB	_	_	_	_	_
+2	心	心	NOUN	NOUN	_	_	_	_	_
+3	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 擊 磬 乎
+1	擊	擊	VERB	VERB	_	_	_	_	_
+2	磬	磬	NOUN	NOUN	_	_	_	_	_
+3	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 既 而 曰
+1	既	既	ADV	ADV	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 鄙 哉 硜 硜 乎
+1	鄙	鄙	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+3	硜	硜	VERB	VERB	_	_	_	_	_
+4	硜	硜	VERB	VERB	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 莫 己 知 也
+1	莫	莫	ADV	ADV	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	知	知	VERB	VERB	_	_	_	_	_
+4	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 斯 已 而 已 矣
+1	斯	斯	PRON	PRON	_	_	_	_	_
+2	已	已	VERB	VERB	_	_	_	_	_
+3	而	而	PART	PART	_	_	_	_	_
+4	已	已	PART	PART	_	_	_	_	_
+5	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 深 則 厲
+1	深	深	ADV	ADV	_	_	_	_	_
+2	則	則	ADV	ADV	_	_	_	_	_
+3	厲	厲	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 淺 則 揭
+1	淺	淺	ADV	ADV	_	_	_	_	_
+2	則	則	ADV	ADV	_	_	_	_	_
+3	揭	揭	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 果 哉
+1	果	果	VERB	VERB	_	_	_	_	_
+2	哉	哉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 末 之 難 矣
+1	末	末	VERB	VERB	_	_	_	_	_
+2	之	之	PRON	PRON	_	_	_	_	_
+3	難	難	VERB	VERB	_	_	_	_	_
+4	矣	矣	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子張 曰
+1	子張	子張	PROPN	PROPN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 書 云
+1	書	書	NOUN	NOUN	_	_	_	_	_
+2	云	云	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 高 宗 諒 陰 三 年 不 言
+1	高	高	PROPN	PROPN	_	_	_	_	_
+2	宗	宗	NOUN	NOUN	_	_	_	_	_
+3	諒	諒	VERB	VERB	_	_	_	_	_
+4	陰	陰	NOUN	NOUN	_	_	_	_	_
+5	三	三	NUM	NUM	_	_	_	_	_
+6	年	年	NOUN	NOUN	_	_	_	_	_
+7	不	不	ADV	ADV	_	_	_	_	_
+8	言	言	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 謂 也
+1	何	何	PRON	PRON	_	_	_	_	_
+2	謂	謂	VERB	VERB	_	_	_	_	_
+3	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 何 必 高 宗
+1	何	何	ADV	ADV	_	_	_	_	_
+2	必	必	ADV	ADV	_	_	_	_	_
+3	高	高	PROPN	PROPN	_	_	_	_	_
+4	宗	宗	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 古 之 人 皆 然
+1	古	古	NOUN	NOUN	_	_	_	_	_
+2	之	之	SCONJ	SCONJ	_	_	_	_	_
+3	人	人	NOUN	NOUN	_	_	_	_	_
+4	皆	皆	ADV	ADV	_	_	_	_	_
+5	然	然	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 君 薨
+1	君	君	NOUN	NOUN	_	_	_	_	_
+2	薨	薨	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 百 官 總 己
+1	百	百	NUM	NUM	_	_	_	_	_
+2	官	官	NOUN	NOUN	_	_	_	_	_
+3	總	總	VERB	VERB	_	_	_	_	_
+4	己	己	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 聽 於 冢 宰 三 年
+1	以	以	ADV	ADV	_	_	_	_	_
+2	聽	聽	VERB	VERB	_	_	_	_	_
+3	於	於	ADP	ADP	_	_	_	_	_
+4	冢	冢	NOUN	NOUN	_	_	_	_	_
+5	宰	宰	NOUN	NOUN	_	_	_	_	_
+6	三	三	NUM	NUM	_	_	_	_	_
+7	年	年	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 上 好 禮
+1	上	上	NOUN	NOUN	_	_	_	_	_
+2	好	好	VERB	VERB	_	_	_	_	_
+3	禮	禮	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 則 民 易 使 也
+1	則	則	ADV	ADV	_	_	_	_	_
+2	民	民	NOUN	NOUN	_	_	_	_	_
+3	易	易	VERB	VERB	_	_	_	_	_
+4	使	使	VERB	VERB	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子路 問 君子
+1	子路	子路	PROPN	PROPN	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	君子	君子	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 脩 己 以 敬
+1	脩	脩	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	以	以	ADV	ADV	_	_	_	_	_
+4	敬	敬	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 斯 而 已 乎
+1	如	如	VERB	VERB	_	_	_	_	_
+2	斯	斯	PRON	PRON	_	_	_	_	_
+3	而	而	PART	PART	_	_	_	_	_
+4	已	已	PART	PART	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 脩 己 以 安 人
+1	脩	脩	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	以	以	ADV	ADV	_	_	_	_	_
+4	安	安	VERB	VERB	_	_	_	_	_
+5	人	人	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 如 斯 而 已 乎
+1	如	如	VERB	VERB	_	_	_	_	_
+2	斯	斯	PRON	PRON	_	_	_	_	_
+3	而	而	PART	PART	_	_	_	_	_
+4	已	已	PART	PART	_	_	_	_	_
+5	乎	乎	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 曰
+1	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 脩 己 以 安 百 姓
+1	脩	脩	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	以	以	ADV	ADV	_	_	_	_	_
+4	安	安	VERB	VERB	_	_	_	_	_
+5	百	百	NUM	NUM	_	_	_	_	_
+6	姓	姓	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 脩 己 以 安 百 姓
+1	脩	脩	VERB	VERB	_	_	_	_	_
+2	己	己	PRON	PRON	_	_	_	_	_
+3	以	以	ADV	ADV	_	_	_	_	_
+4	安	安	VERB	VERB	_	_	_	_	_
+5	百	百	NUM	NUM	_	_	_	_	_
+6	姓	姓	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 堯 舜 其 猶 病 諸
+1	堯	堯	PROPN	PROPN	_	_	_	_	_
+2	舜	舜	PROPN	PROPN	_	_	_	_	_
+3	其	其	PART	PART	_	_	_	_	_
+4	猶	猶	ADV	ADV	_	_	_	_	_
+5	病	病	VERB	VERB	_	_	_	_	_
+6	諸	諸	PRON	PRON	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 原 壤 夷 俟
+1	原	原	PROPN	PROPN	_	_	_	_	_
+2	壤	壤	PROPN	PROPN	_	_	_	_	_
+3	夷	夷	VERB	VERB	_	_	_	_	_
+4	俟	俟	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 幼 而 不 孫 弟
+1	幼	幼	VERB	VERB	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	孫	孫	NOUN	NOUN	_	_	_	_	_
+5	弟	弟	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 長 而 無 述 焉
+1	長	長	VERB	VERB	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	無	無	ADV	ADV	_	_	_	_	_
+4	述	述	VERB	VERB	_	_	_	_	_
+5	焉	焉	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 老 而 不 死
+1	老	老	VERB	VERB	_	_	_	_	_
+2	而	而	CCONJ	CCONJ	_	_	_	_	_
+3	不	不	ADV	ADV	_	_	_	_	_
+4	死	死	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 是 為 賊
+1	是	是	PRON	PRON	_	_	_	_	_
+2	為	為	AUX	AUX	_	_	_	_	_
+3	賊	賊	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 以 杖 叩 其 脛
+1	以	以	VERB	VERB	_	_	_	_	_
+2	杖	杖	NOUN	NOUN	_	_	_	_	_
+3	叩	叩	VERB	VERB	_	_	_	_	_
+4	其	其	PRON	PRON	_	_	_	_	_
+5	脛	脛	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 闕 黨 童 子 將 命
+1	闕	闕	PROPN	PROPN	_	_	_	_	_
+2	黨	黨	NOUN	NOUN	_	_	_	_	_
+3	童	童	NOUN	NOUN	_	_	_	_	_
+4	子	子	NOUN	NOUN	_	_	_	_	_
+5	將	將	VERB	VERB	_	_	_	_	_
+6	命	命	NOUN	NOUN	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 或 問 之 曰
+1	或	或	PRON	PRON	_	_	_	_	_
+2	問	問	VERB	VERB	_	_	_	_	_
+3	之	之	PRON	PRON	_	_	_	_	_
+4	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 益 者 與
+1	益	益	VERB	VERB	_	_	_	_	_
+2	者	者	PART	PART	_	_	_	_	_
+3	與	與	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 子 曰
+1	子	子	NOUN	NOUN	_	_	_	_	_
+2	曰	曰	VERB	VERB	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 吾 見 其 居 於 位 也
+1	吾	吾	PRON	PRON	_	_	_	_	_
+2	見	見	VERB	VERB	_	_	_	_	_
+3	其	其	PRON	PRON	_	_	_	_	_
+4	居	居	VERB	VERB	_	_	_	_	_
+5	於	於	ADP	ADP	_	_	_	_	_
+6	位	位	NOUN	NOUN	_	_	_	_	_
+7	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 見 其 與 先 生 並 行 也
+1	見	見	VERB	VERB	_	_	_	_	_
+2	其	其	PRON	PRON	_	_	_	_	_
+3	與	與	ADP	ADP	_	_	_	_	_
+4	先	先	NOUN	NOUN	_	_	_	_	_
+5	生	生	NOUN	NOUN	_	_	_	_	_
+6	並	並	ADV	ADV	_	_	_	_	_
+7	行	行	VERB	VERB	_	_	_	_	_
+8	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 非 求 益 者 也
+1	非	非	ADV	ADV	_	_	_	_	_
+2	求	求	VERB	VERB	_	_	_	_	_
+3	益	益	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
+# sent_id = KR1h0004_
+# text = 欲 速 成 者 也
+1	欲	欲	AUX	AUX	_	_	_	_	_
+2	速	速	ADV	ADV	_	_	_	_	_
+3	成	成	VERB	VERB	_	_	_	_	_
+4	者	者	PART	PART	_	_	_	_	_
+5	也	也	PART	PART	_	_	_	_	_
+
