@@ -24,8 +24,7 @@
 
 `python3 -m spacy train ./config-pl/config.cfg --output ./model-pl/spacy_model2/ --paths.train ./corpus_polonais/corpus-ent/pl_pdb-ud-train.spacy --paths.dev ./corpus_polonais/corpus-ent/pl_pdb-ud-dev.spacy `
 
-> RÉSULTATS (j'ai du arrêter l'entrainement car c'était trop long)
-
+> RÉSULTATS
 ```
 ================ Initializing pipeline =================
 ✔ Initialized pipeline
