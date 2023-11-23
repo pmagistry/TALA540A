@@ -43,6 +43,7 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
                     tokens = []
                 else:
                     fields = line.split("\t")
+                    #print(fields)
                     form, tag = fields[1], fields[3]
                     if not "-" in fields[0]:  # éviter les contractions type "du"
                         if vocabulaire is None:
@@ -108,12 +109,12 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     print(classification_report(ref, test))
 
 def main():
-    corpus_train = read_conll("./corpus_polonais/corpus-pdb/pl_pdb-ud-train.conllu")
+    corpus_train = read_conll("./corpus_polonais/corpus-lfg/pl_lfg-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
     for model_name in ("./model-pl/spacy_model2/model-best", "pl_core_news_sm", "pl_core_news_md", "pl_core_news_lg"):
         print(model_name)
         model_spacy = spacy.load(model_name)
-        corpus_gold = read_conll("./corpus_polonais/corpus-pdb/pl_pdb-ud-test.conllu", vocabulaire=vocab_train)
+        corpus_gold = read_conll("./corpus_polonais/corpus-lfg/pl_lfg-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
         #for subcorpus in ("annodis", "frwiki", "emea", "Europar"):
         #    print(subcorpus)
