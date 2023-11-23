@@ -62,19 +62,22 @@ def make_corpus_spacy(
         # permet de prendre en compte les formes décontractées (de le)
         doc = Doc(nlp.vocab, words=[t.forme for t in sent.analyse])
         for tok in nlp(doc):
-            # print(tok.pos_)
+            if len(tok.pos_) == 0:
+                pos = tok.tag_
+            else:
+                pos = tok.pos_
             if vocabulaire is None:
                 tok_spacy = Token(
                     compt,
                     tok.text,
                     tok.lemma_,
-                    tok.pos_,
+                    pos,
                     tok.tag_,
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
+                    "_",
+                    "_",
+                    "_",
+                    "_",
+                    "_",
                     True,
                 )
             else:
@@ -83,13 +86,13 @@ def make_corpus_spacy(
                     compt,
                     tok.text,
                     tok.lemma_,
-                    tok.pos_,
+                    pos,
                     tok.tag_,
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
+                    "_",
+                    "_",
+                    "_",
+                    "_",
+                    "_",
                     is_oov,
                 )
             compt += 1
@@ -103,7 +106,7 @@ def compar_listes(
     corpus_test: Corpus,
     subcorpus: Optional[str] = None,
     conf_matrix: Optional[bool] = False,
-) -> Tuple(float, float):
+):
     compt_true = 0
     compt_tot = 0
     oov_ok = 0
@@ -111,7 +114,20 @@ def compar_listes(
     pos_gold = []
     pos_spacy = []
     for sent_gold, sent_test in zip(corpus_gold.liste_sent, corpus_test.liste_sent):
-        if subcorpus is None or subcorpus in sent_gold.sent_id:
+        if subcorpus != "" : 
+            if subcorpus in sent_gold.sent_id and subcorpus in sent_test.sent_id:
+                for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
+                    assert token_gold.forme == token_test.forme
+                    pos_gold.append(token_gold.upos)
+                    pos_spacy.append(token_test.upos)
+                    if token_gold.upos == token_test.upos:
+                        compt_true += 1
+                    compt_tot += 1
+                    if token_gold.is_oov:
+                        oov_total += 1
+                        if token_gold.upos == token_test.upos:
+                            oov_ok += 1
+        else:
             for token_gold, token_test in zip(sent_gold.analyse, sent_test.analyse):
                 assert token_gold.forme == token_test.forme
                 pos_gold.append(token_gold.upos)
@@ -134,6 +150,8 @@ def compar_listes(
         plt.xlabel("POS spacy")
         plt.ylabel("POS corpus")
         plt.show()
+    print(compt_tot)
+    print(oov_total)
     return compt_true / compt_tot, oov_ok / oov_total
 
 
@@ -148,7 +166,6 @@ def corpus_list(corpus_train: Corpus):
 if __name__ == "__main__":
     # corpus train utilisé pour faire le vocabulaire
     corpus_train = sys.argv[1]
-
     corpus_test = sys.argv[2]
     model = sys.argv[3]
 
@@ -159,11 +176,15 @@ if __name__ == "__main__":
 
     # Création du Corpus à partir du corpus de test
     c_gold = make_corpus_conll(corpus_test, vocab)
+    # print(c_gold.liste_sent[0].analyse[0])
 
     # Création du Corpus spacy à partir du corpus gold
     c_test = make_corpus_spacy(c_gold, model, vocab)
+    # print(c_test.liste_sent[0].analyse[0])
 
-    acc_tok, acc_oov = compar_listes(c_gold, c_test, True)
+    subcorpus = sys.argv[4]
+    acc_tok, acc_oov = compar_listes(c_gold, c_test, subcorpus, conf_matrix=False)
+
     print(
-        f"L'accuracy moyenne du modèle {model} de spacy sur ce corpus est de : {acc_tok} et l'accuracy sur les mots non-présents dans le vocabulaire est de : {acc_oov}"
+        f"L'accuracy moyenne du modèle {model} de spacy sur le corpus {subcorpus} est de : {acc_tok} et l'accuracy sur les mots non-présents dans le vocabulaire est de : {acc_oov}"
     )
