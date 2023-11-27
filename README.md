@@ -55,4 +55,9 @@
 
 ## test à faire
 
-- avec ou sans ponctuations
+- tableau de conversions, en fonction de :
+  - papier
+  - analyse quantitative
+  - analyse qualitative
+
+- test avec ou sans ponctuations

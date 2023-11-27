@@ -31,8 +31,13 @@ def main():
     corpora = []   
     for (title, (model, color)) in sorted(models.items()):
         corpora.append(get_jiayan(corpus_r, title, model, color))
-    test_tokens(corpora[0], corpus_r)
+    # test_tokens(corpora[0], corpus_r)
     
     ## Partie 3. évaluation avec subcorpus
     
     ## Partie 4. évaluation sans subcorpus
+    for corpus in corpora :
+        jiayan_sans(corpus, corpus_r)
+    
+if __name__ == "__main__":
+    main()

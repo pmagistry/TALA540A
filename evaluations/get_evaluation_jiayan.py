@@ -53,13 +53,11 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = No
                 assert etoken.form == rtoken.form
                 # sans vocab
                 total += 1
-                if etoken.pos == rtoken.pos:
-                    acc += 1
+                acc += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
                 # avec vocab
                 if etoken.is_oov:
                     total_oov += 1
-                    if etoken.pos == rtoken.pos:
-                        acc_oov += 1
+                    acc_oov += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
         else:
             if rsentence.sent_id == subcorpus :
                 for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
@@ -70,7 +68,7 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = No
                     # avec vocab
                     if etoken.is_oov:
                         total_oov += 1
-                        acc += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
+                        acc_oov += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
 
     return round(acc / total * 100, 2), round(acc_oov / total_oov * 100, 2)
 
@@ -109,7 +107,7 @@ def tableau_conversion(epos: str, rpos: str) -> int:
     # base on context/token : i, j tester en ne les prenant pas en compte et en mettant +1 peu importe
     # pas présent ni dans train ni dans test : o, g, x, ws
     
-    return result
+    return int(result)
 
 
 def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
