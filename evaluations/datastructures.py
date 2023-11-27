@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
 
 """ Ce fichier contient les classes utilisées par tous les autres fichiers
 """

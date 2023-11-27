@@ -2,15 +2,28 @@
 # coding: utf-8
 
 """
-Ce fichier contient les fonctions pour évaluer le pos-tagging des corpus
+Ce fichier contient les fonctions pour évaluer le pos-tagging jiayan des corpus
 """
 
-from collections import OrderedDict
 from typing import Optional
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+import regex
 from datastructures import Corpus
+
+
+def jiayan_sans(ecorpus: Corpus, rcorpus: Corpus) :
+    """ print l'évaluation du posttagging 
+    sans prendre en compte les sous-corpus
+    
+    Args:
+        ecorpus (Corpus): corpus du modèle à évaluer
+        rcorpus (Corpus): corpus de référence
+    """
+    
+    print(f"\nPour le corpus {ecorpus.name} :")
+    # on va chercher l'accuracy
+    acc = get_accuracy(ecorpus, rcorpus)
+    print(f"L'accuracy avec notre modèle est à {acc[0]}%.")
+    print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.")
 
 
 def get_accuracy(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = None) -> tuple[float, float]:
@@ -53,64 +66,50 @@ def get_accuracy(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = No
                     assert etoken.form == rtoken.form
                     # sans vocab
                     total += 1
-                    if etoken.pos == rtoken.pos:
-                        acc += 1
+                    acc += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
                     # avec vocab
                     if etoken.is_oov:
                         total_oov += 1
-                        if etoken.pos == rtoken.pos:
-                            acc_oov += 1
+                        acc += tableau_conversion(etoken.pos, rtoken.pos) # renvoie 1 ou 0
 
     return round(acc / total * 100, 2), round(acc_oov / total_oov * 100, 2)
 
 
-def get_matrice(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = None):
-    """fonction d'affichage des matrices de confusion
-    pour la classification des pos
-
-    Args:
-        ecorpus (Corpus): corpus à évaluer
-        rcorpus (Corpus): corpus de référence
-    """
+def tableau_conversion(epos: str, rpos: str) -> int:
+    result = 0
+    if rpos == "ADJ" and regex.match(r"a|m", epos):
+        result = 1
+    elif rpos == "DET" and regex.match(r"r|b", epos):
+        result = 1
+    elif regex.match(r"CCONJ|SCONJ", rpos) and epos == "c" :
+        result = 1
+    elif rpos == "ADV" and regex.match(r"d|h", rpos) :
+        result = 1
+    elif rpos == "INTJ" and epos == "e" :
+        result = 1
+    elif rpos == "NUM" and epos == "m" :
+        result = 1
+    elif rpos == "NOUN" and regex.match(r"q|n|ni|nl|nt|h", epos) :
+        result = 1
+    elif rpos == "PROPN" and regex.match(r"nh|ns|nz|z", epos) :
+        result = 1
+    elif rpos == "ADP" and regex.match(r"nd|p|k", epos) :
+        result = 1
+    elif rpos == "PRON" and epos == "r" :
+        result = 1
+    elif rpos == "AUX" and regex.match(r"u|v", epos) :
+        result = 1
+    elif rpos == "PART" and regex.match(r"u|k", epos) :
+        result = 1
+    elif rpos == "VERB" and epos == "v":
+        result = 1
+    elif regex.match(r"PUNCT|SYM", rpos) and epos == "wp" :
+        result = 1
     
-    etags = {token.pos for sentence in ecorpus.sentences for token in sentence.tokens}
-    rtags = {token.pos for sentence in rcorpus.sentences for token in sentence.tokens}
-    tags = etags.union(rtags)
-
-    # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
-    epos_rpos = OrderedDict()
-    for etag in tags: # tag du modèle à évaluer
-        epos_rpos[etag] = OrderedDict()
-        for rtag in tags: # tag du corpus de référence
-            epos_rpos[etag][rtag] = 0
-
-    for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        if subcorpus is None:
-            for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
-                epos_rpos[etoken.pos][rtoken.pos] += 1    
-        else:
-            if rsentence.sent_id == subcorpus :
-                for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-                    epos_rpos[etoken.pos][rtoken.pos] += 1
-
-    # 'cm' est une matrice de confusion faite vec pandas
-    cm = pd.DataFrame.from_dict(epos_rpos)
-
-    # remplace les NaN par des 0 -> important pour les calculs après
-    cm = cm.fillna(0)
-    print("\n", cm)  # colonne rpos, ligne epos
-
-    # on crée une matrice de confusion plus 'jolie' avec seaborn
-    plt.subplots(figsize=(8, 6))
-    sns.heatmap(cm, annot=True)
-
-    # titre du graphe et des axes
-    plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
-    plt.xlabel("Etiquette prédite", fontsize=14)
-    plt.ylabel("Etiquette correcte", fontsize=14)
-
-    # affichage
-    plt.show()
+    # base on context/token : i, j tester en ne les prenant pas en compte et en mettant +1 peu importe
+    # pas présent ni dans train ni dans test : o, g, x, ws
+    
+    return result
 
 
 def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
@@ -121,13 +120,18 @@ def test_tokens(ecorpus: Corpus, rcorpus: Corpus):
         ecorpus (Corpus): corpus à évaluer
         rcorpus (Corpus): corpus de référence
     """
-    # pour voir sur le terminal la tokenisation des deux corpus
+    # pour voir sur le trcorpus: Corpuserminal la tokenisation des deux corpus
     print("etoken", "\t", "rtoken")
     for esentences, rsentences in zip(ecorpus.sentences, rcorpus.sentences):
         for etoken, rtoken in zip(esentences.tokens, rsentences.tokens):
             # plusieurs proposition aux choix en fonction de ce que l'on veut voir
-            print(etoken, "\t", rtoken)
+            # print(etoken, "\t", rtoken)
             # if etoken.pos != rtoken.pos:
                 # print(etoken, "\t", rtoken)
                 # print(etoken.form, "\t", rtoken.form)
                 # print(etoken.pos, "\t", rtoken.pos)
+                
+            if tableau_conversion(etoken.pos, rtoken.pos) == 0:
+                print(etoken.form, etoken.pos, "\t", rtoken.form, rtoken.pos)
+            # if regex.match(r"wp", etoken.pos):
+            #     print(etoken.form, etoken.pos, "\t", rtoken.form, rtoken.pos)

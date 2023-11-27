@@ -12,18 +12,8 @@ from tqdm import tqdm
 from conllu import parse
 import spacy
 from spacy.tokens import Doc
+from jiayan import CRFPOSTagger
 from datastructures import Token, Sentence, Corpus
-
-
-def get_vocab(corpus_train: Corpus) -> Set[str]:
-    """
-    Args:
-        corpus_train (Corpus): la partie train du corpus chinois
-
-    Returns:
-        Set[str]: renvoie le vocabulaire du corpus train
-    """
-    return {token.form for sentence in corpus_train.sentences for token in sentence.tokens}
 
 
 def get_conllu(fichier: str, vocabulaire: Optional[Set[str]] = None) -> Corpus:
@@ -69,6 +59,7 @@ def get_conllu(fichier: str, vocabulaire: Optional[Set[str]] = None) -> Corpus:
                 else:
                     is_oov = not token["form"] in vocabulaire
                 tokens.append(Token(form=token["form"], pos=token["upos"], is_oov=is_oov))
+            
             sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
             tqdmbar.update(1)  # update du compteur
 
@@ -110,11 +101,54 @@ def get_spacy(rcorpus: Corpus, title: str, model: str, color: str) -> Corpus:
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 # .tag_ s'il s'agit du modèle que l'on a entrainé
-                if title == "mon_modele" :
+                if title == "mon_modele_spacy" :
                     tokens.append(Token(etoken.text, etoken.tag_, is_oov=rtoken.is_oov))
                 # sinon .pos_
                 else :
                     tokens.append(Token(etoken.text, etoken.pos_, is_oov=rtoken.is_oov))
+            
+            sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
+            tqdmbar.update(1)  # update du compteur
+
+    return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences, name=title)
+
+def get_jiayan(rcorpus: Corpus, title: str, model: str, color: str):
+    """
+    Args:
+        rcorpus (Corpus): corpus de référence
+        title (str): nom du titre du modèle jiayan à afficher sur la barre tqdm
+        model (str): nom du modèle jiayan
+        color (str): couleur de la barre tqdm (ne sert à rien mais ça fait jolie...)
+
+    Returns:
+        Corpus: contient les informations du corpus à évaluer
+    """
+
+    # démarrage de l'instanciation de l'objet Corpus et du compteur tqdm
+    with tqdm(total=rcorpus.nb_sentences, colour=f"{color}", desc=f"{title}") as tqdmbar:
+
+        # on récupère le modèle 
+        postagger = CRFPOSTagger()
+        postagger.load(model)
+
+        # 'sentences' est une liste d'objets de la classe Sentence
+        sentences = []
+        for rsentence in rcorpus.sentences:
+
+            # 'words' est une liste de tokens
+            # dont on a récupéré la forme dans le corpus de référence
+            # 'words
+            words = [tok.form for tok in rsentence.tokens]
+            tags = postagger.postag(words)
+
+            # 'sent_id' contient le nom du sous-corpus d'où vient la phrase
+            sent_id = rsentence.sent_id
+
+            # 'tokens' est une liste d'objet de la classe Token
+            tokens = []
+            for tag, rtoken in zip(tags, rsentence.tokens):
+                tokens.append(Token(rtoken.form, tag, is_oov=rtoken.is_oov))
+            
             sentences.append(Sentence(nb_tokens=len(tokens), sent_id=sent_id, tokens=tokens))
             tqdmbar.update(1)  # update du compteur
 
