@@ -71,7 +71,7 @@ def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
         tokens.append(Token(tok.text, tag, is_oov=origin_token.is_oov))
     return Sentence(origin.sent_id, tokens)
 
-@measure_energy
+# @measure_energy
 def tag_corpus_spacy(corpus: Corpus, model_spacy: SpacyPipeline) -> Corpus:
     sentences = []
     for sentence in corpus.sentences:
@@ -108,17 +108,18 @@ def print_report(corpus_gold: Corpus, corpus_test: Corpus):
     print(classification_report(ref, test))
 
 def main():
-    corpus_train = read_conll("fr_sequoia-ud-train.conllu")
+    corpus_train = read_conll("pl_lfg-ud-train.conllu")
     vocab_train = build_vocabulaire(corpus_train)
-    for model_name in ("output2/model-best", "fr_core_news_sm", "fr_core_news_md", "fr_core_news_lg"):
+    for model_name in ("spacy_model_pl/model-best", "pl_core_news_sm", "pl_core_news_md", "pl_core_news_lg"):
         print(model_name)
         model_spacy = spacy.load(model_name)
-        corpus_gold = read_conll("fr_sequoia-ud-test.conllu", vocabulaire=vocab_train)
+        corpus_gold = read_conll("pl_lfg-ud-test.conllu", vocabulaire=vocab_train)
         corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-        for subcorpus in ("annodis", "frwiki", "emea", "Europar"):
-            print(subcorpus)
-            print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
-        # print_report(corpus_gold, corpus_test)
+        print(compute_accuracy(corpus_gold, corpus_test))
+        #for subcorpus in ("annodis", "frwiki", "emea", "Europar"):
+            #print(subcorpus)
+            #print(compute_accuracy(corpus_gold, corpus_test, subcorpus))
+        print_report(corpus_gold, corpus_test)
 
 
 if __name__ == "__main__":
