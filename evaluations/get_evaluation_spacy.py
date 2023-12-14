@@ -7,6 +7,7 @@ Ce fichier contient les fonctions pour évaluer le pos-tagging spacy des corpus
 
 from collections import OrderedDict
 from typing import Optional
+from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -116,38 +117,50 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = Non
     etags = {token.pos for sentence in ecorpus.sentences for token in sentence.tokens}
     rtags = {token.pos for sentence in rcorpus.sentences for token in sentence.tokens}
     tags = etags.union(rtags)
+    
+    cr = classification_report([token.pos for sentence in rcorpus.sentences for token in sentence.tokens], 
+                               [token.pos for sentence in ecorpus.sentences for token in sentence.tokens], 
+                               target_names=tags)
+    print(cr)
 
-    # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
-    epos_rpos = OrderedDict()
-    for etag in tags: # tag du modèle à évaluer
-        epos_rpos[etag] = OrderedDict()
-        for rtag in tags: # tag du corpus de référence
-            epos_rpos[etag][rtag] = 0
 
-    for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-        if subcorpus is None:
-            for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
-                epos_rpos[etoken.pos][rtoken.pos] += 1    
-        else:
-            if rsentence.sent_id == subcorpus :
-                for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-                    epos_rpos[etoken.pos][rtoken.pos] += 1
+    # # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
+    # epos_rpos = OrderedDict()
+    # for etag in tags: # tag du modèle à évaluer
+    #     epos_rpos[etag] = OrderedDict()
+    #     for rtag in tags: # tag du corpus de référence
+    #         epos_rpos[etag][rtag] = 0
 
-    # 'cm' est une matrice de confusion faite vec pandas
-    cm = pd.DataFrame.from_dict(epos_rpos)
+    # for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
+    #     if subcorpus is None:
+    #         for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
+    #             epos_rpos[etoken.pos][rtoken.pos] += 1    
+    #     else:
+    #         if rsentence.sent_id == subcorpus :
+    #             for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
+    #                 epos_rpos[etoken.pos][rtoken.pos] += 1
 
-    # remplace les NaN par des 0 -> important pour les calculs après
-    cm = cm.fillna(0)
-    print("\n", cm)  # colonne rpos, ligne epos
+    # # 'cm' est une matrice de confusion faite vec pandas
+    # cm = pd.DataFrame.from_dict(epos_rpos)
 
-    # on crée une matrice de confusion plus 'jolie' avec seaborn
-    plt.subplots(figsize=(8, 6))
-    sns.heatmap(cm, annot=True)
+    # # remplace les NaN par des 0 -> important pour les calculs après
+    # cm = cm.fillna(0)
+    # print("\n", cm)  # colonne rpos, ligne epos
 
-    # titre du graphe et des axes
-    plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
-    plt.xlabel("Etiquette prédite", fontsize=14)
-    plt.ylabel("Etiquette correcte", fontsize=14)
+    # # on crée une matrice de confusion plus 'jolie' avec seaborn
+    # plt.subplots(figsize=(8, 6))
+    # sns.heatmap(cm, annot=True)
+
+    # # titre du graphe et des axes
+    # plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
+    # plt.xlabel("Etiquette prédite", fontsize=14)
+    # plt.ylabel("Etiquette correcte", fontsize=14)
+    
+    cm = confusion_matrix([token.pos for sentence in rcorpus.sentences for token in sentence.tokens], 
+                            [token.pos for sentence in ecorpus.sentences for token in sentence.tokens], 
+                            labels=tags)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=tags)
+    disp.plot(xticks_rotation='vertical')
 
     # affichage
     plt.show()

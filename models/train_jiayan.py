@@ -14,6 +14,7 @@ postagger = CRFPOSTagger()
 print('Building data...')
 
 # pas possible d'utiliser postagger.split_data() à cause de random.shuffle
+# qui ne peut pas être utilisé sous python 3.11 mais heuresement 
 # all_pos.txt (train + dev) et test.txt => pour entrainement caractère par caractère
 # pall_pos.txt (train + dev) et ptest.txt => pour entrainement phrase par phrase
 train_x, train_y = postagger.build_data("./corpus/allpos_corpus/pall_pos.txt")

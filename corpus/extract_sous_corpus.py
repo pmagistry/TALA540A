@@ -13,11 +13,10 @@ import sys
 sys.path.insert(0, 'evaluations/')
 
 from get_corpus import get_conllu
-from datastructures import Sentence
 
 def main():
     
-    # on parse le fichier conllu et on crée une instance de la lasse corpus
+    # on parse le fichier conllu et on crée une instance de la classe corpus
     corpus = get_conllu("dev")
     
     # on ne prend les phrases que si elle font partie du sous-corpus que l'on a choisi

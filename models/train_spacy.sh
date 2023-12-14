@@ -6,9 +6,12 @@
 # pour la partie config
 # python -m spacy init fill-config ./models/spacy/base_config_acc.cfg ./models/spacy/config_acc.cfg
 
-# transformer les corpus si ce n'est pas déjà fait
-python -m spacy convert ./corpus/lzh_kyoto-ud-train.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 10
-python -m spacy convert ./corpus/lzh_kyoto-ud-dev.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 10
+# initialisation des corpus au format spacy
+# python -m spacy convert ./corpus/lzh_kyoto-ud-train.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 5
+# python -m spacy convert ./corpus/lzh_kyoto-ud-dev.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 5
+
+# initialisation des vecteurs au format spacy
+# python -m spacy init vectors zh ./corpus/word2vec.vec ./corpus/spacy_corpus/vectors/
 
 # lancer l'entrainement
-python -m spacy train ./models/spacy/config_acc.cfg --output ./models/spacy/monmodel/ --paths.train ./corpus/spacy_corpus/lzh_kyoto-ud-train.spacy --paths.dev ./corpus/spacy_corpus/lzh_kyoto-ud-dev.spacy
+python -m spacy train ./models/spacy/config_acc.cfg --output ./models/spacy/monmodel/ --paths.train ./corpus/spacy_corpus/lzh_kyoto-ud-train.spacy --paths.dev ./corpus/spacy_corpus/lzh_kyoto-ud-dev.spacy --paths.vectors ./corpus/spacy_corpus/vectors/
