@@ -71,40 +71,45 @@ E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE
 ```
 
 ### Essai 2
+
 ```
-===================== Training pipeline ==========================
+===================== Initializing pipeline ========================
+✔ Initialized pipeline
+
+===================== Training pipeline ============================
 ℹ Pipeline: ['tok2vec', 'morphologizer']
 ℹ Initial learn rate: 0.001
-E # LOSS TOK2VEC LOSS MORPH... POS_ACC MORPH_ACC SCORE
-
----
-
-0 0 0.00 89.26 35.94 23.52 0.30
-0 200 265.81 12244.41 76.92 56.51 0.67
-0 400 573.08 10735.36 86.92 69.39 0.78
-0 600 783.52 10807.86 90.35 75.66 0.83
-1 800 906.72 10922.91 92.28 78.71 0.85
-1 1000 1074.28 11084.38 92.99 80.45 0.87
-2 1200 1268.32 11660.49 93.68 81.85 0.88
-2 1400 1481.75 11764.16 94.08 82.58 0.88
-3 1600 1561.41 11017.67 94.36 83.41 0.89
-4 1800 1745.80 10756.76 94.21 83.72 0.89
-6 2000 1847.81 9913.04 94.45 84.24 0.89
-7 2200 1848.48 8797.38 94.56 84.37 0.89
-9 2400 1887.62 8087.74 94.56 84.38 0.89
-11 2600 1675.37 6614.93 94.72 84.40 0.90
-13 2800 1539.89 5688.17 94.51 84.63 0.90
-15 3000 1425.24 4970.85 94.45 84.53 0.89
-17 3200 1331.20 4426.24 94.74 84.83 0.90
-19 3400 1248.32 4011.05 94.53 84.71 0.90
-21 3600 1187.69 3700.90 94.59 84.65 0.90
-22 3800 1115.90 3384.87 94.51 84.48 0.89
-24 4000 1029.13 3023.46 94.60 84.70 0.90
-26 4200 1020.63 2899.06 94.62 84.93 0.90
-28 4400 955.57 2663.25 94.63 84.88 0.90
-30 4600 938.47 2531.77 94.67 84.88 0.90
-32 4800 927.07 2457.63 94.61 84.76 0.90
+E    #       LOSS TOK2VEC  LOSS MORPH...  POS_ACC  MORPH_ACC  SCORE
+---  ------  ------------  -------------  -------  ---------  ------
+  0       0          0.00          89.26    35.94      23.52    0.30
+  0     200        265.81       12244.41    76.92      56.51    0.67
+  0     400        573.08       10735.36    86.92      69.39    0.78
+  0     600        783.52       10807.86    90.35      75.66    0.83
+  1     800        906.72       10922.91    92.28      78.71    0.85
+  1    1000       1074.28       11084.38    92.99      80.45    0.87
+  2    1200       1268.32       11660.49    93.68      81.85    0.88
+  2    1400       1481.75       11764.16    94.08      82.58    0.88
+  3    1600       1561.41       11017.67    94.36      83.41    0.89
+  4    1800       1745.80       10756.76    94.21      83.72    0.89
+  6    2000       1847.81        9913.04    94.45      84.24    0.89
+  7    2200       1848.48        8797.38    94.56      84.37    0.89
+  9    2400       1887.62        8087.74    94.56      84.38    0.89
+ 11    2600       1675.37        6614.93    94.72      84.40    0.90
+ 13    2800       1539.89        5688.17    94.51      84.63    0.90
+ 15    3000       1425.24        4970.85    94.45      84.53    0.89
+ 17    3200       1331.20        4426.24    94.74      84.83    0.90
+ 19    3400       1248.32        4011.05    94.53      84.71    0.90
+ 21    3600       1187.69        3700.90    94.59      84.65    0.90
+ 22    3800       1115.90        3384.87    94.51      84.48    0.89
+ 24    4000       1029.13        3023.46    94.60      84.70    0.90
+ 26    4200       1020.63        2899.06    94.62      84.93    0.90
+ 28    4400        955.57        2663.25    94.63      84.88    0.90
+ 30    4600        938.47        2531.77    94.67      84.88    0.90
+ 32    4800        927.07        2457.63    94.61      84.76    0.90
+✔ Saved pipeline to output directory
+model-pl/spacy_model2/model-last
 ```
+
 - [x] Évaluation.
   > COMMANDE
   > `python3 scripts/eval-polonais.py`
@@ -363,15 +368,10 @@ weighted avg 0.96 0.96 0.96 13112
 
 # ARABE
 
-- [x] Télécharger le corpus conllu (train, dev et test) pour l'arabe.
+- [ ] Télécharger le corpus conllu (train, dev et test) pour l'arabe.
 - [ ] Convertir le corpus en corpus d'entrainement.
+
   > COMMANDES :
-
-`python3 -m spacy convert corpus_arabe/corpus-nyuad/ar_nyuad-ud-train.conllu corpus_arabe/corpus-ent`
-
-`python3 -m spacy convert corpus_arabe/corpus-nyuad/ar_nyuad-ud-dev.conllu corpus_arabe/corpus-ent `
-
-`python3 -m spacy convert corpus_arabe/corpus-nyuad/ar_nyuad-ud-test.conllu corpus_arabe/corpus-ent`
 
 - [ ] Configuration de la pipeline. (tagger + morphologizer)
   > COMMANDE :
@@ -381,26 +381,7 @@ weighted avg 0.96 0.96 0.96 13112
 - [ ] Entrainement.
   > COMMANDE :
 
-`python3 -m spacy train ./config-ar/config.cfg --output ./model-ar/spacy_model2/ --paths.train ./corpus_arabe/corpus-ent/ar_nyuad-ud-train.spacy --paths.dev ./corpus_arabe/corpus-ent/ar_nyuad-ud-dev.spacy`
-
 > RÉSULTATS
-
-```
-============================= Training pipeline =============================
-ℹ Pipeline: ['tok2vec', 'morphologizer', 'tagger']
-ℹ Initial learn rate: 0.001
-E    #       LOSS TOK2VEC  LOSS MORPH...  LOSS TAGGER  POS_ACC  MORPH_ACC  TAG_ACC  SCORE
----  ------  ------------  -------------  -----------  -------  ---------  -------  ------
-  0       0          0.00          86.54        86.42    32.39       6.44    16.07    0.18
-  0     200        391.20       15113.82     15098.69    17.77      17.48    17.37    0.17
-  0     400       1010.83       18852.13     18821.80    17.77      17.48    17.37    0.17
-  0     600       1736.78       23484.89     23447.20    17.77      17.48    17.37    0.17
-  0     800       2528.71       28813.08     28768.26    17.77      17.48    17.37    0.17
-  0    1000       3689.66       36870.55     36808.08    17.77      17.48    17.37    0.17
-  0    1200       5128.88       45718.18     45652.00    17.77      17.67    17.36    0.18
-  0    1400       6878.11       56852.77     56770.87    17.98      17.67    17.40    0.18
-  0    1600       9168.38       70712.51     70594.61    17.98      17.67    17.46    0.18
-```
 
 - [ ] Évaluation.
   > COMMANDE
@@ -408,109 +389,3 @@ E    #       LOSS TOK2VEC  LOSS MORPH...  LOSS TAGGER  POS_ACC  MORPH_ACC  TAG_A
 `python3 scripts/eval-arabe.py`
 
 > RÉSULTATS
-
-```
-./model-pl/spacy_model2/model-best
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-              precision    recall  f1-score   support
-
-         ADJ       0.00      0.01      0.00      1951
-         ADP       0.00      0.00      0.00         0
-         ADV       0.00      0.00      0.00         0
-         AUX       0.00      0.00      0.00         0
-       CCONJ       0.00      0.00      0.00         0
-         DET       0.00      0.00      0.00         0
-        INTJ       0.00      0.00      0.00         0
-        NOUN       0.00      0.00      0.00         0
-         NUM       0.00      0.00      0.00         0
-        PART       0.00      0.00      0.00         0
-        PRON       0.00      0.00      0.00         0
-       PROPN       0.00      0.00      0.00         0
-       PUNCT       0.11      0.11      0.11      7755
-       SCONJ       0.00      0.00      0.00         0
-        VERB       0.80      0.07      0.13     64419
-           X       0.00      0.00      0.00         0
-
-    accuracy                           0.07     74125
-   macro avg       0.06      0.01      0.02     74125
-weighted avg       0.70      0.07      0.12     74125
-
-xx_ent_wiki_sm
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-              precision    recall  f1-score   support
-
-                   0.00      0.00      0.00   74125.0
-         ADJ       0.00      0.00      0.00       0.0
-         ADP       0.00      0.00      0.00       0.0
-         ADV       0.00      0.00      0.00       0.0
-         AUX       0.00      0.00      0.00       0.0
-       CCONJ       0.00      0.00      0.00       0.0
-         DET       0.00      0.00      0.00       0.0
-        INTJ       0.00      0.00      0.00       0.0
-        NOUN       0.00      0.00      0.00       0.0
-         NUM       0.00      0.00      0.00       0.0
-        PART       0.00      0.00      0.00       0.0
-        PRON       0.00      0.00      0.00       0.0
-       PROPN       0.00      0.00      0.00       0.0
-       PUNCT       0.00      0.00      0.00       0.0
-       SCONJ       0.00      0.00      0.00       0.0
-        VERB       0.00      0.00      0.00       0.0
-           X       0.00      0.00      0.00       0.0
-
-    accuracy                           0.00   74125.0
-   macro avg       0.00      0.00      0.00   74125.0
-weighted avg       0.00      0.00      0.00   74125.0
-
-xx_sent_ud_sm
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
-              precision    recall  f1-score   support
-
-                   0.00      0.00      0.00   74125.0
-         ADJ       0.00      0.00      0.00       0.0
-         ADP       0.00      0.00      0.00       0.0
-         ADV       0.00      0.00      0.00       0.0
-         AUX       0.00      0.00      0.00       0.0
-       CCONJ       0.00      0.00      0.00       0.0
-         DET       0.00      0.00      0.00       0.0
-        INTJ       0.00      0.00      0.00       0.0
-        NOUN       0.00      0.00      0.00       0.0
-         NUM       0.00      0.00      0.00       0.0
-        PART       0.00      0.00      0.00       0.0
-        PRON       0.00      0.00      0.00       0.0
-       PROPN       0.00      0.00      0.00       0.0
-       PUNCT       0.00      0.00      0.00       0.0
-       SCONJ       0.00      0.00      0.00       0.0
-        VERB       0.00      0.00      0.00       0.0
-           X       0.00      0.00      0.00       0.0
-
-    accuracy                           0.00   74125.0
-   macro avg       0.00      0.00      0.00   74125.0
-weighted avg       0.00      0.00      0.00   74125.0
-```
