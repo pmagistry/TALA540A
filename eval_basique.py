@@ -1,3 +1,5 @@
+#!/bin/python3
+
 from typing import List, Union, Dict, Set, Optional, Tuple
 from pathlib import Path
 from dataclasses import dataclass
@@ -12,6 +14,8 @@ class Token:
     form: str
     tag: str
     is_oov: bool
+    deprel: str
+    parent: int
 
 
 @dataclass
@@ -37,12 +41,14 @@ def read_conll(path: Path, vocabulaire: Optional[Set[str]] = None) -> Corpus:
                 else:
                     fields = line.split("\t")
                     form, tag = fields[1], fields[3]
+                    deprel = fields[7]
+                    parent = fields[6]
                     if not "-" in fields[0]:  # éviter les contractions type "du"
                         if vocabulaire is None:
                             is_oov = True
                         else:
                             is_oov = not form in vocabulaire
-                        tokens.append(Token(form, tag, is_oov))
+                        tokens.append(Token(form, tag, is_oov, deprel, parent))
     return Corpus(sentences)
 
 
@@ -58,7 +64,7 @@ def sentence_to_doc(sentence: Sentence, vocab) -> SpacyDoc:
 def doc_to_sentence(doc: SpacyDoc, origin: Sentence) -> Sentence:
     tokens = []
     for tok, origin_token in zip(doc, origin.tokens):
-        tokens.append(Token(tok.text, tok.pos_, is_oov=origin_token.is_oov))
+        tokens.append(Token(tok.text, tok.pos_, origin_token.is_oov, origin_token.deprel, origin_token.parent))
     return Sentence(tokens)
 
 
@@ -93,10 +99,15 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
 
 
 def main():
-    model_spacy = spacy.load("fr_core_news_sm")
-    corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
+    #model_spacy = spacy.load("fr_core_news_sm")
+    #corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
+
+    # tagger du chinois :
+    model_spacy = spacy.load("../conll_chinois/spacy_model/model-last/")
+    corpus_gold = read_conll("../conll_chinois/test.conllu", vocabulaire = set(model_spacy.vocab.strings))
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
+    print(corpus_test)
     print(compute_accuracy(corpus_gold, corpus_test))
 
 
