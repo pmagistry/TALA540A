@@ -32,7 +32,8 @@ Corpus choisi pour entraîner spacy : universal dependencies polish lfg (https:/
 
 ## Evaluation des modèles : 
 
-`model-best
+```
+model-best
 (0.9487492373398414, 0.8625050999592003)
 news
 (0.952037947997189, 0.8691056910569106)
@@ -225,7 +226,8 @@ pl_core_news_lg
     accuracy                           0.96     13112
    macro avg       0.84      0.85      0.84     13112
 weighted avg       0.96      0.96      0.96     13112
-`
+
+```
 
 ## TreeTagger
 
@@ -242,6 +244,7 @@ Installer treetagger et les paramètres pour le polonais
 
 ## Évaluation
 
+```
 TREE-TAGGER RESULTS ORIGINAL
 news
 (0.8034082923401265, 0.8056910569105691)
@@ -333,3 +336,4 @@ academic
     accuracy                           0.92     13112
    macro avg       0.92      0.85      0.86     13112
 weighted avg       0.93      0.92      0.92     13112
+```
