@@ -32,7 +32,7 @@ Corpus choisi pour entraîner spacy : universal dependencies polish lfg (https:/
 
 ## Evaluation des modèles : 
 
-model-best
+`model-best
 (0.9487492373398414, 0.8625050999592003)
 news
 (0.952037947997189, 0.8691056910569106)
@@ -126,7 +126,7 @@ blog
 academic
 (0.7272727272727273, 0.6666666666666666)
 
----------------
+
 model best
 
               precision    recall  f1-score   support
@@ -225,6 +225,7 @@ pl_core_news_lg
     accuracy                           0.96     13112
    macro avg       0.84      0.85      0.84     13112
 weighted avg       0.96      0.96      0.96     13112
+`
 
 ## TreeTagger
 
