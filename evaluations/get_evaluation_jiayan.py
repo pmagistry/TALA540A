@@ -3,16 +3,17 @@
 
 """
 Ce fichier contient les fonctions pour évaluer le pos-tagging jiayan des corpus
+L'évaluation de prend pas en compte les sous-corpus
 """
 
 from typing import Optional
 import regex
 from datastructures import Corpus
 
-
 def jiayan_sans(ecorpus: Corpus, rcorpus: Corpus) :
     """ print l'évaluation du posttagging 
     sans prendre en compte les sous-corpus
+    car il n'y a pas de sous-corpus dans notre corpus
     
     Args:
         ecorpus (Corpus): corpus du modèle à évaluer

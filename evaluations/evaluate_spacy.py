@@ -26,11 +26,12 @@ def main():
     # 'models_spacy' est un dictionnaire des noms des modèles spacy
     models = {
         # "corpus_lg" : ("zh_core_web_lg", "GREEN"),
-        "corpus_md" : ("zh_core_web_md", "CYAN"),
+        # "corpus_md" : ("zh_core_web_md", "CYAN"),
         "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
         # "corpus_trf" : ("zh_core_web_trf", "RED"),
         # "mon_modele_spacy" : ("./models/spacy/monmodel/model-best", "YELLOW")
         }
+    
     # 'corpora_spacy' est une liste contenant les résultats des 5 modèles
     corpora = []
     for (title, (model, color)) in sorted(models.items()):   
@@ -38,7 +39,7 @@ def main():
 
     ## Partie 3. évaluation avec subcorpus
     # ex. avec un corpus
-    spacy_avec(corpora[1], corpus_r)
+    # spacy_avec(corpora[1], corpus_r)
         
     ## Partie 4. évaluation sans subcorpus
     for corpus in corpora :

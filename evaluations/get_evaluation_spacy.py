@@ -7,7 +7,6 @@ Ce fichier contient les fonctions pour évaluer le pos-tagging spacy des corpus
 
 from collections import OrderedDict
 from typing import Optional
-from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -15,7 +14,8 @@ from datastructures import Corpus
 
 
 def spacy_avec(ecorpus: Corpus, rcorpus: Corpus) :
-    """ print l'évaluation du posttagging pour chaque sous-corpus
+    """ print l'évaluation du posttagging 
+    en prenant en compte les sous-corpus
     
     Args:
         ecorpus (Corpus): corpus du modèle à évaluer
@@ -31,7 +31,7 @@ def spacy_avec(ecorpus: Corpus, rcorpus: Corpus) :
         print(f"L'accuracy avec notre modèle est à {acc[0]}%.")
         print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.")
         # et ensuite la matrice de confusion
-        print("La matrice de confusion, sans tenir compte du vocabulaire")
+        print("\nLa matrice de confusion, sans tenir compte du vocabulaire.")
         # get_matrice(ecorpus, rcorpus, subcorpus)
     
     
@@ -50,7 +50,7 @@ def spacy_sans(ecorpus: Corpus, rcorpus: Corpus) :
     print(f"L'accuracy avec notre modèle est à {acc[0]}%.")
     print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.")
     # et ensuite la matrice de confusion
-    print("La matrice de confusion, sans tenir compte du vocabulaire")
+    print("\nLa matrice de confusion, sans tenir compte du vocabulaire.")
     get_matrice(ecorpus, rcorpus)
 
 
@@ -114,53 +114,45 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = Non
         rcorpus (Corpus): corpus de référence
     """
     
+    # 'etags' contient les tags du corpus à évaluer
     etags = {token.pos for sentence in ecorpus.sentences for token in sentence.tokens}
+    # 'rtags' contient les tags du corpus de référence
     rtags = {token.pos for sentence in rcorpus.sentences for token in sentence.tokens}
     tags = etags.union(rtags)
-    
-    cr = classification_report([token.pos for sentence in rcorpus.sentences for token in sentence.tokens], 
-                               [token.pos for sentence in ecorpus.sentences for token in sentence.tokens], 
-                               target_names=tags)
-    print(cr)
 
+    # 'epos_rpos' est un dictionnaire (clé = etag) de dictionnaire (clé = rtag)
+    epos_rpos = OrderedDict()
+    for etag in tags: # tag du modèle à évaluer
+        epos_rpos[etag] = OrderedDict()
+        for rtag in tags: # tag du corpus de référence
+            epos_rpos[etag][rtag] = 0
 
-    # # 'epos_rpos' est un dictionnaire (clé = epos) de dictionnaire (clé = rpos)
-    # epos_rpos = OrderedDict()
-    # for etag in tags: # tag du modèle à évaluer
-    #     epos_rpos[etag] = OrderedDict()
-    #     for rtag in tags: # tag du corpus de référence
-    #         epos_rpos[etag][rtag] = 0
+    # on prend en compte les sous-corpus ou non en fonction
+    # du paramètres 'subcorpus'
+    for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
+        if subcorpus is None:
+            for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
+                epos_rpos[etoken.pos][rtoken.pos] += 1    
+        else:
+            if rsentence.sent_id == subcorpus :
+                for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
+                    epos_rpos[etoken.pos][rtoken.pos] += 1
 
-    # for esentence, rsentence in zip(ecorpus.sentences, rcorpus.sentences):
-    #     if subcorpus is None:
-    #         for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):   
-    #             epos_rpos[etoken.pos][rtoken.pos] += 1    
-    #     else:
-    #         if rsentence.sent_id == subcorpus :
-    #             for etoken, rtoken in zip(esentence.tokens, rsentence.tokens):
-    #                 epos_rpos[etoken.pos][rtoken.pos] += 1
+    # 'cm' est une matrice de confusion faite avec pandas
+    cm = pd.DataFrame.from_dict(epos_rpos)
 
-    # # 'cm' est une matrice de confusion faite vec pandas
-    # cm = pd.DataFrame.from_dict(epos_rpos)
+    # remplace les NaN par des 0 -> important pour les calculs après
+    cm = cm.fillna(0)
+    print("\n", cm)  # colonne rpos, ligne epos
 
-    # # remplace les NaN par des 0 -> important pour les calculs après
-    # cm = cm.fillna(0)
-    # print("\n", cm)  # colonne rpos, ligne epos
+    # on crée une matrice de confusion plus 'jolie' avec seaborn
+    plt.subplots(figsize=(8, 6))
+    sns.heatmap(cm, annot=True)
 
-    # # on crée une matrice de confusion plus 'jolie' avec seaborn
-    # plt.subplots(figsize=(8, 6))
-    # sns.heatmap(cm, annot=True)
-
-    # # titre du graphe et des axes
-    # plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
-    # plt.xlabel("Etiquette prédite", fontsize=14)
-    # plt.ylabel("Etiquette correcte", fontsize=14)
-    
-    cm = confusion_matrix([token.pos for sentence in rcorpus.sentences for token in sentence.tokens], 
-                            [token.pos for sentence in ecorpus.sentences for token in sentence.tokens], 
-                            labels=tags)
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=tags)
-    disp.plot(xticks_rotation='vertical')
+    # titre du graphe et des axes
+    plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
+    plt.xlabel("Etiquette prédite", fontsize=14)
+    plt.ylabel("Etiquette correcte", fontsize=14)
 
     # affichage
     plt.show()
