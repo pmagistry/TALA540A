@@ -10,10 +10,17 @@
 """
 
 from get_corpus import get_conllu, get_jiayan
-from get_evaluation_jiayan import jiayan_sans, test_tokens
+from get_evaluation_jiayan import jiayan, jiayan_tc, test_tokens
     
     
 def main():
+    
+    models = {
+        "corpus_jiayan" : ("./models/jiayan/modele_jiayan", "BLUE"),
+        "corpus_sentence" : ("./models/jiayan/modele_sentence", "YELLOW"),
+        "corpus_table" : ("./models/jiayan/modele_table", "GREEN"),
+        "corpus_word" : ("./models/jiayan/modele_word", "RED")
+        }
     
     ## Partie 1. le modèle de référence
     # on récupère le vocabulaire
@@ -22,22 +29,18 @@ def main():
     # 'corpus_r' est le corpus de référence
     corpus_r = get_conllu("test", vocabulaire)
     
-    ## Partie 2. le modèle jiayan
-    # 'models_jiayan' est un dictionnaire des noms des modèles spacy
-    models = {
-        "corpus_jiayan" : ("./models/jiayan/original_pos_model", "BLUE") # reste BLACK
-        }
-    # 'corpora' est une liste contenant les résultats des 5 modèles
-    corpora = []   
+    ## Partie 2. les modèles jiayan
+    # 'corpora' est une liste contenant les résultats des 4 modèles
+    corpora = []
     for (title, (model, color)) in sorted(models.items()):
         corpora.append(get_jiayan(corpus_r, title, model, color))
-    # test_tokens(corpora[0], corpus_r)
-    
-    ## Partie 3. évaluation avec subcorpus
-    
-    ## Partie 4. évaluation sans subcorpus
-    for corpus in corpora :
-        jiayan_sans(corpus, corpus_r)
+
+    ## Partie 3. évaluation
+    for i, corpus in enumerate(corpora):
+        if i == 0:
+            jiayan_tc(corpus, corpus_r)
+        else:
+            jiayan(corpus, corpus_r)
     
 if __name__ == "__main__":
     main()

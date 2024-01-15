@@ -15,6 +15,15 @@ from get_evaluation_spacy import spacy_avec, spacy_sans
     
 def main():
     
+    models_spacy = {
+        "corpus_lg" : ("zh_core_web_lg", "GREEN"),
+        "corpus_md" : ("zh_core_web_md", "CYAN"),
+        "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
+        "corpus_trf" : ("zh_core_web_trf", "RED"),
+        }
+    
+    models_my = {}
+    
     ## Partie 1. le modèle de référence
     # on récupère le vocabulaire
     corpus_train = get_conllu("train")
@@ -23,27 +32,17 @@ def main():
     corpus_r = get_conllu("test", vocabulaire)
 
     ## Partie 2. les modèles spacy
-    # 'models_spacy' est un dictionnaire des noms des modèles spacy
-    models = {
-        # "corpus_lg" : ("zh_core_web_lg", "GREEN"),
-        # "corpus_md" : ("zh_core_web_md", "CYAN"),
-        "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
-        # "corpus_trf" : ("zh_core_web_trf", "RED"),
-        # "mon_modele_spacy" : ("./models/spacy/monmodel/model-best", "YELLOW")
-        }
-    
-    # 'corpora_spacy' est une liste contenant les résultats des 5 modèles
+    # 'corpora' est une liste contenant les résultats des modèles spacy
     corpora = []
-    for (title, (model, color)) in sorted(models.items()):   
+    for (title, (model, color)) in sorted(models_spacy.items()):   
         corpora.append(get_spacy(corpus_r, title, model, color))
-
-    ## Partie 3. évaluation avec subcorpus
-    # ex. avec un corpus
-    # spacy_avec(corpora[1], corpus_r)
         
-    ## Partie 4. évaluation sans subcorpus
+    ## Partie 3. évaluation sans subcorpus
     for corpus in corpora :
         spacy_sans(corpus, corpus_r)
+
+    ## Partie 4. évaluation avec subcorpus
+    # ex. avec un corpus : spacy_avec(corpora[1], corpus_r)
     
 
 if __name__ == "__main__":

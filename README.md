@@ -1,9 +1,18 @@
  TALA540A : TP de Laura Darenne
 
-## to-do-list
-- [] : changer confusion matrix = refaire comme au départ
-- [] : modifier la partie evaluations de jiayan
-- [] : modifier la partie evaluations de spacy
+## corpus
+
+- liste des sous-corpus
+KR1h0001
+KR1h0004
+KR1d0052
+KR2b0041
+KR2e0003
+KR4a0001
+KR4h0169
+KR6c0127
+KR6c0023
+KR6f0082
 
 ---
 
@@ -63,20 +72,18 @@
 
 ---
 
-## test à faire
+## word2vec
 
-- tableau de conversions, en fonction de :
-  - papier
-  - analyse quantitative
-  - analyse qualitative
-  - test pour tableau de conversion avec ou sans i,j
+### table
+1 Word2Vec(sentences=sentences, vector_size=100, window=3, min_count=1, workers=4)
+2 Word2Vec(sentences=sentences, vector_size=50, window=3, min_count=1, workers=4)
+3 Word2Vec(sentences=sentences, vector_size=200, window=3, min_count=1, workers=4)
+4 Word2Vec(sentences=sentences, vector_size=100, window=5, min_count=1, workers=4)
+5 Word2Vec(sentences=sentences, vector_size=100, window=10, min_count=1, workers=4)
 
-- modèles jiayan :
-  - mot par mot
-  - table par table
-  - phrase par phrase
-
-- modèles spacy, évaluer en fonction des vecteurs (potentiellement prendre petit batch pour influer sur la loss mais ne pas se prendre la tête) :
-  - taille contexte plus ou moins grand ; 
-  - taille dimension vecteur ; 
-  - modifier corpus (recoller phrase) / ou texte classique brut avec tokenisation caractère = mot trouvé sur internet
+### sentence
+6 Word2Vec(sentences=sentences, vector_size=100, window=3, min_count=1, workers=4)
+7 Word2Vec(sentences=sentences, vector_size=50, window=3, min_count=1, workers=4)
+8 Word2Vec(sentences=sentences, vector_size=200, window=3, min_count=1, workers=4)
+9 Word2Vec(sentences=sentences, vector_size=100, window=5, min_count=1, workers=4)
+10 Word2Vec(sentences=sentences, vector_size=100, window=10, min_count=1, workers=4)

@@ -1,0 +1,234 @@
+(project) laura@laura:~/Documents/TALA540A$ ./models/train_spacy.sh 
+entrainement modèle 1
+ℹ Creating blank nlp object for language 'zh'
+9002it [00:00, 24907.60it/s]
+✔ Successfully converted 9002 vectors
+✔ Saved nlp object with vectors to output directory. You can now use
+the path to it in your config as the 'vectors' setting in [initialize].
+/home/laura/Documents/TALA540A/corpus/spacy_corpus/vectors
+✔ Created output directory: models/spacy/modele1
+ℹ Saving to output directory: models/spacy/modele1
+ℹ Using CPU
+
+=========================== Initializing pipeline ===========================
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+ℹ Pipeline: ['tok2vec', 'tagger']
+ℹ Initial learn rate: 0.001
+E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE 
+---  ------  ------------  -----------  -------  ------
+  0       0          0.00        68.99    32.84    0.33
+  0     200         70.18      6558.63    77.62    0.78
+  0     400         75.29      5937.72    80.59    0.81
+  0     600        100.36      6519.24    81.00    0.81
+  0     800        126.64      7567.13    83.74    0.84
+  0    1000        156.16      8375.17    84.55    0.85
+  0    1200        206.55      9899.03    85.77    0.86
+  0    1400        262.06     11688.26    85.42    0.85
+  0    1600        327.71     13433.85    86.44    0.86
+  1    1800        381.90     13810.07    87.05    0.87
+  1    2000        492.22     16487.10    87.23    0.87
+  1    2200        607.88     19425.80    87.79    0.88
+  2    2400        687.61     18588.03    87.91    0.88
+  2    2600        739.27     19485.16    88.03    0.88
+  3    2800        671.78     15455.78    88.08    0.88
+  3    3000        731.22     16713.36    88.23    0.88
+  4    3200        631.69     13013.24    87.80    0.88
+  5    3400        694.82     14200.39    88.11    0.88
+  5    3600        595.76     11036.44    87.92    0.88
+  6    3800        649.81     12254.32    87.95    0.88
+  6    4000        541.31      9424.82    87.94    0.88
+  7    4200        606.90     10685.97    87.93    0.88
+  7    4400        517.96      8528.50    87.97    0.88
+  8    4600        540.37      9180.07    88.12    0.88
+✔ Saved pipeline to output directory
+models/spacy/modele1/model-last
+entrainement modèle 2
+ℹ Creating blank nlp object for language 'zh'
+9002it [00:00, 42801.40it/s]
+✔ Successfully converted 9002 vectors
+✔ Saved nlp object with vectors to output directory. You can now use
+the path to it in your config as the 'vectors' setting in [initialize].
+/home/laura/Documents/TALA540A/corpus/spacy_corpus/vectors
+✔ Created output directory: models/spacy/modele2
+ℹ Saving to output directory: models/spacy/modele2
+ℹ Using CPU
+
+=========================== Initializing pipeline ===========================
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+ℹ Pipeline: ['tok2vec', 'tagger']
+ℹ Initial learn rate: 0.001
+E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE 
+---  ------  ------------  -----------  -------  ------
+  0       0          0.00        68.99    28.71    0.29
+  0     200         72.77      6637.92    78.74    0.79
+  0     400         76.66      5913.98    80.70    0.81
+  0     600        100.50      6493.41    80.67    0.81
+  0     800        130.75      7559.28    83.59    0.84
+  0    1000        166.97      8362.00    84.69    0.85
+  0    1200        222.06      9841.77    85.95    0.86
+  0    1400        281.63     11692.43    85.70    0.86
+  0    1600        345.41     13295.34    86.68    0.87
+  1    1800        405.11     13743.47    87.25    0.87
+  1    2000        513.52     16374.44    87.08    0.87
+  1    2200        640.19     19300.67    87.87    0.88
+  2    2400        728.95     18420.68    87.89    0.88
+  2    2600        777.79     19332.35    88.10    0.88
+  3    2800        703.36     15316.13    87.74    0.88
+  3    3000        768.97     16569.35    88.32    0.88
+  4    3200        669.53     12873.14    87.85    0.88
+  5    3400        723.54     14136.58    88.27    0.88
+  5    3600        623.06     10886.61    88.00    0.88
+  6    3800        674.44     12129.64    88.02    0.88
+  6    4000        567.89      9400.05    87.96    0.88
+  7    4200        634.34     10735.33    88.10    0.88
+  7    4400        536.19      8432.46    87.77    0.88
+  8    4600        565.47      9104.65    88.17    0.88
+✔ Saved pipeline to output directory
+models/spacy/modele2/model-last
+entrainement modèle 3
+ℹ Creating blank nlp object for language 'zh'
+9002it [00:00, 13286.32it/s]
+✔ Successfully converted 9002 vectors
+✔ Saved nlp object with vectors to output directory. You can now use
+the path to it in your config as the 'vectors' setting in [initialize].
+/home/laura/Documents/TALA540A/corpus/spacy_corpus/vectors
+✔ Created output directory: models/spacy/modele3
+ℹ Saving to output directory: models/spacy/modele3
+ℹ Using CPU
+
+=========================== Initializing pipeline ===========================
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+ℹ Pipeline: ['tok2vec', 'tagger']
+ℹ Initial learn rate: 0.001
+E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE 
+---  ------  ------------  -----------  -------  ------
+  0       0          0.00        68.99    33.91    0.34
+  0     200         70.12      6755.35    77.62    0.78
+  0     400         77.08      5961.13    80.75    0.81
+  0     600        105.25      6515.79    80.78    0.81
+  0     800        136.07      7627.91    83.43    0.83
+  0    1000        168.00      8468.95    84.90    0.85
+  0    1200        218.61      9931.23    85.69    0.86
+  0    1400        277.20     11786.71    85.61    0.86
+  0    1600        350.48     13504.93    86.29    0.86
+  1    1800        408.82     13952.14    87.07    0.87
+  1    2000        523.50     16485.73    87.20    0.87
+  1    2200        649.74     19616.27    87.89    0.88
+  2    2400        736.82     18930.54    87.90    0.88
+  2    2600        793.05     19624.27    87.87    0.88
+  3    2800        718.44     15738.11    87.93    0.88
+  3    3000        778.43     16825.60    88.17    0.88
+  4    3200        690.26     13275.51    88.06    0.88
+  5    3400        758.82     14484.03    88.07    0.88
+  5    3600        639.78     11144.87    88.03    0.88
+  6    3800        694.69     12415.17    88.07    0.88
+  6    4000        597.72      9770.42    88.04    0.88
+  7    4200        660.33     10831.52    88.12    0.88
+  7    4400        562.67      8664.97    87.97    0.88
+  8    4600        595.76      9395.95    88.25    0.88
+  8    4800        512.99      7652.73    88.08    0.88
+  9    5000        555.12      8469.32    87.80    0.88
+  9    5200        480.49      6900.16    87.89    0.88
+ 10    5400        508.29      7453.44    87.75    0.88
+ 10    5600        439.67      6237.29    87.94    0.88
+ 11    5800        455.20      6591.64    87.44    0.87
+ 11    6000        415.69      5756.85    87.90    0.88
+ 12    6200        438.71      6166.53    88.16    0.88
+✔ Saved pipeline to output directory
+models/spacy/modele3/model-last
+entrainement modèle 4
+ℹ Creating blank nlp object for language 'zh'
+9002it [00:00, 24302.90it/s]
+✔ Successfully converted 9002 vectors
+✔ Saved nlp object with vectors to output directory. You can now use
+the path to it in your config as the 'vectors' setting in [initialize].
+/home/laura/Documents/TALA540A/corpus/spacy_corpus/vectors
+✔ Created output directory: models/spacy/modele4
+ℹ Saving to output directory: models/spacy/modele4
+ℹ Using CPU
+
+=========================== Initializing pipeline ===========================
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+ℹ Pipeline: ['tok2vec', 'tagger']
+ℹ Initial learn rate: 0.001
+E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE 
+---  ------  ------------  -----------  -------  ------
+  0       0          0.00        68.99    31.29    0.31
+  0     200         72.71      6686.00    77.71    0.78
+  0     400         75.00      5965.11    80.77    0.81
+  0     600        100.13      6506.26    80.99    0.81
+  0     800        132.10      7600.15    83.86    0.84
+  0    1000        160.46      8403.75    84.86    0.85
+  0    1200        212.57      9895.43    85.81    0.86
+  0    1400        267.48     11748.61    85.46    0.85
+  0    1600        332.44     13498.50    86.49    0.86
+  1    1800        389.67     13858.48    87.04    0.87
+  1    2000        500.57     16454.49    86.98    0.87
+  1    2200        615.29     19463.50    87.71    0.88
+  2    2400        698.28     18630.03    88.00    0.88
+  2    2600        751.46     19431.63    87.76    0.88
+  3    2800        676.55     15547.98    87.92    0.88
+  3    3000        725.55     16545.54    88.27    0.88
+  4    3200        644.71     13006.39    87.97    0.88
+  5    3400        706.92     14187.95    88.19    0.88
+  5    3600        600.55     10935.55    87.81    0.88
+  6    3800        651.60     12146.24    87.91    0.88
+  6    4000        544.72      9450.97    87.95    0.88
+  7    4200        599.66     10543.95    87.87    0.88
+  7    4400        506.61      8382.93    87.99    0.88
+  8    4600        550.37      9182.94    88.13    0.88
+✔ Saved pipeline to output directory
+models/spacy/modele4/model-last
+entrainement modèle 5
+ℹ Creating blank nlp object for language 'zh'
+9002it [00:00, 24281.30it/s]
+✔ Successfully converted 9002 vectors
+✔ Saved nlp object with vectors to output directory. You can now use
+the path to it in your config as the 'vectors' setting in [initialize].
+/home/laura/Documents/TALA540A/corpus/spacy_corpus/vectors
+✔ Created output directory: models/spacy/modele5
+ℹ Saving to output directory: models/spacy/modele5
+ℹ Using CPU
+
+=========================== Initializing pipeline ===========================
+✔ Initialized pipeline
+
+============================= Training pipeline =============================
+ℹ Pipeline: ['tok2vec', 'tagger']
+ℹ Initial learn rate: 0.001
+E    #       LOSS TOK2VEC  LOSS TAGGER  TAG_ACC  SCORE 
+---  ------  ------------  -----------  -------  ------
+  0       0          0.00        68.99    31.29    0.31
+  0     200         73.63      6749.79    77.72    0.78
+  0     400         76.52      5992.43    80.49    0.80
+  0     600         97.91      6512.39    80.52    0.81
+  0     800        126.58      7578.28    83.33    0.83
+  0    1000        158.23      8438.77    84.85    0.85
+  0    1200        206.11      9910.35    85.85    0.86
+  0    1400        262.78     11766.18    85.41    0.85
+  0    1600        320.78     13423.85    86.51    0.87
+  1    1800        374.69     13828.98    87.13    0.87
+  1    2000        491.60     16421.16    87.19    0.87
+  1    2200        604.30     19454.15    87.74    0.88
+  2    2400        675.58     18684.12    87.87    0.88
+  2    2600        721.44     19492.67    88.10    0.88
+  3    2800        655.77     15390.25    87.81    0.88
+  3    3000        710.68     16734.92    88.46    0.88
+  4    3200        623.30     13073.93    88.08    0.88
+  5    3400        675.15     14102.13    88.07    0.88
+  5    3600        583.87     11156.32    88.15    0.88
+  6    3800        623.84     12163.51    88.01    0.88
+  6    4000        528.55      9556.26    87.81    0.88
+  7    4200        578.93     10623.60    88.18    0.88
+  7    4400        492.17      8529.62    88.05    0.88
+  8    4600        527.71      9076.57    88.17    0.88
+✔ Saved pipeline to output directory
+models/spacy/modele5/model-last

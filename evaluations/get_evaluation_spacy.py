@@ -32,7 +32,7 @@ def spacy_avec(ecorpus: Corpus, rcorpus: Corpus) :
         print(f"En tenant compte du vocabulaire, l'accuracy est à {acc[1]}%.")
         # et ensuite la matrice de confusion
         print("\nLa matrice de confusion, sans tenir compte du vocabulaire.")
-        # get_matrice(ecorpus, rcorpus, subcorpus)
+        get_matrice(ecorpus, rcorpus, subcorpus)
     
     
 def spacy_sans(ecorpus: Corpus, rcorpus: Corpus) :

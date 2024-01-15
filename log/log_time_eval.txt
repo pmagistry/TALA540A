@@ -1,0 +1,39 @@
+zh_core_web_lg :
+real	1m53,211s
+user	1m29,255s
+sys	0m5,638s
+
+zh_core_web_md :
+real	1m26,118s
+user	1m22,217s
+sys	0m2,559s
+
+zh_core_web_sm :
+real	1m18,070s
+user	1m15,768s
+sys	0m2,448s
+
+zh_core_web_trf :
+real	15m18,250s
+user	56m14,445s
+sys	0m27,602s
+
+./models/jiayan/modele_jiayan :
+real	0m24,317s
+user	0m20,506s
+sys	0m2,759s
+
+./models/jiayan/modele_sentence :
+real	0m22,956s
+user	0m20,257s
+sys	0m2,231s
+
+./models/jiayan/modele_table :
+real	0m21,434s
+user	0m20,090s
+sys	0m2,031s
+
+./models/jiayan/modele_word :
+real	0m22,668s
+user	0m21,184s
+sys	0m2,116s

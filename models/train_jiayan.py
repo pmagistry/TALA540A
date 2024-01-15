@@ -8,19 +8,16 @@ Exemple de ce que l'on peut ecrire sur le terminal depuis le dossier TALA540A :
 Ce fichier sert à ré-entrainer l'outils de posttaging du module jiayan
 """
 
-from jiayan import CRFPOSTagger
+from crf_pos_tagger import CRFPOSTagger
 
-postagger = CRFPOSTagger()
+tagger = CRFPOSTagger()
+
 print('Building data...')
 
-# pas possible d'utiliser postagger.split_data() à cause de random.shuffle
-# qui ne peut pas être utilisé sous python 3.11 mais heuresement 
-# all_pos.txt (train + dev) et test.txt => pour entrainement caractère par caractère
-# pall_pos.txt (train + dev) et ptest.txt => pour entrainement phrase par phrase
-train_x, train_y = postagger.build_data("./corpus/allpos_corpus/pall_pos.txt")
-test_x, test_y = postagger.build_data("./corpus/allpos_corpus/ptest.txt")
+train_x, train_y = tagger.build_data("./corpus/jiayan_corpus/word/corpus.txt")
+test_x, test_y = tagger.build_data("./corpus/jiayan_corpus/word/test.txt")
 
 print('Training...')
-postagger.train(train_x, train_y, "models/jiayan/mon_modele_2")
-postagger.eval(test_x, test_y, "models/jiayan/mon_modele_2")
+tagger.train(train_x, train_y, "models/jiayan/modele_word")
+tagger.eval(test_x, test_y, "models/jiayan/modele_word")
 

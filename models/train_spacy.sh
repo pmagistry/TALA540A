@@ -10,8 +10,13 @@
 # python -m spacy convert ./corpus/lzh_kyoto-ud-train.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 5
 # python -m spacy convert ./corpus/lzh_kyoto-ud-dev.conllu ./corpus/spacy_corpus/ -c conllu -l chinese -n 5
 
-# initialisation des vecteurs au format spacy
-# python -m spacy init vectors zh ./corpus/word2vec.vec ./corpus/spacy_corpus/vectors/
+for num in {6..10}
+do
+	echo "entrainement modèle $num"
 
-# lancer l'entrainement
-python -m spacy train ./models/spacy/config_acc.cfg --output ./models/spacy/monmodel/ --paths.train ./corpus/spacy_corpus/lzh_kyoto-ud-train.spacy --paths.dev ./corpus/spacy_corpus/lzh_kyoto-ud-dev.spacy --paths.vectors ./corpus/spacy_corpus/vectors/
+	# initialisation des vecteurs au format spacy
+	python -m spacy init vectors zh ./corpus/vectors/word2vec$num.vec ./corpus/spacy_corpus/vectors/
+
+	# lancer l'entrainement
+	python -m spacy train ./models/spacy/config_acc.cfg --output ./models/spacy/modele$num/ --paths.train ./corpus/spacy_corpus/lzh_kyoto-ud-train.spacy --paths.dev ./corpus/spacy_corpus/lzh_kyoto-ud-dev.spacy --paths.vectors ./corpus/spacy_corpus/vectors/
+done

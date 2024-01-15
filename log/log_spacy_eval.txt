@@ -1,0 +1,107 @@
+
+Pour le corpus corpus_lg :
+L'accuracy avec notre modèle est à 50.72%.
+En tenant compte du vocabulaire, l'accuracy est à 37.95%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PRON   X  CCONJ  NOUN   ADV  SCONJ  ...  VERB  AUX  PART  DET  PUNCT  NUM
+PRON    592   2     25   127   107      1  ...   157    0   472   58      0    9
+X         0   0      0     0     0      0  ...     0    0     0    0      0    0
+CCONJ     0   0     68     7   162      0  ...     0    0   262    0      0    0
+NOUN     22   0      2  4293   275      0  ...   539    0   312   31      1  230
+ADV      12   1     29   158  1466     22  ...   413    0    46   31      2   24
+SCONJ     6   0      0     0     0      0  ...     0    0   594    0      0    0
+PROPN    22   1      6   985   160      0  ...   476    0    10   11      7   56
+INTJ      0   0      0     0     2      0  ...     4    0     0    0      0    0
+ADP       0   0      8     8    29      0  ...   134    0    17    2      0    3
+ADJ       0   0      0     0     0      0  ...     0    0     0    0      0    0
+SYM       0   0      0     1     0      0  ...     0    0     0    0      0    0
+VERB     25  10    112  1377   421     24  ...  5177    0    91   62      5  115
+AUX       0   1      0    16    10      0  ...   527    0     3    0      0    0
+PART     25   0      1   414   555      0  ...   286    0   298    0      0    2
+DET       0   0      0     0     0      0  ...     0    0     0    0      0    0
+PUNCT     0   0      0     0     0      0  ...     0    0     0    0      0    0
+NUM       0   1      0     6    13      0  ...     2    0     0    1      0  435
+
+[17 rows x 17 columns]
+
+Pour le corpus corpus_md :
+L'accuracy avec notre modèle est à 51.03%.
+En tenant compte du vocabulaire, l'accuracy est à 33.59%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PRON   X  CCONJ  NOUN   ADV  SCONJ  ...  VERB  AUX  PART  DET  PUNCT  NUM
+PRON    637   0     24   142    91      2  ...   158    0   446   71      0    5
+X         0   0      0     0     0      0  ...     0    0     0    0      0    0
+CCONJ     1   0     47     5   174      0  ...     0    0   272    0      0    0
+NOUN     26   1      3  4176   402      0  ...   784    0   303   34      3  235
+ADV      10   0     25   140  1612     28  ...   441    0    52   21      2   14
+SCONJ     6   0      0     0     0      0  ...     0    0   594    0      0    0
+PROPN    17   8      3   828   205      0  ...   499    0    14   12      2   37
+INTJ      0   0      0     0     3      0  ...     3    0     0    0      0    0
+ADP       0   1     16    18     8      0  ...   117    0    19    0      0    0
+ADJ       0   0      0     0     0      0  ...     0    0     0    0      0    0
+SYM       0   0      0     1     0      0  ...     0    0     0    0      0    0
+VERB     38  14    104  1340   704     22  ...  5058    0   112   74      1  143
+AUX       0   1      0    17     8      0  ...   485    0     0    0      0    0
+PART     25   1      1   406   541      0  ...   302    0   296    0      0    3
+DET       0   0      0     0     0      0  ...     0    0     0    0      0    0
+PUNCT     0   0      0     0     0      0  ...     0    0     0    0      0    0
+NUM       1   0      0    13    20      3  ...     0    0     0    0      0  428
+
+[17 rows x 17 columns]
+
+Pour le corpus corpus_sm :
+L'accuracy avec notre modèle est à 46.59%.
+En tenant compte du vocabulaire, l'accuracy est à 32.82%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PRON  X  CCONJ  NOUN   ADV  SCONJ  ...  SYM  VERB  AUX  PART  DET  NUM
+PRON    584  0     24   150    47      1  ...    0   192    0   494   84    1
+X         0  0      0     0     0      0  ...    0     0    0     0    0    0
+CCONJ     0  0     42     8   175      0  ...    0     0    0   274    0    0
+NOUN      9  0      0  4080   230      0  ...    0  1193    0   331   19  267
+ADV      11  3     20   234  1331     17  ...    0   614    0    39   27   13
+SCONJ     8  0      0     0     0      0  ...    0     0    0   592    0    0
+PROPN    14  0      5  1001   206      0  ...    0   951    0     4    3   62
+INTJ      0  0      0     1     1      0  ...    0     5    0     0    0    1
+ADP       1  0      5    72     5      0  ...    0   319    0     1    0    2
+ADJ       0  0      0     0     0      0  ...    0     0    0     0    0    0
+SYM       0  0      0     1     0      0  ...    0     0    0     0    0    0
+VERB     21  8     94  1756   457     23  ...    0  5141    0   107   20  140
+AUX       0  1      0    47     9      0  ...    0   423    0     5    0    0
+PART     25  0      0   476   513      0  ...    0   234    0   299    1    4
+DET       0  0      0     0     0      0  ...    0     0    0     0    0    0
+NUM       1  0      0    20     6      0  ...    0     6    0     0    0  432
+
+[16 rows x 16 columns]
+
+Pour le corpus corpus_trf :
+L'accuracy avec notre modèle est à 65.94%.
+En tenant compte du vocabulaire, l'accuracy est à 41.03%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PRON   X  CCONJ  NOUN   ADV  SCONJ  ...  VERB  AUX  PART  DET  PUNCT  NUM
+PRON   1014   0      4    71   131      0  ...   157    0   175   33      3   10
+X         0   0      0     0     0      0  ...     0    0     0    0      0    0
+CCONJ     0   0    104     0   132      0  ...     3    0   260    0      0    0
+NOUN     16   0      0  5580   169      1  ...   367    0   192   31     97  210
+ADV      14   0      9   108  1791     41  ...   443    0   121    8     31    6
+SCONJ     3   0      0     1     0      0  ...     1    0   593    1      0    0
+PROPN    11   0      1   671   104      0  ...   253    0     0    0     60   10
+INTJ      0   0      0     1     1      0  ...     2    0     0    0      3    0
+ADP       0   3     49     1    19      0  ...    50    0    24    0      0    0
+ADJ       0   0      0     0     0      0  ...     0    0     0    0      0    0
+SYM       0   0      0     1     0      0  ...     0    0     0    0      0    0
+VERB      4  20     29  1115   317     17  ...  6278    0    65    7    138   33
+AUX       0   5      0     4     2      0  ...   543    0     0    0      0    0
+PART     26   0     14   399   245      0  ...    64    0   626    0    225    0
+DET       0   0      0     0     0      0  ...     0    0     0    0      0    0
+PUNCT     0   0      0     0     0      0  ...     0    0     0    0      0    0
+NUM       1   0      0    26    13      1  ...     0    0     0    1      0  423
+
+[17 rows x 17 columns]

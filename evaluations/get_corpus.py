@@ -112,6 +112,7 @@ def get_spacy(rcorpus: Corpus, title: str, model: str, color: str) -> Corpus:
 
     return Corpus(nb_sentences=rcorpus.nb_sentences, sentences=sentences, name=title)
 
+
 def get_jiayan(rcorpus: Corpus, title: str, model: str, color: str):
     """
     Args:
