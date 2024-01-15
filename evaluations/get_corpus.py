@@ -101,7 +101,7 @@ def get_spacy(rcorpus: Corpus, title: str, model: str, color: str) -> Corpus:
             tokens = []
             for etoken, rtoken in zip(doc, rsentence.tokens):
                 # .tag_ s'il s'agit du modèle que l'on a entrainé
-                if title == "mon_modele_spacy" :
+                if regex.match(r"corpus_[0-9]+", title):
                     tokens.append(Token(etoken.text, etoken.tag_, is_oov=rtoken.is_oov))
                 # sinon .pos_
                 else :

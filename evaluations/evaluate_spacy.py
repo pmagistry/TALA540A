@@ -19,10 +19,16 @@ def main():
         "corpus_lg" : ("zh_core_web_lg", "GREEN"),
         "corpus_md" : ("zh_core_web_md", "CYAN"),
         "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
-        "corpus_trf" : ("zh_core_web_trf", "RED"),
+        "corpus_trf" : ("zh_core_web_trf", "RED")
         }
     
-    models_my = {}
+    # my_models = {
+    #     "corpus_1" : ("./models/spacy/modele1/model-best", "GREEN"),
+    #     "corpus_2" : ("./models/spacy/modele2/model-best", "CYAN"),
+    #     "corpus_3" : ("./models/spacy/modele3/model-best", "MAGENTA"),
+    #     "corpus_4" : ("./models/spacy/modele4/model-best", "RED"),
+    #     "corpus_5" : ("./models/spacy/modele5/model-best", "YELLOW")
+    # }
     
     ## Partie 1. le modèle de référence
     # on récupère le vocabulaire

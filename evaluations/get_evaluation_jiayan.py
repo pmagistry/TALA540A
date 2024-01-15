@@ -229,7 +229,7 @@ def get_matrice(ecorpus: Corpus, rcorpus: Corpus, subcorpus: Optional[str] = Non
 
     # on crée une matrice de confusion plus 'jolie' avec seaborn
     plt.subplots(figsize=(8, 6))
-    sns.heatmap(cm, annot=True)
+    sns.heatmap(cm, fmt=".1f", annot=True)
 
     # titre du graphe et des axes
     plt.title("Matrice de confusion - données de test", fontsize=20, fontweight="bold")
