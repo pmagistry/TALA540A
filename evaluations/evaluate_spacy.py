@@ -15,12 +15,12 @@ from get_evaluation_spacy import spacy_avec, spacy_sans
     
 def main():
     
-    models_spacy = {
-        "corpus_lg" : ("zh_core_web_lg", "GREEN"),
-        "corpus_md" : ("zh_core_web_md", "CYAN"),
-        "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
-        "corpus_trf" : ("zh_core_web_trf", "RED")
-        }
+    # models_spacy = {
+    #     "corpus_lg" : ("zh_core_web_lg", "GREEN"),
+    #     "corpus_md" : ("zh_core_web_md", "CYAN"),
+    #     "corpus_sm" : ("zh_core_web_sm", "MAGENTA"),
+    #     "corpus_trf" : ("zh_core_web_trf", "RED")
+    #     }
     
     # my_models = {
     #     "corpus_1" : ("./models/spacy/modele1/model-best", "GREEN"),
@@ -29,6 +29,14 @@ def main():
     #     "corpus_4" : ("./models/spacy/modele4/model-best", "RED"),
     #     "corpus_5" : ("./models/spacy/modele5/model-best", "YELLOW")
     # }
+    
+    my_models = {
+        "corpus_6" : ("./models/spacy/modele6/model-best", "GREEN"),
+        "corpus_7" : ("./models/spacy/modele7/model-best", "CYAN"),
+        "corpus_8" : ("./models/spacy/modele8/model-best", "MAGENTA"),
+        "corpus_9" : ("./models/spacy/modele9/model-best", "RED"),
+        "corpus_10" : ("./models/spacy/modele10/model-best", "YELLOW")
+    }
     
     ## Partie 1. le modèle de référence
     # on récupère le vocabulaire
@@ -40,7 +48,7 @@ def main():
     ## Partie 2. les modèles spacy
     # 'corpora' est une liste contenant les résultats des modèles spacy
     corpora = []
-    for (title, (model, color)) in sorted(models_spacy.items()):   
+    for (title, (model, color)) in sorted(my_models.items()):   
         corpora.append(get_spacy(corpus_r, title, model, color))
         
     ## Partie 3. évaluation sans subcorpus

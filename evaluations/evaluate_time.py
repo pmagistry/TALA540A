@@ -27,6 +27,11 @@ def main():
     # (corpus_r, "corpus_modele3", "./models/spacy/modele3/model-best", "RED")
     # (corpus_r, "corpus_modele4", "./models/spacy/modele4/model-best", "RED")
     # (corpus_r, "corpus_modele5", "./models/spacy/modele5/model-best", "RED")
+    # (corpus_r, "corpus_modele6", "./models/spacy/modele6/model-best", "RED")
+    # (corpus_r, "corpus_modele7", "./models/spacy/modele7/model-best", "RED")
+    # (corpus_r, "corpus_modele8", "./models/spacy/modele8/model-best", "RED")
+    # (corpus_r, "corpus_modele9", "./models/spacy/modele9/model-best", "RED")
+    # (corpus_r, "corpus_modele10", "./models/spacy/modele10/model-best", "RED")
 
     corpus_train = get_conllu("train")
     vocabulaire = {token.form for sentence in corpus_train.sentences for token in sentence.tokens}
