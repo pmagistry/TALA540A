@@ -1,16 +1,17 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 """
     Ce que l'on peut ecrire sur le terminal depuis le dossier TALA540A :
-    $ python evaluations/evaluate_spacy.py
-
-    Ce fichier compare la tokenisation des modèles spacy 
-    et de notre modèle que l'on a entrainé avec une tokenisation de référence
+    $ python evaluations/evaluate_time.py
+    
+    Ce fichier permet de mesurer le temps de chargement et d'analyse des modèles (avec time)
+    et leur empreinte énergétique
 """
 
-from get_corpus import get_conllu, get_spacy, get_jiayan
+from pyJoules.energy_meter import measure_energy
 
+@measure_energy
 def main():
     
     # les modèles
@@ -36,7 +37,7 @@ def main():
     corpus_train = get_conllu("train")
     vocabulaire = {token.form for sentence in corpus_train.sentences for token in sentence.tokens}
     corpus_r = get_conllu("test", vocabulaire)
-    get_spacy(corpus_r, "corpus_modele", "./models/spacy/modele5/model-best", "RED")
+    get_jiayan(corpus_r, "corpus_jiayan", "./models/jiayan/modele_table", "BLUE")
 
 if __name__ == "__main__":
     main()

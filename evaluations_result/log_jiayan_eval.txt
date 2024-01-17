@@ -1,0 +1,66 @@
+Pour le corpus corpus_jiayan :
+L'accuracy avec notre modèle est à 56.49%.
+En tenant compte du vocabulaire, l'accuracy est à 42.82%.
+
+Pour le corpus corpus_sentence :
+L'accuracy avec notre modèle est à 89.96%.
+En tenant compte du vocabulaire, l'accuracy est à 54.62%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PROPN  NUM  SYM  INTJ  PART  VERB  CCONJ   ADV  SCONJ  ADP  AUX  NOUN  PRON
+PROPN   2643    1    0     0     1   218      0    30      0    2    0   206    11
+NUM        0  457    0     0     0     8      0     0      0    0    0     2     0
+SYM        0    0    0     0     0     0      0     0      0    0    0     1     0
+INTJ       0    0    0     6     0     3      0     1      0    2    0     0     0
+PART       1    0    0     0  1556     5      1    10      0    6    0     4    24
+VERB     134    3    0     0     1  7729      0   198      6   45   91   513    14
+CCONJ      0    0    0     0     0     0    499     0      0    0    0     0     0
+ADV       31    0    0     0     7   328      0  2298      0    3    0    42     7
+SCONJ      0    0    0     0     0     0      0     0    567    0    0     0    33
+ADP        2    0    0     0    37    18      0     2      0  501   15     0     4
+AUX        0    0    0     0     0    51      0     0      0    2  517     0     0
+NOUN      97    2    0     0    12   323      0    40      0    0    2  6558     6
+PRON       2    0    0     0    42     9      4    22     36    4    0    43  1467
+
+Pour le corpus corpus_table :
+L'accuracy avec notre modèle est à 90.52%.
+En tenant compte du vocabulaire, l'accuracy est à 54.36%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PROPN  NUM  SYM  INTJ  PART  VERB  CCONJ   ADV  SCONJ  ADP  AUX  NOUN  PRON
+PROPN   2605    2    0     0     1   239      0    48      0    2    0   205    10
+NUM        0  455    0     0     0     8      0     0      0    0    0     4     0
+SYM        0    0    0     0     0     0      0     0      0    0    0     1     0
+INTJ       0    0    0     4     0     4      0     1      0    2    0     1     0
+PART       1    0    0     0  1545    10      2    11      0    8    0     4    26
+VERB      99    1    0     0     1  7825      0   210      8   45   71   464    10
+CCONJ      0    0    0     0     0     0    499     0      0    0    0     0     0
+ADV       16    0    0     0     2   274      0  2369      0    4    0    43     8
+SCONJ      0    0    0     0     0     1      0     0    581    0    0     0    18
+ADP        2    0    0     0     0    15      0     2      0  538   16     0     6
+AUX        0    0    0     0     0    54      0     0      0    2  512     2     0
+NOUN      81    2    0     0    11   364      0    43      0    0    2  6532     5
+PRON       3    0    0     0    37    12      4    21     27    3    0    34  1488
+
+Pour le corpus corpus_word :
+L'accuracy avec notre modèle est à 80.57%.
+En tenant compte du vocabulaire, l'accuracy est à 28.21%.
+
+La matrice de confusion, sans tenir compte du vocabulaire.
+
+        PROPN  NUM  SYM  INTJ  PART  VERB  CCONJ   ADV  SCONJ  ADP  AUX  NOUN  PRON
+PROPN   2246   34    0     0     1   511      0    84      0    5    3   210    18
+NUM        0  458    0     0     0     9      0     0      0    0    0     0     0
+SYM        0    0    0     0     0     0      0     0      0    0    0     1     0
+INTJ       0    0    0     6     0     2      0     2      0    2    0     0     0
+PART       0    0    0     0  1524    10     12     1      0   31    0     2    27
+VERB     207    3    0    11    18  6657      0   697     23  131  281   696    10
+CCONJ      0    0    0     0     0     0    499     0      0    0    0     0     0
+ADV       22    0    0     1    47   365      0  2167      0   10    2    45    57
+SCONJ      0    0    0     0     0     0      0     0    600    0    0     0     0
+ADP        0    0    0     0    62     2      0     0      0  438   58     0    19
+AUX        0    0    0     0     0     6      0     0      0    0  564     0     0
+NOUN      97    5    0     0    62   548      0   176      0    1    8  6006   137
+PRON       0    0    0     0    42     2      4     4    505    0    0    26  1046

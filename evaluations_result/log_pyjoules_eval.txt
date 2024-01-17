@@ -1,0 +1,20 @@
+./models/jiayan/modele_sentence :
+begin timestamp : 1705444974.662411; tag : main; duration : 19.779630661010742; package_0 : 136670732.0; dram_0 : 5929062.0; core_0 : 102445538.0; uncore_0 : 4414601.0
+
+./models/jiayan/modele_table :
+begin timestamp : 1705447571.8389063; tag : main; duration : 20.559937000274658; package_0 : 143062989.0; dram_0 : 6221053.0; core_0 : 103709757.0; uncore_0 : 6457686.0
+
+./models/spacy/modele1 :
+begin timestamp : 1705443513.0543392; tag : main; duration : 228.90620827674866; package_0 : 1788428649.0; dram_0 : 84197721.0; core_0 : 1373984947.0; uncore_0 : 91730905.0
+
+./models/spacy/modele2 :
+begin timestamp : 1705443157.5303924; tag : main; duration : 214.47468543052673; package_0 : 1462889871.0; dram_0 : 65650528.0; core_0 : 988740023.0; uncore_0 : 31240520.0
+
+./models/spacy/modele3 :
+begin timestamp : 1705442836.9224892; tag : main; duration : 227.5216109752655; package_0 : 1640567089.0; dram_0 : 79939675.0; core_0 : 1192151611.0; uncore_0 : 85790247.0
+
+./models/spacy/modele4 :
+begin timestamp : 1705441134.6620677; tag : main; duration : 237.8756127357483; package_0 : 1700593120.0; dram_0 : 86589561.0; core_0 : 1238820925.0; uncore_0 : 64851702.0
+
+./models/spacy/modele5 :
+begin timestamp : 1705440493.420426; tag : main; duration : 216.89451098442078; package_0 : 1519091936.0; dram_0 : 69111457.0; core_0 : 1037746184.0; uncore_0 : 42311537.0

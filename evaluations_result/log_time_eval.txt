@@ -1,0 +1,34 @@
+./models/jiayan/modele_sentence :
+real	0m22,956s
+user	0m20,257s
+sys	0m2,231s
+
+./models/jiayan/modele_table :
+real	0m21,434s
+user	0m20,090s
+sys	0m2,031s
+
+./models/spacy/modele1 :
+real	3m28,886s
+user	3m26,472s
+sys	0m2,302s
+
+./models/spacy/modele2 :
+real	3m30,167s
+user	3m27,785s
+sys	0m2,227s
+
+./models/spacy/modele3 :
+real	3m31,256s
+user	3m28,211s
+sys	0m2,186s
+
+./models/spacy/modele4 :
+real	3m27,991s
+user	3m25,856s
+sys	0m2,293s
+
+./models/spacy/modele5 :
+real	3m29,602s
+user	3m27,617s
+sys	0m2,185s
