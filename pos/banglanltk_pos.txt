@@ -1,0 +1,36 @@
+POS	Meaning	SPACY
+CC	Conjunction	CONJ
+CD	Cardinal number	NUM
+DM	Demonstrative	DET
+DT	Determiner	DET
+EX	Existential there	AUX
+FW	Foreign word	NOUN
+IN	Preposition	ADP
+JJ	Adjective	ADJ
+JJR	Adjective, comparative	ADJ
+JJS	Adjective, superlative	ADJ
+MD	Modal	AUX
+NN	Noun, singular or mass	NOUN
+NNP	Proper noun, singular	PROPN
+NNS	Noun, plural	NOUN
+NNV	Verbal Noun	NOUN
+PR	Pronoun	PRON
+PRP	Personal pronoun	PRON
+PRP$	Possessive pronoun	PRON
+PSP	Postposition	ADP
+RB	Adverb	ADV
+RBR	Adverb, comparative	ADV
+RP	Particles	PART
+SYM	Symbol	SYM
+TO	to	ADP
+UH	Interjection	INT
+UNK	Unknown tag	UNK
+VB	Verb, base form	VERB
+VBD	Verb, past tense	VERB
+VBG	Verb, present participle	VERB
+VBN	Verb, past participle	VERB
+VBP	Verb, non-3rd person singular present	VERB
+WDT	Wh-determiner	DET
+WH	Wh words	ADV
+WP	Wh-pronoun	PRON
+WRB	Wh-adverb	ADV

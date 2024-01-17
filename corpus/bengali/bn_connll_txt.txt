@@ -1,0 +1,168 @@
+dev-s1
+কিছু করি না ।
+kichu kari nā .
+dev-s2
+খেয়েছ তুমি ?
+kheŷecha tumi ?
+dev-s3
+মা খাবার দয়ে নাই ।
+mā khābāra daŷe nāi .
+dev-s4
+তোমার মা খারাপ, তাই কি ?
+tomāra mā khārāpa, tāi ki ?
+dev-s5
+না , আমার মা ভাল ।
+nā , āmāra mā bhāla .
+dev-s6
+তোমার বাবার নাম কি ?
+tomāra bābāra nāma ki ?
+dev-s7
+আমার বাবার নাম ফারুক ।
+āmāra bābāra nāma phāruka .
+dev-s8
+তুমি গান গাইতে পারো ?
+tumi gāna gāite pāro ?
+dev-s9
+হ্যাঁ, আমি গান গাইতে পারি ।
+hyām̃, āmi gāna gāite pāri .
+dev-s10
+তুমি কোন ক্লাসে পড়?
+tumi kona klāse paṛa?
+dev-s11
+আমার সোনার বাংলা, আমি তোমায় ভালবাসি ।
+āmāra sonāra bāṁlā, āmi tomāŷa bhālabāsi .
+dev-s12
+প্রথম শ্রেনীতে পড়ি ।
+prathama śrenīte paṛi .
+dev-s13
+একটা গান গাও ।
+ekaṭā gāna gāo .
+dev-s14
+তোমাকে কে রেখে আসে?
+tomāke ke rekhe āse?
+dev-s15
+মা রেখে আসে মাঝে মাঝে বাবা ।
+mā rekhe āse mājhe mājhe bābā .
+dev-s16
+তোমার বন্ধু কতজন?
+tomāra bandhu katajana?
+dev-s17
+চার জন ।
+cāra jana .
+dev-s18
+তাদের নাম কি?
+tādera nāma ki?
+dev-s19
+রাকিব, সাকিব, বর্ণালী ।
+rākiba, sākiba, barṇālī .
+dev-s20
+তোমার বান্ধবী নাই?
+tomāra bāndhabī nāi?
+dev-s21
+একজন আছে ।
+ekajana āche .
+dev-s22
+তার নাম কি?
+tāra nāma ki?
+dev-s23
+তার নাম বর্ণালী ।
+tāra nāma barṇālī .
+dev-s24
+হুম,খুব ভালো ।
+huma,khuba bhālo .
+dev-s25
+চল বাবা খেতে যাই ।
+cala bābā khete yāi .
+dev-s26
+চল খেতে যাই ।
+cala khete yāi .
+dev-s27
+আমি ক্ষুধার্ত ।
+āmi kṣudhārta .
+dev-s28
+বাবা আগে হাত ধুয়ে নাও ।
+bābā āge hāta dhuŷe nāo .
+dev-s29
+না, আমি ধোবো না ।
+nā, āmi dhobo nā .
+dev-s30
+হাত না ধুয়ে খেলে কি হয়, তুমি জানো না?
+hāta nā dhuŷe khele ki haŷa, tumi jāno nā?
+dev-s31
+তোমার অসুখ করবে ।
+tomāra asukha karabe .
+dev-s32
+তাহলে হাত ধোবো ।
+tāhale hāta dhobo .
+dev-s33
+কার্টুন দেখি ।
+kārṭuna dekhi .
+dev-s34
+তুমি কি খেয়েছ?
+tumi ki kheŷecha?
+dev-s35a
+না,আমি খাব না ।
+nā,āmi khāba nā .
+dev-s35b
+তুমি যদি খাও তাহলে একটা মজার গল্প বলব ।
+tumi yadi khāo tāhale ekaṭā majāra galpa balaba .
+dev-s36
+মজার গল্পটি কি?
+majāra galpaṭi ki?
+dev-s37
+আগে খেয়ে নাও তারপর আমি গল্প বলব ।
+āge kheŷe nāo tārapara āmi galpa balaba .
+dev-s38
+বাবা আমরা কি রিক্সায় ঘুরতে যাব?
+bābā āmarā ki riksāŷa ghurate yāba?
+dev-s39
+এখন রোদ নেই,তাই চশমা পরতে হবে না।
+ekhana roda nei,tāi caśamā parate habe nā.
+dev-s40
+যে ভিক্ষা চায়, তাকে দান কর ।
+ye bhikṣā cāŷa, tāke dāna kara .
+dev-s41
+আমাদের দেশের পতাকার রং সবুজ,তুমি জানো কি?
+āmādera deśera patākāra raṁ sabuja,tumi jāno ki?
+dev-s42
+আজ ক্লাসে কি শিখিয়েছে?
+āja klāse ki śikhiŷeche?
+dev-s43
+তোমার প্রিয় রং কি?
+tomāra priŷa raṁ ki?
+dev-s44
+দেখ, তোমার জন্য কি এনেছি?
+dekha, tomāra janya ki enechi?
+dev-s45
+তুমি আমাদের দেশের পতাকা আঁকতে পার?
+tumi āmādera deśera patākā ām̃kate pāra?
+dev-s46
+তুমি আমাদের জাতীয় পতাকা আঁকতে পার?
+tumi āmādera jātīŷa patākā ām̃kate pāra?
+dev-s47
+আজ সারাদিন কি কি করেছ?
+āja sārādina ki ki karecha?
+dev-s48
+আজ বই পড়েছি, আর্ট করেছি, গান শিখেছি ।
+āja bai paṛechi, ārṭa karechi, gāna śikhechi .
+dev-s49
+আমি আজ স্কুলে হাতি দেখেছি ।
+āmi āja skule hāti dekhechi .
+dev-s50
+আচ্ছা, আমি তোমাকে একটা সুন্দর জামা কিনে দিব ।
+ācchā, āmi tomāke ekaṭā sundara jāmā kine diba .
+dev-s51
+এখন পড়তে বসার সময় হয়েছে ।
+ekhana paṛate basāra samaŷa haŷeche .
+dev-s52
+বই নিয়ে পড়তে বস ।
+bai niŷe paṛate basa .
+dev-s53
+আমার পড়া শেষ হয়েছে ।
+āmāra paṛā śeṣa haŷeche .
+dev-s54
+আমি লেখা শেষ করে কার্টুন দেখব ।
+āmi lekhā śeṣa kare kārṭuna dekhaba .
+dev-s55
+আমরা কখন ঘুরতে যাব?
+āmarā kakhana ghurate yāba?
