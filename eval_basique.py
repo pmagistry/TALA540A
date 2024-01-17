@@ -100,7 +100,7 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     # matrice de confusion pour le gouverneur
     mc_parent = defaultdict(lambda: defaultdict(int))
     # matrice de confusion pour la relation
-    matrice_confusion_parent = defaultdict(lambda: defaultdict(int))
+    mc_deprel = defaultdict(lambda: defaultdict(int))
     for sentence_gold, sentence_test in zip(
         corpus_gold.sentences, corpus_test.sentences
     ):
@@ -109,7 +109,8 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
             nb_total += 1
             uas_ok = False
             ols_ok = False
-            #matrice_confusion[token_gold.parent][token_test.parent] += 1 
+            mc_parent[token_gold.parent][token_test.parent] += 1 
+            mc_deprel[token_gold.deprel][token_test.deprel] += 1
             if int(token_gold.parent) == token_test.parent:
                 uas_ok = True
             if token_gold.deprel == token_test.deprel:
@@ -127,7 +128,7 @@ def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, f
     # tag
     if oov_total == 0:
         oov_total += 1
-    return ols / nb_total, uas / nb_total, las / nb_total, oov_ols / oov_total, oov_uas / oov_total, oov_las / oov_total
+    return ols / nb_total, uas / nb_total, las / nb_total, oov_ols / oov_total, oov_uas / oov_total, oov_las / oov_total, mc_parent, mc_deprel
 """
 def compute_accuracy(corpus_gold: Corpus, corpus_test: Corpus) -> Tuple[float, float]:
     nb_ok = 0
@@ -154,11 +155,23 @@ def main():
     #corpus_gold = read_conll("fr_sequoia-ud-test.conllu")
 
     # tagger du chinois :
-    model_spacy = spacy.load("../conll_chinois/spacy_model/model-last/")
+    # premier tagger (rapide)
+    #model_spacy = spacy.load("../conll_chinois/spacy_model/model-last/")
+    # deuxième tagger (performant)
+    #model_spacy = spacy.load("../conll_chinois/modele_perf/model_perf_tagger/output/model-best/")
+    # troisième parser (performant + transformer)
+    #model_spacy = spacy.load("../conll_chinois/modele_perf/model_perf_transformer/output/model-last/")
+
+    # réduction des données d'entraînement
+    #model_spacy = spacy.load("../conll_chinois/modele_perf/modele_perf_100k/output/model-last/")
+    model_spacy = spacy.load("../conll_chinois/modele_perf/modele_perf_250k/output/model-last/")
+
+    # Etat de l'art: modèle de spacy
+    #model_spacy = spacy.load("zh_core_web_trf")
     corpus_gold = read_conll("../conll_chinois/test.conllu", vocabulaire = set(model_spacy.vocab.strings))
 
     corpus_test = tag_corpus_spacy(corpus_gold, model_spacy)
-    ols, uas, las, ools, ouas, olas = compute_accuracy(corpus_gold, corpus_test)
+    ols, uas, las, ools, ouas, olas, mc_parent, mc_deprel = compute_accuracy(corpus_gold, corpus_test)
     print("Score OLS:", ols)
     print("Score UAS:", uas)
     print("Score LAS:", las)
