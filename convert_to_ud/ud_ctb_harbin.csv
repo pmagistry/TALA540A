@@ -1,0 +1,21 @@
+UD,CTB,HARBIN
+ADJ,JJ:VA:OD,a:m
+ADP,P:BA:LB:LC,p:nd
+ADV,AD,d
+AUX,AS:SB:VV,u:v
+CCONJ,CC,c
+DET,DT,r:b
+INTJ,IJ,e
+NOUN,M:NN:NT,q:n:ni:nl:nt
+NUM,CD,m
+PART,DEC:DEG:DER:DEV:ETC:SP:MSP,u
+PRON,PN,r
+PROPN,NR,nh:ns:nz
+PUNCT,PU:VP,wp
+SCONJ,CS,c
+SYM,PU?,wp?
+VERB,VC:VE:VV,v
+X,FW,ws
+X,X,x?
+[based on context],?,b:i:j:o
+[treated as part of a token/or based on context],[treated as part of a token/or based on context],h:k
