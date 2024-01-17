@@ -1,13 +1,5 @@
 TALA540A : TP de Laura Darenne
 
-## environnement de travail
-
-La majorité des modules nécessaires peuvent être téléchargé avec le fichier requirements.
-
-```shell 
-$ conda create --name <env> --file requirements.txt
-```
-
 ### dossier corpus
 
 Le dossier contient tous les corpus pré-traités et les fichiers vecteurs utilisés pour l'entraînement. Il y a également les fichiers python utilisés pour le pré-traitement.
