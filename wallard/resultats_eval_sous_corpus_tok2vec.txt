@@ -1,0 +1,175 @@
+domaine news
+./spacy_model_core_web_sm/non_news/model-best
+(0.6999043247491372, 0.4315994640029236)
+              precision    recall  f1-score   support
+
+         ADJ       0.05      0.35      0.09       686
+         ADP       0.67      0.90      0.77      4307
+         ADV       0.52      0.66      0.59     11007
+       CCONJ       0.80      0.95      0.87      1894
+         DET       0.35      0.85      0.50       786
+        INTJ       0.65      0.15      0.25        97
+        NOUN       0.68      0.61      0.64     53454
+         NUM       0.62      0.77      0.68      7817
+        PART       0.90      0.96      0.93     15377
+        PRON       0.68      0.79      0.73      3287
+       PROPN       0.28      0.51      0.36      3762
+       PUNCT       0.99      0.92      0.95     30028
+       SCONJ       0.12      0.88      0.21        33
+        VERB       0.68      0.55      0.61     42467
+           X       0.86      0.93      0.90       592
+
+    accuracy                           0.70    175594
+   macro avg       0.59      0.72      0.60    175594
+weighted avg       0.73      0.70      0.71    175594
+
+domaine religion
+./spacy_model_core_web_sm/non_religion/model-best
+(0.7085707572108324, 0.48484848484848486)
+              precision    recall  f1-score   support
+
+         ADJ       0.05      0.28      0.09       145
+         ADP       0.66      0.85      0.74       961
+         ADV       0.51      0.76      0.61      2001
+       CCONJ       0.73      0.92      0.81       418
+         DET       0.26      0.77      0.38       128
+        INTJ       0.00      0.00      0.00         1
+        NOUN       0.72      0.60      0.66     10895
+         NUM       0.62      0.78      0.69       949
+        PART       0.87      0.97      0.92      3209
+        PRON       0.60      0.80      0.69       587
+       PROPN       0.22      0.39      0.29       627
+       PUNCT       1.00      0.94      0.97      5949
+       SCONJ       0.13      0.85      0.23        13
+        VERB       0.67      0.54      0.60      8024
+           X       0.84      0.99      0.90       139
+
+    accuracy                           0.71     34046
+   macro avg       0.52      0.70      0.57     34046
+weighted avg       0.74      0.71      0.72     34046
+
+
+domaine sciences académiques
+./spacy_model_core_web_sm/non_sci_aca/model-best
+(0.7106433479075578, 0.5349719101123596)
+              precision    recall  f1-score   support
+
+         ADJ       0.05      0.29      0.08       857
+         ADP       0.65      0.90      0.75      4317
+         ADV       0.54      0.67      0.60     10375
+       CCONJ       0.78      0.95      0.85      2691
+         DET       0.29      0.84      0.43       687
+        INTJ       0.17      0.33      0.22         3
+        NOUN       0.72      0.66      0.69     53745
+         NUM       0.59      0.72      0.65      5155
+        PART       0.89      0.97      0.93     16025
+        PRON       0.56      0.73      0.63      1913
+       PROPN       0.21      0.23      0.22      2182
+       PUNCT       0.99      0.97      0.98     24103
+       SCONJ       0.10      0.61      0.17        62
+        VERB       0.67      0.51      0.58     37536
+           X       0.74      0.99      0.84       449
+
+    accuracy                           0.71    160100
+   macro avg       0.53      0.69      0.58    160100
+weighted avg       0.74      0.71      0.72    160100
+
+domaine essais
+./spacy_model_core_web_sm/non_essais/model-best
+(0.3139786062261201, 0.17595799352027705)
+              precision    recall  f1-score   support
+
+         ADJ       0.03      0.03      0.03      2794
+         ADP       0.06      0.09      0.07      3614
+         ADV       0.24      0.14      0.18     24479
+       CCONJ       0.06      0.02      0.03      3100
+         DET       0.02      0.01      0.02      1957
+        INTJ       0.00      0.00      0.00       142
+        NOUN       0.28      0.26      0.27     36936
+         NUM       0.01      0.07      0.01       582
+        PART       0.44      0.37      0.40     18005
+        PRON       0.15      0.11      0.12      8971
+       PROPN       0.00      0.00      0.00         0
+       PUNCT       0.81      0.70      0.75     27338
+       SCONJ       0.00      0.00      0.00       480
+        VERB       0.24      0.32      0.28     25089
+           X       0.00      0.00      0.00       670
+
+    accuracy                           0.31    154157
+   macro avg       0.16      0.14      0.14    154157
+weighted avg       0.35      0.31      0.33    154157
+
+domaine populaire
+./spacy_model_core_web_sm/non_populaire/model-best
+(0.7201929401447051, 0.5257909215955984)
+              precision    recall  f1-score   support
+
+         ADJ       0.08      0.33      0.13       960
+         ADP       0.68      0.86      0.76      4661
+         ADV       0.51      0.75      0.60     11587
+       CCONJ       0.74      0.91      0.82      1768
+         DET       0.35      0.82      0.50       823
+        INTJ       0.31      0.77      0.44        22
+        NOUN       0.72      0.58      0.64     54887
+         NUM       0.61      0.84      0.71      6779
+        PART       0.85      0.97      0.91     14931
+        PRON       0.65      0.90      0.76      3657
+       PROPN       0.22      0.37      0.27      1761
+       PUNCT       1.00      0.99      0.99     30763
+       SCONJ       0.11      0.89      0.20        70
+        VERB       0.71      0.59      0.64     48993
+           X       0.83      0.98      0.90       778
+
+    accuracy                           0.72    182440
+   macro avg       0.56      0.77      0.62    182440
+weighted avg       0.74      0.72      0.72    182440
+
+domaine fiction
+./spacy_model_core_web_sm/non_fiction/model-best
+(0.7472331559474393, 0.4935435034286223)
+              precision    recall  f1-score   support
+
+         ADJ       0.10      0.49      0.16       604
+         ADP       0.69      0.86      0.77      3891
+         ADV       0.50      0.79      0.61     13218
+       CCONJ       0.67      0.79      0.72       767
+         DET       0.43      0.85      0.57      1357
+        INTJ       0.26      0.97      0.41        58
+        NOUN       0.67      0.56      0.61     41502
+         NUM       0.74      0.77      0.75      8202
+        PART       0.89      0.96      0.92     17521
+        PRON       0.80      0.92      0.85      9192
+       PROPN       0.43      0.51      0.46      3605
+       PUNCT       0.99      0.98      0.99     32716
+       SCONJ       0.14      0.61      0.22        85
+        VERB       0.78      0.64      0.70     52712
+           X       0.85      0.97      0.91       793
+
+    accuracy                           0.75    186223
+   macro avg       0.60      0.78      0.64    186223
+weighted avg       0.77      0.75      0.75    186223
+
+domaine divers
+./spacy_model_core_web_sm/non_divers/model-best
+(0.6527404754799563, 0.3799071338117349)
+              precision    recall  f1-score   support
+
+         ADJ       0.03      0.20      0.06       376
+         ADP       0.68      0.85      0.76      1628
+         ADV       0.40      0.43      0.41      2414
+       CCONJ       0.76      0.94      0.84      1188
+         DET       0.23      0.81      0.36       159
+        INTJ       0.00      0.00      0.00        15
+        NOUN       0.62      0.66      0.64     20867
+         NUM       0.49      0.77      0.60      2281
+        PART       0.89      0.94      0.92      3986
+        PRON       0.46      0.56      0.51       291
+       PROPN       0.19      0.18      0.19       853
+       PUNCT       1.00      0.85      0.92     11213
+       SCONJ       0.00      0.00      0.00         2
+        VERB       0.60      0.42      0.50     14892
+           X       0.77      0.89      0.82       153
+
+    accuracy                           0.65     60318
+   macro avg       0.47      0.57      0.50     60318
+weighted avg       0.68      0.65      0.66     60318
